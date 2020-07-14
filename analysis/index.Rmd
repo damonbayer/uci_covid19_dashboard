@@ -11,13 +11,14 @@ editor_options:
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(scales)
+library(plotly)
 oc_data <- read_csv("data/oc_data.csv")
 theme_set(theme_bw())
 ```
 
 
 ```{r Fig 1, echo=FALSE}
-oc_data %>% 
+fig1 <- oc_data %>% 
   select(-start_date) %>% 
   pivot_longer(-end_date) %>% 
   mutate(name = str_remove(name, "new_") %>% str_to_title()) %>% 
@@ -30,6 +31,14 @@ oc_data %>%
   ylab("Count") +
   ggtitle("Orange County, CA data", subtitle = str_c("Counts binned into", 3, "day periods", sep = " ")) + scale_x_date(breaks=c("14 day"), date_labels = "%b %d") +
   scale_y_continuous(labels = comma)
+
+fig1
+```
+
+# Interactive Version
+
+```{r Fig 1 Interactive, echo=FALSE, warning=F}
+plotly::ggplotly(fig1)
 ```
 
 
