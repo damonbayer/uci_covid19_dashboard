@@ -8,4 +8,28 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+```{r setup, include=FALSE}
+library(tidyverse)
+library(scales)
+oc_data <- read_csv("data/oc_data.csv")
+theme_set(theme_bw())
+```
+
+
+```{r Fig 1, echo=FALSE}
+oc_data %>% 
+  select(-start_date) %>% 
+  pivot_longer(-end_date) %>% 
+  mutate(name = str_remove(name, "new_") %>% str_to_title()) %>% 
+  mutate(name = fct_relevel(name, c("Tests", "Cases", "Deaths"))) %>% 
+  ggplot(aes(end_date, value)) +
+  geom_line() +
+  geom_point() +
+  facet_wrap(. ~ name, scales = "free_y") +
+  xlab("Date") +
+  ylab("Count") +
+  ggtitle("Orange County, CA data", subtitle = str_c("Counts binned into", 3, "day periods", sep = " ")) + scale_x_date(breaks=c("14 day"), date_labels = "%b %d") +
+  scale_y_continuous(labels = comma)
+```
+
+
