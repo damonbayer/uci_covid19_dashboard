@@ -82,56 +82,41 @@ death_graph2 <- graph_data%>%
 
 
 # hospitalizations --------------------------------------------------------
-lump_hosp<-hosp %>%
-  group_by(county,
-           lump = as.integer(floor((max(todays_date) - todays_date) / time_interval_in_days))) %>%
-  filter(n() == time_interval_in_days) %>%
-  summarize(start_date = min(todays_date),
-            end_date = max(todays_date),
-            mean_hosp_conf=mean(hospitalized_covid_confirmed_patients),
-            mean_hosp_total=mean(hospitalized_covid_confirmed_patients+hospitalized_suspected_covid_patients),
-            mean_icu_conf=mean(icu_covid_confirmed_patients),
-            mean_icu_total=mean(icu_covid_confirmed_patients+icu_available_beds),
-            mean_icu_available=mean(icu_available_beds),
-            mean_percent_hosp_beds_conf=mean(hospitalized_covid_confirmed_patients/all_hospital_beds),
-            mean_percent_hosp_beds_total=mean((hospitalized_covid_confirmed_patients+hospitalized_suspected_covid_patients)/all_hospital_beds),
-            mean_icu_available=mean(icu_available_beds)
-            ) %>%
-  dplyr::select(-lump) %>%
-  arrange(start_date)
+hosp<-hosp %>%
+  mutate(hosp_total=hospitalized_covid_confirmed_patients+hospitalized_suspected_covid_patients,
+          mean_icu_conf=icu_covid_confirmed_patients,
+          icu_total=icu_covid_confirmed_patients+icu_available_beds,
+          percent_hosp_beds_conf=hospitalized_covid_confirmed_patients/all_hospital_beds,
+          percent_hosp_beds_total=hosp_total/all_hospital_beds)
 
-
-hosp_graph_data <- lump_hosp%>%
-  select(-start_date) %>%
-  pivot_longer(-c(end_date, county)) %>%
+hosp_graph_data <- hosp%>%
+  pivot_longer(-c(todays_date, county)) %>%
   left_join(population, by=c("county"="counties"))%>%
   mutate(per_100k=(value/popsize)*100000,
          percent=value*100)
 
 #percent of hospital beds in use
 percent_hosp1 <- hosp_graph_data%>%
-  filter(county %in% counties1 & name=="mean_percent_hosp_beds_total" & !is.na(value))%>%
-  ggplot(aes(end_date, percent, color=county)) +
-  geom_line() +
-  geom_point() +
+  filter(county %in% counties1 & name=="percent_hosp_beds_total" & !is.na(value))%>%
+  ggplot(aes(todays_date, percent, color=county)) +
+  geom_ma(aes(linetype="solid"),ma_fun=SMA, n=14)+
   xlab("Date") +
   ylab("Mean Percent Hospital Beds") +
   ggtitle("Mean Percent of Hospital Beds occupied by COVID or COVID Suspect Patients",
-          subtitle = str_c("Means over",
+          subtitle = str_c("Rolling Means over",
                            time_interval_in_days,
                            "day periods", sep = " ")) +
   scale_x_date(breaks=c("14 day"), date_labels = "%b %d")+
   theme_bw()
 
 percent_hosp2 <- hosp_graph_data%>%
-  filter(county %in% counties2 & name=="mean_percent_hosp_beds_total" & !is.na(value))%>%
-  ggplot(aes(end_date, percent, color=county)) +
-  geom_line() +
-  geom_point() +
+  filter(county %in% counties2 & name=="percent_hosp_beds_total" & !is.na(value))%>%
+  ggplot(aes(todays_date, percent, color=county)) +
+  geom_ma(aes(linetype="solid"),ma_fun=SMA, n=14)+
   xlab("Date") +
   ylab("Mean Percent Hospital Beds") +
   ggtitle("Mean Percent of Hospital Beds occupied by COVID or COVID Suspect Patients",
-          subtitle = str_c("Means over",
+          subtitle = str_c("Rolling Means over",
                            time_interval_in_days,
                            "day periods", sep = " ")) +
   scale_x_date(breaks=c("14 day"), date_labels = "%b %d")+
@@ -139,31 +124,69 @@ percent_hosp2 <- hosp_graph_data%>%
 
 #icu beds avvailable per 100000 people
 icu_avalaible1 <- hosp_graph_data%>%
-  filter(county %in% counties1 & name=="mean_icu_available" & !is.na(value))%>%
-  ggplot(aes(end_date, per_100k, color=county)) +
-  geom_line() +
-  geom_point() +
+  filter(county %in% counties1 & name=="icu_available_beds" & !is.na(value))%>%
+  ggplot(aes(todays_date, per_100k, color=county)) +
+  geom_ma(aes(linetype="solid"),ma_fun=SMA, n=14)+
   xlab("Date") +
   ylab("Mean ICU Beds") +
   ggtitle("Mean ICU Beds Available per 100,000 People",
-          subtitle = str_c("Means over",
+          subtitle = str_c("Rolling Means over",
                            time_interval_in_days,
                            "day periods", sep = " ")) +
   scale_x_date(breaks=c("14 day"), date_labels = "%b %d")+
   theme_bw()
 
 icu_avalaible2 <- hosp_graph_data%>%
-  filter(county %in% counties2 & name=="mean_icu_available" & !is.na(value))%>%
-  ggplot(aes(end_date, per_100k, color=county)) +
-  geom_line() +
-  geom_point() +
+  filter(county %in% counties2 & name=="icu_available_beds" & !is.na(value))%>%
+  ggplot(aes(todays_date, per_100k, color=county)) +
+  geom_ma(aes(linetype="solid"),ma_fun=SMA, n=14)+
   xlab("Date") +
   ylab("Mean ICU Beds") +
   ggtitle("Mean ICU Beds Available per 100,000 People",
-          subtitle = str_c("Means over",
+          subtitle = str_c("Rolling Means over",
                            time_interval_in_days,
                            "day periods", sep = " ")) +
   scale_x_date(breaks=c("14 day"), date_labels = "%b %d")+
   theme_bw()
+
+
+
+# cases 2 -----------------------------------------------------------------
+#this is for making rolling averages because I am dumb
+library(tidyquant)
+graph_cases <- cases%>%
+  pivot_longer(-c(date, county)) %>%
+  left_join(population, by=c("county"="counties"))%>%
+  filter(value>0)%>%
+  mutate(per_100k=(value/popsize)*100000)
+
+death_graph3 <- graph_cases%>%
+  filter(county %in% counties1 & name=="newcountdeaths")%>%
+  ggplot(aes(date, per_100k, color=county)) +
+  geom_ma(aes(linetype="solid"),ma_fun=SMA, n=14)+
+  xlab("Date") +
+  ylab("Mean Deaths") +
+  ggtitle("Mean Deaths per 100,000 people",
+          subtitle = str_c("Rolling Means over",
+                           time_interval_in_days,
+                           "day periods", sep = " ")) +
+  scale_x_date(breaks=c("14 day"), date_labels = "%b %d")+
+  theme_bw()
+
+death_graph_straight <- graph_cases%>%
+  filter(county %in% counties1 & name=="newcountdeaths")%>%
+  ggplot(aes(date, per_100k, color=county)) +
+  geom_line()+
+  xlab("Date") +
+  ylab("New Deaths") +
+  ggtitle("New Deaths per 100,000 people",
+          subtitle = str_c("No more Means",
+                           time_interval_in_days,
+                           "day periods", sep = " ")) +
+  scale_x_date(breaks=c("14 day"), date_labels = "%b %d")+
+  theme_bw()
+
+negdeath<-cases%>%
+  filter(newcountdeaths<0)
 
 
