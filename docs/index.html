@@ -15,20 +15,13 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
-<script src="site_libs/plotly-binding-4.9.2.1/plotly.js"></script>
-<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
-<link href="site_libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="site_libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -322,7 +315,7 @@ $(document).ready(function () {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -331,7 +324,7 @@ $(document).ready(function () {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -340,10 +333,10 @@ $(document).ready(function () {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-07-14
+<strong>Last updated:</strong> 2020-07-16
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>uci_covid19_dashboard/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -359,12 +352,12 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -431,16 +424,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree524eb53b1b8e2bee1cf8edad94a09868cbada6eetargetblank524eb53a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/524eb53b1b8e2bee1cf8edad94a09868cbada6ee" target="_blank">524eb53</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree495bf3969b359da88f470acfcc06f3a339df8d98targetblank495bf39a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/495bf3969b359da88f470acfcc06f3a339df8d98" target="_blank">495bf39</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree524eb53b1b8e2bee1cf8edad94a09868cbada6eetargetblank524eb53a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree495bf3969b359da88f470acfcc06f3a339df8d98targetblank495bf39a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/524eb53b1b8e2bee1cf8edad94a09868cbada6ee" target="_blank">524eb53</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/495bf3969b359da88f470acfcc06f3a339df8d98" target="_blank">495bf39</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -449,6 +442,13 @@ Note that you need to be careful to ensure that all relevant files for the analy
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
+
+Untracked files:
+    Untracked:  data/county_pop.csv
+
+Unstaged changes:
+    Modified:   analysis/_site.yml
+    Modified:   analysis/index.Rmd
 
 </code></pre>
 <p>
@@ -487,6 +487,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/6b4b3526d5aac8ca721cbde828f68340547b6e56/docs/index.html" target="_blank">6b4b352</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-14
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -562,48 +579,10 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p><img src="figure/index.Rmd/Fig%201-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-Fig-1-1">
-Past versions of “Fig 1-1.png”
-</button>
-</p>
-<div id="fig-no-spaces-Fig-1-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/66110a1068f5e39959ad9fa3342893ddb5ee1314/docs/figure/index.Rmd/Fig 1-1.png" target="_blank">66110a1</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-07-14
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="interactive-version" class="section level1">
-<h1>Interactive Version</h1>
-<div id="htmlwidget-f96ce359f4b4762a55c0" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f96ce359f4b4762a55c0">{"x":{"data":[{"x":[18339,18342,18345,18348,18351,18354,18357,18360,18363,18366,18369,18372,18375,18378,18381,18384,18387,18390,18393,18396,18399,18402,18405,18408,18411,18414,18417,18420,18423,18426,18429,18432,18435,18438,18441],"y":[1618,1478,1463,1527,1269,2075,1255,1959,1620,1531,2426,1794,3324,2617,4963,5011,4578,6431,4418,6399,4143,9218,8147,6872,11683,6803,13335,7947,14847,11822,12777,18090,12010,21320,13204],"text":["end_date: 2020-03-18<br />value:  1618","end_date: 2020-03-21<br />value:  1478","end_date: 2020-03-24<br />value:  1463","end_date: 2020-03-27<br />value:  1527","end_date: 2020-03-30<br />value:  1269","end_date: 2020-04-02<br />value:  2075","end_date: 2020-04-05<br />value:  1255","end_date: 2020-04-08<br />value:  1959","end_date: 2020-04-11<br />value:  1620","end_date: 2020-04-14<br />value:  1531","end_date: 2020-04-17<br />value:  2426","end_date: 2020-04-20<br />value:  1794","end_date: 2020-04-23<br />value:  3324","end_date: 2020-04-26<br />value:  2617","end_date: 2020-04-29<br />value:  4963","end_date: 2020-05-02<br />value:  5011","end_date: 2020-05-05<br />value:  4578","end_date: 2020-05-08<br />value:  6431","end_date: 2020-05-11<br />value:  4418","end_date: 2020-05-14<br />value:  6399","end_date: 2020-05-17<br />value:  4143","end_date: 2020-05-20<br />value:  9218","end_date: 2020-05-23<br />value:  8147","end_date: 2020-05-26<br />value:  6872","end_date: 2020-05-29<br />value: 11683","end_date: 2020-06-01<br />value:  6803","end_date: 2020-06-04<br />value: 13335","end_date: 2020-06-07<br />value:  7947","end_date: 2020-06-10<br />value: 14847","end_date: 2020-06-13<br />value: 11822","end_date: 2020-06-16<br />value: 12777","end_date: 2020-06-19<br />value: 18090","end_date: 2020-06-22<br />value: 12010","end_date: 2020-06-25<br />value: 21320","end_date: 2020-06-28<br />value: 13204"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"frame":null},{"x":[18339,18342,18345,18348,18351,18354,18357,18360,18363,18366,18369,18372,18375,18378,18381,18384,18387,18390,18393,18396,18399,18402,18405,18408,18411,18414,18417,18420,18423,18426,18429,18432,18435,18438,18441],"y":[94,109,136,155,132,189,112,169,135,102,228,112,256,200,405,282,321,498,251,368,297,527,414,397,598,408,653,454,760,799,1058,1868,1623,2952,1919],"text":["end_date: 2020-03-18<br />value:    94","end_date: 2020-03-21<br />value:   109","end_date: 2020-03-24<br />value:   136","end_date: 2020-03-27<br />value:   155","end_date: 2020-03-30<br />value:   132","end_date: 2020-04-02<br />value:   189","end_date: 2020-04-05<br />value:   112","end_date: 2020-04-08<br />value:   169","end_date: 2020-04-11<br />value:   135","end_date: 2020-04-14<br />value:   102","end_date: 2020-04-17<br />value:   228","end_date: 2020-04-20<br />value:   112","end_date: 2020-04-23<br />value:   256","end_date: 2020-04-26<br />value:   200","end_date: 2020-04-29<br />value:   405","end_date: 2020-05-02<br />value:   282","end_date: 2020-05-05<br />value:   321","end_date: 2020-05-08<br />value:   498","end_date: 2020-05-11<br />value:   251","end_date: 2020-05-14<br />value:   368","end_date: 2020-05-17<br />value:   297","end_date: 2020-05-20<br />value:   527","end_date: 2020-05-23<br />value:   414","end_date: 2020-05-26<br />value:   397","end_date: 2020-05-29<br />value:   598","end_date: 2020-06-01<br />value:   408","end_date: 2020-06-04<br />value:   653","end_date: 2020-06-07<br />value:   454","end_date: 2020-06-10<br />value:   760","end_date: 2020-06-13<br />value:   799","end_date: 2020-06-16<br />value:  1058","end_date: 2020-06-19<br />value:  1868","end_date: 2020-06-22<br />value:  1623","end_date: 2020-06-25<br />value:  2952","end_date: 2020-06-28<br />value:  1919"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x2","yaxis":"y2","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"frame":null},{"x":[18339,18342,18345,18348,18351,18354,18357,18360,18363,18366,18369,18372,18375,18378,18381,18384,18387,18390,18393,18396,18399,18402,18405,18408,18411,18414,18417,18420,18423,18426,18429,18432,18435,18438,18441],"y":[0,1,1,2,4,6,3,3,3,5,7,2,10,4,9,13,9,15,13,8,13,20,18,18,16,23,18,20,24,17,15,20,20,17,15],"text":["end_date: 2020-03-18<br />value:     0","end_date: 2020-03-21<br />value:     1","end_date: 2020-03-24<br />value:     1","end_date: 2020-03-27<br />value:     2","end_date: 2020-03-30<br />value:     4","end_date: 2020-04-02<br />value:     6","end_date: 2020-04-05<br />value:     3","end_date: 2020-04-08<br />value:     3","end_date: 2020-04-11<br />value:     3","end_date: 2020-04-14<br />value:     5","end_date: 2020-04-17<br />value:     7","end_date: 2020-04-20<br />value:     2","end_date: 2020-04-23<br />value:    10","end_date: 2020-04-26<br />value:     4","end_date: 2020-04-29<br />value:     9","end_date: 2020-05-02<br />value:    13","end_date: 2020-05-05<br />value:     9","end_date: 2020-05-08<br />value:    15","end_date: 2020-05-11<br />value:    13","end_date: 2020-05-14<br />value:     8","end_date: 2020-05-17<br />value:    13","end_date: 2020-05-20<br />value:    20","end_date: 2020-05-23<br />value:    18","end_date: 2020-05-26<br />value:    18","end_date: 2020-05-29<br />value:    16","end_date: 2020-06-01<br />value:    23","end_date: 2020-06-04<br />value:    18","end_date: 2020-06-07<br />value:    20","end_date: 2020-06-10<br />value:    24","end_date: 2020-06-13<br />value:    17","end_date: 2020-06-16<br />value:    15","end_date: 2020-06-19<br />value:    20","end_date: 2020-06-22<br />value:    20","end_date: 2020-06-25<br />value:    17","end_date: 2020-06-28<br />value:    15"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x3","yaxis":"y3","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"frame":null}],"layout":{"margin":{"t":55.4520547945205,"r":7.30593607305936,"b":40.1826484018265,"l":60.6392694063927},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Orange County, CA data","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,0.269287789835735],"automargin":true,"type":"linear","autorange":false,"range":[18333.9,18446.1],"tickmode":"array","ticktext":["Mar 19","Apr 02","Apr 16","Apr 30","May 14","May 28","Jun 11","Jun 25"],"tickvals":[18340,18354,18368,18382,18396,18410,18424,18438],"categoryorder":"array","categoryarray":["Mar 19","Apr 02","Apr 16","Apr 30","May 14","May 28","Jun 11","Jun 25"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"annotations":[{"text":"Date","x":0.5,"y":-0.0471841704718417,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"top","annotationType":"axis"},{"text":"Count","x":-0.0684931506849315,"y":0.5,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-90,"xanchor":"right","yanchor":"center","annotationType":"axis"},{"text":"Tests","x":0.134643894917867,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Cases","x":0.5,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Deaths","x":0.865356105082132,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"}],"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[251.75,22323.25],"tickmode":"array","ticktext":["5,000","10,000","15,000","20,000"],"tickvals":[5000,10000,15000,20000],"categoryorder":"array","categoryarray":["5,000","10,000","15,000","20,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":"","hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":0.269287789835735,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":0.269287789835735,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.397378876830932,"x1":0.602621123169068,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.397378876830932,"x1":0.602621123169068,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.730712210164265,"x1":1,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.730712210164265,"x1":1,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"}],"xaxis2":{"type":"linear","autorange":false,"range":[18333.9,18446.1],"tickmode":"array","ticktext":["Mar 19","Apr 02","Apr 16","Apr 30","May 14","May 28","Jun 11","Jun 25"],"tickvals":[18340,18354,18368,18382,18396,18410,18424,18438],"categoryorder":"array","categoryarray":["Mar 19","Apr 02","Apr 16","Apr 30","May 14","May 28","Jun 11","Jun 25"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0.397378876830932,0.602621123169068],"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y2","title":"","hoverformat":".2f"},"yaxis2":{"type":"linear","autorange":false,"range":[-48.9,3094.9],"tickmode":"array","ticktext":["0","1,000","2,000","3,000"],"tickvals":[0,1000,2000,3000],"categoryorder":"array","categoryarray":["0","1,000","2,000","3,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0,1],"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x2","title":"","hoverformat":".2f"},"xaxis3":{"type":"linear","autorange":false,"range":[18333.9,18446.1],"tickmode":"array","ticktext":["Mar 19","Apr 02","Apr 16","Apr 30","May 14","May 28","Jun 11","Jun 25"],"tickvals":[18340,18354,18368,18382,18396,18410,18424,18438],"categoryorder":"array","categoryarray":["Mar 19","Apr 02","Apr 16","Apr 30","May 14","May 28","Jun 11","Jun 25"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0.730712210164265,1],"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y3","title":"","hoverformat":".2f"},"yaxis3":{"type":"linear","autorange":false,"range":[-1.2,25.2],"tickmode":"array","ticktext":["0.0","5.0","10.0","15.0","20.0","25.0"],"tickvals":[0,5,10,15,20,25],"categoryorder":"array","categoryarray":["0.0","5.0","10.0","15.0","20.0","25.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0,1],"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x3","title":"","hoverformat":".2f"},"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"2243fe0b405":{"x":{},"y":{},"type":"scatter"},"2243694abc67":{"x":{},"y":{}}},"cur_data":"2243fe0b405","visdat":{"2243fe0b405":["function (y) ","x"],"2243694abc67":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p><img src="figure/index.Rmd/ICU%20Availability-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/index.Rmd/covid%20hospitalizations-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/index.Rmd/covid%20deaths-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/index.Rmd/covid%20cases-1.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -611,7 +590,6 @@ Damon Bayer
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 4.0.2 (2020-06-22)
 Platform: x86_64-apple-darwin17.0 (64-bit)
 Running under: macOS Catalina 10.15.5
@@ -627,28 +605,34 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] plotly_4.9.2.1  scales_1.1.1    forcats_0.5.0   stringr_1.4.0  
- [5] dplyr_1.0.0     purrr_0.3.4     readr_1.3.1     tidyr_1.1.0    
- [9] tibble_3.0.3    ggplot2_3.3.2   tidyverse_1.3.0 workflowr_1.6.2
+ [1] ckanr_0.4.0                DBI_1.1.0                 
+ [3] glue_1.4.1                 tidyquant_1.0.1           
+ [5] quantmod_0.4.17            TTR_0.23-6                
+ [7] PerformanceAnalytics_2.0.4 xts_0.12-0                
+ [9] zoo_1.8-8                  scales_1.1.1              
+[11] lubridate_1.7.9            forcats_0.5.0             
+[13] stringr_1.4.0              dplyr_1.0.0               
+[15] purrr_0.3.4                readr_1.3.1               
+[17] tidyr_1.1.0                tibble_3.0.3              
+[19] ggplot2_3.3.2              tidyverse_1.3.0           
+[21] workflowr_1.6.2           
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.5        lubridate_1.7.9   assertthat_0.2.1  rprojroot_1.3-2  
- [5] digest_0.6.25     R6_2.4.1          cellranger_1.1.0  backports_1.1.8  
- [9] reprex_0.3.0      evaluate_0.14     httr_1.4.1        pillar_1.4.6     
-[13] rlang_0.4.7       lazyeval_0.2.2    readxl_1.3.1      rstudioapi_0.11  
-[17] data.table_1.12.8 whisker_0.4       blob_1.2.1        rmarkdown_2.3    
-[21] labeling_0.3      htmlwidgets_1.5.1 munsell_0.5.0     broom_0.7.0      
-[25] compiler_4.0.2    httpuv_1.5.4      modelr_0.1.8      xfun_0.15        
-[29] pkgconfig_2.0.3   htmltools_0.5.0   tidyselect_1.1.0  fansi_0.4.1      
-[33] viridisLite_0.3.0 crayon_1.3.4      dbplyr_1.4.4      withr_2.2.0      
-[37] later_1.1.0.1     grid_4.0.2        jsonlite_1.7.0    gtable_0.3.0     
-[41] lifecycle_0.2.0   DBI_1.1.0         git2r_0.27.1      magrittr_1.5     
-[45] cli_2.0.2         stringi_1.4.6     farver_2.0.3      fs_1.4.2         
-[49] promises_1.1.1    xml2_1.3.2        ellipsis_0.3.1    generics_0.0.2   
-[53] vctrs_0.3.1       tools_4.0.2       glue_1.4.1        crosstalk_1.1.0.1
-[57] hms_0.5.3         yaml_2.2.1        colorspace_1.4-1  rvest_0.3.5      
-[61] knitr_1.29        haven_2.3.1      </code></pre>
-</div>
+ [1] Rcpp_1.0.5       lattice_0.20-41  assertthat_0.2.1 rprojroot_1.3-2 
+ [5] digest_0.6.25    R6_2.4.1         cellranger_1.1.0 backports_1.1.8 
+ [9] reprex_0.3.0     evaluate_0.14    httr_1.4.1       pillar_1.4.6    
+[13] rlang_0.4.7      curl_4.3         readxl_1.3.1     rstudioapi_0.11 
+[17] whisker_0.4      blob_1.2.1       rmarkdown_2.3    labeling_0.3    
+[21] munsell_0.5.0    broom_0.7.0      compiler_4.0.2   httpuv_1.5.4    
+[25] modelr_0.1.8     xfun_0.15        pkgconfig_2.0.3  htmltools_0.5.0 
+[29] tidyselect_1.1.0 quadprog_1.5-8   fansi_0.4.1      crayon_1.3.4    
+[33] dbplyr_1.4.4     withr_2.2.0      later_1.1.0.1    Quandl_2.10.0   
+[37] grid_4.0.2       jsonlite_1.7.0   gtable_0.3.0     lifecycle_0.2.0 
+[41] git2r_0.27.1     magrittr_1.5     cli_2.0.2        stringi_1.4.6   
+[45] farver_2.0.3     fs_1.4.2         promises_1.1.1   xml2_1.3.2      
+[49] ellipsis_0.3.1   generics_0.0.2   vctrs_0.3.1      tools_4.0.2     
+[53] hms_0.5.3        yaml_2.2.1       colorspace_1.4-1 rvest_0.3.5     
+[57] knitr_1.29       haven_2.3.1     </code></pre>
 </div>
 
 
