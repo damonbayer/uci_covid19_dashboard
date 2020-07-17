@@ -91,7 +91,7 @@ hosp_tidy %>%
   coord_x_date(xlim = c(min(hosp_tidy$date) + ma_n, NA))
 ```
 
-```{r covid hospitalizations}
+```{r Covid Hospitalizations}
 per_n_people <- 1e5
 
 hosp_tidy %>% 
@@ -110,7 +110,7 @@ hosp_tidy %>%
 ```
 
 
-```{r covid deaths}
+```{r Covid Deaths}
 per_n_people <- 1e6
 
 cases_tidy %>% 
@@ -128,7 +128,7 @@ cases_tidy %>%
   coord_x_date(xlim = c(min(filter(cases_tidy, name == "newcountdeaths")$date) + ma_n, NA))
 ```
 
-```{r covid cases}
+```{r Covid Cases}
 per_n_people <- 1e5
 
 cases_tidy %>% 
