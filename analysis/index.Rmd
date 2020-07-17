@@ -91,6 +91,28 @@ hosp_tidy %>%
   coord_x_date(xlim = c(min(hosp_tidy$date) + ma_n, NA))
 ```
 
+
+```{r COVID ICU Occupancy}
+per_n_people <- 1e5
+
+hosp_tidy %>% 
+  filter(name %in% c("icu_covid_confirmed_patients", "icu_suspected_covid_patients")) %>% 
+  group_by(county, date, population) %>% 
+  summarize(value = sum(value)) %>% 
+  ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
+  geom_ma(linetype = "solid", ma_fun = SMA, n = ma_n) +
+  ggtitle(glue("ICU Patients with COVID-19 per {comma(per_n_people)} People"),
+          subtitle = glue("{ma_n} Day Moving Average")) +
+  scale_color_discrete(name = "County") +
+  scale_x_date(name = "Date",
+               breaks = "14 day",
+               date_labels = "%b %d") +
+  scale_y_continuous(name = NULL,
+                     label = comma) +
+  coord_x_date(xlim = c(min(filter(hosp_tidy, name == "hospitalized_covid_patients")$date) + ma_n, NA))
+```
+
+
 ```{r Covid Hospitalizations}
 per_n_people <- 1e5
 
