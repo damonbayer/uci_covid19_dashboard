@@ -9,15 +9,14 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F)
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
 library(tidyverse)
 library(lubridate)
 library(scales)
-library(tidyquant)
+library(TTR)
 library(glue)
+library(patchwork)
 library(ckanr) # library to interact with CA Gov. Public Health Portal
-
-theme_set(theme_bw())
 
 # connect to CKAN instance
 ckanr_setup(url="https://data.ca.gov")
@@ -27,7 +26,6 @@ ckan <- ckanr::src_ckan("https://data.ca.gov")
 resources <- rbind(resource_search("name:covid-19", as = "table")$results,
              resource_search("name:hospitals by county", as = "table")$results)
 
-# get resource ids
 resource_ids <- list(cases = resources$resource_id[resources$name == "COVID-19 Cases"],
                      tests = resources$resource_id[resources$name == "COVID-19 Testing"],
                      hosp = resources$resource_id[resources$name == "Hospitals By County"])
@@ -51,11 +49,22 @@ hosp <- tbl(src = ckan$con, from = resource_ids$hosp) %>%
 
 county_pop <- read_csv("data/county_pop.csv") %>% rename_all(str_to_lower)
 
-counties_of_interest <- c("San Diego",  "Los Angeles",  "Orange", "Alameda", "Santa Clara")
+sah_start <- ymd("2020-03-19")
+sah_end <- ymd("2020-05-04")
 ```
 
 
+
 ```{r tidy data, message=FALSE}
+# Data Processing Options
+counties_of_interest <- c("San Diego",  "Los Angeles",  "Orange", "Alameda", "Santa Clara")
+cbPalette <- c("#56B4E9", "#009E73", "#E69F00", "#CC79A7", "#0072B2")
+sah_alpha <- 0.2
+
+per_n_people <- 1e6
+ma_n <- 7
+
+# Tidy Data
 hosp_tidy <- hosp %>%
   filter(county %in% counties_of_interest) %>% 
   pivot_longer(cols = -c(date, county)) %>% 
@@ -69,76 +78,77 @@ cases_tidy <- cases %>%
   drop_na() %>% 
   left_join(county_pop) %>% 
   arrange(county, date)
+
+# Theme Options
+theme_set(theme_bw() +
+            theme(legend.position = "bottom",
+                  text = element_text(size=14)))
+
+update_geom_defaults("line", list(size = 1.5))
 ```
 
-
-```{r ICU Availability}
-ma_n <- 14
-per_n_people <- 1e5
-
-hosp_tidy %>%
-  filter(name == "icu_available_beds") %>%
-  ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  geom_ma(linetype = "solid", ma_fun = SMA, n = ma_n) +
-  ggtitle(glue("ICU Beds Available per {comma(per_n_people)} People"),
-          subtitle = glue("{ma_n} Day Moving Average")) +
-  scale_color_discrete(name = "County") +
-  scale_x_date(name = "Date",
-               breaks = "14 day",
-               date_labels = "%b %d") +
-  scale_y_continuous(name = NULL,
-                     label = comma) +
-  coord_x_date(xlim = c(min(hosp_tidy$date) + ma_n, NA))
-```
-
-
-```{r COVID ICU Occupancy}
-per_n_people <- 1e5
-
-hosp_tidy %>% 
+```{r make plots}
+# ICU Occupancy
+icu_plot_data <- hosp_tidy %>% 
   filter(name %in% c("icu_covid_confirmed_patients", "icu_suspected_covid_patients")) %>% 
   group_by(county, date, population) %>% 
   summarize(value = sum(value)) %>% 
+  group_by(county) %>%
+  mutate(value = runMean(value, ma_n)) %>%
+  drop_na()
+
+icu_plot <- icu_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  geom_ma(linetype = "solid", ma_fun = SMA, n = ma_n) +
+  geom_line() +
   ggtitle(glue("ICU Patients with COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
-  scale_color_discrete(name = "County") +
+  scale_color_manual(name = "County", values = cbPalette) +
   scale_x_date(name = "Date",
                breaks = "14 day",
                date_labels = "%b %d") +
   scale_y_continuous(name = NULL,
                      label = comma) +
-  coord_x_date(xlim = c(min(filter(hosp_tidy, name == "hospitalized_covid_patients")$date) + ma_n, NA))
-```
+  annotate("rect",
+           xmin = if_else(min(icu_plot_data$date) < sah_start,
+                          sah_start,
+                          min(icu_plot_data$date)),
+           xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+    annotate("text", y = Inf, x = sah_end, vjust = 2, label = "Stay at Home\n Order Ended")
 
-
-```{r Covid Hospitalizations}
-per_n_people <- 1e5
-
-hosp_tidy %>% 
+# Hospitalizations
+hospitalizations_plot_data <- hosp_tidy %>% 
   filter(name == "hospitalized_covid_patients") %>% 
+  group_by(county) %>%
+  mutate(value = runMean(value, ma_n)) %>% 
+  drop_na()
+
+hospitalizations_plot <- hospitalizations_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  geom_ma(linetype = "solid", ma_fun = SMA, n = ma_n) +
+  geom_line() +
   ggtitle(glue("Hospitalized Patients with COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
   scale_color_discrete(name = "County") +
   scale_x_date(name = "Date",
                breaks = "14 day",
                date_labels = "%b %d") +
-  scale_y_continuous(name = NULL,
-                     label = comma) +
-  coord_x_date(xlim = c(min(filter(hosp_tidy, name == "hospitalized_covid_patients")$date) + ma_n, NA))
-```
+  scale_y_continuous(name = NULL, label = comma) +
+  annotate("rect",
+           xmin = if_else(min(hospitalizations_plot_data$date) < sah_start,
+                          sah_start,
+                          min(hospitalizations_plot_data$date)),
+           xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+    annotate("text", y = Inf, x = sah_end, vjust = 2, label = "Stay at Home\n Order Ended")
 
-
-```{r Covid Deaths}
-per_n_people <- 1e6
-
-cases_tidy %>% 
+# Deaths
+deaths_plot_data <- cases_tidy %>% 
   filter(name == "newcountdeaths") %>% 
+  group_by(county) %>%
+  mutate(value = runMean(value, ma_n)) %>% 
+  drop_na()
+
+deaths_plot <- deaths_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  geom_ma(linetype = "solid", ma_fun = SMA, n = ma_n) +
+  geom_line() +
   ggtitle(glue("Daily Deaths due to COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
   scale_color_discrete(name = "County") +
@@ -147,16 +157,25 @@ cases_tidy %>%
                date_labels = "%b %d") +
   scale_y_continuous(name = NULL,
                      label = comma) +
-  coord_x_date(xlim = c(min(filter(cases_tidy, name == "newcountdeaths")$date) + ma_n, NA))
-```
+  annotate("rect",
+           xmin = if_else(min(deaths_plot_data$date) < sah_start,
+                          sah_start,
+                          min(deaths_plot_data$date)),
+           xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+    annotate("text", y = Inf, x = sah_end, vjust = 2, label = "Stay at Home\n Order Ended")
 
-```{r Covid Cases}
-per_n_people <- 1e5
-
-cases_tidy %>% 
+# Cases
+cases_plot_data <- cases_tidy %>% 
   filter(name == "newcountconfirmed") %>% 
+  group_by(county) %>%
+  mutate(value = runMean(value, ma_n)) %>% 
+  drop_na()
+
+cases_xmax <- 
+
+cases_plot <- cases_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  geom_ma(linetype = "solid", ma_fun = SMA, n = ma_n) +
+  geom_line() +
   ggtitle(glue("Daily Confirmed COVID-19 Cases per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
   scale_color_discrete(name = "County") +
@@ -165,6 +184,22 @@ cases_tidy %>%
                date_labels = "%b %d") +
   scale_y_continuous(name = NULL,
                      label = comma) +
-  coord_x_date(xlim = c(min(filter(cases_tidy, name == "newcountconfirmed")$date) + ma_n, NA))
+    annotate("rect",
+           xmin = if_else(min(cases_plot_data$date) < sah_start,
+                          sah_start,
+                          min(cases_plot_data$date)),
+           xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+  annotate("text", y = Inf, x = sah_end, vjust = 2, label = "Stay at Home\n Order Ended")
 ```
 
+
+```{r plot}
+hospitalizations_plot
+icu_plot
+deaths_plot
+cases_plot
+```
+
+Data collected from the [California Open Data Portal](https://data.ca.gov/group/covid-19).
+
+Last updated `r as.Date(max(resources$last_modified[resources$name %in% c("COVID-19 Cases", "COVID-19 Testing", "Hospitals By County")]))`.
