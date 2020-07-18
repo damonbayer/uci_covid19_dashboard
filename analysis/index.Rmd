@@ -127,7 +127,7 @@ hospitalizations_plot <- hospitalizations_plot_data %>%
   geom_line() +
   ggtitle(glue("Hospitalized Patients with COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
-  scale_color_discrete(name = "County") +
+  scale_color_manual(name = "County", values = cbPalette) +
   scale_x_date(name = "Date",
                breaks = "14 day",
                date_labels = "%b %d") +
@@ -151,7 +151,7 @@ deaths_plot <- deaths_plot_data %>%
   geom_line() +
   ggtitle(glue("Daily Deaths due to COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
-  scale_color_discrete(name = "County") +
+  scale_color_manual(name = "County", values = cbPalette) +
   scale_x_date(name = "Date",
                breaks = "14 day",
                date_labels = "%b %d") +
@@ -178,7 +178,7 @@ cases_plot <- cases_plot_data %>%
   geom_line() +
   ggtitle(glue("Daily Confirmed COVID-19 Cases per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
-  scale_color_discrete(name = "County") +
+  scale_color_manual(name = "County", values = cbPalette) +
   scale_x_date(name = "Date",
                breaks = "14 day",
                date_labels = "%b %d") +
