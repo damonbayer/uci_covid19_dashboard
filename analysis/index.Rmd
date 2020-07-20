@@ -58,8 +58,6 @@ sah_end <- ymd("2020-05-04")
 ```{r tidy data, message=FALSE}
 # Data Processing Options
 counties_of_interest <- c("San Diego",  "Los Angeles",  "Orange", "Alameda", "Santa Clara")
-cbPalette <- c("#56B4E9", "#009E73", "#E69F00", "#CC79A7", "#0072B2")
-sah_alpha <- 0.2
 
 per_n_people <- 1e6
 ma_n <- 7
@@ -85,6 +83,19 @@ theme_set(theme_bw() +
                   text = element_text(size=14)))
 
 update_geom_defaults("line", list(size = 1.5))
+
+cbPalette <- c("#56B4E9", "#009E73", "#E69F00", "#CC79A7", "#0072B2")
+sah_alpha <- 0.2
+
+gglayers = list(
+  geom_line(),
+  scale_color_manual(name = "County", values = cbPalette),
+  scale_x_date(name = "Date",
+               breaks = "14 day",
+               date_labels = "%b %d"),
+  scale_y_continuous(name = NULL,
+                     label = comma)
+)
 ```
 
 ```{r make plots}
@@ -99,21 +110,15 @@ icu_plot_data <- hosp_tidy %>%
 
 icu_plot <- icu_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  geom_line() +
   ggtitle(glue("ICU Patients with COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
-  scale_color_manual(name = "County", values = cbPalette) +
-  scale_x_date(name = "Date",
-               breaks = "14 day",
-               date_labels = "%b %d") +
-  scale_y_continuous(name = NULL,
-                     label = comma) +
+ gglayers +
   annotate("rect",
            xmin = if_else(min(icu_plot_data$date) < sah_start,
                           sah_start,
                           min(icu_plot_data$date)),
            xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = Inf, x = sah_end, vjust = 2, label = "Stay at Home\n Order Ended")
+    annotate("text", y = 55, x = sah_end, label = "Stay at Home\n Order Ended")
 
 # Hospitalizations
 hospitalizations_plot_data <- hosp_tidy %>% 
@@ -124,20 +129,15 @@ hospitalizations_plot_data <- hosp_tidy %>%
 
 hospitalizations_plot <- hospitalizations_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  geom_line() +
   ggtitle(glue("Hospitalized Patients with COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
-  scale_color_manual(name = "County", values = cbPalette) +
-  scale_x_date(name = "Date",
-               breaks = "14 day",
-               date_labels = "%b %d") +
-  scale_y_continuous(name = NULL, label = comma) +
+  gglayers +
   annotate("rect",
            xmin = if_else(min(hospitalizations_plot_data$date) < sah_start,
                           sah_start,
                           min(hospitalizations_plot_data$date)),
            xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = Inf, x = sah_end, vjust = 2, label = "Stay at Home\n Order Ended")
+    annotate("text", y = 175, x = sah_end, label = "Stay at Home\n Order Ended")
 
 # Deaths
 deaths_plot_data <- cases_tidy %>% 
@@ -148,21 +148,15 @@ deaths_plot_data <- cases_tidy %>%
 
 deaths_plot <- deaths_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  geom_line() +
   ggtitle(glue("Daily Deaths due to COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
-  scale_color_manual(name = "County", values = cbPalette) +
-  scale_x_date(name = "Date",
-               breaks = "14 day",
-               date_labels = "%b %d") +
-  scale_y_continuous(name = NULL,
-                     label = comma) +
+  gglayers +
   annotate("rect",
            xmin = if_else(min(deaths_plot_data$date) < sah_start,
                           sah_start,
                           min(deaths_plot_data$date)),
            xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = Inf, x = sah_end, vjust = 2, label = "Stay at Home\n Order Ended")
+    annotate("text", y = 3, x = sah_end, label = "Stay at Home\n Order Ended")
 
 # Cases
 cases_plot_data <- cases_tidy %>% 
@@ -171,25 +165,17 @@ cases_plot_data <- cases_tidy %>%
   mutate(value = runMean(value, ma_n)) %>% 
   drop_na()
 
-cases_xmax <- 
-
 cases_plot <- cases_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  geom_line() +
   ggtitle(glue("Daily Confirmed COVID-19 Cases per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
-  scale_color_manual(name = "County", values = cbPalette) +
-  scale_x_date(name = "Date",
-               breaks = "14 day",
-               date_labels = "%b %d") +
-  scale_y_continuous(name = NULL,
-                     label = comma) +
+  gglayers +
     annotate("rect",
            xmin = if_else(min(cases_plot_data$date) < sah_start,
                           sah_start,
                           min(cases_plot_data$date)),
            xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-  annotate("text", y = Inf, x = sah_end, vjust = 2, label = "Stay at Home\n Order Ended")
+  annotate("text", y = 250, x = sah_end, label = "Stay at Home\n Order Ended")
 ```
 
 
