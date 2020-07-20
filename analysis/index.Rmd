@@ -93,8 +93,9 @@ gglayers = list(
   scale_x_date(name = "Date",
                breaks = "14 day",
                date_labels = "%b %d"),
-  scale_y_continuous(name = NULL,
-                     label = comma)
+  scale_y_continuous(label = comma,
+                     # label = comma
+                     )
 )
 ```
 
@@ -113,12 +114,13 @@ icu_plot <- icu_plot_data %>%
   ggtitle(glue("ICU Patients with COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
  gglayers +
+  ylab(glue("ICU Patients with COVID-19\nper {comma(per_n_people)} People")) +
   annotate("rect",
            xmin = if_else(min(icu_plot_data$date) < sah_start,
                           sah_start,
                           min(icu_plot_data$date)),
            xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 55, x = sah_end, label = "Stay at Home\n Order Ended")
+    annotate("text", y = 55, x = sah_end, label = "Stay at Home\nOrder Ended")
 
 # Hospitalizations
 hospitalizations_plot_data <- hosp_tidy %>% 
@@ -132,12 +134,13 @@ hospitalizations_plot <- hospitalizations_plot_data %>%
   ggtitle(glue("Hospitalized Patients with COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
   gglayers +
+  ylab(glue("Hospitalized Patients with COVID-19\nper {comma(per_n_people)} People")) +
   annotate("rect",
            xmin = if_else(min(hospitalizations_plot_data$date) < sah_start,
                           sah_start,
                           min(hospitalizations_plot_data$date)),
            xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 175, x = sah_end, label = "Stay at Home\n Order Ended")
+    annotate("text", y = 175, x = sah_end, label = "Stay at Home\nOrder Ended")
 
 # Deaths
 deaths_plot_data <- cases_tidy %>% 
@@ -151,12 +154,13 @@ deaths_plot <- deaths_plot_data %>%
   ggtitle(glue("Daily Deaths due to COVID-19 per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
   gglayers +
+  ylab(glue("Daily Deaths due to COVID-19\nper {comma(per_n_people)} People")) +
   annotate("rect",
            xmin = if_else(min(deaths_plot_data$date) < sah_start,
                           sah_start,
                           min(deaths_plot_data$date)),
            xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 3, x = sah_end, label = "Stay at Home\n Order Ended")
+    annotate("text", y = 3, x = sah_end, label = "Stay at Home\nOrder Ended")
 
 # Cases
 cases_plot_data <- cases_tidy %>% 
@@ -170,12 +174,13 @@ cases_plot <- cases_plot_data %>%
   ggtitle(glue("Daily Confirmed COVID-19 Cases per {comma(per_n_people)} People"),
           subtitle = glue("{ma_n} Day Moving Average")) +
   gglayers +
+  ylab(glue("Daily Confirmed COVID-19 Cases\nper {comma(per_n_people)} People")) +
     annotate("rect",
            xmin = if_else(min(cases_plot_data$date) < sah_start,
                           sah_start,
                           min(cases_plot_data$date)),
            xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-  annotate("text", y = 250, x = sah_end, label = "Stay at Home\n Order Ended")
+  annotate("text", y = 250, x = sah_end, label = "Stay at Home\nOrder Ended")
 ```
 
 
