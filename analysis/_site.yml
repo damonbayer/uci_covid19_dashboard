@@ -3,7 +3,7 @@ output_dir: ../docs
 navbar:
   title: UCI COVID-19 Dashboard
   left:
-  - text: Home
+  - text:
     href: index.html
   - text: About
     href: about.html
