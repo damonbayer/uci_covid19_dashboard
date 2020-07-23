@@ -23,6 +23,7 @@ library(scales)
 library(TTR)
 library(glue)
 library(patchwork)
+library(ggtext)
 library(ckanr) # library to interact with CA Gov. Public Health Portal
 
 # connect to CKAN instance
@@ -56,6 +57,7 @@ hosp <- tbl(src = ckan$con, from = resource_ids$hosp) %>%
 
 county_pop <- read_csv("data/county_pop.csv") %>% rename_all(str_to_lower)
 
+# stay at home order start and end dates
 sah_start <- ymd("2020-03-19")
 sah_end <- ymd("2020-05-04")
 ```
@@ -66,8 +68,8 @@ sah_end <- ymd("2020-05-04")
 # Data Processing Options
 counties_of_interest <- c("San Diego",  "Los Angeles",  "Orange", "Alameda", "Santa Clara")
 
-per_n_people <- 1e6
-ma_n <- 7
+per_n_people <- 1e6 # denominator for reporting counts (e.g, per million people)
+ma_n <- 7 # moving average window length in days
 
 # Tidy Data
 hosp_tidy <- hosp %>%
@@ -92,6 +94,7 @@ theme_set(theme_bw() +
 update_geom_defaults("line", list(size = 1.5))
 
 cbPalette <- c("#56B4E9", "#009E73", "#E69F00", "#CC79A7", "#0072B2")
+
 sah_alpha <- 0.2
 
 gglayers = list(
@@ -107,28 +110,6 @@ gglayers = list(
 ```
 
 ```{r make plots}
-# ICU Occupancy
-icu_plot_data <- hosp_tidy %>% 
-  filter(name %in% c("icu_covid_confirmed_patients", "icu_suspected_covid_patients")) %>% 
-  group_by(county, date, population) %>% 
-  summarize(value = sum(value)) %>% 
-  group_by(county) %>%
-  mutate(value = runMean(value, ma_n)) %>%
-  drop_na()
-
-icu_plot <- icu_plot_data %>% 
-  ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  ggtitle(glue("ICU Patients with COVID-19"),
-          subtitle = glue("{ma_n} Day Moving Average")) +
- gglayers +
-  ylab(glue("ICU Patients with COVID-19\nper {comma(per_n_people)} People")) +
-  annotate("rect",
-           xmin = if_else(min(icu_plot_data$date) < sah_start,
-                          sah_start,
-                          min(icu_plot_data$date)),
-           xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 55, x = sah_end, label = "Stay at Home\nOrder Ended")
-
 # Hospitalizations
 hospitalizations_plot_data <- hosp_tidy %>% 
   filter(name == "hospitalized_covid_patients") %>% 
@@ -138,8 +119,11 @@ hospitalizations_plot_data <- hosp_tidy %>%
 
 hospitalizations_plot <- hospitalizations_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  ggtitle(glue("Hospitalized Patients with COVID-19"),
-          subtitle = glue("{ma_n} Day Moving Average")) +
+  ggtitle(glue("Hospitalized Patients with COVID-19 <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
+          #subtitle = glue("{ma_n} Day Moving Average")) 
+  theme(
+    plot.title = element_markdown()
+  ) +
   gglayers +
   ylab(glue("Hospitalized Patients with COVID-19\nper {comma(per_n_people)} People")) +
   annotate("rect",
@@ -149,19 +133,48 @@ hospitalizations_plot <- hospitalizations_plot_data %>%
            xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
     annotate("text", y = 175, x = sah_end, label = "Stay at Home\nOrder Ended")
 
+# ICU Occupancy
+icu_plot_data <- hosp_tidy %>% 
+  filter(name %in% c("icu_covid_confirmed_patients", "icu_suspected_covid_patients")) %>% 
+  group_by(county, date, population) %>% 
+  summarize(value = sum(value)) %>% 
+  group_by(county) %>%
+  mutate(value = runMean(value, ma_n)) %>%
+  drop_na()  %>%
+filter(date >= min(hospitalizations_plot_data$date)) 
+
+icu_plot <- icu_plot_data %>% 
+  ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
+  ggtitle(glue("ICU Patients with COVID-19 <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
+#          subtitle = glue("{ma_n} Day Moving Average")) +
+  theme(
+    plot.title = element_markdown()
+  ) +
+ gglayers +
+  ylab(glue("ICU Patients with COVID-19\nper {comma(per_n_people)} People")) +
+  annotate("rect",
+           xmin = if_else(min(icu_plot_data$date) < sah_start, sah_start, min(icu_plot_data$date)),
+           xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+    annotate("text", y = 55, x = sah_end, label = "Stay at Home\nOrder Ended")
+
+
 # Deaths
 deaths_plot_data <- cases_tidy %>% 
   filter(name == "newcountdeaths") %>% 
   group_by(county) %>%
   mutate(value = runMean(value, ma_n)) %>% 
-  drop_na()
+  drop_na() %>%
+filter(date >= min(hospitalizations_plot_data$date))
 
 deaths_plot <- deaths_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  ggtitle(glue(" New Daily Deaths due to COVID-19"),
-          subtitle = glue("{ma_n} Day Moving Average")) +
+  ggtitle(glue(" New Daily Deaths due to COVID-19 <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
+#          subtitle = glue("{ma_n} Day Moving Average")) +
+  theme(
+    plot.title = element_markdown()
+  ) +
   gglayers +
-  ylab(glue("Daily Deaths due to COVID-19\nper {comma(per_n_people)} People")) +
+  ylab(glue("New Daily Deaths due to COVID-19\nper {comma(per_n_people)} People")) +
   annotate("rect",
            xmin = if_else(min(deaths_plot_data$date) < sah_start,
                           sah_start,
@@ -174,14 +187,18 @@ cases_plot_data <- cases_tidy %>%
   filter(name == "newcountconfirmed") %>% 
   group_by(county) %>%
   mutate(value = runMean(value, ma_n)) %>% 
-  drop_na()
+  drop_na() %>%
+filter(date >= min(hospitalizations_plot_data$date))
 
 cases_plot <- cases_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  ggtitle(glue("New Daily Confirmed COVID-19 Cases"),
-          subtitle = glue("{ma_n} Day Moving Average")) +
+  ggtitle(glue("New Daily COVID-19 Cases <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
+#          subtitle = glue("{ma_n} Day Moving Average")) +
+  theme(
+    plot.title = element_markdown()
+  ) +
   gglayers +
-  ylab(glue("Daily Confirmed COVID-19 Cases\nper {comma(per_n_people)} People")) +
+  ylab(glue("New Daily Confirmed COVID-19 Cases\nper {comma(per_n_people)} People")) +
     annotate("rect",
            xmin = if_else(min(cases_plot_data$date) < sah_start,
                           sah_start,

@@ -7,6 +7,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-This is an effort to provide timely and understandable COVID-19 data visualizations to the public in Orange County, California. The effort is coordinated by students and faculty in the Department of Statistics at UC Irvine. 
+This is an effort to provide timely and understandable COVID-19 data visualizations to the public in Orange County, California. The effort is coordinated by students and faculty at UC Irvine. 
 
 Contact information: TBA
