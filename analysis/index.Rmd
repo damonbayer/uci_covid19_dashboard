@@ -7,6 +7,13 @@ output:
 editor_options:
   chunk_output_type: console
 ---
+<style type="text/css">
+.main-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
@@ -184,12 +191,31 @@ cases_plot <- cases_plot_data %>%
 ```
 
 
-```{r plot}
+<div class = "row">
+<div class = "col-md-6">
+```{r hospitalizations_plot}
 hospitalizations_plot
+```
+</div>
+<div class = "col-md-6">
+```{r icu_plot}
 icu_plot
-deaths_plot
+```
+</div>
+</div>
+<div class = "row">
+<div class = "col-md-6">
+```{r cases_plot}
 cases_plot
 ```
+</div>
+<div class = "col-md-6">
+```{r deaths_plot}
+deaths_plot
+```
+</div>
+</div>
+
 
 Data collected from the [California Open Data Portal](https://data.ca.gov/group/covid-19).
 
