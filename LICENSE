@@ -1,20 +1,3 @@
----
-title: "License"
-output:
-  workflowr::wflow_html:
-    toc: false
-editor_options:
-  chunk_output_type: console
----
-
-### Site Content
-
-**This work is licensed under the** [Creative Commons Attribution 4.0 International License][cc].
-
-### Source Code
-
-**The source code is licensed under the** [MIT License][mit].
-
 MIT License
 
 Copyright (c) 2020 UC Irvine Statistics COVID Awareness Team
@@ -36,7 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-[cc]: https://creativecommons.org/licenses/by/4.0/
-[mit]: https://choosealicense.com/licenses/mit/
-
