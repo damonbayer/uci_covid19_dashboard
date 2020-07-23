@@ -1,9 +1,9 @@
 name: uci_covid19_dashboard
 output_dir: ../docs
 navbar:
-  title: UCI COVID-19 Dashboard
+  title: COVID-19 Trends by UCI Statistics
   left:
-  - text:
+  - text: Home
     href: index.html
   - text: About
     href: about.html

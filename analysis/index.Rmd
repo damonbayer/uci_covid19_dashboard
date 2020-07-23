@@ -118,7 +118,7 @@ icu_plot_data <- hosp_tidy %>%
 
 icu_plot <- icu_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  ggtitle(glue("ICU Patients with COVID-19 per {comma(per_n_people)} People"),
+  ggtitle(glue("ICU Patients with COVID-19"),
           subtitle = glue("{ma_n} Day Moving Average")) +
  gglayers +
   ylab(glue("ICU Patients with COVID-19\nper {comma(per_n_people)} People")) +
@@ -138,7 +138,7 @@ hospitalizations_plot_data <- hosp_tidy %>%
 
 hospitalizations_plot <- hospitalizations_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  ggtitle(glue("Hospitalized Patients with COVID-19 per {comma(per_n_people)} People"),
+  ggtitle(glue("Hospitalized Patients with COVID-19"),
           subtitle = glue("{ma_n} Day Moving Average")) +
   gglayers +
   ylab(glue("Hospitalized Patients with COVID-19\nper {comma(per_n_people)} People")) +
@@ -158,7 +158,7 @@ deaths_plot_data <- cases_tidy %>%
 
 deaths_plot <- deaths_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  ggtitle(glue("Daily Deaths due to COVID-19 per {comma(per_n_people)} People"),
+  ggtitle(glue(" New Daily Deaths due to COVID-19"),
           subtitle = glue("{ma_n} Day Moving Average")) +
   gglayers +
   ylab(glue("Daily Deaths due to COVID-19\nper {comma(per_n_people)} People")) +
@@ -178,7 +178,7 @@ cases_plot_data <- cases_tidy %>%
 
 cases_plot <- cases_plot_data %>% 
   ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-  ggtitle(glue("Daily Confirmed COVID-19 Cases per {comma(per_n_people)} People"),
+  ggtitle(glue("New Daily Confirmed COVID-19 Cases"),
           subtitle = glue("{ma_n} Day Moving Average")) +
   gglayers +
   ylab(glue("Daily Confirmed COVID-19 Cases\nper {comma(per_n_people)} People")) +
