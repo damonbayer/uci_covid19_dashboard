@@ -11,7 +11,7 @@
 
 
 
-<title>Home</title>
+<title>COVID-19 Trends by UCI Statistics</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -78,6 +78,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -277,7 +278,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">UCI COVID-19 Dashboard</a>
+      <a class="navbar-brand" href="index.html">COVID-19 Trends by UC Irvine</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -308,7 +309,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Home</h1>
+<h1 class="title toc-ignore">COVID-19 Trends by UCI Statistics</h1>
 
 </div>
 
@@ -333,7 +334,7 @@ $(document).ready(function () {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-07-17
+<strong>Last updated:</strong> 2020-07-24
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
@@ -424,16 +425,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree65c719549d20245e7442b8e82113ba622c3922c7targetblank65c7195a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/65c719549d20245e7442b8e82113ba622c3922c7" target="_blank">65c7195</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreeed98b18f61327c517bbfa13c863215ecb13cad7ctargetblanked98b18a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/ed98b18f61327c517bbfa13c863215ecb13cad7c" target="_blank">ed98b18</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree65c719549d20245e7442b8e82113ba622c3922c7targetblank65c7195a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreeed98b18f61327c517bbfa13c863215ecb13cad7ctargetblanked98b18a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/65c719549d20245e7442b8e82113ba622c3922c7" target="_blank">65c7195</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/ed98b18f61327c517bbfa13c863215ecb13cad7c" target="_blank">ed98b18</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -443,9 +444,6 @@ Ignored files:
     Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-
-Untracked files:
-    Untracked:  analysis/figure/
 
 Unstaged changes:
     Modified:   analysis/index.Rmd
@@ -487,6 +485,431 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ed98b18f61327c517bbfa13c863215ecb13cad7c/analysis/index.Rmd" target="_blank">ed98b18</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-24
+</td>
+<td>
+Fix Site Title on Home
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/eb680ced06bcdae3422f7fb16da7677da450953a/docs/index.html" target="_blank">eb680ce</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-24
+</td>
+<td>
+republishing to update plots
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9a5a980430de108eb3cebf61912fe9e940191b63/analysis/index.Rmd" target="_blank">9a5a980</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+<td>
+moved a bit stay at home text
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/9a5a980430de108eb3cebf61912fe9e940191b63/docs/index.html" target="_blank">9a5a980</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+<td>
+moved a bit stay at home text
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f07587abc131f4f880cf4b957cb8c07717739a7f/analysis/index.Rmd" target="_blank">f07587a</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+<td>
+all plots start on the same date; moved subtitle to title
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/f07587abc131f4f880cf4b957cb8c07717739a7f/docs/index.html" target="_blank">f07587a</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+<td>
+all plots start on the same date; moved subtitle to title
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/9aa359e384279097912651f2401f53f6377332a0/docs/index.html" target="_blank">9aa359e</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+<td>
+shortenting title for friendlier mobile version
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c14824c64584fa544565dc69f26144c6c3619e8f/analysis/index.Rmd" target="_blank">c14824c</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-23
+</td>
+<td>
+Remove Home text
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/c14824c64584fa544565dc69f26144c6c3619e8f/docs/index.html" target="_blank">c14824c</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-23
+</td>
+<td>
+Remove Home text
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9ccdb5ded7a4b1da185e378872d1ee7bdd4c94bd/analysis/index.Rmd" target="_blank">9ccdb5d</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-22
+</td>
+<td>
+playing with appearance
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/9ccdb5ded7a4b1da185e378872d1ee7bdd4c94bd/docs/index.html" target="_blank">9ccdb5d</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-22
+</td>
+<td>
+playing with appearance
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/938ccdf36991f8af349532bd3accd534715502a0/analysis/index.Rmd" target="_blank">938ccdf</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-22
+</td>
+<td>
+2 Column Layout
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/938ccdf36991f8af349532bd3accd534715502a0/docs/index.html" target="_blank">938ccdf</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-22
+</td>
+<td>
+2 Column Layout
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/b4fb3aecca8aaac2840809216cc336792eac8034/docs/index.html" target="_blank">b4fb3ae</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-21
+</td>
+<td>
+update 2020-07-21
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/c95cee39094d38c1cc2eefa10e77c90d9e8a8c02/docs/index.html" target="_blank">c95cee3</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-20
+</td>
+<td>
+Hide Workflowr buttons
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/7bd8ff7a967f7fdddce46fae5142743deb699c9a/analysis/index.Rmd" target="_blank">7bd8ff7</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-20
+</td>
+<td>
+Y Axis Labels
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/77cc6b00817d3a5f37a950246cd12fce9658cf7f/analysis/index.Rmd" target="_blank">77cc6b0</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-20
+</td>
+<td>
+Fix Stay at Home text position
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/77cc6b00817d3a5f37a950246cd12fce9658cf7f/docs/index.html" target="_blank">77cc6b0</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-20
+</td>
+<td>
+Fix Stay at Home text position
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/536980408273516105830230fb9e99795331f4e5/docs/index.html" target="_blank">5369804</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-19
+</td>
+<td>
+Update 2020-07-19
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/32aeff84fcffb4f0bf4f5a7752939bb5a20423af/analysis/index.Rmd" target="_blank">32aeff8</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-17
+</td>
+<td>
+Orange County is Orange
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/32aeff84fcffb4f0bf4f5a7752939bb5a20423af/docs/index.html" target="_blank">32aeff8</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-17
+</td>
+<td>
+Orange County is Orange
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/bc97c2a90a990bbb5f439d6e9c57f3b70252d2db/analysis/index.Rmd" target="_blank">bc97c2a</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-17
+</td>
+<td>
+Changes from plot feedback
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/bc97c2a90a990bbb5f439d6e9c57f3b70252d2db/docs/index.html" target="_blank">bc97c2a</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-17
+</td>
+<td>
+Changes from plot feedback
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/02dbf8667d8022b9484ca97af956457c1f7b3820/analysis/index.Rmd" target="_blank">02dbf86</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-17
+</td>
+<td>
+New Data + ICU Occupancy
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/02dbf8667d8022b9484ca97af956457c1f7b3820/docs/index.html" target="_blank">02dbf86</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-17
+</td>
+<td>
+New Data + ICU Occupancy
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -664,13 +1087,22 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p><img src="figure/index.Rmd/ICU%20Availability-1.png" width="672" style="display: block; margin: auto;" /></p>
+<style type="text/css">
+.main-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class = "row">
+<div class = "col-md-6">
+<p><img src="figure/index.Rmd/hospitalizations_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-ICU-Availability-1">
-Past versions of “ICU Availability-1.png”
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-hospitalizations_plot-1">
+Past versions of hospitalizations_plot-1.png
 </button>
 </p>
-<div id="fig-no-spaces-ICU-Availability-1" class="collapse">
+<div id="fig-hospitalizations_plot-1" class="collapse">
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
 <thead>
@@ -689,28 +1121,83 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/cc4c19406fccba01436342d7c29276b39ac62442/docs/figure/index.Rmd/ICU Availability-1.png" target="_blank">cc4c194</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/eb680ced06bcdae3422f7fb16da7677da450953a/docs/figure/index.Rmd/hospitalizations_plot-1.png" target="_blank">eb680ce</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-24
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9a5a980430de108eb3cebf61912fe9e940191b63/docs/figure/index.Rmd/hospitalizations_plot-1.png" target="_blank">9a5a980</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f07587abc131f4f880cf4b957cb8c07717739a7f/docs/figure/index.Rmd/hospitalizations_plot-1.png" target="_blank">f07587a</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9aa359e384279097912651f2401f53f6377332a0/docs/figure/index.Rmd/hospitalizations_plot-1.png" target="_blank">9aa359e</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9ccdb5ded7a4b1da185e378872d1ee7bdd4c94bd/docs/figure/index.Rmd/hospitalizations_plot-1.png" target="_blank">9ccdb5d</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-22
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/938ccdf36991f8af349532bd3accd534715502a0/docs/figure/index.Rmd/hospitalizations_plot-1.png" target="_blank">938ccdf</a>
 </td>
 <td>
 Damon Bayer
 </td>
 <td>
-2020-07-16
+2020-07-22
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<pre><code>`summarise()` regrouping output by &#39;county&#39;, &#39;date&#39; (override with `.groups` argument)</code></pre>
-<p><img src="figure/index.Rmd/COVID%20ICU%20Occupancy-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p><img src="figure/index.Rmd/Covid%20Hospitalizations-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div class = "col-md-6">
+<p><img src="figure/index.Rmd/icu_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-Covid-Hospitalizations-1">
-Past versions of “Covid Hospitalizations-1.png”
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-icu_plot-1">
+Past versions of icu_plot-1.png
 </button>
 </p>
-<div id="fig-no-spaces-Covid-Hospitalizations-1" class="collapse">
+<div id="fig-icu_plot-1" class="collapse">
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
 <thead>
@@ -729,26 +1216,85 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c9cdb24fa962141e48dec64ab53db3b9d54652eb/docs/figure/index.Rmd/Covid Hospitalizations-1.png" target="_blank">c9cdb24</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/eb680ced06bcdae3422f7fb16da7677da450953a/docs/figure/index.Rmd/icu_plot-1.png" target="_blank">eb680ce</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-24
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9a5a980430de108eb3cebf61912fe9e940191b63/docs/figure/index.Rmd/icu_plot-1.png" target="_blank">9a5a980</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f07587abc131f4f880cf4b957cb8c07717739a7f/docs/figure/index.Rmd/icu_plot-1.png" target="_blank">f07587a</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9aa359e384279097912651f2401f53f6377332a0/docs/figure/index.Rmd/icu_plot-1.png" target="_blank">9aa359e</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9ccdb5ded7a4b1da185e378872d1ee7bdd4c94bd/docs/figure/index.Rmd/icu_plot-1.png" target="_blank">9ccdb5d</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-22
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/938ccdf36991f8af349532bd3accd534715502a0/docs/figure/index.Rmd/icu_plot-1.png" target="_blank">938ccdf</a>
 </td>
 <td>
 Damon Bayer
 </td>
 <td>
-2020-07-16
+2020-07-22
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p><img src="figure/index.Rmd/Covid%20Deaths-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div class = "row">
+<div class = "col-md-6">
+<p><img src="figure/index.Rmd/cases_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-Covid-Deaths-1">
-Past versions of “Covid Deaths-1.png”
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-cases_plot-1">
+Past versions of cases_plot-1.png
 </button>
 </p>
-<div id="fig-no-spaces-Covid-Deaths-1" class="collapse">
+<div id="fig-cases_plot-1" class="collapse">
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
 <thead>
@@ -767,26 +1313,83 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c9cdb24fa962141e48dec64ab53db3b9d54652eb/docs/figure/index.Rmd/Covid Deaths-1.png" target="_blank">c9cdb24</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/eb680ced06bcdae3422f7fb16da7677da450953a/docs/figure/index.Rmd/cases_plot-1.png" target="_blank">eb680ce</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-24
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9a5a980430de108eb3cebf61912fe9e940191b63/docs/figure/index.Rmd/cases_plot-1.png" target="_blank">9a5a980</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f07587abc131f4f880cf4b957cb8c07717739a7f/docs/figure/index.Rmd/cases_plot-1.png" target="_blank">f07587a</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9aa359e384279097912651f2401f53f6377332a0/docs/figure/index.Rmd/cases_plot-1.png" target="_blank">9aa359e</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9ccdb5ded7a4b1da185e378872d1ee7bdd4c94bd/docs/figure/index.Rmd/cases_plot-1.png" target="_blank">9ccdb5d</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-22
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/938ccdf36991f8af349532bd3accd534715502a0/docs/figure/index.Rmd/cases_plot-1.png" target="_blank">938ccdf</a>
 </td>
 <td>
 Damon Bayer
 </td>
 <td>
-2020-07-16
+2020-07-22
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p><img src="figure/index.Rmd/Covid%20Cases-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div class = "col-md-6">
+<p><img src="figure/index.Rmd/deaths_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-Covid-Cases-1">
-Past versions of “Covid Cases-1.png”
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-deaths_plot-1">
+Past versions of deaths_plot-1.png
 </button>
 </p>
-<div id="fig-no-spaces-Covid-Cases-1" class="collapse">
+<div id="fig-deaths_plot-1" class="collapse">
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
 <thead>
@@ -805,19 +1408,78 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c9cdb24fa962141e48dec64ab53db3b9d54652eb/docs/figure/index.Rmd/Covid Cases-1.png" target="_blank">c9cdb24</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/eb680ced06bcdae3422f7fb16da7677da450953a/docs/figure/index.Rmd/deaths_plot-1.png" target="_blank">eb680ce</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-24
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9a5a980430de108eb3cebf61912fe9e940191b63/docs/figure/index.Rmd/deaths_plot-1.png" target="_blank">9a5a980</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f07587abc131f4f880cf4b957cb8c07717739a7f/docs/figure/index.Rmd/deaths_plot-1.png" target="_blank">f07587a</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9aa359e384279097912651f2401f53f6377332a0/docs/figure/index.Rmd/deaths_plot-1.png" target="_blank">9aa359e</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-23
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9ccdb5ded7a4b1da185e378872d1ee7bdd4c94bd/docs/figure/index.Rmd/deaths_plot-1.png" target="_blank">9ccdb5d</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-07-22
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/938ccdf36991f8af349532bd3accd534715502a0/docs/figure/index.Rmd/deaths_plot-1.png" target="_blank">938ccdf</a>
 </td>
 <td>
 Damon Bayer
 </td>
 <td>
-2020-07-16
+2020-07-22
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
+</div>
+</div>
+<p>Data collected from the <a href="https://data.ca.gov/group/covid-19">California Open Data Portal</a>.</p>
+<p>Last updated 2020-07-24.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -840,33 +1502,28 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] ckanr_0.4.0                DBI_1.1.0                 
- [3] glue_1.4.1                 tidyquant_1.0.1           
- [5] quantmod_0.4.17            TTR_0.23-6                
- [7] PerformanceAnalytics_2.0.4 xts_0.12-0                
- [9] zoo_1.8-8                  scales_1.1.1              
-[11] lubridate_1.7.9            forcats_0.5.0             
-[13] stringr_1.4.0              dplyr_1.0.0               
-[15] purrr_0.3.4                readr_1.3.1               
-[17] tidyr_1.1.0                tibble_3.0.3              
-[19] ggplot2_3.3.2              tidyverse_1.3.0           
+ [1] ckanr_0.4.0     DBI_1.1.0       ggtext_0.1.0    patchwork_1.0.1
+ [5] glue_1.4.1      TTR_0.23-6      scales_1.1.1    lubridate_1.7.9
+ [9] forcats_0.5.0   stringr_1.4.0   dplyr_1.0.0     purrr_0.3.4    
+[13] readr_1.3.1     tidyr_1.1.0     tibble_3.0.3    ggplot2_3.3.2  
+[17] tidyverse_1.3.0 workflowr_1.6.2
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.5       lattice_0.20-41  assertthat_0.2.1 rprojroot_1.3-2 
- [5] digest_0.6.25    R6_2.4.1         cellranger_1.1.0 backports_1.1.8 
- [9] reprex_0.3.0     evaluate_0.14    httr_1.4.1       pillar_1.4.6    
-[13] rlang_0.4.7      curl_4.3         readxl_1.3.1     rstudioapi_0.11 
-[17] whisker_0.4      blob_1.2.1       rmarkdown_2.3    labeling_0.3    
-[21] munsell_0.5.0    broom_0.7.0      compiler_4.0.2   httpuv_1.5.4    
-[25] modelr_0.1.8     xfun_0.15        pkgconfig_2.0.3  htmltools_0.5.0 
-[29] tidyselect_1.1.0 workflowr_1.6.2  quadprog_1.5-8   fansi_0.4.1     
+ [1] Rcpp_1.0.5       lattice_0.20-41  zoo_1.8-8        assertthat_0.2.1
+ [5] rprojroot_1.3-2  digest_0.6.25    R6_2.4.1         cellranger_1.1.0
+ [9] backports_1.1.8  reprex_0.3.0     evaluate_0.14    httr_1.4.1      
+[13] pillar_1.4.6     rlang_0.4.7      curl_4.3         readxl_1.3.1    
+[17] rstudioapi_0.11  whisker_0.4      blob_1.2.1       rmarkdown_2.3   
+[21] labeling_0.3     gridtext_0.1.1   munsell_0.5.0    broom_0.7.0     
+[25] compiler_4.0.2   httpuv_1.5.4     modelr_0.1.8     xfun_0.15       
+[29] pkgconfig_2.0.3  htmltools_0.5.0  tidyselect_1.1.0 fansi_0.4.1     
 [33] crayon_1.3.4     dbplyr_1.4.4     withr_2.2.0      later_1.1.0.1   
-[37] Quandl_2.10.0    grid_4.0.2       jsonlite_1.7.0   gtable_0.3.0    
-[41] lifecycle_0.2.0  git2r_0.27.1     magrittr_1.5     cli_2.0.2       
-[45] stringi_1.4.6    farver_2.0.3     fs_1.4.2         promises_1.1.1  
-[49] xml2_1.3.2       ellipsis_0.3.1   generics_0.0.2   vctrs_0.3.1     
-[53] tools_4.0.2      hms_0.5.3        yaml_2.2.1       colorspace_1.4-1
-[57] rvest_0.3.5      knitr_1.29       haven_2.3.1     </code></pre>
+[37] grid_4.0.2       jsonlite_1.7.0   gtable_0.3.0     lifecycle_0.2.0 
+[41] git2r_0.27.1     magrittr_1.5     cli_2.0.2        stringi_1.4.6   
+[45] farver_2.0.3     fs_1.4.2         promises_1.1.1   xml2_1.3.2      
+[49] ellipsis_0.3.1   xts_0.12-0       generics_0.0.2   vctrs_0.3.1     
+[53] tools_4.0.2      markdown_1.1     hms_0.5.3        yaml_2.2.1      
+[57] colorspace_1.4-1 rvest_0.3.5      knitr_1.29       haven_2.3.1     </code></pre>
 </div>
 
 
