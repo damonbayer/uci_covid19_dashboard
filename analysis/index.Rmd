@@ -105,7 +105,10 @@ gglayers = list(
                date_labels = "%b %d"),
   scale_y_continuous(label = comma,
                      # label = comma
-                     )
+                     ),
+  guides(color = guide_legend(nrow = 2,
+                           byrow = TRUE)),
+  labs(caption = "UCI Statistics & CA Open Data")
 )
 ```
 
