@@ -10,3 +10,14 @@ editor_options:
 This is an effort to provide timely and understandable COVID-19 data visualizations to the public in Orange County, California. The effort is coordinated by students and faculty at UC Irvine. 
 
 Contact information: TBA
+
+<!-- ## Methods -->
+
+<!-- ### Moving Averages -->
+<!-- Our figures present 7 day moving averages. This means that, for cases on July 7th, we report the average number of cases per million people during the period July 1st to July 7th. On July 8th, we report the average number of cases per million people during the period July 2nd to July 8th. We use moving averages as opposed to raw data (such as the actual number of cases per million people on July 7th) because cases can increase or decrease dramatically on a particular day, making it difficult to see long term trends that are of public interest. Moving averages help highlight these trends more clearly. -->
+
+<!-- ### Cases/Deaths/Hospitalizations per Million People -->
+<!-- In order to calculate, for example, cases per million people, we take the number of cases reported in a county for a day, divide by the 2019 census population for that county and then multiply by 1 million. We do this because different counties have very different population sizes (Los Angeles County has approximately 10 million while Orange County has approximately 3 million) and we want to provide numbers which are comparable across counties.  -->
+
+<!-- ### Testing Data -->
+<!-- The number of Covid-19 tests performed in a day is not available at a county level from the California state government at this time. This makes it somewhat difficult to compare cases across counties, because we do not know for sure that counties have the same testing capacity.  -->
