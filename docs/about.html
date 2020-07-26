@@ -334,7 +334,7 @@ $(document).ready(function () {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-07-24
+<strong>Last updated:</strong> 2020-07-26
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -365,28 +365,24 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreeed98b18f61327c517bbfa13c863215ecb13cad7ctargetblanked98b18a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/ed98b18f61327c517bbfa13c863215ecb13cad7c" target="_blank">ed98b18</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree32001f7d2e5c2a29dda73683907806e704f79618targetblank32001f7a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/32001f7d2e5c2a29dda73683907806e704f79618" target="_blank">32001f7</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreeed98b18f61327c517bbfa13c863215ecb13cad7ctargetblanked98b18a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree32001f7d2e5c2a29dda73683907806e704f79618targetblank32001f7a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/ed98b18f61327c517bbfa13c863215ecb13cad7c" target="_blank">ed98b18</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/32001f7d2e5c2a29dda73683907806e704f79618" target="_blank">32001f7</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-
-Unstaged changes:
-    Modified:   analysis/index.Rmd
 
 </code></pre>
 <p>
@@ -425,6 +421,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/32001f7d2e5c2a29dda73683907806e704f79618/analysis/about.Rmd" target="_blank">32001f7</a>
+</td>
+<td>
+igoldsteinh
+</td>
+<td>
+2020-07-24
+</td>
+<td>
+hopefully commented methods section
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/f08c6cce309d0709b909dd1e737d92a36f3fe1df/docs/about.html" target="_blank">f08c6cc</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-24
+</td>
+<td>
+Watermark &amp; Legend Fix
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -655,6 +685,13 @@ Start workflowr project.
 </div>
 <p>This is an effort to provide timely and understandable COVID-19 data visualizations to the public in Orange County, California. The effort is coordinated by students and faculty at UC Irvine.</p>
 <p>Contact information: TBA</p>
+<!-- ## Methods -->
+<!-- ### Moving Averages -->
+<!-- Our figures present 7 day moving averages. This means that, for cases on July 7th, we report the average number of cases per million people during the period July 1st to July 7th. On July 8th, we report the average number of cases per million people during the period July 2nd to July 8th. We use moving averages as opposed to raw data (such as the actual number of cases per million people on July 7th) because cases can increase or decrease dramatically on a particular day, making it difficult to see long term trends that are of public interest. Moving averages help highlight these trends more clearly. -->
+<!-- ### Cases/Deaths/Hospitalizations per Million People -->
+<!-- In order to calculate, for example, cases per million people, we take the number of cases reported in a county for a day, divide by the 2019 census population for that county and then multiply by 1 million. We do this because different counties have very different population sizes (Los Angeles County has approximately 10 million while Orange County has approximately 3 million) and we want to provide numbers which are comparable across counties.  -->
+<!-- ### Testing Data -->
+<!-- The number of Covid-19 tests performed in a day is not available at a county level from the California state government at this time. This makes it somewhat difficult to compare cases across counties, because we do not know for sure that counties have the same testing capacity.  -->
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
