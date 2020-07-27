@@ -86,19 +86,18 @@ cases_tidy <- cases %>%
   left_join(county_pop) %>% 
   arrange(county, date)
 
-# Theme Options
-theme_set(theme_bw() +
-            theme(legend.position = "bottom",
-                  text = element_text(size=14)))
 
-update_geom_defaults("line", list(size = 1.5))
+# Theme options
+theme_set(theme_bw(base_size = 14) +
+            theme(legend.position = "bottom",
+                  legend.title = element_text(size = 12)))
 
 cbPalette <- c("#56B4E9", "#009E73", "#E69F00", "#CC79A7", "#0072B2")
 
 sah_alpha <- 0.2
 
 gglayers = list(
-  geom_line(),
+  geom_line(size = 1.5),
   scale_color_manual(name = "County", values = cbPalette),
   scale_x_date(name = "Date",
                breaks = "14 day",
@@ -106,8 +105,6 @@ gglayers = list(
   scale_y_continuous(label = comma,
                      # label = comma
                      ),
-  guides(color = guide_legend(nrow = 2,
-                           byrow = TRUE)),
   labs(caption = "UCI Statistics & CA Open Data")
 )
 ```
