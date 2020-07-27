@@ -22,9 +22,9 @@ library(lubridate)
 library(scales)
 library(TTR)
 library(glue)
-library(patchwork)
 library(ggtext)
 library(ckanr) # library to interact with CA Gov. Public Health Portal
+library(cowplot)
 
 # connect to CKAN instance
 ckanr_setup(url="https://data.ca.gov")
@@ -102,11 +102,12 @@ gglayers = list(
   scale_x_date(name = "Date",
                breaks = "14 day",
                date_labels = "%b %d"),
-  scale_y_continuous(label = comma,
-                     # label = comma
-                     ),
-  labs(caption = "UCI Statistics & CA Open Data")
+  scale_y_continuous(label = comma)
 )
+
+watermark <- function(plt) ggdraw(plt) + draw_label("UCI Statistics", color = "light grey", alpha=0.3, size = 50, angle = 45)
+# Could also use stamp function
+# stamp(plot1, label = "DRAFT", color = "red")
 ```
 
 ```{r make plots}
@@ -211,24 +212,24 @@ cases_plot <- cases_plot_data %>%
 <div class = "row">
 <div class = "col-md-6">
 ```{r hospitalizations_plot}
-hospitalizations_plot
+watermark(hospitalizations_plot)
 ```
 </div>
 <div class = "col-md-6">
 ```{r icu_plot}
-icu_plot
+watermark(icu_plot)
 ```
 </div>
 </div>
 <div class = "row">
 <div class = "col-md-6">
 ```{r cases_plot}
-cases_plot
+watermark(cases_plot)
 ```
 </div>
 <div class = "col-md-6">
 ```{r deaths_plot}
-deaths_plot
+watermark(deaths_plot)
 ```
 </div>
 </div>
