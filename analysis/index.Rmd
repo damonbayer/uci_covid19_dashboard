@@ -22,9 +22,9 @@ library(lubridate)
 library(scales)
 library(TTR)
 library(glue)
-library(patchwork)
 library(ggtext)
 library(ckanr) # library to interact with CA Gov. Public Health Portal
+library(cowplot)
 
 # connect to CKAN instance
 ckanr_setup(url="https://data.ca.gov")
@@ -86,30 +86,28 @@ cases_tidy <- cases %>%
   left_join(county_pop) %>% 
   arrange(county, date)
 
-# Theme Options
-theme_set(theme_bw() +
-            theme(legend.position = "bottom",
-                  text = element_text(size=14)))
 
-update_geom_defaults("line", list(size = 1.5))
+# Theme options
+theme_set(theme_bw(base_size = 14) +
+            theme(legend.position = "bottom",
+                  legend.title = element_text(size = 12)))
 
 cbPalette <- c("#56B4E9", "#009E73", "#E69F00", "#CC79A7", "#0072B2")
 
 sah_alpha <- 0.2
 
 gglayers = list(
-  geom_line(),
+  geom_line(size = 1.5),
   scale_color_manual(name = "County", values = cbPalette),
   scale_x_date(name = "Date",
                breaks = "14 day",
                date_labels = "%b %d"),
-  scale_y_continuous(label = comma,
-                     # label = comma
-                     ),
-  guides(color = guide_legend(nrow = 2,
-                           byrow = TRUE)),
-  labs(caption = "UCI Statistics & CA Open Data")
+  scale_y_continuous(label = comma)
 )
+
+watermark <- function(plt) ggdraw(plt) + draw_label("UCI Statistics", color = "light grey", alpha=0.3, size = 50, angle = 45)
+# Could also use stamp function
+# stamp(plot1, label = "DRAFT", color = "red")
 ```
 
 ```{r make plots}
@@ -214,24 +212,24 @@ cases_plot <- cases_plot_data %>%
 <div class = "row">
 <div class = "col-md-6">
 ```{r hospitalizations_plot}
-hospitalizations_plot
+watermark(hospitalizations_plot)
 ```
 </div>
 <div class = "col-md-6">
 ```{r icu_plot}
-icu_plot
+watermark(icu_plot)
 ```
 </div>
 </div>
 <div class = "row">
 <div class = "col-md-6">
 ```{r cases_plot}
-cases_plot
+watermark(cases_plot)
 ```
 </div>
 <div class = "col-md-6">
 ```{r deaths_plot}
-deaths_plot
+watermark(deaths_plot)
 ```
 </div>
 </div>
