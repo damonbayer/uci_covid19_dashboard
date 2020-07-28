@@ -11,7 +11,7 @@ editor_options:
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 65%;
 }
 </style>
 
@@ -20,7 +20,7 @@ editor_options:
 This is an effort to provide timely and understandable COVID-19 data visualizations to the public in Orange County, California. The effort is coordinated by the UC Irvine COVID Awareness Group, consisting of students and faculty from the following units at UC Irvine. 
 
 
-<a href="https://www.stat.uci.edu" target="_blank"><img src = "assets/UCI14_2Line_ICS_Dept_Stats_blue.png" width="90%" class="center"/></a>
+<a href="https://www.stat.uci.edu" target="_blank"><img src = "assets/UCI14_2Line_ICS_Dept_Stats_blue.png" class="center"/></a>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="http://publichealth.uci.edu/ph/_home/" target="_blank"><img src = "assets/UCI14_FLS_PubHealth_Blue.png"/ width="25%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
