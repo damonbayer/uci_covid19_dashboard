@@ -34,7 +34,7 @@ Our figures present 7 day moving averages. This means that, for cases on July 7t
 In order to calculate, for example, cases per million people, we take the number of cases reported in a county for a day, divide by the 2019 census population for that county and then multiply by 1 million. We do this because different counties have very different population sizes (Los Angeles County has approximately 10 million while Orange County has approximately 3 million) and we want to provide numbers which are comparable across counties.
 
 ### Testing Data
-The number of daily new cases depend not only on the number of infected individuals in the population, but also on the number of tests performed. 
-It would be much better to plot positivity ratio (positive cases divided by the total number of tests) instead of cases.
+The number of daily new cases depends not only on the number of infected individuals in the population, but also on the number of tests performed. 
+It would be much better to plot the positivity ratio (positive cases divided by the total number of tests) instead of cases.
 Unfortunately, the number of Covid-19 diagnostic tests performed in a day is not available at a county level from the [California Open Data Portal](https://data.ca.gov/group/covid-19) at this time. 
 LA and OC counties do have testing data available ([LA COVID-19 data](http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/), [OC COVID-19 Data](https://data-ocpw.opendata.arcgis.com/datasets/e5ceebe7edba44cc8f875ca54cc2341a?page=18)), but we prefer to use one data source for now.
