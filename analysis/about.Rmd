@@ -20,12 +20,13 @@ editor_options:
 This is an effort to provide timely and understandable COVID-19 data visualizations to the public in Orange County, California. The effort is coordinated by the UC Irvine COVID Awareness Group, consisting of students and faculty from the following units at UC Irvine. 
 
 
-<a href="https://www.stat.uci.edu" target="_blank"><img src = "assets/UCI14_2Line_ICS_Dept_Stats_blue.png" width="100%" class="center"/></a>
+<a href="https://www.stat.uci.edu" target="_blank"><img src = "assets/UCI14_2Line_ICS_Dept_Stats_blue.png" width="90%" class="center"/></a>
 
-<a href="http://publichealth.uci.edu/ph/_home/" target="_blank"><img src = "assets/UCI14_FLS_PubHealth_Blue.png"/ width="30%"></a>&nbsp;&nbsp;&nbsp;
-<a href="https://cvr.bio.uci.edu" target="_blank"><img src = "assets/UCi17_CtrVirusResearch_blue.png"/ width="30%"></a>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://publichealth.uci.edu/ph/_home/" target="_blank"><img src = "assets/UCI14_FLS_PubHealth_Blue.png"/ width="25%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://cvr.bio.uci.edu" target="_blank"><img src = "assets/UCi17_CtrVirusResearch_blue.png"/ width="25%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://infectiousdiseaseinitiative.uci.edu" target="_blank"><img src = "assets/U
-CI19_Infectious_Disease_Science_Int_2L_blue.png"/ width="35%"></a>
+CI19_Infectious_Disease_Science_Int_2L_blue.png"/ width="30%"></a>
 
 ### UC Irvine COVID Awareness Group Members: 
 Damon Bayer, Bernadette Boden-Albala, Isaac Goldstein, Rachel Longjohn, Vladimir Minin, Andrew Noymer, Daniel M. Parker, Padhraic Smyth.
