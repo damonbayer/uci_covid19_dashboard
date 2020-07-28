@@ -6,3 +6,12 @@
 .title {
 	display: none;
 }
+
+.navbar {
+	background-color: #0064A4;
+}
+
+a,
+a:hover {
+	color: #6AA2B8;
+}
