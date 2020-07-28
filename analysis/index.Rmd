@@ -105,7 +105,7 @@ gglayers = list(
   scale_y_continuous(label = comma)
 )
 
-watermark <- function(plt) ggdraw(plt) + draw_label("UCI Statistics", color = "light grey", alpha=0.3, size = 50, angle = 45)
+watermark <- function(plt) ggdraw(plt) + draw_label("UC Irvine COVID Awareness Group", color = "#0064A4", alpha=0.4, size = 15, angle = 0, x=0.25, y=0.85, hjust = 0, vjust = 0)
 # Could also use stamp function
 # stamp(plot1, label = "DRAFT", color = "red")
 ```
