@@ -8,10 +8,13 @@ editor_options:
 ---
 ## About
 
-This is an effort to provide timely and understandable COVID-19 data visualizations to the public in Orange County, California. The effort is coordinated by students and faculty at UC Irvine. 
+This is an effort to provide timely and understandable COVID-19 data visualizations to the public in Orange County, California. The effort is coordinated by the UC Irvine COVID Awareness Group, consisting of students and faculty from the following units at UC Irvine. 
+
+
+<img src = "assets/UCI14_2Line_ICS_Dept_Stats_blue.png" width="55%"/><img src = "assets/UCi17_CtrVirusResearch_blue.png"/ width="40%">
 
 #### Contact information: 
-TBA
+For technical details get in touch with  [Prof. Vladimir Minin](http://vnminin.github.io). For more general media inquiries, contact [Prof. Andrew Noymer](https://webfiles.uci.edu/noymer/web/).
 
 ## Methodology
 
