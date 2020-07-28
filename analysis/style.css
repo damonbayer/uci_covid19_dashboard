@@ -1,10 +1,13 @@
-.btn-workflowr {
-  display: none;
-  visibility: hidden;
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+	color: #6AA2B8;
 }
 
-.title {
-	display: none;
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: #6AA2B8;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	background-color: #1B3D6D
 }
 
 .navbar {
@@ -14,4 +17,13 @@
 a,
 a:hover {
 	color: #6AA2B8;
+}
+
+.btn-workflowr {
+  display: none;
+  visibility: hidden;
+}
+
+.title {
+	display: none;
 }
