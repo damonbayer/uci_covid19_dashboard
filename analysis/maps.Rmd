@@ -36,3 +36,7 @@ editor_options:
 <img src = "assets/OC_Labels.png"/>
 </div>
 </div>
+
+Data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).
+
+Last updated `r as.Date("07/29/2020", "%m/%d/%y")`.
