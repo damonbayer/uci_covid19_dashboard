@@ -58,3 +58,7 @@ The number of daily new cases depends not only on the number of infected individ
 It would be much better to plot the positivity ratio (positive cases divided by the total number of tests) instead of cases.
 Unfortunately, the number of Covid-19 diagnostic tests performed in a day is not available at a county level from the [California Open Data Portal](https://data.ca.gov/group/covid-19) at this time. 
 LA and OC counties do have testing data available ([LA COVID-19 data](http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/), [OC COVID-19 Data](https://data-ocpw.opendata.arcgis.com/datasets/e5ceebe7edba44cc8f875ca54cc2341a?page=18)), but we prefer to use one data source for now.
+
+### Maps
+Maps of cases have been created with data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).
+If an individual tested multiple times, only the first postive test was counted as a case.
