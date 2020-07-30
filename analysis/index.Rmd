@@ -234,6 +234,22 @@ watermark(deaths_plot)
 </div>
 </div>
 
+<div class = "col-md-6">
+<img src = "assets/MarchIncid.png"/>
+</div>
+<div class = "col-md-6">
+<img src = "assets/AprilIncid.png"/>
+</div>
+<div class = "col-md-6">
+<img src = "assets/MayIncid.png"/>
+</div>
+<div class = "col-md-6">
+<img src = "assets/JuneIncid.png"/>
+</div>
+<div class = "col-md-6">
+<img src = "assets/JulyIncid.png"/>
+</div>
+
 
 Data collected from the [California Open Data Portal](https://data.ca.gov/group/covid-19).
 
