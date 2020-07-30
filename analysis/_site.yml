@@ -5,7 +5,7 @@ navbar:
   left:
   - text: County Trends
     href: index.html
-  - text: Maps
+  - text: OC Maps
     href: maps.html
   - text: About
     href: about.html
