@@ -8,19 +8,19 @@ editor_options:
 ---
 
 
-<div class = "col-md-6">
+<div class = "col-md-4">
 <img src = "assets/MarchIncid.png"/>
 </div>
-<div class = "col-md-6">
+<div class = "col-md-4">
 <img src = "assets/AprilIncid.png"/>
 </div>
-<div class = "col-md-6">
+<div class = "col-md-4">
 <img src = "assets/MayIncid.png"/>
 </div>
 <div class = "row">
-<div class = "col-md-6">
+<div class = "col-md-4">
 <img src = "assets/JuneIncid.png"/>
 </div>
-<div class = "col-md-6">
+<div class = "col-md-4">
 <img src = "assets/JulyIncid.png"/>
 </div>
