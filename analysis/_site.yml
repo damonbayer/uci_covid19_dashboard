@@ -6,14 +6,18 @@ navbar:
   - icon: fa-line-chart
     text: CA County Trends
     href: index.html
-  - icon: fa-map-o
-    text: OC Maps
-    href: maps.html
-  - icon: fa-users
-    text: About
+  - text: "OC Maps"
+    icon: fa-map-o
+    menu:
+      - text: Incidence
+        href: incidence-maps.html
+      - text: Positivity
+        href: positivity-maps.html
+  - text: About
+    icon: fa-users
     href: about.html
-  - icon: fa-gavel
-    text: License
+  - text: License
+    icon: fa-gavel
     href: license.html
   right:
   - icon: fa-github

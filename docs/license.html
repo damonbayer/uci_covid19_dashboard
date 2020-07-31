@@ -289,12 +289,22 @@ $(document).ready(function () {
     CA County Trends
   </a>
 </li>
-<li>
-  <a href="maps.html">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-map-o"></span>
      
     OC Maps
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="incidence-maps.html">Incidence</a>
+    </li>
+    <li>
+      <a href="positivity-maps.html">Positivity</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="about.html">
@@ -384,16 +394,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree490ebde0e88119a1bfcd0ba64caf601cab4855f6targetblank490ebdea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/490ebde0e88119a1bfcd0ba64caf601cab4855f6" target="_blank">490ebde</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreed6216385c410c4ebd121019e108f397d9be6e27atargetblankd621638a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/d6216385c410c4ebd121019e108f397d9be6e27a" target="_blank">d621638</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree490ebde0e88119a1bfcd0ba64caf601cab4855f6targetblank490ebdea" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreed6216385c410c4ebd121019e108f397d9be6e27atargetblankd621638a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/490ebde0e88119a1bfcd0ba64caf601cab4855f6" target="_blank">490ebde</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/d6216385c410c4ebd121019e108f397d9be6e27a" target="_blank">d621638</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -406,8 +416,13 @@ Ignored files:
     Ignored:    analysis/.DS_Store
     Ignored:    data/.DS_Store
 
-Staged changes:
+Untracked files:
+    Untracked:  analysis/incidence-maps.Rmd
+    Untracked:  analysis/positivity-maps.Rmd
+
+Unstaged changes:
     Modified:   analysis/_site.yml
+    Deleted:    analysis/maps.Rmd
 
 </code></pre>
 <p>
@@ -446,6 +461,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/d6216385c410c4ebd121019e108f397d9be6e27a/docs/license.html" target="_blank">d621638</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-31
+</td>
+<td>
+Icons in navigation
+</td>
+</tr>
 <tr>
 <td>
 html
