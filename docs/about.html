@@ -345,7 +345,7 @@ $(document).ready(function () {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -354,7 +354,7 @@ $(document).ready(function () {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -366,7 +366,7 @@ $(document).ready(function () {
 <strong>Last updated:</strong> 2020-08-01
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>uci_covid19_dashboard/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -382,47 +382,41 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreed6216385c410c4ebd121019e108f397d9be6e27atargetblankd621638a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/d6216385c410c4ebd121019e108f397d9be6e27a" target="_blank">d621638</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree51fac0909fa8bc672027489d0b39c64e03e7afe0targetblank51fac09a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/51fac0909fa8bc672027489d0b39c64e03e7afe0" target="_blank">51fac09</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreed6216385c410c4ebd121019e108f397d9be6e27atargetblankd621638a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree51fac0909fa8bc672027489d0b39c64e03e7afe0targetblank51fac09a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/d6216385c410c4ebd121019e108f397d9be6e27a" target="_blank">d621638</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/51fac0909fa8bc672027489d0b39c64e03e7afe0" target="_blank">51fac09</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    analysis/.DS_Store
-    Ignored:    data/.DS_Store
-
-Untracked files:
-    Untracked:  analysis/incidence-maps.Rmd
-    Untracked:  analysis/positivity-maps.Rmd
 
 Unstaged changes:
-    Modified:   analysis/_site.yml
-    Deleted:    analysis/maps.Rmd
+    Modified:   analysis/about.Rmd
+    Modified:   analysis/incidence-maps.Rmd
+    Modified:   analysis/positivity-maps.Rmd
 
 </code></pre>
 <p>
@@ -466,7 +460,57 @@ Message
 html
 </td>
 <td>
-=======
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/a873dd5ac69922f862397ea652bd34aee4ebd91c/docs/about.html" target="_blank">a873dd5</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-08-01
+</td>
+<td>
+data update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/8d0b6ce730d77df2d188a1391d4d1292cf7b363d/docs/about.html" target="_blank">8d0b6ce</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-08-01
+</td>
+<td>
+daily date update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/e024ad3e4fa81d6bf4cb060c4bb07e09df565c57/docs/about.html" target="_blank">e024ad3</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-07-31
+</td>
+<td>
+Positivity Maps + Navigation Updates
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
 <a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/d6216385c410c4ebd121019e108f397d9be6e27a/docs/about.html" target="_blank">d621638</a>
 </td>
 <td>
@@ -1655,6 +1699,10 @@ CI19_Infectious_Disease_Science_Int_2L_blue.png"/ width="30%"></a></p>
 <div id="maps" class="section level3">
 <h3>Maps</h3>
 <p>Maps of cases have been created with data provided by the <a href="https://www.ochealthinfo.com">Orange County Health Care Agency</a>. If an individual tested multiple times, only the first postive test was counted as a case.</p>
+</div>
+<div id="software" class="section level3">
+<h3>Software</h3>
+<p>We used <a href="https://www.r-project.org">R</a> software environment, <a href="https://www.tidyverse.org">tidyverse</a> collection of R packages, <a href="https://jdblischak.github.io/workflowr/">workflowr</a> R package, and <a href="https://qgis.org/en/site/">QGIS</a> geographic information system software.</p>
 </div>
 </div>
 

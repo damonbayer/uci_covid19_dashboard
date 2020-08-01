@@ -62,3 +62,6 @@ LA and OC counties do have testing data available ([LA COVID-19 data](http://das
 ### Maps
 Maps of cases have been created with data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).
 If an individual tested multiple times, only the first postive test was counted as a case.
+
+### Software
+We used [R](https://www.r-project.org) software environment, [tidyverse](https://www.tidyverse.org) collection of R packages, [workflowr](https://jdblischak.github.io/workflowr/) R package, and [QGIS](https://qgis.org/en/site/) geographic information system software.

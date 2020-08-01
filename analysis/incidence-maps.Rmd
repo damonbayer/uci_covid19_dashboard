@@ -14,7 +14,7 @@ editor_options:
 }
 </style>
 
-<h3>Number of COVID-19 cases mapped to OC zip codes</h3>
+### Number of COVID-19 cases mapped to OC zip codes
 
 <div class = "row">
 <div class = "col-md-4">
