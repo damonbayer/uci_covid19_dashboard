@@ -3,13 +3,21 @@ output_dir: ../docs
 navbar:
   title: COVID-19 Trends by UC Irvine
   left:
-  - text: CA County Trends
+  - icon: fa-line-chart
+    text: CA County Trends
     href: index.html
-  - text: OC Maps
-    href: maps.html
+  - text: "OC Maps"
+    icon: fa-map-o
+    menu:
+      - text: Incidence
+        href: incidence-maps.html
+      - text: Positivity
+        href: positivity-maps.html
   - text: About
+    icon: fa-users
     href: about.html
   - text: License
+    icon: fa-gavel
     href: license.html
   right:
   - icon: fa-github
