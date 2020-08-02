@@ -9,8 +9,10 @@ navbar:
   - text: "OC Maps"
     icon: fa-map-o
     menu:
-      - text: Incidence
+      - text: Cases
         href: incidence-maps.html
+      - text: Tests
+        href: testing-maps.html
       - text: Positivity
         href: positivity-maps.html
   - text: About
