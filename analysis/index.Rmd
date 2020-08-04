@@ -101,7 +101,8 @@ gglayers = list(
   scale_color_manual(name = "County", values = cbPalette),
   scale_x_date(name = "Date",
                breaks = "14 day",
-               date_labels = "%b %d"),
+               date_labels = "%b %d",
+               expand = expansion(add=c(0,7))),
   scale_y_continuous(label = comma)
 )
 
