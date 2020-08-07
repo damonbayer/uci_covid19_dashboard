@@ -473,8 +473,11 @@ Note that you need to be careful to ensure that all relevant files for the analy
 </p>
 <pre><code>
 Ignored files:
+    Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
+    Ignored:    analysis/.DS_Store
+    Ignored:    data/.DS_Store
 
 </code></pre>
 <p>
@@ -799,13 +802,13 @@ Positivity Maps + Navigation Updates
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>R version 4.0.0 (2020-04-24)
+<pre><code>R version 4.0.2 (2020-06-22)
 Platform: x86_64-apple-darwin17.0 (64-bit)
-Running under: macOS Catalina 10.15.4
+Running under: macOS Catalina 10.15.6
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+LAPACK: /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
 
 locale:
 [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
@@ -819,11 +822,11 @@ other attached packages:
 loaded via a namespace (and not attached):
  [1] Rcpp_1.0.5      rstudioapi_0.11 whisker_0.4     knitr_1.29     
  [5] magrittr_1.5    R6_2.4.1        rlang_0.4.7     stringr_1.4.0  
- [9] tools_4.0.0     xfun_0.15       git2r_0.27.1    htmltools_0.5.0
+ [9] tools_4.0.2     xfun_0.15       git2r_0.27.1    htmltools_0.5.0
 [13] ellipsis_0.3.1  rprojroot_1.3-2 yaml_2.2.1      digest_0.6.25  
 [17] tibble_3.0.3    lifecycle_0.2.0 crayon_1.3.4    later_1.1.0.1  
 [21] vctrs_0.3.1     promises_1.1.1  fs_1.4.2        glue_1.4.1     
-[25] evaluate_0.14   rmarkdown_2.3   stringi_1.4.6   compiler_4.0.0 
+[25] evaluate_0.14   rmarkdown_2.3   stringi_1.4.6   compiler_4.0.2 
 [29] pillar_1.4.6    backports_1.1.8 httpuv_1.5.4    pkgconfig_2.0.3</code></pre>
 </div>
 </div>
