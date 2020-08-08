@@ -106,7 +106,7 @@ gglayers = list(
   scale_y_continuous(label = comma)
 )
 
-watermark <- function(plt) ggdraw(plt) + draw_label("UC Irvine COVID Awareness Group", color = "#0064A4", alpha=0.4, size = 15, angle = 0, x=0.25, y=0.85, hjust = 0, vjust = 0)
+watermark <- function(plt) ggdraw(plt) + draw_label("UC Irvine COVID Awareness Group", color = "#0064A4", alpha=0.4, size = 15, angle = 0, x=0.20, y=0.85, hjust = 0, vjust = 0)
 # Could also use stamp function
 # stamp(plot1, label = "DRAFT", color = "red")
 ```
@@ -239,4 +239,6 @@ Data collected from the [California Open Data Portal](https://data.ca.gov/group/
 
 Last updated on `r Sys.Date()` 
 
-Last available date in the [California Open Data Portal](https://data.ca.gov/group/covid-19) is `r as.Date(max(resources$last_modified[resources$name %in% c("COVID-19 Cases", "COVID-19 Testing", "Hospitals By County")]))`.
+Last available date in the [California Open Data Portal](https://data.ca.gov/group/covid-19) is `r as.Date(max(hosp_tidy$date, cases_tidy$date))`.
+
+<!-- Last available date in the [California Open Data Portal](https://data.ca.gov/group/covid-19) is `r as.Date(max(resources$last_modified[resources$name %in% c("COVID-19 Cases", "COVID-19 Testing", "Hospitals By County")]))`. -->
