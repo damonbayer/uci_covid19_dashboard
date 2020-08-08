@@ -237,4 +237,6 @@ watermark(deaths_plot)
 
 Data collected from the [California Open Data Portal](https://data.ca.gov/group/covid-19).
 
-Last updated `r as.Date(max(resources$last_modified[resources$name %in% c("COVID-19 Cases", "COVID-19 Testing", "Hospitals By County")]))`.
+Last updated on `r Sys.Date()` 
+
+Last available date in the [California Open Data Portal](https://data.ca.gov/group/covid-19) is `r as.Date(max(resources$last_modified[resources$name %in% c("COVID-19 Cases", "COVID-19 Testing", "Hospitals By County")]))`.
