@@ -15,8 +15,6 @@ editor_options:
 }
 </style>
 
-<br>
-<font color="red"><b>Even though the state's reporting system problems have been resolved, our death and case counts below may still be affected for the next couple of days.</b></font> Click [here](https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx#COVID-19%20by%20the%20Numbers) for official updates.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F)

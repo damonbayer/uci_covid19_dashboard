@@ -348,7 +348,7 @@ $(document).ready(function () {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -357,7 +357,7 @@ $(document).ready(function () {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -366,10 +366,10 @@ $(document).ready(function () {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-08-12
+<strong>Last updated:</strong> 2020-08-13
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>uci_covid19_dashboard/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -385,12 +385,12 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -457,16 +457,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree8db6eb52321788d3aa96178db917efe7fe8da7e4targetblank8db6eb5a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/8db6eb52321788d3aa96178db917efe7fe8da7e4" target="_blank">8db6eb5</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree616ee7e1586fbda0b6d79ce9f8165781bdd7dd59targetblank616ee7ea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/616ee7e1586fbda0b6d79ce9f8165781bdd7dd59" target="_blank">616ee7e</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree8db6eb52321788d3aa96178db917efe7fe8da7e4targetblank8db6eb5a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree616ee7e1586fbda0b6d79ce9f8165781bdd7dd59targetblank616ee7ea" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/8db6eb52321788d3aa96178db917efe7fe8da7e4" target="_blank">8db6eb5</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/616ee7e1586fbda0b6d79ce9f8165781bdd7dd59" target="_blank">616ee7e</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -475,6 +475,9 @@ Note that you need to be careful to ensure that all relevant files for the analy
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
+
+Unstaged changes:
+    Modified:   analysis/index.Rmd
 
 </code></pre>
 <p>
@@ -513,6 +516,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/616ee7e1586fbda0b6d79ce9f8165781bdd7dd59/docs/index.html" target="_blank">616ee7e</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-08-12
+</td>
+<td>
+daily data update
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1955,7 +1975,6 @@ Start workflowr project.
   margin-right: auto;
 }
 </style>
-<p><br> <font color="red"><b>Even though the state’s reporting system problems have been resolved, our death and case counts below may still be affected for the next couple of days.</b></font> Click <a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx#COVID-19%20by%20the%20Numbers">here</a> for official updates.</p>
 <div class = "row">
 <div class = "col-md-6">
 <p><img src="figure/index.Rmd/hospitalizations_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
@@ -1981,6 +2000,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/616ee7e1586fbda0b6d79ce9f8165781bdd7dd59/docs/figure/index.Rmd/hospitalizations_plot-1.png" target="_blank">616ee7e</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-08-12
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0803f2b87dcfc53b09a6c367ac3f4d71d23b36c1/docs/figure/index.Rmd/hospitalizations_plot-1.png" target="_blank">0803f2b</a>
@@ -2296,6 +2326,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/616ee7e1586fbda0b6d79ce9f8165781bdd7dd59/docs/figure/index.Rmd/icu_plot-1.png" target="_blank">616ee7e</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-08-12
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0803f2b87dcfc53b09a6c367ac3f4d71d23b36c1/docs/figure/index.Rmd/icu_plot-1.png" target="_blank">0803f2b</a>
@@ -2615,6 +2656,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/616ee7e1586fbda0b6d79ce9f8165781bdd7dd59/docs/figure/index.Rmd/cases_plot-1.png" target="_blank">616ee7e</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-08-12
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0803f2b87dcfc53b09a6c367ac3f4d71d23b36c1/docs/figure/index.Rmd/cases_plot-1.png" target="_blank">0803f2b</a>
 </td>
 <td>
@@ -2930,6 +2982,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/616ee7e1586fbda0b6d79ce9f8165781bdd7dd59/docs/figure/index.Rmd/deaths_plot-1.png" target="_blank">616ee7e</a>
+</td>
+<td>
+vnminin
+</td>
+<td>
+2020-08-12
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0803f2b87dcfc53b09a6c367ac3f4d71d23b36c1/docs/figure/index.Rmd/deaths_plot-1.png" target="_blank">0803f2b</a>
 </td>
 <td>
@@ -3221,9 +3284,9 @@ Damon Bayer
 </div>
 </div>
 <p>Data collected from the <a href="https://data.ca.gov/group/covid-19">California Open Data Portal</a>.</p>
-<p>Last updated on 2020-08-12</p>
-<p>Last available date in the <a href="https://data.ca.gov/group/covid-19">California Open Data Portal</a> is 2020-08-11.</p>
-<!-- Last available date in the [California Open Data Portal](https://data.ca.gov/group/covid-19) is 2020-08-12. -->
+<p>Last updated on 2020-08-13</p>
+<p>Last available date in the <a href="https://data.ca.gov/group/covid-19">California Open Data Portal</a> is 2020-08-12.</p>
+<!-- Last available date in the [California Open Data Portal](https://data.ca.gov/group/covid-19) is 2020-08-13. -->
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
