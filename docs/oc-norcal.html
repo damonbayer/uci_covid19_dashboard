@@ -12,7 +12,7 @@
 
 
 
-<title>COVID-19 Maps by UCI Statistics</title>
+<title>COVID-19 Trends by UCI Statistics</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -292,13 +292,19 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="socal-counties.html">SoCal Only (Los Angeles, San Diego, Orange, Riverside, San Bernadino)</a>
+      <a href="socal-counties.html">SoCal Only (Los Angeles, San Diego, Orange, Riverside, San Bernardino)</a>
     </li>
     <li>
       <a href="norcal-counties.html">NorCal Only (Santa Clara, Alameda, Sacramento, Contra Costa, Fresno)</a>
     </li>
     <li>
-      <a href="index.html">SoCal v. Norcal (Los Angeles, San Diego, Orange, Santa Clara, Alameda)</a>
+      <a href="index.html">SoCal v. NorCal (Los Angeles, San Diego, Orange, Santa Clara, Alameda)</a>
+    </li>
+    <li>
+      <a href="oc-norcal.html">OC v. NorCal (Orange, Santa Clara, Alameda, Sacramento, Contra Costa)</a>
+    </li>
+    <li>
+      <a href="la-norcal.html">LA v. NorCal (Los Angeles, Santa Clara, Alameda, Sacramento, Contra Costa)</a>
     </li>
   </ul>
 </li>
@@ -354,14 +360,14 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">COVID-19 Maps by UCI Statistics</h1>
+<h1 class="title toc-ignore">COVID-19 Trends by UCI Statistics</h1>
 
 </div>
 
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -370,7 +376,7 @@ $(document).ready(function () {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -379,10 +385,10 @@ $(document).ready(function () {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-08-20
+<strong>Last updated:</strong> 2020-08-24
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>uci_covid19_dashboard/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -398,12 +404,12 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown is untracked by Git. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -487,9 +493,12 @@ Note that you need to be careful to ensure that all relevant files for the analy
 <pre><code>
 Ignored files:
     Ignored:    .DS_Store
+    Ignored:    .Rhistory
 
 Untracked files:
+    Untracked:  analysis/la-norcal.Rmd
     Untracked:  analysis/norcal-counties.Rmd
+    Untracked:  analysis/oc-norcal.Rmd
     Untracked:  analysis/socal-counties.Rmd
     Untracked:  code/functions.R
 
@@ -508,477 +517,9 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <hr>
 </div>
 <div id="versions" class="tab-pane fade">
-
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/incidence-maps.Rmd</code>) and HTML (<code>docs/incidence-maps.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+There are no past versions. Publish this analysis with <code>wflow_publish()</code> to start tracking its development.
 </p>
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-File
-</th>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-<th>
-Message
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/64a83bf3c5d82ad5b6c31b768787de3c11033adf/docs/incidence-maps.html" target="_blank">64a83bf</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-08-18
-</td>
-<td>
-automatic update - 2020-08-18
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/ae98627444ee2334e443ba2fa7b366e53accfed1/docs/incidence-maps.html" target="_blank">ae98627</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-14
-</td>
-<td>
-daily date pull
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/24e4ed4763c156d32e1505e27a06baccea89231e/docs/incidence-maps.html" target="_blank">24e4ed4</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-13
-</td>
-<td>
-data update
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/616ee7e1586fbda0b6d79ce9f8165781bdd7dd59/docs/incidence-maps.html" target="_blank">616ee7e</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-12
-</td>
-<td>
-daily data update
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/8db6eb52321788d3aa96178db917efe7fe8da7e4/docs/incidence-maps.html" target="_blank">8db6eb5</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-11
-</td>
-<td>
-pushed a note about reporting system problems
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/0803f2b87dcfc53b09a6c367ac3f4d71d23b36c1/docs/incidence-maps.html" target="_blank">0803f2b</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-11
-</td>
-<td>
-data update
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/19f231503013e5872a6e45ea2c18916a07edd17b/docs/incidence-maps.html" target="_blank">19f2315</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-10
-</td>
-<td>
-push with updated data
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/a5927e77fabe4d46d7a25031561c88780de0ff9f/docs/incidence-maps.html" target="_blank">a5927e7</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-09
-</td>
-<td>
-rebuilding with new data
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/fb0028a802e78d6238a4433d7871330cccfa7c06/docs/incidence-maps.html" target="_blank">fb0028a</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-08
-</td>
-<td>
-ca portal got data
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/9589b6dd7b4744e7c8466a204115a638f9bfd831/docs/incidence-maps.html" target="_blank">9589b6d</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-07
-</td>
-<td>
-two time stamps
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/9648fc7a27e500d278bd45bbaec49f9560fb75b6/docs/incidence-maps.html" target="_blank">9648fc7</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-07
-</td>
-<td>
-something
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/60756e043ec8ea04df56e6bc333b5ec8b6697d3b/docs/incidence-maps.html" target="_blank">60756e0</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-08-07
-</td>
-<td>
-data update
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/b3f0a7a6c749fade6c83fba123d9c052285814c4/docs/incidence-maps.html" target="_blank">b3f0a7a</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-06
-</td>
-<td>
-rebuilding to fix testing not linking to itself
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/35e30c188f698c96b98973ad99b324f4627b638e/docs/incidence-maps.html" target="_blank">35e30c1</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-06
-</td>
-<td>
-daily data update; I am a good robot
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/7334400967b6818969e0e491e7715e26950b4c0e/docs/incidence-maps.html" target="_blank">7334400</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-05
-</td>
-<td>
-data update
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/6466f12bf883beea41f1cc066605e1376d48267a/docs/incidence-maps.html" target="_blank">6466f12</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-04
-</td>
-<td>
-data pull and fixed the last date being cut off
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/5db0d2e0d54463815daca0aef03b6bb3a4ebcb22/docs/incidence-maps.html" target="_blank">5db0d2e</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-03
-</td>
-<td>
-data update
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/4afb037edc4df4df059aad021c59124fe30e5915/docs/incidence-maps.html" target="_blank">4afb037</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-02
-</td>
-<td>
-forgot to republish
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/e3847edb64aedaa1833f1e466367a70ddc840dfa/docs/incidence-maps.html" target="_blank">e3847ed</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-02
-</td>
-<td>
-added testing maps
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/a2c2c618ee6a469db10ab06dbce0391cd41b34b5/analysis/incidence-maps.Rmd" target="_blank">a2c2c61</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-01
-</td>
-<td>
-added Software section to About
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/a2c2c618ee6a469db10ab06dbce0391cd41b34b5/docs/incidence-maps.html" target="_blank">a2c2c61</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-01
-</td>
-<td>
-added Software section to About
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/51fac0909fa8bc672027489d0b39c64e03e7afe0/analysis/incidence-maps.Rmd" target="_blank">51fac09</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-01
-</td>
-<td>
-added page headers to incidence and positive maps
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/51fac0909fa8bc672027489d0b39c64e03e7afe0/docs/incidence-maps.html" target="_blank">51fac09</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-01
-</td>
-<td>
-added page headers to incidence and positive maps
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/a873dd5ac69922f862397ea652bd34aee4ebd91c/docs/incidence-maps.html" target="_blank">a873dd5</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-08-01
-</td>
-<td>
-data update
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e024ad3e4fa81d6bf4cb060c4bb07e09df565c57/analysis/incidence-maps.Rmd" target="_blank">e024ad3</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-07-31
-</td>
-<td>
-Positivity Maps + Navigation Updates
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/e024ad3e4fa81d6bf4cb060c4bb07e09df565c57/docs/incidence-maps.html" target="_blank">e024ad3</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-07-31
-</td>
-<td>
-Positivity Maps + Navigation Updates
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 <hr>
 </div>
 </div>
@@ -990,32 +531,25 @@ Positivity Maps + Navigation Updates
   margin-right: auto;
 }
 </style>
-<div id="number-of-covid-19-cases-mapped-to-oc-zip-codes" class="section level3">
-<h3>Number of COVID-19 cases mapped to OC zip codes</h3>
 <div class="row">
-<div class="col-md-4">
-<p><img src = "assets/MarchIncid.png"/></p>
+<div class="col-md-6">
+<p><img src="figure/oc-norcal.Rmd/hospitalizations_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div class="col-md-4">
-<p><img src = "assets/AprilIncid.png"/></p>
-</div>
-<div class="col-md-4">
-<p><img src = "assets/MayIncid.png"/></p>
+<div class="col-md-6">
+<p><img src="figure/oc-norcal.Rmd/icu_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div class="row">
-<div class="col-md-4">
-<p><img src = "assets/JuneIncid.png"/></p>
+<div class="col-md-6">
+<p><img src="figure/oc-norcal.Rmd/cases_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div class="col-md-4">
-<p><img src = "assets/JulyIncid.png"/></p>
-</div>
-<div class="col-md-4">
-<p><img src = "assets/OC_Labels.png"/></p>
+<div class="col-md-6">
+<p><img src="figure/oc-norcal.Rmd/deaths_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<p>Data provided by the <a href="https://www.ochealthinfo.com">Orange County Health Care Agency</a>.</p>
-<p>Last updated 2020-07-29.</p>
+<p>Data collected from the <a href="https://data.ca.gov/group/covid-19">California Open Data Portal</a>.</p>
+<p>Last updated on 2020-08-24.</p>
+<p>Last available date in the <a href="https://data.ca.gov/group/covid-19">California Open Data Portal</a> is 2020-08-23.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1023,7 +557,6 @@ Positivity Maps + Navigation Updates
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 3.6.1 (2019-07-05)
 Platform: x86_64-apple-darwin15.6.0 (64-bit)
 Running under: macOS Catalina 10.15.4
@@ -1038,15 +571,29 @@ locale:
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+ [1] cowplot_1.0.0   ckanr_0.4.0     DBI_1.0.0       ggtext_0.1.0   
+ [5] glue_1.3.1      TTR_0.23-6      scales_1.0.0    lubridate_1.7.4
+ [9] forcats_0.4.0   stringr_1.4.0   dplyr_0.8.3     purrr_0.3.2    
+[13] readr_1.3.1     tidyr_1.0.0     tibble_3.0.1    ggplot2_3.3.2  
+[17] tidyverse_1.2.1
+
 loaded via a namespace (and not attached):
- [1] workflowr_1.6.2 Rcpp_1.0.2      rprojroot_1.3-2 digest_0.6.21  
- [5] later_1.1.0.1   R6_2.4.0        backports_1.1.4 git2r_0.27.1   
- [9] magrittr_1.5    evaluate_0.14   stringi_1.4.3   rlang_0.4.6    
-[13] fs_1.3.1        promises_1.1.1  whisker_0.4     rmarkdown_1.15 
-[17] tools_3.6.1     stringr_1.4.0   glue_1.3.1      httpuv_1.5.4   
-[21] xfun_0.9        yaml_2.2.0      compiler_3.6.1  htmltools_0.3.6
-[25] knitr_1.25     </code></pre>
-</div>
+ [1] Rcpp_1.0.2       lattice_0.20-41  zoo_1.8-6        assertthat_0.2.1
+ [5] rprojroot_1.3-2  digest_0.6.21    R6_2.4.0         cellranger_1.1.0
+ [9] backports_1.1.4  evaluate_0.14    httr_1.4.1       pillar_1.4.4    
+[13] rlang_0.4.6      curl_4.2         readxl_1.3.1     rstudioapi_0.10 
+[17] rmarkdown_1.15   labeling_0.3     munsell_0.5.0    gridtext_0.1.1  
+[21] broom_0.5.6      compiler_3.6.1   httpuv_1.5.4     modelr_0.1.5    
+[25] xfun_0.9         pkgconfig_2.0.3  htmltools_0.3.6  tidyselect_0.2.5
+[29] workflowr_1.6.2  crayon_1.3.4     dbplyr_1.4.2     withr_2.1.2     
+[33] later_1.1.0.1    grid_3.6.1       nlme_3.1-140     jsonlite_1.6    
+[37] gtable_0.3.0     lifecycle_0.2.0  git2r_0.27.1     magrittr_1.5    
+[41] cli_1.1.0        stringi_1.4.3    fs_1.3.1         promises_1.1.1  
+[45] xml2_1.2.2       ellipsis_0.3.0   xts_0.12-0       generics_0.0.2  
+[49] vctrs_0.3.0      tools_3.6.1      markdown_1.1     hms_0.5.1       
+[53] yaml_2.2.0       colorspace_1.4-1 rvest_0.3.4      knitr_1.25      
+[57] haven_2.1.1     </code></pre>
 </div>
 
 

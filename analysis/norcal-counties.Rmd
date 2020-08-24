@@ -21,8 +21,8 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 
 ```{r get_plots}
 source("code/functions.R")
-counties_of_interest <- c("San Diego",  "Los Angeles",  "Orange", "Alameda", "Santa Clara")
-plots <- invisible(get_county_plots(counties_of_interest))
+counties_of_interest <- c("Alameda", "Santa Clara", "Sacramento", "Contra Costa", "Fresno")
+plots <- get_county_plots(counties_of_interest)
 ```
 
 <div class = "row">
@@ -55,4 +55,3 @@ Data collected from the [California Open Data Portal](https://data.ca.gov/group/
 Last updated on `r Sys.Date()`. 
 
 Last available date in the [California Open Data Portal](https://data.ca.gov/group/covid-19) is `r as.Date(plots$data_date)`.
-
