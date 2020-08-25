@@ -16,7 +16,7 @@ editor_options:
 </style>
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, warning = F, message = F)
+knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.retina = 2)
 ```
 
 ```{r get_plots}
