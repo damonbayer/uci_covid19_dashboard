@@ -6,6 +6,17 @@ navbar:
   - icon: fa-line-chart
     text: CA County Trends
     href: index.html
+    menu:
+      - text: "SoCal v. NorCal (Los Angeles, San Diego, Orange, Santa Clara, Alameda)"
+        href: index.html
+      - text: "SoCal Only (Los Angeles, San Diego, Orange, Riverside, San Bernardino)"
+        href: socal-counties.html
+      - text: "NorCal Only (Santa Clara, Alameda, Sacramento, Contra Costa, Fresno)"
+        href: norcal-counties.html
+      - text: "OC v. NorCal (Orange, Santa Clara, Alameda, Sacramento, Contra Costa)"
+        href: oc-norcal.html
+      - text: "LA v. NorCal (Los Angeles, Santa Clara, Alameda, Sacramento, Contra Costa)"
+        href: la-norcal.html        
   - text: "OC Maps"
     icon: fa-map-o
     menu:
