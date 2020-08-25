@@ -15,6 +15,8 @@ editor_options:
 }
 </style>
 
+#### Use <span style="color:#FFF; background-color: #0064A4">CA County Trends</span> dropdown menu for other county comparisons and <span style="color:#FFF; background-color: #0064A4">OC Maps</span> dropdown menu for maps of Orange County, CA
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.retina = 2)
 ```

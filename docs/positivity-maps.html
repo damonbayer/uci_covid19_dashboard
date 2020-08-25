@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -243,6 +242,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -292,13 +292,19 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="socal-counties.html">SoCal Only (Los Angeles, San Diego, Orange, Riverside, San Bernadino)</a>
+      <a href="index.html">SoCal v. NorCal (Los Angeles, San Diego, Orange, Santa Clara, Alameda)</a>
+    </li>
+    <li>
+      <a href="socal-counties.html">SoCal Only (Los Angeles, San Diego, Orange, Riverside, San Bernardino)</a>
     </li>
     <li>
       <a href="norcal-counties.html">NorCal Only (Santa Clara, Alameda, Sacramento, Contra Costa, Fresno)</a>
     </li>
     <li>
-      <a href="index.html">SoCal v. Norcal (Los Angeles, San Diego, Orange, Santa Clara, Alameda)</a>
+      <a href="oc-norcal.html">OC v. NorCal (Orange, Santa Clara, Alameda, Sacramento, Contra Costa)</a>
+    </li>
+    <li>
+      <a href="la-norcal.html">LA v. NorCal (Los Angeles, Santa Clara, Alameda, Sacramento, Contra Costa)</a>
     </li>
   </ul>
 </li>
@@ -470,32 +476,32 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreef932f34c1b2651a7daeecd4067bfdae33d8058c8targetblankf932f34a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/f932f34c1b2651a7daeecd4067bfdae33d8058c8" target="_blank">f932f34</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree206d9d18571d992ac69754d6abdec64f56e6fe19targetblank206d9d1a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/206d9d18571d992ac69754d6abdec64f56e6fe19" target="_blank">206d9d1</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreef932f34c1b2651a7daeecd4067bfdae33d8058c8targetblankf932f34a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree206d9d18571d992ac69754d6abdec64f56e6fe19targetblank206d9d1a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/f932f34c1b2651a7daeecd4067bfdae33d8058c8" target="_blank">f932f34</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/206d9d18571d992ac69754d6abdec64f56e6fe19" target="_blank">206d9d1</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .DS_Store
-
-Untracked files:
-    Untracked:  analysis/norcal-counties.Rmd
-    Untracked:  analysis/socal-counties.Rmd
-    Untracked:  code/functions.R
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
 
 Unstaged changes:
-    Modified:   analysis/_site.yml
     Modified:   analysis/index.Rmd
+    Modified:   analysis/la-norcal.Rmd
+    Modified:   analysis/norcal-counties.Rmd
+    Modified:   analysis/oc-norcal.Rmd
+    Modified:   analysis/socal-counties.Rmd
+    Modified:   analysis/style.css
 
 </code></pre>
 <p>
@@ -534,6 +540,57 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/518db49365de84890b2d0ac93dc6fe84adb6af93/docs/positivity-maps.html" target="_blank">518db49</a>
+</td>
+<td>
+Rachel Longjohn
+</td>
+<td>
+2020-08-24
+</td>
+<td>
+Merge branch ‘master’ into county-sets
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/2559f5d547c2441ef9ad21db5ce2c4e877e0b631/docs/positivity-maps.html" target="_blank">2559f5d</a>
+</td>
+<td>
+Rachel Longjohn
+</td>
+<td>
+2020-08-24
+</td>
+<td>
+add more county sets
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/b79277f650c9538880bcc7d095c249b79fe15b68/docs/positivity-maps.html" target="_blank">b79277f</a>
+</td>
+<td>
+markellekelly
+</td>
+<td>
+2020-08-24
+</td>
+<td>
+automatic update - 2020-08-24
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -1092,13 +1149,13 @@ Positivity Maps + Navigation Updates
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>R version 3.6.1 (2019-07-05)
-Platform: x86_64-apple-darwin15.6.0 (64-bit)
+<pre><code>R version 4.0.0 (2020-04-24)
+Platform: x86_64-apple-darwin17.0 (64-bit)
 Running under: macOS Catalina 10.15.4
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRblas.0.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
+BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
 
 locale:
 [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
@@ -1106,14 +1163,18 @@ locale:
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+[1] workflowr_1.6.2
+
 loaded via a namespace (and not attached):
- [1] workflowr_1.6.2 Rcpp_1.0.2      rprojroot_1.3-2 digest_0.6.21  
- [5] later_1.1.0.1   R6_2.4.0        backports_1.1.4 git2r_0.27.1   
- [9] magrittr_1.5    evaluate_0.14   stringi_1.4.3   rlang_0.4.6    
-[13] fs_1.3.1        promises_1.1.1  whisker_0.4     rmarkdown_1.15 
-[17] tools_3.6.1     stringr_1.4.0   glue_1.3.1      httpuv_1.5.4   
-[21] xfun_0.9        yaml_2.2.0      compiler_3.6.1  htmltools_0.3.6
-[25] knitr_1.25     </code></pre>
+ [1] Rcpp_1.0.5      rstudioapi_0.11 whisker_0.4     knitr_1.29     
+ [5] magrittr_1.5    R6_2.4.1        rlang_0.4.7     stringr_1.4.0  
+ [9] tools_4.0.0     xfun_0.15       git2r_0.27.1    htmltools_0.5.0
+[13] ellipsis_0.3.1  rprojroot_1.3-2 yaml_2.2.1      digest_0.6.25  
+[17] tibble_3.0.3    lifecycle_0.2.0 crayon_1.3.4    later_1.1.0.1  
+[21] vctrs_0.3.1     promises_1.1.1  fs_1.4.2        glue_1.4.1     
+[25] evaluate_0.14   rmarkdown_2.3   stringi_1.4.6   compiler_4.0.0 
+[29] pillar_1.4.6    backports_1.1.8 httpuv_1.5.4    pkgconfig_2.0.3</code></pre>
 </div>
 </div>
 
