@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.retina = 2)
 
 ```{r get_plots}
 source("code/functions.R")
-counties_of_interest <- c("Alameda", "Santa Clara", "Sacramento", "Contra Costa", "Fresno")
+counties_of_interest <- c("Alameda", "Santa Clara", "Sacramento", "Contra Costa", "San Francisco")
 plots <- get_county_plots(counties_of_interest)
 ```
 

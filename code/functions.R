@@ -73,7 +73,7 @@ get_county_plots <- function(counties_of_interest){
   
   
   # Theme options
-  theme_set(theme_bw(base_size = 13) +
+  theme_set(theme_bw(base_size = 12.5) +
               theme(legend.position = "bottom",
                     legend.title = element_text(size = 12)))
   
@@ -87,7 +87,7 @@ get_county_plots <- function(counties_of_interest){
                  `San Bernardino` = "#1980E6",
                  Sacramento = "#CC625E",
                  `Contra Costa` = "#CAA1E6",
-                 Fresno = "#E6CA5C")
+                 `San Francisco` = "#E6CA5C")
   
   sah_alpha <- 0.2
   
