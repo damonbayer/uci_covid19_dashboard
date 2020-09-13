@@ -46,4 +46,4 @@ editor_options:
 
 Data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).
 
-Last updated `r as.Date("07/29/2020", "%m/%d/%y")`.
+Last updated on `r Sys.Date()`.
