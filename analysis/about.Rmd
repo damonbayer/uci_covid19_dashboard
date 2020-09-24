@@ -47,6 +47,12 @@ The content of this site is licensed under the most permissive creative commons 
 
 ## Methodology
 
+### Data
+Figures of cases, deaths and hospitalizations over time have been created with publicly available data from the [California Open Data Portal](https://data.ca.gov/group/covid-19). Cases and deaths are counted by date reported, rather than the date the test was administered or date of death (if someone is tested on Friday, and the results are reported the following Tuesday, the case is counted for Tuesday).  
+
+Maps of cases have been created with data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).
+If an individual tested multiple times, only the first postive test was counted as a case.
+
 ### Moving Averages
 Our figures present 7 day moving averages. This means that, for cases on July 7th, for example, we report the average number of cases per million people during the period July 1st to July 7th. On July 8th, we report the average number of cases per million people during the period July 2nd to July 8th, etc. We use moving averages as opposed to raw data (such as the actual number of cases per million people on July 7th) because cases can increase or decrease dramatically on a particular day, making it difficult to see trends in the time series of interest. Moving averages help highlight these trends more clearly.
 
@@ -58,10 +64,6 @@ The number of daily new cases depends not only on the number of infected individ
 It would be much better to plot the positivity ratio (positive cases divided by the total number of tests) instead of cases.
 Unfortunately, the number of Covid-19 diagnostic tests performed in a day is not available at a county level from the [California Open Data Portal](https://data.ca.gov/group/covid-19) at this time. 
 LA and OC counties do have testing data available ([LA COVID-19 data](http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/), [OC COVID-19 Data](https://data-ocpw.opendata.arcgis.com/datasets/e5ceebe7edba44cc8f875ca54cc2341a?page=18)), but we prefer to use one data source for now.
-
-### Maps
-Maps of cases have been created with data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).
-If an individual tested multiple times, only the first postive test was counted as a case.
 
 ### Software
 We used [R](https://www.r-project.org) software environment, [tidyverse](https://www.tidyverse.org) collection of R packages, [workflowr](https://jdblischak.github.io/workflowr/) R package, and [QGIS](https://qgis.org/en/site/) geographic information system software.
