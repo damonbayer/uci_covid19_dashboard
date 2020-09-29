@@ -30,12 +30,12 @@ plots <- get_city_plots(cities_of_interest)
 <div class = "row">
 <div class = "col-md-6">
 ```{r hospitalizations_plot}
-watermark(plots$hospitalizations_plot)
+watermark(plots$positive_plot)
 ```
 </div>
 <div class = "col-md-6">
 ```{r icu_plot}
-watermark(plots$icu_plot)
+watermark(plots$testing_plot)
 ```
 </div>
 </div>

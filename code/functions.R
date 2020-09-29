@@ -212,7 +212,11 @@ get_county_plots <- function(counties_of_interest){
 # oc city plots -----------------------------------------------------------
 get_city_plots <- function(cities_of_interest){
 
-  city_data <- read.csv("data/city_data.csv")
+  # cities_of_interest <- c("Anaheim", "Santa Ana", "Irvine", "Huntington Beach", "Garden Grove")
+
+  city_data <- read.csv("data/oc_city_data.csv")
+
+  city_data$posted_date <- as.Date(city_data$posted_date)
 
   city_pop <- read_csv("data/city_pop.csv") %>% rename_all(str_to_lower)
 
@@ -225,10 +229,12 @@ get_city_plots <- function(cities_of_interest){
 
   # Tidy Data
   tidy_city <- city_data%>%
+    filter(city %in% cities_of_interest)%>%
     left_join(city_pop)%>%
     mutate(
-      positivity=new_cases/new_tests
-    )
+      positivity=(new_cases/new_tests)*100
+    )%>%
+    filter(posted_date >= sah_start)
 
 
   # Theme options
@@ -272,12 +278,11 @@ get_city_plots <- function(cities_of_interest){
     gglayers +
     ylab(glue("Percent Positive COVID-19 Tests")) +
     annotate("rect",
-             xmin = if_else(min(tidy_city$posted_date) < sah_start,
+             xmin = if_else(min(positive_plot_data$posted_date) < sah_start,
                             sah_start,
-                            min(tidy_city$posted_date)),
+                            min(positive_plot_data$posted_date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 175, x = sah_end+8, label = "Stay at Home\nOrder Ended")
-
+    annotate("text", y = 20, x = sah_end+8, label = "Stay at Home\nOrder Ended")
   # Testing
   testing_plot_data <- tidy_city %>%
     group_by(city) %>%
@@ -294,9 +299,11 @@ get_city_plots <- function(cities_of_interest){
     gglayers +
     ylab(glue("Total COVID-19 Tests Performed\nper {comma(per_n_people)} People")) +
     annotate("rect",
-             xmin = if_else(min(testing_plot_data$posted_date) < sah_start, sah_start, min(testing_plot_data$posted_date)),
+             xmin = if_else(min(testing_plot_data$posted_date) < sah_start,
+                            sah_start,
+                            min(testing_plot_data$posted_date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 51, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 175, x = sah_end+8, label = "Stay at Home\nOrder Ended")
 
 
   # Deaths
@@ -319,7 +326,7 @@ get_city_plots <- function(cities_of_interest){
                             sah_start,
                             min(deaths_plot_data$posted_date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 3, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 1, x = sah_end+8, label = "Stay at Home\nOrder Ended")
 
   # Cases
   cases_plot_data <- tidy_city %>%
@@ -341,13 +348,13 @@ get_city_plots <- function(cities_of_interest){
                             sah_start,
                             min(cases_plot_data$posted_date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 250, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 25, x = sah_end+8, label = "Stay at Home\nOrder Ended")
 
-  return(list(positivity_plot = positivity_plot,
+  return(list(positive_plot = positive_plot,
               testing_plot = testing_plot,
               cases_plot = cases_plot,
               deaths_plot = deaths_plot,
-              data_date = max(hosp_tidy$date, cases_tidy$date)))
+              data_date = max(tidy_city$posted_date)))
 }
 
 
