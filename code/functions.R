@@ -212,6 +212,46 @@ get_county_plots <- function(counties_of_interest){
 # oc city plots -----------------------------------------------------------
 get_city_plots <- function(cities_of_interest){
 
+  #first step is to grab hospital data so that we're starting on the same date as the other graphs
+  # connect to CKAN instance
+  ckanr_setup(url="https://data.ca.gov")
+  ckan <- quiet(ckanr::src_ckan("https://data.ca.gov"))
+
+  # get resources
+  resources <- rbind(resource_search("name:covid-19", as = "table")$results,
+                     resource_search("name:hospitals by county", as = "table")$results)
+
+  resource_ids <- list(cases = resources$resource_id[resources$name == "COVID-19 Cases"],
+                       tests = resources$resource_id[resources$name == "COVID-19 Testing"],
+                       hosp = resources$resource_id[resources$name == "Hospitals By County"])
+
+
+  hosp <- tbl(src = ckan$con, from = resource_ids$hosp) %>%
+    as_tibble() %>%
+    select(-starts_with("_")) %>%
+    mutate(date = as.Date(todays_date)) %>%
+    select(-todays_date)
+
+  counties_of_interest <- c("San Diego",  "Los Angeles",  "Orange", "Alameda", "Santa Clara")
+
+  county_pop <- read_csv("data/county_pop.csv") %>% rename_all(str_to_lower)
+
+
+  hosp_tidy <- hosp %>%
+    filter(county %in% counties_of_interest) %>%
+    pivot_longer(cols = -c(date, county)) %>%
+    drop_na() %>%
+    left_join(county_pop) %>%
+    arrange(county, date)
+
+  hospitalizations_plot_data <- hosp_tidy %>%
+    filter(name == "hospitalized_covid_patients") %>%
+    group_by(county) %>%
+    mutate(value = runMean(value, 7)) %>%
+    drop_na()
+
+  min_date <- min(hospitalizations_plot_data$date)
+  # now read in city data
   # cities_of_interest <- c("Anaheim", "Santa Ana", "Irvine", "Huntington Beach", "Garden Grove")
 
   city_data <- read.csv("data/oc_city_data.csv")
@@ -224,6 +264,9 @@ get_city_plots <- function(cities_of_interest){
   sah_start <- ymd("2020-03-19")
   sah_end <- ymd("2020-05-04")
 
+  #max date truncated for reporting delays
+  max_date <- max(city_data$posted_date)-days(11)
+
   per_n_people <- 1e5 # denominator for reporting counts (e.g, per million people)
   ma_n <- 7 # moving average window length in days
 
@@ -234,7 +277,7 @@ get_city_plots <- function(cities_of_interest){
     mutate(
       positivity=(new_cases/new_tests)*100
     )%>%
-    filter(posted_date >= sah_start)
+    filter(posted_date >= sah_start  & posted_date <= max_date)
 
 
   # Theme options
@@ -266,7 +309,8 @@ get_city_plots <- function(cities_of_interest){
   positive_plot_data <- tidy_city %>%
     group_by(city) %>%
     mutate(value = runMean(positivity, ma_n)) %>%
-    drop_na()
+    drop_na()%>%
+    filter(posted_date >= min_date)
 
   positive_plot <- positive_plot_data %>%
     ggplot(aes(posted_date, value, group = city, color = city)) +
@@ -282,12 +326,13 @@ get_city_plots <- function(cities_of_interest){
                             sah_start,
                             min(positive_plot_data$posted_date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 20, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 15, x = sah_end+8, label = "Stay at Home\nOrder Ended")
   # Testing
   testing_plot_data <- tidy_city %>%
     group_by(city) %>%
     mutate(value = runMean(new_tests, ma_n)) %>%
-    drop_na()
+    drop_na()%>%
+    filter(posted_date >= min_date)
 
   testing_plot <- testing_plot_data %>%
     ggplot(aes(posted_date, value / population * per_n_people, group = city, color = city)) +
@@ -310,7 +355,8 @@ get_city_plots <- function(cities_of_interest){
   deaths_plot_data <- tidy_city %>%
     group_by(city) %>%
     mutate(value = runMean(new_deaths, ma_n)) %>%
-    drop_na()
+    drop_na()%>%
+    filter(posted_date >= min_date)
 
   deaths_plot <- deaths_plot_data %>%
     ggplot(aes(posted_date, value / population * per_n_people, group = city, color = city)) +
@@ -332,7 +378,8 @@ get_city_plots <- function(cities_of_interest){
   cases_plot_data <- tidy_city %>%
     group_by(city) %>%
     mutate(value = runMean(new_cases, ma_n)) %>%
-    drop_na()
+    drop_na()%>%
+    filter(posted_date >= min_date)
 
   cases_plot <- cases_plot_data %>%
     ggplot(aes(posted_date, value / population * per_n_people, group = city, color = city)) +

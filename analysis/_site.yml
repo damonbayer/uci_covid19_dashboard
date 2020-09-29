@@ -26,6 +26,9 @@ navbar:
         href: testing-maps.html
       - text: Positivity
         href: positivity-maps.html
+  #  - text: "OC Cities"
+  #    icon: fa-line-chart
+  #   href: oc-cities.html
   - text: About
     icon: fa-users
     href: about.html

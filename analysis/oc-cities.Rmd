@@ -54,4 +54,6 @@ watermark(plots$deaths_plot)
 
 Data provided by [Orange County Health Care Agency](https://www.ochealthinfo.com).
 
+Last available date reported is `r as.Date(plots$data_date)`.
+
 Last updated on `r Sys.Date()`. 
