@@ -16,7 +16,10 @@ navbar:
       - text: "OC v. NorCal "
         href: oc-norcal.html
       - text: "LA v. NorCal"
-        href: la-norcal.html
+        href: la-norcal.
+  - text: "OC City Trends"
+    icon: fa-line-chart
+    href: oc-cities.html
   - text: "OC Maps"
     icon: fa-map-o
     menu:
@@ -26,9 +29,6 @@ navbar:
         href: testing-maps.html
       - text: Positivity
         href: positivity-maps.html
-  #  - text: "OC Cities"
-  #    icon: fa-line-chart
-  #   href: oc-cities.html
   - text: About
     icon: fa-users
     href: about.html
