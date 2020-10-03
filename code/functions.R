@@ -57,7 +57,7 @@ get_county_plots <- function(counties_of_interest){
   sah_start <- ymd("2020-03-19")
   sah_end <- ymd("2020-05-04")
 
-  per_n_people <- 1e6 # denominator for reporting counts (e.g, per million people)
+  per_n_people <- 1e5 # denominator for reporting counts (e.g, per million people)
   ma_n <- 7 # moving average window length in days
 
   # Tidy Data
