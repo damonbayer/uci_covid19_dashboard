@@ -308,13 +308,16 @@ get_city_plots <- function(cities_of_interest){
   # Positivity
   positive_plot_data <- tidy_city %>%
     group_by(city) %>%
-    mutate(value = runMean(positivity, ma_n)) %>%
+    mutate(
+            sum_pos=runSum(new_cases, ma_n),
+            sum_test=runSum(new_tests, ma_n),
+            value = (sum_pos/sum_test)*100) %>%
     drop_na()%>%
     filter(posted_date >= min_date)
 
   positive_plot <- positive_plot_data %>%
     ggplot(aes(posted_date, value, group = city, color = city)) +
-    ggtitle(glue("Percent Positive COVID-19 Tests <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
+    ggtitle(glue("Percent Positive COVID-19 Tests <span style='font-size:14pt'>({ma_n} Day Moving Window)</span>")) +
     #subtitle = glue("{ma_n} Day Moving Average"))
     theme(
       plot.title = element_markdown()
@@ -360,7 +363,7 @@ get_city_plots <- function(cities_of_interest){
 
   deaths_plot <- deaths_plot_data %>%
     ggplot(aes(posted_date, value / population * per_n_people, group = city, color = city)) +
-    ggtitle(glue(" New Daily Deaths due to COVID-19 <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
+    ggtitle(glue("New Daily Deaths due to COVID-19 <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
     #          subtitle = glue("{ma_n} Day Moving Average")) +
     theme(
       plot.title = element_markdown()
