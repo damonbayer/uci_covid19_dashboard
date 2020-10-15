@@ -16,7 +16,7 @@ navbar:
       - text: "OC v. NorCal "
         href: oc-norcal.html
       - text: "LA v. NorCal"
-        href: la-norcal.
+        href: la-norcal.html
   - text: "OC City Trends"
     icon: fa-line-chart
     href: oc-cities.html
