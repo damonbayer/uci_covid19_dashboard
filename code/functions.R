@@ -287,24 +287,8 @@ get_city_plots <- function(cities_of_interest){
 
   # keep color palette consistent across county sets
 
-  cbPalette <- c(Anaheim = "#56B4E9",
-                 Fullerton = "#009E73",
-                 `Garden Grove` = "#E69F00",
-                 Orange = "#CC79A7",
-                 `Santa Ana` = "#0072B2",
-
-                 `Costa Mesa` = "#56B4E9",
-                 `Irvine` = "#009E73",
-                 `Lake Forest` = "#E69F00",
-                 `Mission Viejo` = "#CC79A7",
-                 `Newport Beach` = "#0072B2",
-
-                 `Dana Point` = "#56B4E9",
-                 `Huntington Beach` = "#009E73",
-                 `Laguna Beach` = "#E69F00",
-                 # `Newport Beach` = "#0072B2" from above
-                 `San Clemente` = "#CC79A7",
-                 `Seal Beach` = "#A857E6")
+  cbPalette <- c("#56B4E9", "#009E73", "#E69F00", "#CC79A7", "#0072B2",
+                 "#A857E6", "#1980E6", "#CC625E", "#CAA1E6", "#E6CA5C")
 
   sah_alpha <- 0.2
 
