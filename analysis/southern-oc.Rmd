@@ -1,0 +1,59 @@
+---
+title: "COVID-19 Trends by UCI Statistics"
+site: workflowr::wflow_site
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+<style type="text/css">
+.main-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.retina = 2)
+```
+
+### Orange County City Trends
+
+```{r get_plots}
+source("code/functions.R")
+cities_of_interest <- c("Irvine", "Costa Mesa", "Mission Viejo", "Newport Beach", "Lake Forest")
+plots <- get_city_plots(cities_of_interest)
+```
+
+<div class = "row">
+<div class = "col-md-6">
+```{r hospitalizations_plot}
+watermark(plots$positive_plot)
+```
+</div>
+<div class = "col-md-6">
+```{r icu_plot}
+watermark(plots$testing_plot)
+```
+</div>
+</div>
+<div class = "row">
+<div class = "col-md-6">
+```{r cases_plot}
+watermark(plots$cases_plot)
+```
+</div>
+<div class = "col-md-6">
+```{r deaths_plot}
+watermark(plots$deaths_plot)
+```
+</div>
+</div>
+
+Data provided by [Orange County Health Care Agency](https://www.ochealthinfo.com).
+
+Last available date reported is `r as.Date(plots$data_date)`.
+
+Last updated on `r Sys.Date()`. 

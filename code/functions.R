@@ -287,11 +287,8 @@ get_city_plots <- function(cities_of_interest){
 
   # keep color palette consistent across county sets
 
-  cbPalette <- c(Anaheim = "#56B4E9",
-                 `Santa Ana` = "#009E73",
-                  `Huntington Beach` = "#E69F00",
-                 `Irvine` = "#CC79A7",
-                 `Garden Grove` = "#0072B2")
+  cbPalette <- c("#56B4E9", "#009E73", "#E69F00", "#CC79A7", "#0072B2",
+                 "#A857E6", "#1980E6", "#CC625E", "#CAA1E6", "#E6CA5C")
 
   sah_alpha <- 0.2
 

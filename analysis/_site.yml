@@ -19,7 +19,16 @@ navbar:
         href: la-norcal.html
   - text: "OC City Trends"
     icon: fa-line-chart
-    href: oc-cities.html
+    href: oc-populous-cities.html
+    menu:
+      - text: "5 Most Populous"
+        href: oc-populous-cities.html
+      - text: "Northern OC"
+        href: northern-oc.html
+      - text: "Southern OC"
+        href: southern-oc.html
+      - text: "Coastal OC"
+        href: coastal-oc.html
   - text: "OC Maps"
     icon: fa-map-o
     menu:
