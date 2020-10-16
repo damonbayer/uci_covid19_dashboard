@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.retina = 2)
 
 ```{r get_plots}
 source("code/functions.R")
-cities_of_interest <- c("Anaheim", "Santa Ana", "Irvine", "Huntington Beach", "Garden Grove")
+cities_of_interest <- c("Newport Beach", "San Clemente", "Dana Point", "Seal Beach", "Laguna Beach", "Huntington Beach")
 plots <- get_city_plots(cities_of_interest)
 ```
 

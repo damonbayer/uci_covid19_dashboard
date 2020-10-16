@@ -13,7 +13,6 @@
 
 <title>License</title>
 
-<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -34,7 +33,14 @@ div.section {
 }
 </style>
 
-
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -311,12 +317,25 @@ $(document).ready(function () {
     </li>
   </ul>
 </li>
-<li>
-  <a href="oc-cities.html">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-line-chart"></span>
      
     OC City Trends
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="northern-oc.html">Northern OC</a>
+    </li>
+    <li>
+      <a href="southern-oc.html">Southern OC</a>
+    </li>
+    <li>
+      <a href="coastal-oc.html">Coastal OC</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -426,27 +445,34 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree9542e726a7a34644d501f9c3629a7b8700f04d43targetblank9542e72a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/9542e726a7a34644d501f9c3629a7b8700f04d43" target="_blank">9542e72</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreef4752020716c088ff1c728f70e5c510c62f15323targetblankf475202a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/f4752020716c088ff1c728f70e5c510c62f15323" target="_blank">f475202</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree9542e726a7a34644d501f9c3629a7b8700f04d43targetblank9542e72a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreef4752020716c088ff1c728f70e5c510c62f15323targetblankf475202a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/9542e726a7a34644d501f9c3629a7b8700f04d43" target="_blank">9542e72</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/f4752020716c088ff1c728f70e5c510c62f15323" target="_blank">f475202</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .Renviron
+    Ignored:    .Rproj.user/
 
 Untracked files:
-    Untracked:  r_env.yml
-    Untracked:  rebuild
+    Untracked:  analysis/coastal-oc.Rmd
+    Untracked:  analysis/northern-oc.Rmd
+    Untracked:  analysis/southern-oc.Rmd
+
+Unstaged changes:
+    Modified:   analysis/_site.yml
+    Deleted:    analysis/oc-cities.Rmd
+    Modified:   code/functions.R
+    Modified:   uci_covid19_dashboard.Rproj
 
 </code></pre>
 <p>
@@ -485,6 +511,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/f4752020716c088ff1c728f70e5c510c62f15323/docs/license.html" target="_blank">f475202</a>
+</td>
+<td>
+markellekelly
+</td>
+<td>
+2020-10-15
+</td>
+<td>
+automatic update - 2020-10-15
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -2507,8 +2550,6 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
-
-
 
 
 
