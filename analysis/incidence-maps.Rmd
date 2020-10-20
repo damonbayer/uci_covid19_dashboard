@@ -46,9 +46,6 @@ editor_options:
 <div class = "col-md-4">
 <img src = "assets/SeptIncid.png"/>
 </div>
-</div>
-
-<div class = "row">
 <div class = "col-md-4">
 <img src = "assets/OC_Labels.png"/>
 </div>
