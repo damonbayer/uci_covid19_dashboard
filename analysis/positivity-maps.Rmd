@@ -27,6 +27,7 @@ editor_options:
 <img src = "assets/MayPos.png"/>
 </div>
 </div>
+
 <div class = "row">
 <div class = "col-md-4">
 <img src = "assets/JunePos.png"/>
@@ -38,7 +39,11 @@ editor_options:
 <img src = "assets/AugPos.png"/>
 </div>
 </div>
+
 <div class = "row">
+<div class = "col-md-4">
+<img src = "assets/SeptPos.png"/>
+</div>
 <div class = "col-md-4">
 <img src = "assets/OC_Labels.png"/>
 </div>
