@@ -265,7 +265,7 @@ get_city_plots <- function(cities_of_interest){
   sah_end <- ymd("2020-05-04")
 
   #max date truncated for reporting delays
-  max_date <- max(city_data$posted_date)#-days(11)
+  max_date <- max(city_data$posted_date)-days(11)
 
   per_n_people <- 1e5 # denominator for reporting counts (e.g, per million people)
   ma_n <- 7 # moving average window length in days
