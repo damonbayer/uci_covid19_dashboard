@@ -2,77 +2,8 @@ library(tidyverse)
 library(lubridate)
 library(here)
 
-# Use this script to convert the CSVs provided by OCHCA to the format needed for the functions.R 
+# Use this script to convert the CSVs provided by OCHCA to the format needed for the functions.R
 
-# Get Web Data ------------------------------------------------------------
-get_ochca_web_data <- function(raw_html = read_lines("https://occovid19.ochealthinfo.com/coronavirus-in-oc"),
-                               death_csv = file.path("data", "oc", "oc_deaths.csv"),
-                               keep_extras = F) {
-  process_table <- function(tbl) {
-    tbl %>%
-      str_remove_all("\\\\|\"") %>%
-      str_extract_all("\\[[^\\[].*?\\]") %>%
-      unlist() %>%
-      str_remove_all("\\[|\\]") %>%
-      enframe(name = NULL)
-  }
-
-  processed_tables <- raw_html %>%
-    str_trim() %>%
-    `[`(str_starts(., "\\w+ = \\[\\[")) %>%
-    enframe(name = NULL, value = "raw_table") %>%
-    mutate(name = as.vector(str_match(raw_table, "\\w+(?= =)"))) %>%
-    select(name, raw_table) %>%
-    mutate(raw_table = map(raw_table, process_table)) %>%
-    deframe()
-
-  split_tables <- list(
-    testData = separate(processed_tables$testData, value, into = c("posted_date", "extra_testData1", "new_tests", "total_tests", "extra_testData2", "new_cases"), sep = ","),
-    caseArr = separate(processed_tables$caseArr, value, into = c("posted_date", "new_cases", "total_cases", "extra_caseArr1"), sep = ","),
-    caseAvg = separate(processed_tables$caseAvg, value, into = c("posted_date", "avg_trend"), sep = ","),
-    hospitalArr = separate(processed_tables$hospitalArr, value, into = c("posted_date", "current_hospitalized", "current_icu", "hospital_completeness25"), sep = ",")
-  )
-
-  death_table <- read_csv(death_csv,
-                          col_types = cols(
-                            .default = col_integer(),
-                            posted_date = col_date(format = "%m/%d/%y")))
-
-  joined_table <- map(split_tables, ~mutate(., posted_date = lubridate::mdy(posted_date)) %>%
-                        mutate_if(is.character, as.integer)) %>%
-    append(list(death_table)) %>%
-    reduce(full_join) %>%
-    arrange(posted_date)
-
-  if(!keep_extras) {
-    joined_table <- select(joined_table, -starts_with("extra"))
-  }
-
-  joined_table
-}
-
-# write_rds(get_ochca_web_data(), here("data", "oc", "ochca_covid.rds"))
-
-# Read and Sanitize -------------------------------------------------------
-read_santize_ochca_covid <- function(file_name = "ochca_covid.csv") {
-  read_csv(file_name,
-           col_types = cols(.default = col_character(),
-                            POSTED_DATE = col_date(format = "%m/%d/%Y"))) %>%
-    rename_all(~str_to_lower(.) %>%
-                 str_replace_all("_covid19_", "_") %>%
-                 str_replace_all(" ", "_") %>%
-                 str_remove(":")) %>%
-    rename(new_tests = "people_tested_by_hca_public_health_lab_(phl)_and_commercial_labs_since_yesterday",
-           total_tests = "total_people_tested_by_phl_and_commercial_labs_to_date") %>%
-    mutate_if(is.character, ~na_if(., "Unavailable")) %>%
-    mutate_if(is.character, ~str_trim(.) %>%
-                str_replace("-", "0") %>%
-                str_remove_all(",")) %>%
-    mutate_if(is.character, as.integer)
-}
-
-
-# Get Line List Data ------------------------------------------------------
 negative_test_synonyms <- c("not detected",
                             "negative",
                             "coronavirus 2019 novel not detected",
@@ -84,7 +15,8 @@ negative_test_synonyms <- c("not detected",
                             "neg-see report",
                             "sars-cov-2 rna not detected by naa",
                             "none detected",
-                            "not detected in pooled specimen")
+                            "not detected in pooled specimen",
+                            "not detected in pooled specimen (qualifier value)")
 
 positive_test_synonyms <- c("detected",
                             "coronavirus 2019 novel positive",
@@ -119,6 +51,7 @@ other_test_synonyms <- c("inconclusive",
                          "not tested",
                          "phoned results (and readback confirmed) to:",
                          "see note",
+                         "unknown",
                          "clotted",
                          "coronavirus 2019 novel unsatisfactory",
                          # "cryptococcus neoformans",
@@ -129,6 +62,9 @@ other_test_synonyms <- c("inconclusive",
                          "test not done",
                          "test not perf",
                          "not pregnant",
+                         "acinetobacter baumannii (organism)",
+                         "multiple drug-resistant serratia marcescens",
+                         "genus enterococcus",
                          "biofiresarsneg",
                          "equivocal result",
                          "coronavirus 2019 novel inconcluside",
@@ -147,28 +83,27 @@ other_test_synonyms <- c("inconclusive",
                          "enterobacter cloacae complex (organism)"
 )
 
-read_line_list <- function(line_list_name = "10.19.20 release to UCI team.csv",
-                           negative_line_list_name = "All ELR PCR tests updated 10.19.20.csv") {
-  new_deaths_tbl <- read_csv(here::here("data", "oc", line_list_name),
-                             col_types = cols(.default = col_skip(),
-                                              `DtDeath` = col_date("%m/%d/%Y"))) %>%
+read_line_list <- function(line_list_name, negative_line_list_name) {
+  new_deaths_tbl <- read_csv(here::here("data", line_list_name)) %>%
     drop_na() %>%
-    transmute(posted_date = `DtDeath`) %>%
+    transmute(posted_date = lubridate::ymd(DtDeath)) %>%
     count(posted_date, name = "new_deaths") %>%
     arrange(posted_date)
 
 
 
-  neg_line_list <- read_csv(here::here("data", "oc", negative_line_list_name),
-                            col_types = cols(.default = col_skip(),
-                                             PersonId = col_integer(),
-                                             Specimen.Collected.Date = col_date("%m-%d-%Y"),
-                                             Resulted.Organism = col_character())) %>%
+  neg_line_list <- read_csv(here::here("data", negative_line_list_name),
+                            col_types = cols(PersonId = col_integer(),
+                                             Resulted.Organism = col_character(),
+                                             .default = col_character())) %>%
     filter(!is.na(Resulted.Organism)) %>%
-    mutate(test_result = fct_collapse(str_to_lower(Resulted.Organism),
-                                      negative = negative_test_synonyms,
-                                      positive = positive_test_synonyms,
-                                      other = other_test_synonyms)) %>%
+    mutate(
+      Specimen.Collected.Date = lubridate::mdy(Specimen.Collected.Date),
+      test_result = fct_collapse(trimws(str_to_lower(Resulted.Organism)),
+                                  negative = negative_test_synonyms,
+                                  positive = positive_test_synonyms,
+                                  other = other_test_synonyms)
+    ) %>%
     select(id = PersonId, posted_date = Specimen.Collected.Date, test_result) %>%
     filter(posted_date >= lubridate::ymd("2020-01-01")) %>%
     group_by(id) %>%
@@ -197,19 +132,19 @@ read_line_list <- function(line_list_name = "10.19.20 release to UCI team.csv",
     select(posted_date, new_cases, new_tests, new_deaths)
 }
 
-read_line_list_by_city <- function(line_list_name = "10.19.20 release to UCI team.csv",
-                                   negative_line_list_name = "All ELR PCR tests updated 10.19.20.csv") {
-  neg_line_list <- read_csv(here::here("data", "oc", negative_line_list_name),
-                            col_types = cols(.default = col_skip(),
-                                             PersonId = col_integer(),
-                                             Specimen.Collected.Date = col_date("%m-%d-%Y"),
+read_line_list_by_city <- function(line_list_name, negative_line_list_name) {
+  neg_line_list <- read_csv(here::here("data", negative_line_list_name),
+                            col_types = cols(PersonId = col_integer(),
                                              Resulted.Organism = col_character(),
                                              Zip = col_character())) %>%
     filter(!is.na(Resulted.Organism)) %>%
-    mutate(test_result = fct_collapse(str_to_lower(Resulted.Organism),
-                                      negative = negative_test_synonyms,
-                                      positive = positive_test_synonyms,
-                                      other = other_test_synonyms)) %>%
+    mutate(
+      Specimen.Collected.Date = lubridate::mdy(Specimen.Collected.Date),
+      test_result = fct_collapse(trimws(str_to_lower(Resulted.Organism)),
+                                  negative = negative_test_synonyms,
+                                  positive = positive_test_synonyms,
+                                  other = other_test_synonyms)
+    ) %>%
     select(id = PersonId, posted_date = Specimen.Collected.Date, test_result, zip = Zip) %>%
     mutate(zip = str_sub(zip, end = 5)) %>%
     filter(posted_date >= lubridate::ymd("2020-01-01")) %>%
@@ -219,12 +154,12 @@ read_line_list_by_city <- function(line_list_name = "10.19.20 release to UCI tea
     ungroup()
 
 
-  new_deaths_tbl <- read_csv(here::here("data", "oc", line_list_name),
-                             col_types = cols(.default = col_skip(),
-                                              `DtDeath` = col_date("%m/%d/%Y"),
-                                              Zip = col_character())) %>%
+  new_deaths_tbl <- read_csv(here::here("data", line_list_name),
+                             col_types = cols(Zip = col_character(),
+                                              DtDeath = col_character())) %>%
     drop_na() %>%
-    select(posted_date = `DtDeath`, zip = Zip) %>%
+    mutate(posted_date = lubridate::ymd(DtDeath)) %>%
+    select(posted_date, zip = Zip) %>%
     count(posted_date, zip, name = "new_deaths") %>%
     arrange(posted_date)
 
@@ -242,7 +177,7 @@ read_line_list_by_city <- function(line_list_name = "10.19.20 release to UCI tea
     distinct()
 
 
-  oc_zips <- read_csv(here("data", "oc", "oc_zips.csv"),
+  oc_zips <- read_csv(here("data", "oc_zips.csv"),
                       col_types = cols(Zip = col_character())) %>%
     rename_all(str_to_lower) %>%
     group_by(city) %>%
@@ -269,10 +204,17 @@ read_line_list_by_city <- function(line_list_name = "10.19.20 release to UCI tea
 }
 
 
+## Do the conversion
 
-oc_data <- read_line_list()
+oc_data <- read_line_list(
+  line_list_name = "10.26.20 release to UCI team.csv",
+  negative_line_list_name = "All ELR PCR tests updated 10.26.20.csv"
+)
 
-oc_data_by_city <- read_line_list_by_city()
+oc_data_by_city <- read_line_list_by_city(
+  line_list_name = "10.26.20 release to UCI team.csv",
+  negative_line_list_name = "All ELR PCR tests updated 10.26.20.csv"
+)
 
-write.csv(oc_data, "oc_data.csv")
-write.csv(oc_data_by_city, "oc_city_data.csv")
+write.csv(oc_data, here("data", "oc_data.csv"))
+write.csv(oc_data_by_city, here("data", "oc_city_data.csv"))
