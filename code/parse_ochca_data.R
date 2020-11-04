@@ -80,7 +80,8 @@ other_test_synonyms <- c("inconclusive",
                          "specimen received mislabeled",
                          "enterococcus faecalis",
                          "carbapenem resistant pseudomonas aeruginosa",
-                         "enterobacter cloacae complex (organism)"
+                         "enterobacter cloacae complex (organism)",
+                         "interpretive information: 2019 novel coronavirus sars-cov-2 by pcr"
 )
 
 read_line_list <- function(line_list_name, negative_line_list_name) {
@@ -207,13 +208,13 @@ read_line_list_by_city <- function(line_list_name, negative_line_list_name) {
 ## Do the conversion
 
 oc_data <- read_line_list(
-  line_list_name = "10.26.20 release to UCI team.csv",
-  negative_line_list_name = "All ELR PCR tests updated 10.26.20.csv"
+  line_list_name = "11.2.20 release to UCI team.csv",
+  negative_line_list_name = "All ELR PCR tests updated 11.2.20.csv"
 )
 
 oc_data_by_city <- read_line_list_by_city(
-  line_list_name = "10.26.20 release to UCI team.csv",
-  negative_line_list_name = "All ELR PCR tests updated 10.26.20.csv"
+  line_list_name = "11.2.20 release to UCI team.csv",
+  negative_line_list_name = "All ELR PCR tests updated 11.2.20.csv"
 )
 
 write.csv(oc_data, here("data", "oc_data.csv"))
