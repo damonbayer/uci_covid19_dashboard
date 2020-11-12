@@ -99,7 +99,7 @@ get_county_plots <- function(counties_of_interest){
     geom_line(size = 1.5),
     scale_color_manual(name = "County", values = cbPalette),
     scale_x_date(name = "Date",
-                 breaks = "14 day",
+                 breaks = "21 day",
                  date_labels = "%b %d",
                  expand = expansion(add=c(0,7))),
     scale_y_continuous(label = comma)
