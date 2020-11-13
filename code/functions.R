@@ -258,7 +258,9 @@ get_city_plots <- function(cities_of_interest){
 
   city_data$posted_date <- as.Date(city_data$posted_date)
 
-  city_pop <- read_csv("data/city_pop.csv") %>% rename_all(str_to_lower)
+  city_pop <- read_csv("data/city_pop.csv") %>%
+    rename_all(str_to_lower) %>%
+    dplyr::select(city, population)
 
   # stay at home order start and end dates
   sah_start <- ymd("2020-03-19")

@@ -1,43 +1,488 @@
-City,Population
-Aliso Viejo,49046
-Anaheim,354475
-Brea,39146
-Buena Park,80266
-Capistrano Beach,7248
-Corona Del Mar,12478
-Costa Mesa,110851
-Cypress,47993
-Dana Point,25756
-Foothill Ranch,11248
-Fountain Valley,56004
-Fullerton,134733
-Garden Grove,172782
-Huntington Beach,190249
-Irvine,212569
-La Habra,67619
-La Palma,15554
-Ladera Ranch,21944
-Laguna Beach,23881
-Laguna Hills,29291
-Laguna Niguel,63297
-Laguna Woods,16012
-Lake Forest,59182
-Los Alamitos,21751
-Midway City,8337
-Mission Viejo,94804
-Newport Beach,62946
-Newport Coast,9741
-Orange,141692
-Placentia,52033
-Rancho Santa Margarita,43792
-San Clemente,63773
-San Juan Capistrano,34731
-Santa Ana,348131
-Seal Beach,23729
-Stanton,29945
-Sunset Beach,831
-Trabuco Canyon,32611
-Tustin,80773
-Villa Park,5781
-Westminster,89747
-Yorba Linda,66570
+"","City","Population"
+"1","Adelanto",34049
+"2","Agoura Hills",20222
+"3","Alameda",77624
+"4","Albany",19696
+"5","Alhambra",83750
+"6","Aliso Viejo",50887
+"7","Alturas",2563
+"8","Amador City",190
+"9","American Canyon",20475
+"10","Anaheim",350365
+"11","Anderson",10630
+"12","Angels",3956
+"13","Antioch",111502
+"14","Apple Valley town",73453
+"15","Arcadia",57939
+"16","Arcata",18431
+"17","Arroyo Grande",17976
+"18","Artesia",16601
+"19","Arvin",21851
+"20","Atascadero",30075
+"21","Atherton town",7137
+"22","Atwater",29559
+"23","Auburn",14195
+"24","Avalon",3681
+"25","Avenal",13496
+"26","Azusa",49974
+"27","Bakersfield",384145
+"28","Baldwin Park",75251
+"29","Banning",31221
+"30","Barstow",23915
+"31","Beaumont",51063
+"32","Bell",35521
+"33","Bellflower",76435
+"34","Bell Gardens",42012
+"35","Belmont",26941
+"36","Belvedere",2104
+"37","Benicia",28240
+"38","Berkeley",121363
+"39","Beverly Hills",33792
+"40","Big Bear Lake",5279
+"41","Biggs",1879
+"42","Bishop",3747
+"43","Blue Lake",1245
+"44","Blythe",19682
+"45","Bradbury",1070
+"46","Brawley",26227
+"47","Brea",43255
+"48","Brentwood",64474
+"49","Brisbane",4671
+"50","Buellton",5102
+"51","Buena Park",81788
+"52","Burbank",102511
+"53","Burlingame",30889
+"54","Calabasas",23853
+"55","Calexico",39825
+"56","California City",14198
+"57","Calimesa",9160
+"58","Calipatria",7114
+"59","Calistoga",5247
+"60","Camarillo",69888
+"61","Campbell",41793
+"62","Canyon Lake",11280
+"63","Capitola",10010
+"64","Carlsbad",115382
+"65","Carmel-by-the-Sea",3811
+"66","Carpinteria",13385
+"67","Carson",91394
+"68","Cathedral City",55007
+"69","Ceres",48706
+"70","Cerritos",49859
+"71","Chico",103301
+"72","Chino",94371
+"73","Chino Hills",83853
+"74","Chowchilla",18310
+"75","Chula Vista",274492
+"76","Citrus Heights",87796
+"77","Claremont",36266
+"78","Clayton",12265
+"79","Clearlake",15267
+"80","Cloverdale",8656
+"81","Clovis",114584
+"82","Coachella",45743
+"83","Coalinga",17179
+"84","Colfax",2002
+"85","Colma town",1489
+"86","Colton",54824
+"87","Colusa",6060
+"88","Commerce",12661
+"89","Compton",95605
+"90","Concord",129295
+"91","Corcoran",21960
+"92","Corning",7710
+"93","Corona",169868
+"94","Coronado",23731
+"95","Corte Madera town",9751
+"96","Costa Mesa",113003
+"97","Cotati",7410
+"98","Covina",47450
+"99","Crescent City",6787
+"100","Cudahy",23569
+"101","Culver City",39185
+"102","Cupertino",59276
+"103","Cypress",49006
+"104","Daly City",106280
+"105","Dana Point",33577
+"106","Danville town",44510
+"107","Davis",69413
+"108","Delano",53573
+"109","Del Mar",4319
+"110","Del Rey Oaks",1654
+"111","Desert Hot Springs",28878
+"112","Diamond Bar",55720
+"113","Dinuba",24461
+"114","Dixon",20698
+"115","Dorris",897
+"116","Dos Palos",5527
+"117","Downey",111126
+"118","Duarte",21271
+"119","Dublin",64826
+"120","Dunsmuir",1564
+"121","East Palo Alto",29314
+"122","Eastvale",64157
+"123","El Cajon",102708
+"124","El Centro",44079
+"125","El Cerrito",25508
+"126","Elk Grove",174775
+"127","El Monte",115487
+"128","El Paso de Robles (Paso Robles)",32153
+"129","El Segundo",16610
+"130","Emeryville",12086
+"131","Encinitas",62709
+"132","Escalon",7574
+"133","Escondido",151625
+"134","Etna",718
+"135","Eureka",26710
+"136","Exeter",10485
+"137","Fairfax town",7522
+"138","Fairfield",117133
+"139","Farmersville",10703
+"140","Ferndale",1352
+"141","Fillmore",15870
+"142","Firebaugh",8296
+"143","Folsom",81328
+"144","Fontana",214547
+"145","Fort Bragg",7291
+"146","Fort Jones",692
+"147","Fortuna",12259
+"148","Foster City",33901
+"149","Fountain Valley",55357
+"150","Fowler",6790
+"151","Fremont",241110
+"152","Fresno",531576
+"153","Fullerton",138632
+"154","Galt",26536
+"155","Gardena",59329
+"156","Garden Grove",171644
+"157","Gilroy",59032
+"158","Glendale",199303
+"159","Glendora",51544
+"160","Goleta",30911
+"161","Gonzales",8306
+"162","Grand Terrace",12584
+"163","Grass Valley",12817
+"164","Greenfield",17516
+"165","Gridley",7246
+"166","Grover Beach",13459
+"167","Guadalupe",7783
+"168","Gustine",5882
+"169","Half Moon Bay",12932
+"170","Hanford",57703
+"171","Hawaiian Gardens",14159
+"172","Hawthorne",86068
+"173","Hayward",159203
+"174","Healdsburg",11845
+"175","Hemet",85334
+"176","Hercules",26276
+"177","Hermosa Beach",19320
+"178","Hesperia",95750
+"179","Hidden Hills",1890
+"180","Highland",55417
+"181","Hillsborough town",11387
+"182","Hollister",40740
+"183","Holtville",6621
+"184","Hughson",7565
+"185","Huntington Beach",199223
+"186","Huntington Park",57509
+"187","Huron",7281
+"188","Imperial",18120
+"189","Imperial Beach",27440
+"190","Indian Wells",5470
+"191","Indio",91765
+"192","Industry",202
+"193","Inglewood",108151
+"194","Ione",8568
+"195","Irvine",287401
+"196","Irwindale",1446
+"197","Isleton",844
+"198","Jackson",4840
+"199","Jurupa Valley",109527
+"200","Kerman",15282
+"201","King City",14077
+"202","Kingsburg",12108
+"203","La Ca<U+FFFD>ada Flintridge",20009
+"204","Lafayette",26638
+"205","Laguna Beach",22827
+"206","Laguna Hills",31207
+"207","Laguna Niguel",66385
+"208","Laguna Woods",15850
+"209","La Habra",60513
+"210","La Habra Heights",6492
+"211","Lake Elsinore",69283
+"212","Lake Forest",85531
+"213","Lakeport",5006
+"214","Lakewood",79307
+"215","La Mesa",59249
+"216","La Mirada",48183
+"217","Lancaster",157601
+"218","La Palma",15428
+"219","La Puente",39614
+"220","La Quinta",41748
+"221","Larkspur",12254
+"222","Lathrop",24483
+"223","La Verne",31974
+"224","Lawndale",32389
+"225","Lemon Grove",26811
+"226","Lemoore",26725
+"227","Lincoln",48275
+"228","Lindsay",13463
+"229","Live Oak",8912
+"230","Livermore",90189
+"231","Livingston",14896
+"232","Lodi",67586
+"233","Loma Linda",24482
+"234","Lomita",20320
+"235","Lompoc",42853
+"236","Long Beach",462628
+"237","Loomis town",6866
+"238","Los Alamitos",11399
+"239","Los Altos",30089
+"240","Los Altos Hills town",8423
+"241","Los Angeles",3979576
+"242","Los Banos",41036
+"243","Los Gatos town",30222
+"244","Loyalton",702
+"245","Lynwood",69887
+"246","McFarland",15506
+"247","Madera",65860
+"248","Malibu",11820
+"249","Mammoth Lakes town",8235
+"250","Manhattan Beach",35183
+"251","Manteca",83028
+"252","Maricopa",1192
+"253","Marina",22781
+"254","Martinez",38297
+"255","Marysville",12476
+"256","Maywood",26973
+"257","Mendota",11511
+"258","Menifee",94756
+"259","Menlo Park",34698
+"260","Merced",83676
+"261","Millbrae",22394
+"262","Mill Valley",14259
+"263","Milpitas",84196
+"264","Mission Viejo",94381
+"265","Modesto",215196
+"266","Monrovia",36331
+"267","Montague",1398
+"268","Montclair",40083
+"269","Montebello",61954
+"270","Monterey",28178
+"271","Monterey Park",59669
+"272","Monte Sereno",3427
+"273","Moorpark",36375
+"274","Moraga town",17783
+"275","Moreno Valley",213055
+"276","Morgan Hill",45952
+"277","Morro Bay",10543
+"278","Mountain View",82739
+"279","Mount Shasta",3274
+"280","Murrieta",116223
+"281","Napa",78130
+"282","National City",61394
+"283","Needles",4976
+"284","Nevada City",3148
+"285","Newark",49149
+"286","Newman",11784
+"287","Newport Beach",84534
+"288","Norco",26604
+"289","Norwalk",103949
+"290","Novato",55516
+"291","Oakdale",23596
+"292","Oakland",433031
+"293","Oakley",42543
+"294","Oceanside",175742
+"295","Ojai",7470
+"296","Ontario",185010
+"297","Orange",138669
+"298","Orange Cove",10273
+"299","Orinda",19926
+"300","Orland",7827
+"301","Oroville",20737
+"302","Oxnard",208881
+"303","Pacifica",38546
+"304","Pacific Grove",15413
+"305","Palmdale",155079
+"306","Palm Desert",53275
+"307","Palm Springs",48518
+"308","Palo Alto",65364
+"309","Palos Verdes Estates",13273
+"310","Paradise town",4476
+"311","Paramount",53955
+"312","Parlier",15618
+"313","Pasadena",141029
+"314","Patterson",22524
+"315","Perris",79291
+"316","Petaluma",60520
+"317","Pico Rivera",62027
+"318","Piedmont",11135
+"319","Pinole",19250
+"320","Pismo Beach",8168
+"321","Pittsburg",72588
+"322","Placentia",51233
+"323","Placerville",11175
+"324","Pleasant Hill",34839
+"325","Pleasanton",81777
+"326","Plymouth",1076
+"327","Point Arena",449
+"328","Pomona",151691
+"329","Porterville",59599
+"330","Port Hueneme",21926
+"331","Portola",1930
+"332","Portola Valley town",4568
+"333","Poway",49323
+"334","Rancho Cordova",75087
+"335","Rancho Cucamonga",177603
+"336","Rancho Mirage",18528
+"337","Rancho Palos Verdes",41530
+"338","Rancho Santa Margarita",47896
+"339","Red Bluff",14539
+"340","Redding",92590
+"341","Redlands",71513
+"342","Redondo Beach",66749
+"343","Redwood City",85925
+"344","Reedley",25658
+"345","Rialto",103526
+"346","Richmond",110567
+"347","Ridgecrest",28973
+"348","Rio Dell",3349
+"349","Rio Vista",9718
+"350","Ripon",16386
+"351","Riverbank",24881
+"352","Riverside",331360
+"353","Rocklin",68823
+"354","Rohnert Park",43291
+"355","Rolling Hills",1845
+"356","Rolling Hills Estates",8058
+"357","Rosemead",54058
+"358","Roseville",141500
+"359","Ross town",2451
+"360","Sacramento",513624
+"361","St. Helena",6102
+"362","Salinas",155465
+"363","San Anselmo town",12476
+"364","San Bernardino",215784
+"365","San Bruno",42807
+"366","San Buenaventura (Ventura)",109106
+"367","San Carlos",30185
+"368","San Clemente",64558
+"369","Sand City",399
+"370","San Diego",1423851
+"371","San Dimas",33621
+"372","San Fernando",24322
+"373","San Francisco",881549
+"374","San Gabriel",39899
+"375","Sanger",25339
+"376","San Jacinto",49215
+"377","San Joaquin",4021
+"378","San Jose",1021795
+"379","San Juan Bautista",2104
+"380","San Juan Capistrano",35911
+"381","San Leandro",88815
+"382","San Luis Obispo",47459
+"383","San Marcos",96664
+"384","San Marino",13048
+"385","San Mateo",104430
+"386","San Pablo",30990
+"387","San Rafael",58440
+"388","San Ramon",75995
+"389","Santa Ana",332318
+"390","Santa Barbara",91364
+"391","Santa Clara",130365
+"392","Santa Clarita",212979
+"393","Santa Cruz",64608
+"394","Santa Fe Springs",17630
+"395","Santa Maria",107263
+"396","Santa Monica",90401
+"397","Santa Paula",29806
+"398","Santa Rosa",176753
+"399","Santee",58081
+"400","Saratoga",30153
+"401","Sausalito",7068
+"402","Scotts Valley",11757
+"403","Seal Beach",23896
+"404","Seaside",33748
+"405","Sebastopol",7674
+"406","Selma",24825
+"407","Shafter",20401
+"408","Shasta Lake",10413
+"409","Sierra Madre",10793
+"410","Signal Hill",11421
+"411","Simi Valley",125613
+"412","Solana Beach",13296
+"413","Soledad",25999
+"414","Solvang",5838
+"415","Sonoma",11024
+"416","Sonora",4864
+"417","South El Monte",20574
+"418","South Gate",93444
+"419","South Lake Tahoe",22197
+"420","South Pasadena",25329
+"421","South San Francisco",67789
+"422","Stanton",38139
+"423","Stockton",312697
+"424","Suisun City",29663
+"425","Sunnyvale",152703
+"426","Susanville",15010
+"427","Sutter Creek",2622
+"428","Taft",9272
+"429","Tehachapi",13011
+"430","Tehama",373
+"431","Temecula",114761
+"432","Temple City",35811
+"433","Thousand Oaks",126813
+"434","Tiburon town",9084
+"435","Torrance",143592
+"436","Tracy",94740
+"437","Trinidad",355
+"438","Truckee town",16735
+"439","Tulare",65496
+"440","Tulelake",978
+"441","Turlock",73631
+"442","Tustin",79348
+"443","Twentynine Palms",26073
+"444","Ukiah",15995
+"445","Union City",74107
+"446","Upland",77140
+"447","Vacaville",100670
+"448","Vallejo",121692
+"449","Vernon",110
+"450","Victorville",122385
+"451","Villa Park",5790
+"452","Visalia",134605
+"453","Vista",101638
+"454","Walnut",29685
+"455","Walnut Creek",70166
+"456","Wasco",28710
+"457","Waterford",8962
+"458","Watsonville",53856
+"459","Weed",2725
+"460","West Covina",105101
+"461","West Hollywood",36475
+"462","Westlake Village",8217
+"463","Westminster",90643
+"464","Westmorland",2254
+"465","West Sacramento",53519
+"466","Wheatland",3873
+"467","Whittier",85098
+"468","Wildomar",37229
+"469","Williams",5408
+"470","Willits",4890
+"471","Willows",6072
+"472","Windsor town",27128
+"473","Winters",7315
+"474","Woodlake",7658
+"475","Woodland",60548
+"476","Woodside town",5458
+"477","Yorba Linda",67644
+"478","Yountville",2966
+"479","Yreka",7518
+"480","Yuba City",67010
+"481","Yucaipa",53921
+"482","Yucca Valley town",21777
+"483","Note: The estimates are based on the 2010 Census and reflect changes to the April 1",NA
+"484","Suggested Citation:",NA
+"485","Annual Estimates of the Resident Population for Incorporated Places in California: April 1",NA
+"486","Source: U.S. Census Bureau",NA
+"487","Release Date: May 2020",NA
