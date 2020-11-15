@@ -289,8 +289,7 @@ get_city_plots <- function(cities_of_interest){
 
   # keep color palette consistent across county sets
 
-  cbPalette <- c("#56B4E9", "#009E73", "#E69F00", "#CC79A7", "#0072B2",
-                 "#A857E6", "#1980E6", "#CC625E", "#CAA1E6", "#E6CA5C")
+  cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
   sah_alpha <- 0.2
 
