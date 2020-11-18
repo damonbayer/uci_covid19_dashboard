@@ -13,6 +13,7 @@
 
 <title>COVID-19 Trends by UCI Statistics</title>
 
+<script src="site_libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -32,6 +33,17 @@ div.section {
   padding-top: 12px;
 }
 </style>
+
+
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -499,30 +511,34 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree488493a85720c7404cd6c8bd81095a39b08576bdtargetblank488493aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/488493a85720c7404cd6c8bd81095a39b08576bd" target="_blank">488493a</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree22759c1931011a1afd2ae792e8e076e18b987cd2targetblank22759c1a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/22759c1931011a1afd2ae792e8e076e18b987cd2" target="_blank">22759c1</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree488493a85720c7404cd6c8bd81095a39b08576bdtargetblank488493aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree22759c1931011a1afd2ae792e8e076e18b987cd2targetblank22759c1a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/488493a85720c7404cd6c8bd81095a39b08576bd" target="_blank">488493a</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/22759c1931011a1afd2ae792e8e076e18b987cd2" target="_blank">22759c1</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    analysis/.DS_Store
-    Ignored:    data/.DS_Store
+
+Untracked files:
+    Untracked:  data/11.16.20 release to UCI team.csv
+    Untracked:  data/All ELR PCR tests updated 11.16.20.csv
 
 Unstaged changes:
+    Modified:   code/parse_ochca_data.R
     Modified:   data/oc_city_data.csv
+    Modified:   data/oc_data.csv
+    Modified:   uci_covid19_dashboard.Rproj
 
 </code></pre>
 <p>
@@ -561,6 +577,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/22759c1931011a1afd2ae792e8e076e18b987cd2/docs/oc-populous-cities.html" target="_blank">22759c1</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-11-17
+</td>
+<td>
+Nov 16 Update
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -1308,817 +1341,20 @@ Added OC 5 Most Populous Cities comparison
 </style>
 <div id="orange-county-city-trends" class="section level3">
 <h3>Orange County City Trends</h3>
-<div class = "row">
-<div class = "col-md-6">
+<div class="row">
+<div class="col-md-6">
 <p><img src="figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-hospitalizations_plot-1">
-Past versions of hospitalizations_plot-1.png
-</button>
-</p>
-<div id="fig-hospitalizations_plot-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f43b0f854d08987ff2047a6a48c16036fe331a6b/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">f43b0f8</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c5a66e5e1dc3aa8d7d361034a838860d22facf2f/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">c5a66e5</a>
-</td>
-<td>
-Jessica George
-</td>
-<td>
-2020-11-15
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/39a512473f30d5ec6d8fec99a19cd1b2835eb690/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">39a5124</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-12
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f2f3802b528a1e0764ed8663009b69fd46da8899/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">f2f3802</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-11-12
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/05216700025a865252deeb096589eb68e73fd68c/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">0521670</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-05
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ddd7d03dbb010bca49745698d3cacc45e5952e23/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">ddd7d03</a>
-</td>
-<td>
-Jessica George
-</td>
-<td>
-2020-11-03
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ae0d991574cd92f075e283b5ef7aa4966c95ddbc/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">ae0d991</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-27
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c03f470201c493ebabddf4fb0ab25c3c6146ba15/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">c03f470</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-26
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/1d49990e8603b346c154e66454a37803a5dd8407/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">1d49990</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-20
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0c2be58ab3967bffc01424c79c52ca7cb47fcad9/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">0c2be58</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/149bf660e39f0162dc0aef7831e75cc194e07eb3/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">149bf66</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6dda957623d97f5e0b5eaac3058c1f3e5b24d3fd/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">6dda957</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/cb0af7f7d51050eda845dd0c9bd1782ee95ef7d8/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">cb0af7f</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6214d3e80170a371ad2ecbe0214b3870607a7db8/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">6214d3e</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-10-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e295ddbe859f71ea03927b2e68fff7b91df15156/docs/figure/oc-populous-cities.Rmd/hospitalizations_plot-1.png" target="_blank">e295ddb</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-15
-</td>
-</tr>
-</tbody>
-</table>
 </div>
-</div>
-</div>
-<div class = "col-md-6">
+<div class="col-md-6">
 <p><img src="figure/oc-populous-cities.Rmd/icu_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-icu_plot-1">
-Past versions of icu_plot-1.png
-</button>
-</p>
-<div id="fig-icu_plot-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f43b0f854d08987ff2047a6a48c16036fe331a6b/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">f43b0f8</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c5a66e5e1dc3aa8d7d361034a838860d22facf2f/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">c5a66e5</a>
-</td>
-<td>
-Jessica George
-</td>
-<td>
-2020-11-15
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0ab8f6d44b63fe3074938f21250bc70ce2128f11/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">0ab8f6d</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-13
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/39a512473f30d5ec6d8fec99a19cd1b2835eb690/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">39a5124</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-12
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f2f3802b528a1e0764ed8663009b69fd46da8899/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">f2f3802</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-11-12
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/05216700025a865252deeb096589eb68e73fd68c/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">0521670</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-05
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ddd7d03dbb010bca49745698d3cacc45e5952e23/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">ddd7d03</a>
-</td>
-<td>
-Jessica George
-</td>
-<td>
-2020-11-03
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ae0d991574cd92f075e283b5ef7aa4966c95ddbc/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">ae0d991</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-27
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c03f470201c493ebabddf4fb0ab25c3c6146ba15/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">c03f470</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-26
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/1d49990e8603b346c154e66454a37803a5dd8407/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">1d49990</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-20
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0c2be58ab3967bffc01424c79c52ca7cb47fcad9/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">0c2be58</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/149bf660e39f0162dc0aef7831e75cc194e07eb3/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">149bf66</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6dda957623d97f5e0b5eaac3058c1f3e5b24d3fd/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">6dda957</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/cb0af7f7d51050eda845dd0c9bd1782ee95ef7d8/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">cb0af7f</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6214d3e80170a371ad2ecbe0214b3870607a7db8/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">6214d3e</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-10-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e295ddbe859f71ea03927b2e68fff7b91df15156/docs/figure/oc-populous-cities.Rmd/icu_plot-1.png" target="_blank">e295ddb</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-15
-</td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
-</div>
-</div>
-<div class = "row">
-<div class = "col-md-6">
+<div class="row">
+<div class="col-md-6">
 <p><img src="figure/oc-populous-cities.Rmd/cases_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-cases_plot-1">
-Past versions of cases_plot-1.png
-</button>
-</p>
-<div id="fig-cases_plot-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f43b0f854d08987ff2047a6a48c16036fe331a6b/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">f43b0f8</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c5a66e5e1dc3aa8d7d361034a838860d22facf2f/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">c5a66e5</a>
-</td>
-<td>
-Jessica George
-</td>
-<td>
-2020-11-15
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0ab8f6d44b63fe3074938f21250bc70ce2128f11/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">0ab8f6d</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-13
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/39a512473f30d5ec6d8fec99a19cd1b2835eb690/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">39a5124</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-12
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f2f3802b528a1e0764ed8663009b69fd46da8899/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">f2f3802</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-11-12
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/05216700025a865252deeb096589eb68e73fd68c/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">0521670</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-05
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ddd7d03dbb010bca49745698d3cacc45e5952e23/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">ddd7d03</a>
-</td>
-<td>
-Jessica George
-</td>
-<td>
-2020-11-03
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ae0d991574cd92f075e283b5ef7aa4966c95ddbc/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">ae0d991</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-27
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c03f470201c493ebabddf4fb0ab25c3c6146ba15/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">c03f470</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-26
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/1d49990e8603b346c154e66454a37803a5dd8407/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">1d49990</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-20
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0c2be58ab3967bffc01424c79c52ca7cb47fcad9/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">0c2be58</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/149bf660e39f0162dc0aef7831e75cc194e07eb3/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">149bf66</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6dda957623d97f5e0b5eaac3058c1f3e5b24d3fd/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">6dda957</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/cb0af7f7d51050eda845dd0c9bd1782ee95ef7d8/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">cb0af7f</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6214d3e80170a371ad2ecbe0214b3870607a7db8/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">6214d3e</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-10-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e295ddbe859f71ea03927b2e68fff7b91df15156/docs/figure/oc-populous-cities.Rmd/cases_plot-1.png" target="_blank">e295ddb</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-15
-</td>
-</tr>
-</tbody>
-</table>
 </div>
-</div>
-</div>
-<div class = "col-md-6">
+<div class="col-md-6">
 <p><img src="figure/oc-populous-cities.Rmd/deaths_plot-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-deaths_plot-1">
-Past versions of deaths_plot-1.png
-</button>
-</p>
-<div id="fig-deaths_plot-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f43b0f854d08987ff2047a6a48c16036fe331a6b/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">f43b0f8</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c5a66e5e1dc3aa8d7d361034a838860d22facf2f/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">c5a66e5</a>
-</td>
-<td>
-Jessica George
-</td>
-<td>
-2020-11-15
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0ab8f6d44b63fe3074938f21250bc70ce2128f11/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">0ab8f6d</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-13
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/39a512473f30d5ec6d8fec99a19cd1b2835eb690/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">39a5124</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-12
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f2f3802b528a1e0764ed8663009b69fd46da8899/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">f2f3802</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-11-12
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/05216700025a865252deeb096589eb68e73fd68c/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">0521670</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-11-05
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ddd7d03dbb010bca49745698d3cacc45e5952e23/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">ddd7d03</a>
-</td>
-<td>
-Jessica George
-</td>
-<td>
-2020-11-03
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ae0d991574cd92f075e283b5ef7aa4966c95ddbc/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">ae0d991</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-27
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c03f470201c493ebabddf4fb0ab25c3c6146ba15/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">c03f470</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-26
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/1d49990e8603b346c154e66454a37803a5dd8407/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">1d49990</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-20
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0c2be58ab3967bffc01424c79c52ca7cb47fcad9/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">0c2be58</a>
-</td>
-<td>
-vnminin
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/149bf660e39f0162dc0aef7831e75cc194e07eb3/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">149bf66</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6dda957623d97f5e0b5eaac3058c1f3e5b24d3fd/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">6dda957</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-19
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/cb0af7f7d51050eda845dd0c9bd1782ee95ef7d8/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">cb0af7f</a>
-</td>
-<td>
-markellekelly
-</td>
-<td>
-2020-10-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6214d3e80170a371ad2ecbe0214b3870607a7db8/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">6214d3e</a>
-</td>
-<td>
-Damon Bayer
-</td>
-<td>
-2020-10-16
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e295ddbe859f71ea03927b2e68fff7b91df15156/docs/figure/oc-populous-cities.Rmd/deaths_plot-1.png" target="_blank">e295ddb</a>
-</td>
-<td>
-Thanasi Bakis
-</td>
-<td>
-2020-10-15
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
 </div>
 </div>
 <p>Data provided by <a href="https://www.ochealthinfo.com">Orange County Health Care Agency</a>.</p>
@@ -2132,15 +1368,17 @@ Thanasi Bakis
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
 <pre><code>R version 4.0.3 (2020-10-10)
-Platform: x86_64-apple-darwin17.0 (64-bit)
-Running under: macOS Catalina 10.15.7
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19042)
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
 
 locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+[1] LC_COLLATE=English_United States.1252 
+[2] LC_CTYPE=English_United States.1252   
+[3] LC_MONETARY=English_United States.1252
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.1252    
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -2149,7 +1387,7 @@ other attached packages:
  [1] cowplot_1.1.0   ckanr_0.5.0     DBI_1.1.0       ggtext_0.1.0   
  [5] glue_1.4.2      TTR_0.24.2      scales_1.1.1    lubridate_1.7.9
  [9] forcats_0.5.0   stringr_1.4.0   dplyr_1.0.2     purrr_0.3.4    
-[13] readr_1.3.1     tidyr_1.1.2     tibble_3.0.3    ggplot2_3.3.2  
+[13] readr_1.4.0     tidyr_1.1.2     tibble_3.0.3    ggplot2_3.3.2  
 [17] tidyverse_1.3.0 workflowr_1.6.2
 
 loaded via a namespace (and not attached):
@@ -2157,10 +1395,10 @@ loaded via a namespace (and not attached):
  [5] rprojroot_1.3-2  digest_0.6.25    R6_2.4.1         cellranger_1.1.0
  [9] backports_1.1.10 reprex_0.3.0     evaluate_0.14    httr_1.4.2      
 [13] pillar_1.4.6     rlang_0.4.7      curl_4.3         readxl_1.3.1    
-[17] rstudioapi_0.11  whisker_0.4      blob_1.2.1       rmarkdown_2.3   
+[17] rstudioapi_0.11  whisker_0.4      blob_1.2.1       rmarkdown_2.4   
 [21] labeling_0.3     urltools_1.7.3   triebeard_0.3.0  gridtext_0.1.1  
-[25] munsell_0.5.0    broom_0.7.0      compiler_4.0.3   httpuv_1.5.4    
-[29] modelr_0.1.8     xfun_0.17        pkgconfig_2.0.3  htmltools_0.5.0 
+[25] munsell_0.5.0    broom_0.7.1      compiler_4.0.3   httpuv_1.5.4    
+[29] modelr_0.1.8     xfun_0.18        pkgconfig_2.0.3  htmltools_0.5.0 
 [33] tidyselect_1.1.0 httpcode_0.3.0   fansi_0.4.1      crayon_1.3.4    
 [37] dbplyr_1.4.4     withr_2.3.0      later_1.1.0.1    crul_1.0.0      
 [41] grid_4.0.3       jsonlite_1.7.1   gtable_0.3.0     lifecycle_0.2.0 
@@ -2184,6 +1422,8 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
+
+
 
 
 

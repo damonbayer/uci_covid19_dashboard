@@ -13,6 +13,7 @@
 
 <title>COVID-19 Maps by UCI Statistics</title>
 
+<script src="site_libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -32,6 +33,17 @@ div.section {
   padding-top: 12px;
 }
 </style>
+
+
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -499,30 +511,34 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree488493a85720c7404cd6c8bd81095a39b08576bdtargetblank488493aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/488493a85720c7404cd6c8bd81095a39b08576bd" target="_blank">488493a</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree22759c1931011a1afd2ae792e8e076e18b987cd2targetblank22759c1a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/22759c1931011a1afd2ae792e8e076e18b987cd2" target="_blank">22759c1</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree488493a85720c7404cd6c8bd81095a39b08576bdtargetblank488493aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtree22759c1931011a1afd2ae792e8e076e18b987cd2targetblank22759c1a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/488493a85720c7404cd6c8bd81095a39b08576bd" target="_blank">488493a</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/22759c1931011a1afd2ae792e8e076e18b987cd2" target="_blank">22759c1</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    analysis/.DS_Store
-    Ignored:    data/.DS_Store
+
+Untracked files:
+    Untracked:  data/11.16.20 release to UCI team.csv
+    Untracked:  data/All ELR PCR tests updated 11.16.20.csv
 
 Unstaged changes:
+    Modified:   code/parse_ochca_data.R
     Modified:   data/oc_city_data.csv
+    Modified:   data/oc_data.csv
+    Modified:   uci_covid19_dashboard.Rproj
 
 </code></pre>
 <p>
@@ -561,6 +577,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/22759c1931011a1afd2ae792e8e076e18b987cd2/docs/positivity-maps.html" target="_blank">22759c1</a>
+</td>
+<td>
+Damon Bayer
+</td>
+<td>
+2020-11-17
+</td>
+<td>
+Nov 16 Update
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -2981,15 +3014,17 @@ Positivity Maps + Navigation Updates
 <div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 4.0.3 (2020-10-10)
-Platform: x86_64-apple-darwin17.0 (64-bit)
-Running under: macOS Catalina 10.15.7
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19042)
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
 
 locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+[1] LC_COLLATE=English_United States.1252 
+[2] LC_CTYPE=English_United States.1252   
+[3] LC_MONETARY=English_United States.1252
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.1252    
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -3000,11 +3035,11 @@ other attached packages:
 loaded via a namespace (and not attached):
  [1] Rcpp_1.0.5       rstudioapi_0.11  whisker_0.4      knitr_1.30      
  [5] magrittr_1.5     R6_2.4.1         rlang_0.4.7      stringr_1.4.0   
- [9] tools_4.0.3      xfun_0.17        git2r_0.27.1     htmltools_0.5.0 
+ [9] tools_4.0.3      xfun_0.18        git2r_0.27.1     htmltools_0.5.0 
 [13] ellipsis_0.3.1   rprojroot_1.3-2  yaml_2.2.1       digest_0.6.25   
 [17] tibble_3.0.3     lifecycle_0.2.0  crayon_1.3.4     later_1.1.0.1   
 [21] vctrs_0.3.4      promises_1.1.1   fs_1.5.0         glue_1.4.2      
-[25] evaluate_0.14    rmarkdown_2.3    stringi_1.5.3    compiler_4.0.3  
+[25] evaluate_0.14    rmarkdown_2.4    stringi_1.5.3    compiler_4.0.3  
 [29] pillar_1.4.6     backports_1.1.10 httpuv_1.5.4     pkgconfig_2.0.3 </code></pre>
 </div>
 </div>
@@ -3021,6 +3056,8 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
+
+
 
 
 
