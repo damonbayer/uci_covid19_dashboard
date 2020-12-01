@@ -270,7 +270,7 @@ get_city_plots <- function(cities_of_interest){
   max_date <- max(city_data$posted_date)-days(11)
 
   per_n_people <- 1e5 # denominator for reporting counts (e.g, per million people)
-  ma_n <- 7 # moving average window length in days
+  ma_n <- 14 # moving average window length in days
 
   # Tidy Data
   tidy_city <- city_data%>%
