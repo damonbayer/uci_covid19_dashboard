@@ -95,11 +95,13 @@ get_county_plots <- function(counties_of_interest){
 
   sah_alpha <- 0.2
 
+  break_vec <- seq(from = sah_end, to = max(hosp_tidy$date, cases_tidy$date), by = "21 day")
+
   gglayers = list(
     geom_line(size = 1.5),
     scale_color_manual(name = "County", values = cbPalette),
     scale_x_date(name = "Date",
-                 breaks = "21 day",
+                 breaks = break_vec,
                  date_labels = "%b %d",
                  expand = expansion(add=c(0,7))),
     scale_y_continuous(label = comma)
@@ -126,7 +128,7 @@ get_county_plots <- function(counties_of_interest){
                             sah_start,
                             min(hospitalizations_plot_data$date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 175/10, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 175/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   # ICU Occupancy
   icu_plot_data <- hosp_tidy %>%
@@ -150,7 +152,7 @@ get_county_plots <- function(counties_of_interest){
     annotate("rect",
              xmin = if_else(min(icu_plot_data$date) < sah_start, sah_start, min(icu_plot_data$date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 51/10, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 51/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
 
   # Deaths
@@ -175,7 +177,7 @@ get_county_plots <- function(counties_of_interest){
                             sah_start,
                             min(deaths_plot_data$date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 3/10, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 3/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   # Cases
   cases_plot_data <- cases_tidy %>%
@@ -199,7 +201,7 @@ get_county_plots <- function(counties_of_interest){
                             sah_start,
                             min(cases_plot_data$date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 250/10, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 250/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   return(list(hospitalizations_plot = hospitalizations_plot,
               icu_plot = icu_plot,
@@ -327,7 +329,7 @@ get_city_plots <- function(cities_of_interest){
                             sah_start,
                             min(positive_plot_data$posted_date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 15, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 15, x = sah_end+21, label = "Stay at Home\nOrder Ended")
   # Testing
   testing_plot_data <- tidy_city %>%
     group_by(city) %>%
@@ -349,7 +351,7 @@ get_city_plots <- function(cities_of_interest){
                             sah_start,
                             min(testing_plot_data$posted_date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 175, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 175, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
 
   # Deaths
@@ -373,7 +375,7 @@ get_city_plots <- function(cities_of_interest){
                             sah_start,
                             min(deaths_plot_data$posted_date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 1, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 1, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   # Cases
   cases_plot_data <- tidy_city %>%
@@ -396,7 +398,7 @@ get_city_plots <- function(cities_of_interest){
                             sah_start,
                             min(cases_plot_data$posted_date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 25, x = sah_end+8, label = "Stay at Home\nOrder Ended")
+    annotate("text", y = 25, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   return(list(positive_plot = positive_plot,
               testing_plot = testing_plot,
