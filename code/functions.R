@@ -214,51 +214,53 @@ get_county_plots <- function(counties_of_interest){
 # oc city plots -----------------------------------------------------------
 get_city_plots <- function(cities_of_interest){
 
-  #first step is to grab hospital data so that we're starting on the same date as the other graphs
-  # connect to CKAN instance
-  ckanr_setup(url="https://data.ca.gov")
-  ckan <- quiet(ckanr::src_ckan("https://data.ca.gov"))
-
-  # get resources
-  resources <- rbind(resource_search("name:covid-19", as = "table")$results,
-                     resource_search("name:hospitals by county", as = "table")$results)
-
-  resource_ids <- list(cases = resources$resource_id[resources$name == "COVID-19 Cases"],
-                       tests = resources$resource_id[resources$name == "COVID-19 Testing"],
-                       hosp = resources$resource_id[resources$name == "Hospitals By County"])
-
-
-  hosp <- tbl(src = ckan$con, from = resource_ids$hosp) %>%
-    as_tibble() %>%
-    select(-starts_with("_")) %>%
-    mutate(date = as.Date(todays_date)) %>%
-    select(-todays_date)
-
-  counties_of_interest <- c("San Diego",  "Los Angeles",  "Orange", "Alameda", "Santa Clara")
-
-  county_pop <- read_csv("data/county_pop.csv") %>% rename_all(str_to_lower)
-
-
-  hosp_tidy <- hosp %>%
-    filter(county %in% counties_of_interest) %>%
-    pivot_longer(cols = -c(date, county)) %>%
-    drop_na() %>%
-    left_join(county_pop) %>%
-    arrange(county, date)
-
-  hospitalizations_plot_data <- hosp_tidy %>%
-    filter(name == "hospitalized_covid_patients") %>%
-    group_by(county) %>%
-    mutate(value = runMean(value, 7)) %>%
-    drop_na()
-
-  min_date <- min(hospitalizations_plot_data$date)
+  # #first step is to grab hospital data so that we're starting on the same date as the other graphs
+  # # connect to CKAN instance
+  # ckanr_setup(url="https://data.ca.gov")
+  # ckan <- quiet(ckanr::src_ckan("https://data.ca.gov"))
+  #
+  # # get resources
+  # resources <- rbind(resource_search("name:covid-19", as = "table")$results,
+  #                    resource_search("name:hospitals by county", as = "table")$results)
+  #
+  # resource_ids <- list(cases = resources$resource_id[resources$name == "COVID-19 Cases"],
+  #                      tests = resources$resource_id[resources$name == "COVID-19 Testing"],
+  #                      hosp = resources$resource_id[resources$name == "Hospitals By County"])
+  #
+  #
+  # hosp <- tbl(src = ckan$con, from = resource_ids$hosp) %>%
+  #   as_tibble() %>%
+  #   select(-starts_with("_")) %>%
+  #   mutate(date = as.Date(todays_date)) %>%
+  #   select(-todays_date)
+  #
+  # counties_of_interest <- c("San Diego",  "Los Angeles",  "Orange", "Alameda", "Santa Clara")
+  #
+  # county_pop <- read_csv("data/county_pop.csv") %>% rename_all(str_to_lower)
+  #
+  #
+  # hosp_tidy <- hosp %>%
+  #   filter(county %in% counties_of_interest) %>%
+  #   pivot_longer(cols = -c(date, county)) %>%
+  #   drop_na() %>%
+  #   left_join(county_pop) %>%
+  #   arrange(county, date)
+  #
+  # hospitalizations_plot_data <- hosp_tidy %>%
+  #   filter(name == "hospitalized_covid_patients") %>%
+  #   group_by(county) %>%
+  #   mutate(value = runMean(value, 7)) %>%
+  #   drop_na()
+  #
+  # min_date <- min(hospitalizations_plot_data$date)
+  # Just hardcode minimum date
+  min_date <- structure(18379, class = "Date")
   # now read in city data
   # cities_of_interest <- c("Anaheim", "Santa Ana", "Irvine", "Huntington Beach", "Garden Grove")
 
-  city_data <- read.csv("data/oc_city_data.csv")
+  city_data <- read_csv("data/oc_city_data.csv")
 
-  city_data$posted_date <- as.Date(city_data$posted_date)
+  city_data$date <- as.Date(city_data$date)
 
   city_pop <- read_csv("data/city_pop.csv") %>%
     rename_all(str_to_lower) %>%
@@ -269,7 +271,7 @@ get_city_plots <- function(cities_of_interest){
   sah_end <- ymd("2020-05-04")
 
   #max date truncated for reporting delays
-  max_date <- max(city_data$posted_date)-days(11)
+  max_date <- max(city_data$date)-days(11)
 
   per_n_people <- 1e5 # denominator for reporting counts (e.g, per million people)
   ma_n <- 14 # moving average window length in days
@@ -279,9 +281,9 @@ get_city_plots <- function(cities_of_interest){
     filter(city %in% cities_of_interest)%>%
     left_join(city_pop)%>%
     mutate(
-      positivity=(new_cases/new_tests)*100
+      positivity=(cases/tests)*100
     )%>%
-    filter(posted_date >= sah_start  & posted_date <= max_date)
+    filter(date >= sah_start  & date <= max_date)
 
 
   # Theme options
@@ -309,14 +311,14 @@ get_city_plots <- function(cities_of_interest){
   positive_plot_data <- tidy_city %>%
     group_by(city) %>%
     mutate(
-            sum_pos=runSum(new_cases, ma_n),
-            sum_test=runSum(new_tests, ma_n),
-            value = (sum_pos/sum_test)*100) %>%
+      sum_pos=runSum(cases, ma_n),
+      sum_test=runSum(tests, ma_n),
+      value = (sum_pos/sum_test)*100) %>%
     drop_na()%>%
-    filter(posted_date >= min_date)
+    filter(date >= min_date)
 
   positive_plot <- positive_plot_data %>%
-    ggplot(aes(posted_date, value, group = city, color = city)) +
+    ggplot(aes(date, value, group = city, color = city)) +
     ggtitle(glue("Percent Positive COVID-19 Tests <span style='font-size:14pt'>({ma_n} Day Moving Window)</span>")) +
     #subtitle = glue("{ma_n} Day Moving Average"))
     theme(
@@ -325,20 +327,20 @@ get_city_plots <- function(cities_of_interest){
     gglayers +
     ylab(glue("Percent Positive COVID-19 Tests")) +
     annotate("rect",
-             xmin = if_else(min(positive_plot_data$posted_date) < sah_start,
+             xmin = if_else(min(positive_plot_data$date) < sah_start,
                             sah_start,
-                            min(positive_plot_data$posted_date)),
+                            min(positive_plot_data$date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
     annotate("text", y = 15, x = sah_end+21, label = "Stay at Home\nOrder Ended")
   # Testing
   testing_plot_data <- tidy_city %>%
     group_by(city) %>%
-    mutate(value = runMean(new_tests, ma_n)) %>%
+    mutate(value = runMean(tests, ma_n)) %>%
     drop_na()%>%
-    filter(posted_date >= min_date)
+    filter(date >= min_date)
 
   testing_plot <- testing_plot_data %>%
-    ggplot(aes(posted_date, value / population * per_n_people, group = city, color = city)) +
+    ggplot(aes(date, value / population * per_n_people, group = city, color = city)) +
     ggtitle(glue("Total COVID-19 Tests Peformed <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
     #          subtitle = glue("{ma_n} Day Moving Average")) +
     theme(
@@ -347,9 +349,9 @@ get_city_plots <- function(cities_of_interest){
     gglayers +
     ylab(glue("Total COVID-19 Tests Performed\nper {comma(per_n_people)} People")) +
     annotate("rect",
-             xmin = if_else(min(testing_plot_data$posted_date) < sah_start,
+             xmin = if_else(min(testing_plot_data$date) < sah_start,
                             sah_start,
-                            min(testing_plot_data$posted_date)),
+                            min(testing_plot_data$date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
     annotate("text", y = 175, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
@@ -357,12 +359,12 @@ get_city_plots <- function(cities_of_interest){
   # Deaths
   deaths_plot_data <- tidy_city %>%
     group_by(city) %>%
-    mutate(value = runMean(new_deaths, ma_n)) %>%
+    mutate(value = runMean(deaths, ma_n)) %>%
     drop_na()%>%
-    filter(posted_date >= min_date)
+    filter(date >= min_date)
 
   deaths_plot <- deaths_plot_data %>%
-    ggplot(aes(posted_date, value / population * per_n_people, group = city, color = city)) +
+    ggplot(aes(date, value / population * per_n_people, group = city, color = city)) +
     ggtitle(glue("New Daily Deaths due to COVID-19 <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
     #          subtitle = glue("{ma_n} Day Moving Average")) +
     theme(
@@ -371,21 +373,21 @@ get_city_plots <- function(cities_of_interest){
     gglayers +
     ylab(glue("New Daily Deaths due to COVID-19\nper {comma(per_n_people)} People")) +
     annotate("rect",
-             xmin = if_else(min(deaths_plot_data$posted_date) < sah_start,
+             xmin = if_else(min(deaths_plot_data$date) < sah_start,
                             sah_start,
-                            min(deaths_plot_data$posted_date)),
+                            min(deaths_plot_data$date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
     annotate("text", y = 1, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   # Cases
   cases_plot_data <- tidy_city %>%
     group_by(city) %>%
-    mutate(value = runMean(new_cases, ma_n)) %>%
+    mutate(value = runMean(cases, ma_n)) %>%
     drop_na()%>%
-    filter(posted_date >= min_date)
+    filter(date >= min_date)
 
   cases_plot <- cases_plot_data %>%
-    ggplot(aes(posted_date, value / population * per_n_people, group = city, color = city)) +
+    ggplot(aes(date, value / population * per_n_people, group = city, color = city)) +
     ggtitle(glue("New Daily COVID-19 Cases <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
     #          subtitle = glue("{ma_n} Day Moving Average")) +
     theme(
@@ -394,9 +396,9 @@ get_city_plots <- function(cities_of_interest){
     gglayers +
     ylab(glue("New Daily Confirmed COVID-19 Cases\nper {comma(per_n_people)} People")) +
     annotate("rect",
-             xmin = if_else(min(cases_plot_data$posted_date) < sah_start,
+             xmin = if_else(min(cases_plot_data$date) < sah_start,
                             sah_start,
-                            min(cases_plot_data$posted_date)),
+                            min(cases_plot_data$date)),
              xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
     annotate("text", y = 25, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
@@ -404,7 +406,7 @@ get_city_plots <- function(cities_of_interest){
               testing_plot = testing_plot,
               cases_plot = cases_plot,
               deaths_plot = deaths_plot,
-              data_date = max(tidy_city$posted_date)))
+              data_date = max(tidy_city$date)))
 }
 
 

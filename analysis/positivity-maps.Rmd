@@ -48,10 +48,16 @@ editor_options:
 <img src = "assets/OctPos.png"/>
 </div>
 <div class = "col-md-4">
+<img src = "assets/NovPos.png"/>
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-4">
 <img src = "assets/OC_Labels.png"/>
 </div>
 </div>
 
 Data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).
 
-Last updated `r as.Date("10/11/2020", "%m/%d/%y")`.
+Last updated `r as.Date("12/18/2020", "%m/%d/%y")`.
