@@ -165,7 +165,7 @@ get_county_plots <- function(counties_of_interest){
 
   deaths_plot <- deaths_plot_data %>%
     ggplot(aes(date, value / population * per_n_people, group = county, color = county)) +
-    ggtitle(glue(" New Daily Deaths due to COVID-19 <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
+    ggtitle(glue(" New Daily Deaths due to COVID-19* <span style='font-size:14pt'>({ma_n} Day Moving Average)</span>")) +
     #          subtitle = glue("{ma_n} Day Moving Average")) +
     theme(
       plot.title = element_markdown()

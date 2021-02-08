@@ -51,6 +51,7 @@ watermark(plots$deaths_plot)
 ```
 </div>
 </div>
+*Note that if deaths have been incorrectly reported in the past, current counts will be artificially decreased to account for the error. This may lead to negative deaths being reported. 
 
 Data collected from the [California Open Data Portal](https://data.ca.gov/group/covid-19).
 
