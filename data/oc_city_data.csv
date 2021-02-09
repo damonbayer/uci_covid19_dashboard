@@ -328,6 +328,12 @@ date,city,cases,tests,deaths
 2021-01-30,Aliso Viejo,6,74,0
 2021-01-31,Aliso Viejo,5,51,0
 2021-02-01,Aliso Viejo,9,164,0
+2021-02-02,Aliso Viejo,12,176,0
+2021-02-03,Aliso Viejo,4,109,0
+2021-02-04,Aliso Viejo,0,93,0
+2021-02-05,Aliso Viejo,0,68,0
+2021-02-06,Aliso Viejo,0,20,0
+2021-02-07,Aliso Viejo,0,2,0
 2020-01-25,Anaheim,0,2,0
 2020-01-26,Anaheim,0,1,0
 2020-02-07,Anaheim,3,5,0
@@ -672,6 +678,12 @@ date,city,cases,tests,deaths
 2021-01-30,Anaheim,106,803,0
 2021-01-31,Anaheim,73,576,0
 2021-02-01,Anaheim,187,1775,0
+2021-02-02,Anaheim,119,1541,0
+2021-02-03,Anaheim,80,1403,0
+2021-02-04,Anaheim,1,1120,0
+2021-02-05,Anaheim,0,766,0
+2021-02-06,Anaheim,0,271,0
+2021-02-07,Anaheim,0,44,0
 2020-01-28,Brea,0,1,0
 2020-03-12,Brea,0,3,0
 2020-03-13,Brea,0,2,0
@@ -998,6 +1010,12 @@ date,city,cases,tests,deaths
 2021-01-30,Brea,6,90,0
 2021-01-31,Brea,6,62,0
 2021-02-01,Brea,10,202,0
+2021-02-02,Brea,13,191,0
+2021-02-03,Brea,3,130,0
+2021-02-04,Brea,0,119,0
+2021-02-05,Brea,0,99,0
+2021-02-06,Brea,0,14,0
+2021-02-07,Brea,0,6,0
 2020-02-29,Buena Park,0,1,0
 2020-03-02,Buena Park,0,1,0
 2020-03-09,Buena Park,0,1,0
@@ -1329,6 +1347,12 @@ date,city,cases,tests,deaths
 2021-01-30,Buena Park,27,185,0
 2021-01-31,Buena Park,20,121,0
 2021-02-01,Buena Park,32,371,0
+2021-02-02,Buena Park,15,343,0
+2021-02-03,Buena Park,14,288,0
+2021-02-04,Buena Park,1,296,0
+2021-02-05,Buena Park,0,160,0
+2021-02-06,Buena Park,0,54,0
+2021-02-07,Buena Park,0,8,0
 2020-03-13,Capistrano Beach,0,1,0
 2020-03-15,Capistrano Beach,0,1,0
 2020-03-16,Capistrano Beach,0,2,0
@@ -1636,6 +1660,12 @@ date,city,cases,tests,deaths
 2021-01-30,Capistrano Beach,0,12,0
 2021-01-31,Capistrano Beach,4,10,0
 2021-02-01,Capistrano Beach,1,23,0
+2021-02-02,Capistrano Beach,0,17,0
+2021-02-03,Capistrano Beach,1,17,0
+2021-02-04,Capistrano Beach,0,6,0
+2021-02-05,Capistrano Beach,0,8,0
+2021-02-06,Capistrano Beach,0,3,0
+2021-02-07,Capistrano Beach,0,1,0
 2020-03-09,Corona Del Mar,0,1,0
 2020-03-12,Corona Del Mar,1,1,0
 2020-03-13,Corona Del Mar,1,3,0
@@ -1957,6 +1987,11 @@ date,city,cases,tests,deaths
 2021-01-30,Corona Del Mar,0,13,0
 2021-01-31,Corona Del Mar,0,11,0
 2021-02-01,Corona Del Mar,1,22,0
+2021-02-02,Corona Del Mar,3,31,0
+2021-02-03,Corona Del Mar,2,21,0
+2021-02-04,Corona Del Mar,0,12,0
+2021-02-05,Corona Del Mar,0,27,0
+2021-02-06,Corona Del Mar,0,3,0
 2020-03-01,Costa Mesa,0,1,0
 2020-03-04,Costa Mesa,0,1,0
 2020-03-10,Costa Mesa,0,1,0
@@ -2287,6 +2322,12 @@ date,city,cases,tests,deaths
 2021-01-30,Costa Mesa,19,173,0
 2021-01-31,Costa Mesa,17,158,0
 2021-02-01,Costa Mesa,41,537,0
+2021-02-02,Costa Mesa,24,483,0
+2021-02-03,Costa Mesa,16,343,0
+2021-02-04,Costa Mesa,0,252,0
+2021-02-05,Costa Mesa,0,213,0
+2021-02-06,Costa Mesa,0,55,0
+2021-02-07,Costa Mesa,0,4,0
 2020-02-01,Cypress,0,1,0
 2020-02-07,Cypress,25,124,0
 2020-03-07,Cypress,11,113,0
@@ -2615,6 +2656,11 @@ date,city,cases,tests,deaths
 2021-01-30,Cypress,8,86,0
 2021-01-31,Cypress,5,69,0
 2021-02-01,Cypress,14,216,0
+2021-02-02,Cypress,8,222,0
+2021-02-03,Cypress,11,224,0
+2021-02-04,Cypress,0,191,0
+2021-02-05,Cypress,0,96,0
+2021-02-06,Cypress,0,29,0
 2020-03-10,Dana Point,0,2,0
 2020-03-12,Dana Point,0,3,0
 2020-03-13,Dana Point,1,4,0
@@ -2941,6 +2987,12 @@ date,city,cases,tests,deaths
 2021-01-30,Dana Point,10,67,0
 2021-01-31,Dana Point,2,30,0
 2021-02-01,Dana Point,5,70,0
+2021-02-02,Dana Point,3,61,0
+2021-02-03,Dana Point,3,45,0
+2021-02-04,Dana Point,0,41,0
+2021-02-05,Dana Point,0,27,0
+2021-02-06,Dana Point,0,14,0
+2021-02-07,Dana Point,0,5,0
 2020-03-16,Foothill Ranch,0,4,0
 2020-03-17,Foothill Ranch,0,3,0
 2020-03-18,Foothill Ranch,1,1,0
@@ -3259,6 +3311,11 @@ date,city,cases,tests,deaths
 2021-01-30,Foothill Ranch,0,13,0
 2021-01-31,Foothill Ranch,0,14,0
 2021-02-01,Foothill Ranch,2,28,0
+2021-02-02,Foothill Ranch,0,29,0
+2021-02-03,Foothill Ranch,0,21,0
+2021-02-04,Foothill Ranch,0,12,0
+2021-02-05,Foothill Ranch,0,8,0
+2021-02-06,Foothill Ranch,0,1,0
 2020-03-04,Fountain Valley,0,1,0
 2020-03-07,Fountain Valley,0,2,0
 2020-03-11,Fountain Valley,0,3,0
@@ -3588,6 +3645,12 @@ date,city,cases,tests,deaths
 2021-01-30,Fountain Valley,11,90,0
 2021-01-31,Fountain Valley,5,129,0
 2021-02-01,Fountain Valley,15,261,0
+2021-02-02,Fountain Valley,19,248,0
+2021-02-03,Fountain Valley,5,159,0
+2021-02-04,Fountain Valley,0,115,0
+2021-02-05,Fountain Valley,0,101,0
+2021-02-06,Fountain Valley,0,21,0
+2021-02-07,Fountain Valley,0,7,0
 2020-01-25,Fullerton,0,2,0
 2020-02-07,Fullerton,0,1,0
 2020-02-08,Fullerton,0,1,0
@@ -3921,6 +3984,12 @@ date,city,cases,tests,deaths
 2021-01-30,Fullerton,19,271,0
 2021-01-31,Fullerton,16,249,0
 2021-02-01,Fullerton,54,753,0
+2021-02-02,Fullerton,34,655,0
+2021-02-03,Fullerton,16,462,0
+2021-02-04,Fullerton,2,382,0
+2021-02-05,Fullerton,1,320,0
+2021-02-06,Fullerton,0,68,0
+2021-02-07,Fullerton,0,9,0
 2020-01-25,Garden Grove,1,3,0
 2020-02-07,Garden Grove,2,19,0
 2020-02-22,Garden Grove,0,1,0
@@ -4256,6 +4325,12 @@ date,city,cases,tests,deaths
 2021-01-30,Garden Grove,53,361,1
 2021-01-31,Garden Grove,33,252,0
 2021-02-01,Garden Grove,74,800,0
+2021-02-02,Garden Grove,71,784,0
+2021-02-03,Garden Grove,35,627,0
+2021-02-04,Garden Grove,3,422,0
+2021-02-05,Garden Grove,0,298,0
+2021-02-06,Garden Grove,0,134,0
+2021-02-07,Garden Grove,0,15,0
 2020-01-22,Huntington Beach,0,1,0
 2020-02-28,Huntington Beach,0,1,0
 2020-03-03,Huntington Beach,0,1,0
@@ -4592,6 +4667,12 @@ date,city,cases,tests,deaths
 2021-01-30,Huntington Beach,18,270,0
 2021-01-31,Huntington Beach,20,331,0
 2021-02-01,Huntington Beach,41,756,0
+2021-02-02,Huntington Beach,45,726,0
+2021-02-03,Huntington Beach,16,468,0
+2021-02-04,Huntington Beach,0,339,0
+2021-02-05,Huntington Beach,0,327,0
+2021-02-06,Huntington Beach,0,68,0
+2021-02-07,Huntington Beach,0,12,0
 2020-01-26,Irvine,0,1,0
 2020-01-29,Irvine,0,1,0
 2020-02-07,Irvine,0,1,0
@@ -4929,6 +5010,12 @@ date,city,cases,tests,deaths
 2021-01-30,Irvine,30,413,0
 2021-01-31,Irvine,26,306,0
 2021-02-01,Irvine,67,1386,0
+2021-02-02,Irvine,49,1139,0
+2021-02-03,Irvine,8,779,0
+2021-02-04,Irvine,0,704,0
+2021-02-05,Irvine,0,511,0
+2021-02-06,Irvine,0,100,0
+2021-02-07,Irvine,0,17,0
 2020-01-25,La Habra,0,1,0
 2020-02-23,La Habra,0,1,0
 2020-03-09,La Habra,0,3,0
@@ -5257,6 +5344,12 @@ date,city,cases,tests,deaths
 2021-01-30,La Habra,12,110,0
 2021-01-31,La Habra,15,76,0
 2021-02-01,La Habra,21,262,0
+2021-02-02,La Habra,15,237,0
+2021-02-03,La Habra,3,159,0
+2021-02-04,La Habra,0,130,0
+2021-02-05,La Habra,1,118,0
+2021-02-06,La Habra,0,31,0
+2021-02-07,La Habra,0,9,0
 2020-02-07,La Palma,1,2,0
 2020-03-09,La Palma,0,1,0
 2020-03-10,La Palma,1,2,0
@@ -5576,6 +5669,12 @@ date,city,cases,tests,deaths
 2021-01-30,La Palma,2,22,0
 2021-01-31,La Palma,1,22,0
 2021-02-01,La Palma,6,80,0
+2021-02-02,La Palma,1,58,0
+2021-02-03,La Palma,0,91,0
+2021-02-04,La Palma,0,50,0
+2021-02-05,La Palma,0,35,0
+2021-02-06,La Palma,0,4,0
+2021-02-07,La Palma,0,1,0
 2020-01-25,Ladera Ranch,0,1,0
 2020-03-12,Ladera Ranch,0,2,0
 2020-03-13,Ladera Ranch,0,1,0
@@ -5904,6 +6003,12 @@ date,city,cases,tests,deaths
 2021-01-30,Ladera Ranch,7,54,0
 2021-01-31,Ladera Ranch,1,36,0
 2021-02-01,Ladera Ranch,7,100,0
+2021-02-02,Ladera Ranch,1,70,0
+2021-02-03,Ladera Ranch,0,53,0
+2021-02-04,Ladera Ranch,0,45,0
+2021-02-05,Ladera Ranch,0,38,0
+2021-02-06,Ladera Ranch,0,14,0
+2021-02-07,Ladera Ranch,0,1,0
 2020-01-26,Laguna Beach,0,1,0
 2020-03-06,Laguna Beach,0,1,0
 2020-03-10,Laguna Beach,0,2,0
@@ -6232,6 +6337,11 @@ date,city,cases,tests,deaths
 2021-01-30,Laguna Beach,2,24,0
 2021-01-31,Laguna Beach,1,22,0
 2021-02-01,Laguna Beach,8,75,0
+2021-02-02,Laguna Beach,3,65,0
+2021-02-03,Laguna Beach,1,44,0
+2021-02-04,Laguna Beach,1,36,0
+2021-02-05,Laguna Beach,0,32,0
+2021-02-06,Laguna Beach,0,4,0
 2020-03-02,Laguna Hills,0,1,0
 2020-03-04,Laguna Hills,0,1,0
 2020-03-11,Laguna Hills,0,1,0
@@ -6561,6 +6671,12 @@ date,city,cases,tests,deaths
 2021-01-30,Laguna Hills,3,64,0
 2021-01-31,Laguna Hills,3,30,0
 2021-02-01,Laguna Hills,8,123,0
+2021-02-02,Laguna Hills,8,98,0
+2021-02-03,Laguna Hills,0,65,0
+2021-02-04,Laguna Hills,0,53,0
+2021-02-05,Laguna Hills,0,28,0
+2021-02-06,Laguna Hills,0,14,0
+2021-02-07,Laguna Hills,0,3,0
 2020-03-02,Laguna Niguel,2,2,0
 2020-03-04,Laguna Niguel,0,1,0
 2020-03-05,Laguna Niguel,0,2,0
@@ -6893,6 +7009,12 @@ date,city,cases,tests,deaths
 2021-01-30,Laguna Niguel,12,99,0
 2021-01-31,Laguna Niguel,3,49,0
 2021-02-01,Laguna Niguel,6,182,0
+2021-02-02,Laguna Niguel,7,146,0
+2021-02-03,Laguna Niguel,1,107,0
+2021-02-04,Laguna Niguel,0,131,0
+2021-02-05,Laguna Niguel,0,77,0
+2021-02-06,Laguna Niguel,0,42,0
+2021-02-07,Laguna Niguel,0,2,0
 2020-03-05,Laguna Woods,0,2,0
 2020-03-14,Laguna Woods,0,1,0
 2020-03-15,Laguna Woods,0,3,0
@@ -7215,6 +7337,11 @@ date,city,cases,tests,deaths
 2021-01-30,Laguna Woods,1,24,0
 2021-01-31,Laguna Woods,0,16,0
 2021-02-01,Laguna Woods,2,49,0
+2021-02-02,Laguna Woods,2,34,0
+2021-02-03,Laguna Woods,0,33,0
+2021-02-04,Laguna Woods,0,27,0
+2021-02-05,Laguna Woods,0,13,0
+2021-02-06,Laguna Woods,0,7,0
 2020-02-07,Lake Forest,0,1,0
 2020-03-04,Lake Forest,0,1,0
 2020-03-05,Lake Forest,0,1,0
@@ -7545,6 +7672,12 @@ date,city,cases,tests,deaths
 2021-01-30,Lake Forest,22,127,0
 2021-01-31,Lake Forest,9,63,0
 2021-02-01,Lake Forest,21,196,0
+2021-02-02,Lake Forest,13,198,0
+2021-02-03,Lake Forest,8,136,0
+2021-02-04,Lake Forest,0,97,0
+2021-02-05,Lake Forest,0,72,0
+2021-02-06,Lake Forest,0,19,0
+2021-02-07,Lake Forest,0,2,0
 2020-02-25,Los Alamitos,0,1,0
 2020-03-13,Los Alamitos,0,1,0
 2020-03-17,Los Alamitos,0,1,0
@@ -7868,6 +8001,12 @@ date,city,cases,tests,deaths
 2021-01-30,Los Alamitos,1,29,0
 2021-01-31,Los Alamitos,6,37,0
 2021-02-01,Los Alamitos,5,152,0
+2021-02-02,Los Alamitos,0,114,0
+2021-02-03,Los Alamitos,1,94,0
+2021-02-04,Los Alamitos,1,77,0
+2021-02-05,Los Alamitos,1,47,0
+2021-02-06,Los Alamitos,0,10,0
+2021-02-07,Los Alamitos,0,3,0
 2020-02-29,Midway City,0,1,0
 2020-03-15,Midway City,0,1,0
 2020-03-17,Midway City,0,2,0
@@ -8175,6 +8314,11 @@ date,city,cases,tests,deaths
 2021-01-30,Midway City,8,25,0
 2021-01-31,Midway City,2,11,0
 2021-02-01,Midway City,6,36,0
+2021-02-02,Midway City,4,39,0
+2021-02-03,Midway City,2,35,0
+2021-02-04,Midway City,1,13,0
+2021-02-05,Midway City,0,14,0
+2021-02-06,Midway City,0,5,0
 2020-02-07,Mission Viejo,0,1,0
 2020-02-29,Mission Viejo,0,1,0
 2020-03-05,Mission Viejo,0,1,0
@@ -8507,6 +8651,12 @@ date,city,cases,tests,deaths
 2021-01-30,Mission Viejo,21,147,0
 2021-01-31,Mission Viejo,7,108,0
 2021-02-01,Mission Viejo,21,315,0
+2021-02-02,Mission Viejo,17,365,0
+2021-02-03,Mission Viejo,5,162,0
+2021-02-04,Mission Viejo,0,140,0
+2021-02-05,Mission Viejo,0,81,0
+2021-02-06,Mission Viejo,0,28,0
+2021-02-07,Mission Viejo,0,8,0
 2020-02-09,Newport Beach,0,1,0
 2020-02-28,Newport Beach,0,2,0
 2020-03-06,Newport Beach,0,3,0
@@ -8839,6 +8989,12 @@ date,city,cases,tests,deaths
 2021-01-30,Newport Beach,4,91,0
 2021-01-31,Newport Beach,3,59,0
 2021-02-01,Newport Beach,14,313,1
+2021-02-02,Newport Beach,17,312,0
+2021-02-03,Newport Beach,4,166,0
+2021-02-04,Newport Beach,2,151,0
+2021-02-05,Newport Beach,0,87,0
+2021-02-06,Newport Beach,0,22,0
+2021-02-07,Newport Beach,0,3,0
 2020-03-12,Newport Coast,0,1,0
 2020-03-13,Newport Coast,0,2,0
 2020-03-15,Newport Coast,2,3,0
@@ -9158,6 +9314,11 @@ date,city,cases,tests,deaths
 2021-01-30,Newport Coast,1,17,0
 2021-01-31,Newport Coast,0,12,0
 2021-02-01,Newport Coast,2,25,0
+2021-02-02,Newport Coast,0,8,0
+2021-02-03,Newport Coast,0,19,0
+2021-02-04,Newport Coast,0,8,0
+2021-02-05,Newport Coast,0,9,0
+2021-02-06,Newport Coast,0,3,0
 2020-02-07,Orange,0,3,0
 2020-02-29,Orange,0,1,0
 2020-03-04,Orange,0,1,0
@@ -9491,6 +9652,12 @@ date,city,cases,tests,deaths
 2021-01-30,Orange,38,343,0
 2021-01-31,Orange,19,216,0
 2021-02-01,Orange,47,586,0
+2021-02-02,Orange,34,534,0
+2021-02-03,Orange,13,416,0
+2021-02-04,Orange,4,330,0
+2021-02-05,Orange,1,284,0
+2021-02-06,Orange,1,137,0
+2021-02-07,Orange,0,23,0
 2020-02-27,Placentia,0,1,0
 2020-03-06,Placentia,0,2,0
 2020-03-10,Placentia,1,1,0
@@ -9819,6 +9986,12 @@ date,city,cases,tests,deaths
 2021-01-30,Placentia,14,98,0
 2021-01-31,Placentia,10,86,0
 2021-02-01,Placentia,14,204,0
+2021-02-02,Placentia,15,173,0
+2021-02-03,Placentia,6,139,0
+2021-02-04,Placentia,0,101,0
+2021-02-05,Placentia,0,79,0
+2021-02-06,Placentia,0,19,0
+2021-02-07,Placentia,0,6,0
 2020-03-07,Rancho Santa Margarita,0,1,0
 2020-03-10,Rancho Santa Margarita,0,2,0
 2020-03-11,Rancho Santa Margarita,0,1,0
@@ -10149,6 +10322,12 @@ date,city,cases,tests,deaths
 2021-01-30,Rancho Santa Margarita,2,70,0
 2021-01-31,Rancho Santa Margarita,3,38,0
 2021-02-01,Rancho Santa Margarita,7,151,0
+2021-02-02,Rancho Santa Margarita,6,108,0
+2021-02-03,Rancho Santa Margarita,1,90,0
+2021-02-04,Rancho Santa Margarita,0,71,0
+2021-02-05,Rancho Santa Margarita,0,42,0
+2021-02-06,Rancho Santa Margarita,0,5,0
+2021-02-07,Rancho Santa Margarita,0,4,0
 2020-03-09,San Clemente,0,2,0
 2020-03-11,San Clemente,0,1,0
 2020-03-12,San Clemente,0,5,0
@@ -10478,6 +10657,12 @@ date,city,cases,tests,deaths
 2021-01-30,San Clemente,16,114,0
 2021-01-31,San Clemente,3,49,0
 2021-02-01,San Clemente,14,181,0
+2021-02-02,San Clemente,8,130,0
+2021-02-03,San Clemente,0,88,0
+2021-02-04,San Clemente,2,89,0
+2021-02-05,San Clemente,0,60,0
+2021-02-06,San Clemente,0,27,0
+2021-02-07,San Clemente,0,4,0
 2020-03-12,San Juan Capistrano,0,3,0
 2020-03-13,San Juan Capistrano,3,4,0
 2020-03-14,San Juan Capistrano,1,1,0
@@ -10804,6 +10989,12 @@ date,city,cases,tests,deaths
 2021-01-30,San Juan Capistrano,12,107,0
 2021-01-31,San Juan Capistrano,4,35,0
 2021-02-01,San Juan Capistrano,5,97,0
+2021-02-02,San Juan Capistrano,7,172,0
+2021-02-03,San Juan Capistrano,4,49,0
+2021-02-04,San Juan Capistrano,0,50,0
+2021-02-05,San Juan Capistrano,0,35,0
+2021-02-06,San Juan Capistrano,0,27,0
+2021-02-07,San Juan Capistrano,0,1,0
 2020-01-24,Santa Ana,0,1,0
 2020-01-25,Santa Ana,0,2,0
 2020-02-07,Santa Ana,16,57,0
@@ -11142,6 +11333,12 @@ date,city,cases,tests,deaths
 2021-01-30,Santa Ana,101,672,0
 2021-01-31,Santa Ana,69,411,0
 2021-02-01,Santa Ana,153,1444,0
+2021-02-02,Santa Ana,156,1656,0
+2021-02-03,Santa Ana,48,895,0
+2021-02-04,Santa Ana,7,863,0
+2021-02-05,Santa Ana,0,580,0
+2021-02-06,Santa Ana,1,258,0
+2021-02-07,Santa Ana,0,35,0
 2020-02-07,Seal Beach,0,1,0
 2020-03-07,Seal Beach,0,2,0
 2020-03-12,Seal Beach,0,2,0
@@ -11466,6 +11663,12 @@ date,city,cases,tests,deaths
 2021-01-30,Seal Beach,2,36,0
 2021-01-31,Seal Beach,4,48,0
 2021-02-01,Seal Beach,2,222,0
+2021-02-02,Seal Beach,3,86,0
+2021-02-03,Seal Beach,0,69,0
+2021-02-04,Seal Beach,0,43,0
+2021-02-05,Seal Beach,0,44,0
+2021-02-06,Seal Beach,0,19,0
+2021-02-07,Seal Beach,0,5,0
 2020-01-25,Stanton,0,1,0
 2020-02-07,Stanton,0,2,0
 2020-03-13,Stanton,0,1,0
@@ -11787,6 +11990,12 @@ date,city,cases,tests,deaths
 2021-01-30,Stanton,10,58,0
 2021-01-31,Stanton,8,46,0
 2021-02-01,Stanton,8,113,0
+2021-02-02,Stanton,2,196,0
+2021-02-03,Stanton,8,75,0
+2021-02-04,Stanton,0,72,0
+2021-02-05,Stanton,1,49,0
+2021-02-06,Stanton,0,22,0
+2021-02-07,Stanton,0,2,0
 2020-03-16,Sunset Beach,0,1,0
 2020-04-08,Sunset Beach,0,1,0
 2020-04-21,Sunset Beach,0,1,0
@@ -12002,6 +12211,10 @@ date,city,cases,tests,deaths
 2021-01-30,Sunset Beach,0,3,0
 2021-01-31,Sunset Beach,0,1,0
 2021-02-01,Sunset Beach,0,2,0
+2021-02-02,Sunset Beach,0,1,0
+2021-02-03,Sunset Beach,0,3,0
+2021-02-04,Sunset Beach,0,3,0
+2021-02-05,Sunset Beach,0,1,0
 2020-03-05,Trabuco Canyon,0,1,0
 2020-03-09,Trabuco Canyon,0,1,0
 2020-03-12,Trabuco Canyon,0,1,0
@@ -12330,6 +12543,12 @@ date,city,cases,tests,deaths
 2021-01-30,Trabuco Canyon,1,65,0
 2021-01-31,Trabuco Canyon,4,32,0
 2021-02-01,Trabuco Canyon,6,104,0
+2021-02-02,Trabuco Canyon,3,70,0
+2021-02-03,Trabuco Canyon,1,75,0
+2021-02-04,Trabuco Canyon,0,38,0
+2021-02-05,Trabuco Canyon,0,24,0
+2021-02-06,Trabuco Canyon,0,9,0
+2021-02-07,Trabuco Canyon,0,2,0
 2020-02-07,Tustin,0,1,0
 2020-02-20,Tustin,1,1,0
 2020-03-01,Tustin,0,1,0
@@ -12662,6 +12881,12 @@ date,city,cases,tests,deaths
 2021-01-30,Tustin,16,121,0
 2021-01-31,Tustin,6,94,0
 2021-02-01,Tustin,21,313,0
+2021-02-02,Tustin,25,268,0
+2021-02-03,Tustin,6,204,0
+2021-02-04,Tustin,1,165,0
+2021-02-05,Tustin,0,130,0
+2021-02-06,Tustin,0,29,0
+2021-02-07,Tustin,0,3,0
 2020-03-16,Villa Park,1,3,0
 2020-03-18,Villa Park,1,2,0
 2020-03-19,Villa Park,0,2,0
@@ -12965,6 +13190,12 @@ date,city,cases,tests,deaths
 2021-01-30,Villa Park,1,7,0
 2021-01-31,Villa Park,0,10,0
 2021-02-01,Villa Park,3,24,0
+2021-02-02,Villa Park,0,12,0
+2021-02-03,Villa Park,0,10,0
+2021-02-04,Villa Park,0,5,0
+2021-02-05,Villa Park,0,3,0
+2021-02-06,Villa Park,0,1,0
+2021-02-07,Villa Park,0,1,0
 2020-03-12,Westminster,0,1,0
 2020-03-13,Westminster,0,2,0
 2020-03-14,Westminster,1,4,0
@@ -13292,6 +13523,12 @@ date,city,cases,tests,deaths
 2021-01-30,Westminster,22,183,0
 2021-01-31,Westminster,17,206,0
 2021-02-01,Westminster,35,477,0
+2021-02-02,Westminster,19,343,0
+2021-02-03,Westminster,8,292,0
+2021-02-04,Westminster,4,172,0
+2021-02-05,Westminster,1,150,0
+2021-02-06,Westminster,0,73,0
+2021-02-07,Westminster,0,12,0
 2020-02-07,Yorba Linda,1,1,0
 2020-02-28,Yorba Linda,0,1,0
 2020-03-04,Yorba Linda,0,1,0
@@ -13625,3 +13862,9 @@ date,city,cases,tests,deaths
 2021-01-30,Yorba Linda,15,106,0
 2021-01-31,Yorba Linda,3,86,0
 2021-02-01,Yorba Linda,27,327,0
+2021-02-02,Yorba Linda,6,204,0
+2021-02-03,Yorba Linda,7,173,0
+2021-02-04,Yorba Linda,2,116,0
+2021-02-05,Yorba Linda,0,103,0
+2021-02-06,Yorba Linda,0,27,0
+2021-02-07,Yorba Linda,0,2,0
