@@ -22,6 +22,7 @@ quiet <- function(x) {
 
 # county plots ------------------------------------------------------------
 get_county_plots <- function(counties_of_interest){
+
   # connect to CKAN instance
   ckanr_setup(url="https://data.ca.gov")
   ckan <- quiet(ckanr::src_ckan("https://data.ca.gov"))
@@ -30,26 +31,48 @@ get_county_plots <- function(counties_of_interest){
   resources <- rbind(resource_search("name:covid-19", as = "table")$results,
                      resource_search("name:hospitals by county", as = "table")$results)
 
-  resource_ids <- list(cases = resources$resource_id[resources$name == "COVID-19 Cases"],
-                       tests = resources$resource_id[resources$name == "COVID-19 Testing"],
-                       hosp = resources$resource_id[resources$name == "Hospitals By County"])
+  # resource_ids <- list(cases = resources$resource_id[resources$name == "COVID-19 Cases"],
+  #                      tests = resources$resource_id[resources$name == "COVID-19 Testing"],
+  #                      hosp = resources$resource_id[resources$name == "Hospitals By County"])
+
+  resource_ids <- list(cases_deaths = resources$id[resources$name == "Statewide COVID-19 Cases Deaths"],
+                       hosp = resources$id[resources$name == "Statewide Covid-19 Hospital County Data"])
+
+
 
   # pull resources into data frames (adds extra cols _id and _full_text)
-  cases <- tbl(src = ckan$con, from = resource_ids$cases) %>%
-    as_tibble( )%>%
-    select(-starts_with("_")) %>%
-    mutate(date = as.Date(date))
-
-  tests <- tbl(src = ckan$con, from = resource_ids$test) %>%
+  cases <-
+    tbl(src = ckan$con, from = resource_ids$cases_deaths) %>%
     as_tibble() %>%
-    select(-starts_with("_")) %>%
-    mutate(date = as.Date(date))
+    mutate(date = lubridate::ymd(date),
+           deaths = as.integer(deaths),
+           reported_cases = as.integer(reported_cases),
+           cases = as.integer(cases),
+           positive_tests = as.integer(positive_tests),
+           total_tests = as.integer(total_tests)) %>%
+    select(date,
+           cases = cases,
+           tests = total_tests,
+           deaths,
+           county = area) %>%
+    arrange(date, county)
 
-  hosp <- tbl(src = ckan$con, from = resource_ids$hosp) %>%
+
+  hosp <-
+    tbl(src = ckan$con, from = resource_ids$hosp) %>%
     as_tibble() %>%
-    select(-starts_with("_")) %>%
-    mutate(date = as.Date(todays_date)) %>%
-    select(-todays_date)
+    mutate(todays_date = lubridate::ymd(todays_date),
+           hospitalized_covid_patients = as.integer(hospitalized_covid_patients),
+           icu_covid_confirmed_patients = as.integer(icu_covid_confirmed_patients),
+           icu_suspected_covid_patients = as.integer(icu_suspected_covid_patients)) %>%
+    mutate(icu_covid_patients =
+             if_else(is.na(icu_covid_confirmed_patients), 0L, icu_covid_confirmed_patients) +
+             if_else(is.na(icu_suspected_covid_patients), 0L, icu_suspected_covid_patients)) %>%
+    select(date = todays_date,
+           hospitalized_covid_patients,
+           icu_covid_patients,
+           county)
+
 
   county_pop <- read_csv("data/county_pop.csv") %>% rename_all(str_to_lower)
 
@@ -132,9 +155,7 @@ get_county_plots <- function(counties_of_interest){
 
   # ICU Occupancy
   icu_plot_data <- hosp_tidy %>%
-    filter(name %in% c("icu_covid_confirmed_patients", "icu_suspected_covid_patients")) %>%
-    group_by(county, date, population) %>%
-    summarize(value = sum(value)) %>%
+    filter(name == "icu_covid_patients") %>%
     group_by(county) %>%
     mutate(value = runMean(value, ma_n)) %>%
     drop_na()  %>%
@@ -157,7 +178,7 @@ get_county_plots <- function(counties_of_interest){
 
   # Deaths
   deaths_plot_data <- cases_tidy %>%
-    filter(name == "newcountdeaths") %>%
+    filter(name == "deaths") %>%
     group_by(county) %>%
     mutate(value = runMean(value, ma_n)) %>%
     drop_na() %>%
@@ -181,7 +202,7 @@ get_county_plots <- function(counties_of_interest){
 
   # Cases
   cases_plot_data <- cases_tidy %>%
-    filter(name == "newcountconfirmed") %>%
+    filter(name == "cases") %>%
     group_by(county) %>%
     mutate(value = runMean(value, ma_n)) %>%
     drop_na() %>%
