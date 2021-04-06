@@ -14,53 +14,52 @@ editor_options:
 }
 </style>
 
+<br>
+<br>
+
 ### Number of COVID-19 tests (positive + negative) mapped to OC zip codes
 
-<div class = "row">
-<div class = "col-md-4">
-<img src = "assets/MarchTests.png"/>
-</div>
-<div class = "col-md-4">
-<img src = "assets/AprilTests.png"/>
-</div>
-<div class = "col-md-4">
-<img src = "assets/MayTests.png"/>
-</div>
-</div>
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  fig.align = "center",
+  message = FALSE,
+  warning = FALSE
+)
+```
 
-<div class = "row">
-<div class = "col-md-4">
-<img src = "assets/JuneTests.png"/>
-</div>
-<div class = "col-md-4">
-<img src = "assets/JulyTests.png"/>
-</div>
-<div class = "col-md-4">
-<img src = "assets/AugTests.png"/>
-</div>
-</div>
 
-<div class = "row">
-<div class = "col-md-4">
-<img src = "assets/SeptTests.png"/>
-</div>
-<div class = "col-md-4">
-<img src = "assets/OctTests.png"/>
-</div>
-<div class = "col-md-4">
-<img src = "assets/NovTests.png"/>
-</div>
-</div>
+```{r libraries}
+library(here)
 
-<div class = "row">
-<div class = "col-md-4">
-<img src = "assets/DecTests.png"/>
-</div>
-<div class = "col-md-4">
-<img src = "assets/OC_Labels.png"/>
-</div>
-</div>
+source(here("code", "map-functions.R"))
+```
 
-Data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).
 
-Last updated `r as.Date("12/18/2020", "%m/%d/%y")`.
+```{r generate-tests-map}
+tests_covid_zip_data <- readRDS(here("data", "tests_map_data.rds"))
+
+date_seq <- zoo::as.yearmon(
+  seq(as.Date("2020-03-01"), tests_covid_zip_data$max_date_in_data, by = "months"), 
+  "%m/%Y"
+)
+
+gen_map_gif(
+  plot_data = tests_covid_zip_data$tests_plot_data, 
+  socal_shp_file = here("data/shape-files/socal-zip", "Zipcode_boundary_scag_2009.shp"), 
+  ca_shp_file = here("data/shape-files/ca-counties", "cnty19_1.shp"), 
+  legend_label = tests_covid_zip_data$tests_legend_label, 
+  month_seq = date_seq, 
+  var_type = "tests"
+)
+```
+
+
+```{r display-tests-map}
+htmltools::includeHTML(here("docs", "tests-map-gif.html"))
+```
+
+
+Data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).  
+Most recent date in data used was `r tests_covid_zip_data$max_date_in_data`.  
+Last updated on `r lubridate::today()`.
