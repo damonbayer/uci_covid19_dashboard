@@ -39,3 +39,8 @@ vignettes/*.pdf
 .Renviron
 
 .DS_Store
+
+# Files produced by making map gif
+docs/css
+docs/images
+docs/js
