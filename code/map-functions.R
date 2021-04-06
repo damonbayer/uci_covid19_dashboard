@@ -17,11 +17,11 @@ prep_and_save_map_data <- function(
   reporting_delay = 5, # Drop most recent 5 days due to reporting delay
   path_to_save_folder = here("map-covid-data") # Path to folder to save map data in
 ){
-  
+
   oc_zips <- read_csv(zip_code_file, col_types = cols(Zip = col_character())) %>%
     rename_all(str_to_lower)
-  
-  
+
+
   # Read in and summarize OCHCA data by zip
   neg_line_list <- read_csv(neg_line_list_file) %>%
     mutate(Specimen.Collected.Date = as.Date(
@@ -47,7 +47,7 @@ prep_and_save_map_data <- function(
     group_by(id) %>%
     arrange(posted_date) %>%
     ungroup()
-  
+
   new_deaths_tbl <- read_csv(
     line_list_file,
     col_types = cols(
@@ -60,40 +60,40 @@ prep_and_save_map_data <- function(
     select(posted_date = `DtDeath`, zip = Zip) %>%
     count(posted_date, zip, name = "new_deaths") %>%
     arrange(posted_date)
-  
+
   first_pos <- neg_line_list %>%
     filter(test_result == "positive") %>%
     group_by(id) %>%
     summarise(first_pos = min(posted_date))
-  
+
   neg_line_list_filtered <- left_join(neg_line_list, first_pos) %>%
     mutate(first_pos = replace_na(first_pos, lubridate::ymd("9999-12-31"))) %>%
     filter(posted_date <= first_pos) %>%
     select(-first_pos) %>%
     distinct()
-  
+
   neg_line_list_filtered_zip <- neg_line_list_filtered %>%
     right_join(oc_zips) %>%
     count(posted_date, test_result, zip) %>%
     pivot_wider(names_from = test_result, values_from = n)
-  
+
   new_deaths_tbl_zip <- new_deaths_tbl %>%
     right_join(oc_zips) %>%
     drop_na() %>%
     count(posted_date, zip, wt = new_deaths, name = "new_deaths")
-  
+
   covid_zip_data <- full_join(neg_line_list_filtered_zip, new_deaths_tbl_zip) %>%
     replace(is.na(.), 0) %>%
     mutate(new_cases = positive, new_tests = negative + positive + other) %>%
     select(posted_date, zip, new_cases, new_tests, new_deaths) %>%
     arrange(zip, posted_date) %>%
-    mutate(month_date = as.yearmon(posted_date, "%m/%Y")) %>% 
+    mutate(month_date = as.yearmon(posted_date, "%m/%Y")) %>%
     filter(posted_date < max(posted_date) - days(reporting_delay))
 
-  
+
   # Summarize case data
   oc_zips$cases_scaled_pop <- oc_zips$population / cases_per
-  
+
   cases_plot_data <- covid_zip_data %>%
     group_by(zip, month_date) %>%
     summarize(new_cases_in_frame = sum(new_cases)) %>%
@@ -119,17 +119,17 @@ prep_and_save_map_data <- function(
         ">480"
       ))) %>%
     select(zip, plot_var, month_date)
-  
+
   cases_legend_label <- paste0(
     "Reported cases per\n",
     prettyNum(cases_per, big.mark = ",", scientific = FALSE),
     " people"
   )
-  
-  
+
+
   # Summarize tests data
   oc_zips$tests_scaled_pop <- oc_zips$population / tests_per
-  
+
   tests_plot_data <- covid_zip_data %>%
     group_by(zip, month_date) %>%
     summarize(new_tests_in_frame = sum(new_tests)) %>%
@@ -154,14 +154,14 @@ prep_and_save_map_data <- function(
       )
     )) %>%
     select(zip, plot_var, month_date)
-  
+
   tests_legend_label <- paste0(
     "Tests per\n",
     prettyNum(tests_per, big.mark = ",", scientific = FALSE),
     " people"
   )
-  
-  
+
+
   # Summarize positivity data
   pos_plot_data <- covid_zip_data %>%
     group_by(zip, month_date) %>%
@@ -186,32 +186,32 @@ prep_and_save_map_data <- function(
       )
     )) %>%
     select(zip, plot_var, month_date)
-  
+
   pos_legend_label <- paste0("Percent of COVID-19\ntest positive")
-  
-  
+
+
   # Save aggregated OCHCA data to dashboard
   saveRDS(
     list(
-      "cases_plot_data" = cases_plot_data, 
+      "cases_plot_data" = cases_plot_data,
       "cases_legend_label" = cases_legend_label,
       "max_date_in_data" = max(covid_zip_data$posted_date)
     ),
     file = paste0(path_to_save_folder, "/cases_map_data.rds")
   )
-  
+
   saveRDS(
     list(
-      "tests_plot_data" = tests_plot_data, 
+      "tests_plot_data" = tests_plot_data,
       "tests_legend_label" = tests_legend_label,
       "max_date_in_data" = max(covid_zip_data$posted_date)
     ),
     file = paste0(path_to_save_folder, "/tests_map_data.rds")
   )
-  
+
   saveRDS(
     list(
-      "pos_plot_data" = pos_plot_data, 
+      "pos_plot_data" = pos_plot_data,
       "pos_legend_label" = pos_legend_label,
       "max_date_in_data" = max(covid_zip_data$posted_date)
     ),
@@ -227,44 +227,44 @@ prep_and_save_map_data <- function(
 
 # gen-city-map-labeled -----------------------------------------------------
 gen_city_map_labeled <- function(
-  socal_shp_file = here("map-covid-data/shape-files/socal-zip", "Zipcode_boundary_scag_2009.shp"),
-  ca_shp_file = here("map-covid-data/shape-files/ca-counties", "cnty19_1.shp"),
-  road_shp_file = here("map-covid-data/shape-files/ca-interstates", "tl_2015_06_prisecroads.shp"),
-  zip_code_file = here("map-covid-data", "map_zipcodes.csv")
+  socal_shp_file = here("data/shape-files/socal-zip", "Zipcode_boundary_scag_2009.shp"),
+  ca_shp_file = here("data/shape-files/ca-counties", "cnty19_1.shp"),
+  road_shp_file = here("data/shape-files/ca-interstates", "tl_2015_06_prisecroads.shp"),
+  zip_code_file = here("data", "map_zipcodes.csv")
 ) {
-  
+
   # Load OC zip code file
   oc_zips <- read_csv(zip_code_file, col_types = cols(Zip = col_character())) %>%
     rename_all(str_to_lower)
-  
+
   oc_cities <- oc_zips %>%
     group_by(city) %>%
     summarize(population = sum(population))
-  
+
   # Load CA roads shp
   roads_shp <- st_read(road_shp_file, quiet = TRUE) %>%
     subset(RTTYP == "I")
-  
+
   # Load usa shp file to get cover below southern CA
   ca_shp <- st_read(ca_shp_file, quiet = TRUE)
-  
+
   ca_shp_oc_only <- ca_shp %>% filter(COUNTY_NAM == "Orange")
-  
+
   # Load southern CA shp
   all_shp <- st_read(socal_shp_file, quiet = TRUE)
-  
+
   all_shp1 <- all_shp %>%
     group_by(NAME) %>%
     summarize()
-  
+
   all_city_shp1 <- all_shp1 %>% # Plot for entire area of shape file
     left_join(oc_cities, by = c("NAME" = "city")) %>%
     mutate(ID = NAME)
-  
+
   oc_city_shp1 <- all_shp1 %>% # Only want names for OC cities
     right_join(oc_cities, by = c("NAME" = "city")) %>%
     mutate(ID = NAME)
-  
+
   names_to_drop <- c(
     "Buena Park",
     "Capistrano Beach",
@@ -288,11 +288,11 @@ gen_city_map_labeled <- function(
     "Villa Park",
     "Westminster"
   )
-  
+
   oc_city_shp_renamed <- oc_city_shp1 %>%  # Drop names that don't place well
     mutate(NAME = ifelse(NAME %in% names_to_drop, "", NAME))
-  
-  
+
+
   # Plot of cities with roads and UCI
   ggplot(all_city_shp1) +
     geom_sf(fill = "khaki1", color = "gray60") +
@@ -408,35 +408,35 @@ gen_map_gif <- function(
   month_seq,
   var_type
 ){
-  
+
   socal_shp_og <- st_read(socal_shp_file, quiet = TRUE)
-  
+
   ca_shp_og <- st_read(ca_shp_file, quiet = TRUE)
-  
+
   ca_shp_oc_only <- ca_shp_og %>% filter(COUNTY_NAM == "Orange")
-  
+
   map_labeled <- gen_city_map_labeled()
-  
+
   prev_directory <- getwd()
   setwd("docs/") # Need to save the map html to docs folder
-  
+
   saveHTML({
 
     ani.options(verbose = FALSE)
-    
+
     for (i in 1:length(month_seq)) {
       curr_time <- month_seq[i]
-      
+
       plot_data_sub <- plot_data %>% filter(month_date == curr_time)
 
       socal_shp <- socal_shp_og %>% # Plot for entire area of shape file
         full_join(plot_data_sub, by = c("KEY_" = "zip")) %>%
         mutate(ID = KEY_)
-      
+
       oc_shp <- socal_shp_og %>% # Only want names for OC zips
         right_join(plot_data_sub, by = c("KEY_" = "zip")) %>%
         mutate(ID = KEY_)
-      
+
       curr_map <- ggplot(socal_shp_og) +
         geom_sf(fill = "khaki1", color = "gray60") +
         geom_sf(data = ca_shp_og, fill = "khaki1", color = "gray60") +
@@ -487,13 +487,13 @@ gen_map_gif <- function(
           fontface="bold"
         ) +
         scale_fill_viridis(drop = FALSE, discrete = TRUE, direction = -1)
-      
+
       grid.arrange(
         curr_map,
         map_labeled,
         ncol = 2
       )
-      
+
       ani.pause()
     }
   },
@@ -503,7 +503,7 @@ gen_map_gif <- function(
   htmlfile = paste0(var_type, "-map-gif.html"),
   verbose = FALSE
   )
-  
+
   setwd(prev_directory)
 }
 
