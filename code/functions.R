@@ -144,13 +144,13 @@ get_county_plots <- function(counties_of_interest){
       plot.title = element_markdown()
     ) +
     gglayers +
-    ylab(glue("Hospitalized Patients with COVID-19\nper {comma(per_n_people)} People")) +
-    annotate("rect",
-             xmin = if_else(min(hospitalizations_plot_data$date) < sah_start,
-                            sah_start,
-                            min(hospitalizations_plot_data$date)),
-             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 175/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
+    ylab(glue("Hospitalized Patients with COVID-19\nper {comma(per_n_people)} People")) #+
+#    annotate("rect",
+#             xmin = if_else(min(hospitalizations_plot_data$date) < sah_start,
+#                            sah_start,
+#                            min(hospitalizations_plot_data$date)),
+#             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+#    annotate("text", y = 175/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   # ICU Occupancy
   icu_plot_data <- hosp_tidy %>%
@@ -168,11 +168,11 @@ get_county_plots <- function(counties_of_interest){
       plot.title = element_markdown()
     ) +
     gglayers +
-    ylab(glue("ICU Patients with COVID-19\nper {comma(per_n_people)} People")) +
-    annotate("rect",
-             xmin = if_else(min(icu_plot_data$date) < sah_start, sah_start, min(icu_plot_data$date)),
-             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 51/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
+    ylab(glue("ICU Patients with COVID-19\nper {comma(per_n_people)} People")) #+
+#    annotate("rect",
+#             xmin = if_else(min(icu_plot_data$date) < sah_start, sah_start, min(icu_plot_data$date)),
+#             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+#    annotate("text", y = 51/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
 
   # Deaths
@@ -191,13 +191,13 @@ get_county_plots <- function(counties_of_interest){
       plot.title = element_markdown()
     ) +
     gglayers +
-    ylab(glue("New Daily Deaths due to COVID-19\nper {comma(per_n_people)} People")) +
-    annotate("rect",
-             xmin = if_else(min(deaths_plot_data$date) < sah_start,
-                            sah_start,
-                            min(deaths_plot_data$date)),
-             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 3/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
+    ylab(glue("New Daily Deaths due to COVID-19\nper {comma(per_n_people)} People")) #+
+#    annotate("rect",
+#             xmin = if_else(min(deaths_plot_data$date) < sah_start,
+#                            sah_start,
+#                            min(deaths_plot_data$date)),
+#             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+#    annotate("text", y = 3/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   # Cases
   cases_plot_data <- cases_tidy %>%
@@ -215,13 +215,13 @@ get_county_plots <- function(counties_of_interest){
       plot.title = element_markdown()
     ) +
     gglayers +
-    ylab(glue("New Daily Confirmed COVID-19 Cases\nper {comma(per_n_people)} People")) +
-    annotate("rect",
-             xmin = if_else(min(cases_plot_data$date) < sah_start,
-                            sah_start,
-                            min(cases_plot_data$date)),
-             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 250/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
+    ylab(glue("New Daily Confirmed COVID-19 Cases\nper {comma(per_n_people)} People")) #+
+#    annotate("rect",
+#             xmin = if_else(min(cases_plot_data$date) < sah_start,
+#                            sah_start,
+#                            min(cases_plot_data$date)),
+#             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+#    annotate("text", y = 250/10, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   return(list(hospitalizations_plot = hospitalizations_plot,
               icu_plot = icu_plot,
