@@ -345,13 +345,13 @@ get_city_plots <- function(cities_of_interest){
       plot.title = element_markdown()
     ) +
     gglayers +
-    ylab(glue("Percent Positive COVID-19 Tests")) +
-    annotate("rect",
-             xmin = if_else(min(positive_plot_data$date) < sah_start,
-                            sah_start,
-                            min(positive_plot_data$date)),
-             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 15, x = sah_end+21, label = "Stay at Home\nOrder Ended")
+    ylab(glue("Percent Positive COVID-19 Tests")) #+
+#    annotate("rect",
+#             xmin = if_else(min(positive_plot_data$date) < sah_start,
+#                            sah_start,
+#                            min(positive_plot_data$date)),
+#             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+#    annotate("text", y = 15, x = sah_end+21, label = "Stay at Home\nOrder Ended")
   # Testing
   testing_plot_data <- tidy_city %>%
     group_by(city) %>%
@@ -367,13 +367,13 @@ get_city_plots <- function(cities_of_interest){
       plot.title = element_markdown()
     ) +
     gglayers +
-    ylab(glue("Total COVID-19 Tests Performed\nper {comma(per_n_people)} People")) +
-    annotate("rect",
-             xmin = if_else(min(testing_plot_data$date) < sah_start,
-                            sah_start,
-                            min(testing_plot_data$date)),
-             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 175, x = sah_end+21, label = "Stay at Home\nOrder Ended")
+    ylab(glue("Total COVID-19 Tests Performed\nper {comma(per_n_people)} People")) #+
+#    annotate("rect",
+#             xmin = if_else(min(testing_plot_data$date) < sah_start,
+#                            sah_start,
+#                            min(testing_plot_data$date)),
+#             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+#    annotate("text", y = 175, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
 
   # Deaths
@@ -391,13 +391,13 @@ get_city_plots <- function(cities_of_interest){
       plot.title = element_markdown()
     ) +
     gglayers +
-    ylab(glue("New Daily Deaths due to COVID-19\nper {comma(per_n_people)} People")) +
-    annotate("rect",
-             xmin = if_else(min(deaths_plot_data$date) < sah_start,
-                            sah_start,
-                            min(deaths_plot_data$date)),
-             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 1, x = sah_end+21, label = "Stay at Home\nOrder Ended")
+    ylab(glue("New Daily Deaths due to COVID-19\nper {comma(per_n_people)} People")) #+
+#    annotate("rect",
+#             xmin = if_else(min(deaths_plot_data$date) < sah_start,
+#                            sah_start,
+#                            min(deaths_plot_data$date)),
+#             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+#    annotate("text", y = 1, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   # Cases
   cases_plot_data <- tidy_city %>%
@@ -414,13 +414,13 @@ get_city_plots <- function(cities_of_interest){
       plot.title = element_markdown()
     ) +
     gglayers +
-    ylab(glue("New Daily Confirmed COVID-19 Cases\nper {comma(per_n_people)} People")) +
-    annotate("rect",
-             xmin = if_else(min(cases_plot_data$date) < sah_start,
-                            sah_start,
-                            min(cases_plot_data$date)),
-             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
-    annotate("text", y = 25, x = sah_end+21, label = "Stay at Home\nOrder Ended")
+    ylab(glue("New Daily Confirmed COVID-19 Cases\nper {comma(per_n_people)} People")) #+
+#    annotate("rect",
+#             xmin = if_else(min(cases_plot_data$date) < sah_start,
+#                            sah_start,
+#                            min(cases_plot_data$date)),
+#             xmax = sah_end, ymin = -Inf, ymax = Inf, alpha = sah_alpha) +
+#    annotate("text", y = 25, x = sah_end+21, label = "Stay at Home\nOrder Ended")
 
   return(list(positive_plot = positive_plot,
               testing_plot = testing_plot,
