@@ -35,26 +35,25 @@ get_county_plots <- function(counties_of_interest){
   #                      tests = resources$resource_id[resources$name == "COVID-19 Testing"],
   #                      hosp = resources$resource_id[resources$name == "Hospitals By County"])
 
-  resource_ids <- list(cases_deaths = resources$id[resources$name == "Statewide COVID-19 Cases Deaths"],
+  resource_ids <- list(cases_deaths = resources$id[resources$name == "Statewide COVID-19 Cases Deaths Tests"],
                        hosp = resources$id[resources$name == "Statewide Covid-19 Hospital County Data"])
-
 
 
   # pull resources into data frames (adds extra cols _id and _full_text)
   cases <-
     tbl(src = ckan$con, from = resource_ids$cases_deaths) %>%
     as_tibble() %>%
-    mutate(date = lubridate::ymd(date),
-           deaths = as.integer(deaths),
-           reported_cases = as.integer(reported_cases),
-           cases = as.integer(cases),
-           positive_tests = as.integer(positive_tests),
-           total_tests = as.integer(total_tests)) %>%
+    mutate(date = lubridate::ymd(DATE),
+           deaths = as.integer(DEATHS),
+           reported_cases = as.integer(REPORTED_CASES),
+           cases = as.integer(CASES),
+           positive_tests = as.integer(POSITIVE_TESTS),
+           total_tests = as.integer(TOTAL_TESTS)) %>%
     select(date,
            cases = cases,
            tests = total_tests,
            deaths,
-           county = area) %>%
+           county = AREA) %>%
     arrange(date, county)
 
 
@@ -118,7 +117,7 @@ get_county_plots <- function(counties_of_interest){
 
   sah_alpha <- 0.2
 
-  break_vec <- seq(from = sah_end, to = max(hosp_tidy$date, cases_tidy$date), by = "21 day")
+  break_vec <- seq(from = sah_end, to = max(hosp_tidy$date, cases_tidy$date), by = "28 day")
 
   gglayers = list(
     geom_line(size = 1.5),
