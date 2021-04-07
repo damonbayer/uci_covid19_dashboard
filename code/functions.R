@@ -322,7 +322,7 @@ get_city_plots <- function(cities_of_interest){
     geom_line(size = 1.5),
     scale_color_manual(name = "City", values = cbPalette),
     scale_x_date(name = "Date",
-                 breaks = "21 day",
+                 breaks = "28 day",
                  date_labels = "%b %d",
                  expand = expansion(add=c(0,7))),
     scale_y_continuous(label = comma)
