@@ -35,7 +35,7 @@ get_county_plots <- function(counties_of_interest){
   #                      tests = resources$resource_id[resources$name == "COVID-19 Testing"],
   #                      hosp = resources$resource_id[resources$name == "Hospitals By County"])
 
-  resource_ids <- list(cases_deaths = resources$id[resources$name == "Statewide COVID-19 Cases Deaths Tests"],
+  resource_ids <- list(cases_deaths = resources$id[resources$name == "Statewide COVID-19 Cases Deaths"],
                        hosp = resources$id[resources$name == "Statewide Covid-19 Hospital County Data"])
 
 
@@ -43,17 +43,17 @@ get_county_plots <- function(counties_of_interest){
   cases <-
     tbl(src = ckan$con, from = resource_ids$cases_deaths) %>%
     as_tibble() %>%
-    mutate(date = lubridate::ymd(DATE),
-           deaths = as.integer(DEATHS),
-           reported_cases = as.integer(REPORTED_CASES),
-           cases = as.integer(CASES),
-           positive_tests = as.integer(POSITIVE_TESTS),
-           total_tests = as.integer(TOTAL_TESTS)) %>%
+    mutate(date = lubridate::ymd(date),
+           deaths = as.integer(deaths),
+           reported_cases = as.integer(reported_cases),
+           cases = as.integer(cases),
+           positive_tests = as.integer(positive_tests),
+           total_tests = as.integer(total_tests)) %>%
     select(date,
            cases = cases,
            tests = total_tests,
            deaths,
-           county = AREA) %>%
+           county = area) %>%
     arrange(date, county)
 
 
