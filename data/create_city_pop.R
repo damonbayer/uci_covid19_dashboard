@@ -3,8 +3,8 @@ library(tidyverse)
 library(here)
 
 
-city_pops_old <- read.csv(here("data", "city_pop.csv"))
-city_pops <- read_csv(here("data", "ca_census_pop_2010_2019.csv"))
+city_pops_old <- read.csv("data/city_pop.csv")
+city_pops <- read_csv("data/ca_census_pop_2010_2019.csv")
 
 city_pops <- city_pops %>%
   dplyr::select(City, Population = `2019`)
@@ -20,4 +20,4 @@ testing <- city_pops %>%
   left_join(city_pops_old, by= "City") %>%
   drop_na()
 
-write.csv(city_pops, here("data", "city_pop.csv"))
+write.csv(city_pops, "data/city_pop.csv")

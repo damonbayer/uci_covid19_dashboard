@@ -30,14 +30,12 @@ knitr::opts_chunk$set(
 
 
 ```{r libraries}
-library(here)
-
-source(here("code", "map-functions.R"))
+source("code/map-functions.R")
 ```
 
 
 ```{r generate-tests-map}
-tests_covid_zip_data <- readRDS(here("data", "tests_map_data.rds"))
+tests_covid_zip_data <- readRDS("data/tests_map_data.rds")
 
 date_seq <- zoo::as.yearmon(
   seq(as.Date("2020-03-01"), tests_covid_zip_data$max_date_in_data, by = "months"), 
@@ -46,8 +44,8 @@ date_seq <- zoo::as.yearmon(
 
 gen_map_gif(
   plot_data = tests_covid_zip_data$tests_plot_data, 
-  socal_shp_file = here("data/shape-files/socal-zip", "Zipcode_boundary_scag_2009.shp"), 
-  ca_shp_file = here("data/shape-files/ca-counties", "cnty19_1.shp"), 
+  socal_shp_file = "data/shape-files/socal-zip/Zipcode_boundary_scag_2009.shp", 
+  ca_shp_file = "data/shape-files/ca-counties/cnty19_1.shp", 
   legend_label = tests_covid_zip_data$tests_legend_label, 
   month_seq = date_seq, 
   var_type = "tests"
@@ -56,7 +54,7 @@ gen_map_gif(
 
 
 ```{r display-tests-map}
-htmltools::includeHTML(here("docs", "tests-map-gif.html"))
+htmltools::includeHTML("docs/tests-map-gif.html")
 ```
 
 

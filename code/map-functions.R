@@ -1,5 +1,4 @@
 library(tidyverse)
-library(here)
 library(viridis)
 library(sf)
 library(ggspatial)
@@ -15,7 +14,7 @@ prep_and_save_map_data <- function(
   cases_per = 100000, # Number of cases per cases_per people in zip per time frame
   tests_per = 100000, # Number of tests per tests_per people in geog_level per time frame
   reporting_delay = 5, # Drop most recent 5 days due to reporting delay
-  path_to_save_folder = here("map-covid-data") # Path to folder to save map data in
+  path_to_save_folder = "map-covid-data" # Path to folder to save map data in
 ){
 
   oc_zips <- read_csv(zip_code_file, col_types = cols(Zip = col_character())) %>%
@@ -227,10 +226,10 @@ prep_and_save_map_data <- function(
 
 # gen-city-map-labeled -----------------------------------------------------
 gen_city_map_labeled <- function(
-  socal_shp_file = here("data/shape-files/socal-zip", "Zipcode_boundary_scag_2009.shp"),
-  ca_shp_file = here("data/shape-files/ca-counties", "cnty19_1.shp"),
-  road_shp_file = here("data/shape-files/ca-interstates", "tl_2015_06_prisecroads.shp"),
-  zip_code_file = here("data", "map_zipcodes.csv")
+  socal_shp_file = "data/shape-files/socal-zip/Zipcode_boundary_scag_2009.shp",
+  ca_shp_file = "data/shape-files/ca-counties/cnty19_1.shp",
+  road_shp_file = "data/shape-files/ca-interstates/tl_2015_06_prisecroads.shp",
+  zip_code_file = "data/map_zipcodes.csv"
 ) {
 
   # Load OC zip code file

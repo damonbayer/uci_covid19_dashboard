@@ -1,6 +1,5 @@
 library(tidyverse)
 library(lubridate)
-library(here)
 
 # Use this script to convert the CSVs provided by OCHCA to the format needed for the functions.R
 
