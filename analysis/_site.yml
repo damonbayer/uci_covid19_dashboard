@@ -3,7 +3,7 @@ output_dir: ../docs
 navbar:
   title: COVID-19 Trends by UC Irvine
   left:
-  - icon: fa-line-chart
+  - icon: fas fa-chart-line
     text: CA County Trends
     href: index.html
     menu:
@@ -18,7 +18,7 @@ navbar:
       - text: "LA v. NorCal"
         href: la-norcal.html
   - text: "OC City Trends"
-    icon: fa-line-chart
+    icon: fas fa-chart-line
     href: oc-populous-cities.html
     menu:
       - text: "5 Most Populous"
@@ -30,7 +30,7 @@ navbar:
       - text: "Coastal OC"
         href: coastal-oc.html
   - text: "OC Maps"
-    icon: fa-map-o
+    icon: far fa-map
     menu:
       - text: Cases
         href: incidence-maps.html
@@ -39,13 +39,13 @@ navbar:
       - text: Positivity
         href: positivity-maps.html
   - text: About
-    icon: fa-users
+    icon: fas fa-users
     href: about.html
   - text: License
     icon: fa-gavel
     href: license.html
   right:
-  - icon: fa-github
+  - icon: fab fa-github
     text: Source code
     href: https://github.com/damonbayer/uci_covid19_dashboard
 output:
