@@ -154,7 +154,7 @@ date,city,cases,tests,deaths
 2020-08-07,Aliso Viejo,2,60,0
 2020-08-08,Aliso Viejo,1,41,0
 2020-08-09,Aliso Viejo,1,25,0
-2020-08-10,Aliso Viejo,1,54,0
+2020-08-10,Aliso Viejo,1,53,0
 2020-08-11,Aliso Viejo,2,156,0
 2020-08-12,Aliso Viejo,1,59,0
 2020-08-13,Aliso Viejo,3,57,0
@@ -294,7 +294,7 @@ date,city,cases,tests,deaths
 2020-12-25,Aliso Viejo,12,29,0
 2020-12-26,Aliso Viejo,30,163,0
 2020-12-27,Aliso Viejo,17,83,0
-2020-12-28,Aliso Viejo,30,267,0
+2020-12-28,Aliso Viejo,30,268,0
 2020-12-29,Aliso Viejo,48,543,0
 2020-12-30,Aliso Viejo,42,252,1
 2020-12-31,Aliso Viejo,24,164,1
@@ -333,10 +333,10 @@ date,city,cases,tests,deaths
 2021-02-02,Aliso Viejo,14,290,0
 2021-02-03,Aliso Viejo,19,275,0
 2021-02-04,Aliso Viejo,7,184,0
-2021-02-05,Aliso Viejo,11,148,0
+2021-02-05,Aliso Viejo,10,147,0
 2021-02-06,Aliso Viejo,10,100,0
 2021-02-07,Aliso Viejo,6,65,0
-2021-02-08,Aliso Viejo,4,179,1
+2021-02-08,Aliso Viejo,5,180,1
 2021-02-09,Aliso Viejo,4,336,0
 2021-02-10,Aliso Viejo,4,234,0
 2021-02-11,Aliso Viejo,1,164,0
@@ -351,7 +351,7 @@ date,city,cases,tests,deaths
 2021-02-20,Aliso Viejo,5,85,0
 2021-02-21,Aliso Viejo,0,47,0
 2021-02-22,Aliso Viejo,3,142,0
-2021-02-23,Aliso Viejo,4,268,0
+2021-02-23,Aliso Viejo,4,269,0
 2021-02-24,Aliso Viejo,3,241,0
 2021-02-25,Aliso Viejo,3,105,1
 2021-02-26,Aliso Viejo,7,129,0
@@ -367,7 +367,7 @@ date,city,cases,tests,deaths
 2021-03-08,Aliso Viejo,1,128,0
 2021-03-09,Aliso Viejo,1,136,0
 2021-03-10,Aliso Viejo,1,116,0
-2021-03-11,Aliso Viejo,2,83,0
+2021-03-11,Aliso Viejo,2,84,0
 2021-03-12,Aliso Viejo,2,119,0
 2021-03-13,Aliso Viejo,0,49,0
 2021-03-14,Aliso Viejo,1,45,0
@@ -380,7 +380,7 @@ date,city,cases,tests,deaths
 2021-03-21,Aliso Viejo,1,30,0
 2021-03-22,Aliso Viejo,5,242,0
 2021-03-23,Aliso Viejo,2,171,0
-2021-03-24,Aliso Viejo,4,124,0
+2021-03-24,Aliso Viejo,3,123,0
 2021-03-25,Aliso Viejo,1,87,0
 2021-03-26,Aliso Viejo,2,100,0
 2021-03-27,Aliso Viejo,3,66,0
@@ -391,14 +391,21 @@ date,city,cases,tests,deaths
 2021-04-01,Aliso Viejo,4,115,0
 2021-04-02,Aliso Viejo,1,121,0
 2021-04-03,Aliso Viejo,1,69,0
-2021-04-04,Aliso Viejo,0,54,0
-2021-04-05,Aliso Viejo,1,139,0
-2021-04-06,Aliso Viejo,0,193,0
-2021-04-07,Aliso Viejo,0,107,0
-2021-04-08,Aliso Viejo,0,79,0
-2021-04-09,Aliso Viejo,0,71,0
-2021-04-10,Aliso Viejo,0,18,0
-2021-04-11,Aliso Viejo,1,7,0
+2021-04-04,Aliso Viejo,0,56,0
+2021-04-05,Aliso Viejo,1,150,0
+2021-04-06,Aliso Viejo,0,200,0
+2021-04-07,Aliso Viejo,0,119,0
+2021-04-08,Aliso Viejo,0,87,0
+2021-04-09,Aliso Viejo,0,83,0
+2021-04-10,Aliso Viejo,0,40,0
+2021-04-11,Aliso Viejo,2,43,0
+2021-04-12,Aliso Viejo,2,141,0
+2021-04-13,Aliso Viejo,2,242,0
+2021-04-14,Aliso Viejo,0,116,0
+2021-04-15,Aliso Viejo,0,79,0
+2021-04-16,Aliso Viejo,1,86,0
+2021-04-17,Aliso Viejo,0,35,0
+2021-04-18,Aliso Viejo,0,5,0
 2020-01-25,Anaheim,0,2,0
 2020-01-26,Anaheim,0,1,0
 2020-02-07,Anaheim,3,5,0
@@ -487,26 +494,26 @@ date,city,cases,tests,deaths
 2020-05-17,Anaheim,9,77,4
 2020-05-18,Anaheim,56,309,2
 2020-05-19,Anaheim,30,301,0
-2020-05-20,Anaheim,40,405,3
+2020-05-20,Anaheim,40,406,3
 2020-05-21,Anaheim,46,390,1
 2020-05-22,Anaheim,31,365,1
 2020-05-23,Anaheim,27,153,2
 2020-05-24,Anaheim,15,100,1
 2020-05-25,Anaheim,12,110,2
 2020-05-26,Anaheim,63,485,2
-2020-05-27,Anaheim,38,423,1
+2020-05-27,Anaheim,38,424,1
 2020-05-28,Anaheim,39,442,3
 2020-05-29,Anaheim,36,430,1
 2020-05-30,Anaheim,31,227,2
 2020-05-31,Anaheim,27,154,0
 2020-06-01,Anaheim,34,310,4
-2020-06-02,Anaheim,32,468,2
+2020-06-02,Anaheim,32,469,2
 2020-06-03,Anaheim,51,491,1
 2020-06-04,Anaheim,45,431,1
 2020-06-05,Anaheim,50,487,0
 2020-06-06,Anaheim,37,312,1
 2020-06-07,Anaheim,22,183,3
-2020-06-08,Anaheim,53,408,5
+2020-06-08,Anaheim,53,409,5
 2020-06-09,Anaheim,43,621,6
 2020-06-10,Anaheim,67,523,3
 2020-06-11,Anaheim,73,587,1
@@ -514,21 +521,21 @@ date,city,cases,tests,deaths
 2020-06-13,Anaheim,48,341,1
 2020-06-14,Anaheim,30,167,1
 2020-06-15,Anaheim,70,476,3
-2020-06-16,Anaheim,80,617,1
+2020-06-16,Anaheim,80,618,1
 2020-06-17,Anaheim,96,589,0
 2020-06-18,Anaheim,121,675,4
 2020-06-19,Anaheim,128,743,2
 2020-06-20,Anaheim,82,430,0
 2020-06-21,Anaheim,45,198,1
 2020-06-22,Anaheim,137,745,2
-2020-06-23,Anaheim,160,800,3
+2020-06-23,Anaheim,160,801,3
 2020-06-24,Anaheim,159,840,4
 2020-06-25,Anaheim,147,845,1
 2020-06-26,Anaheim,144,753,1
 2020-06-27,Anaheim,88,482,2
 2020-06-28,Anaheim,67,288,2
 2020-06-29,Anaheim,155,825,1
-2020-06-30,Anaheim,177,856,4
+2020-06-30,Anaheim,177,857,4
 2020-07-01,Anaheim,155,851,0
 2020-07-02,Anaheim,134,888,3
 2020-07-03,Anaheim,102,606,3
@@ -541,7 +548,7 @@ date,city,cases,tests,deaths
 2020-07-10,Anaheim,139,914,4
 2020-07-11,Anaheim,88,494,7
 2020-07-12,Anaheim,62,300,1
-2020-07-13,Anaheim,127,810,1
+2020-07-13,Anaheim,128,811,1
 2020-07-14,Anaheim,124,844,1
 2020-07-15,Anaheim,136,1016,5
 2020-07-16,Anaheim,144,929,4
@@ -555,17 +562,17 @@ date,city,cases,tests,deaths
 2020-07-24,Anaheim,96,739,2
 2020-07-25,Anaheim,49,428,2
 2020-07-26,Anaheim,38,306,2
-2020-07-27,Anaheim,108,908,4
-2020-07-28,Anaheim,79,792,3
+2020-07-27,Anaheim,108,912,4
+2020-07-28,Anaheim,79,793,3
 2020-07-29,Anaheim,87,986,0
 2020-07-30,Anaheim,71,737,8
 2020-07-31,Anaheim,106,836,3
 2020-08-01,Anaheim,36,480,4
-2020-08-02,Anaheim,32,350,4
+2020-08-02,Anaheim,32,349,4
 2020-08-03,Anaheim,55,678,4
-2020-08-04,Anaheim,70,871,2
+2020-08-04,Anaheim,70,872,2
 2020-08-05,Anaheim,51,664,2
-2020-08-06,Anaheim,43,559,1
+2020-08-06,Anaheim,43,560,1
 2020-08-07,Anaheim,67,743,3
 2020-08-08,Anaheim,26,310,2
 2020-08-09,Anaheim,16,183,4
@@ -573,28 +580,28 @@ date,city,cases,tests,deaths
 2020-08-11,Anaheim,45,805,1
 2020-08-12,Anaheim,35,644,0
 2020-08-13,Anaheim,58,525,2
-2020-08-14,Anaheim,70,659,1
+2020-08-14,Anaheim,70,660,1
 2020-08-15,Anaheim,25,334,1
 2020-08-16,Anaheim,10,186,5
 2020-08-17,Anaheim,56,647,3
-2020-08-18,Anaheim,52,703,3
+2020-08-18,Anaheim,52,704,3
 2020-08-19,Anaheim,60,669,2
 2020-08-20,Anaheim,51,549,1
 2020-08-21,Anaheim,80,645,1
 2020-08-22,Anaheim,30,333,1
-2020-08-23,Anaheim,14,162,1
+2020-08-23,Anaheim,14,167,1
 2020-08-24,Anaheim,45,659,1
 2020-08-25,Anaheim,54,828,3
 2020-08-26,Anaheim,35,573,2
 2020-08-27,Anaheim,40,457,1
-2020-08-28,Anaheim,35,612,1
+2020-08-28,Anaheim,35,617,1
 2020-08-29,Anaheim,26,271,0
 2020-08-30,Anaheim,14,179,0
 2020-08-31,Anaheim,44,563,1
 2020-09-01,Anaheim,31,701,3
 2020-09-02,Anaheim,30,587,1
 2020-09-03,Anaheim,36,510,0
-2020-09-04,Anaheim,37,516,1
+2020-09-04,Anaheim,37,521,1
 2020-09-05,Anaheim,21,279,3
 2020-09-06,Anaheim,7,179,1
 2020-09-07,Anaheim,12,175,0
@@ -612,106 +619,106 @@ date,city,cases,tests,deaths
 2020-09-19,Anaheim,18,304,1
 2020-09-20,Anaheim,11,220,1
 2020-09-21,Anaheim,33,703,2
-2020-09-22,Anaheim,44,971,1
+2020-09-22,Anaheim,44,973,1
 2020-09-23,Anaheim,35,834,0
 2020-09-24,Anaheim,45,630,0
 2020-09-25,Anaheim,47,611,2
 2020-09-26,Anaheim,21,337,1
 2020-09-27,Anaheim,16,239,0
 2020-09-28,Anaheim,30,739,1
-2020-09-29,Anaheim,43,879,0
+2020-09-29,Anaheim,43,881,0
 2020-09-30,Anaheim,25,739,2
 2020-10-01,Anaheim,34,623,2
 2020-10-02,Anaheim,37,713,2
 2020-10-03,Anaheim,16,374,1
 2020-10-04,Anaheim,18,239,3
 2020-10-05,Anaheim,36,874,3
-2020-10-06,Anaheim,46,1174,0
+2020-10-06,Anaheim,46,1175,0
 2020-10-07,Anaheim,37,891,1
 2020-10-08,Anaheim,33,765,0
 2020-10-09,Anaheim,36,851,0
 2020-10-10,Anaheim,22,421,1
 2020-10-11,Anaheim,10,251,0
 2020-10-12,Anaheim,42,848,2
-2020-10-13,Anaheim,54,1081,0
+2020-10-13,Anaheim,54,1088,0
 2020-10-14,Anaheim,32,931,0
-2020-10-15,Anaheim,39,878,0
+2020-10-15,Anaheim,38,877,0
 2020-10-16,Anaheim,37,820,0
 2020-10-17,Anaheim,17,337,1
 2020-10-18,Anaheim,13,274,0
 2020-10-19,Anaheim,45,988,1
-2020-10-20,Anaheim,42,1065,0
+2020-10-20,Anaheim,42,1072,0
 2020-10-21,Anaheim,39,897,0
 2020-10-22,Anaheim,38,788,2
 2020-10-23,Anaheim,40,792,1
 2020-10-24,Anaheim,17,334,2
 2020-10-25,Anaheim,17,258,1
 2020-10-26,Anaheim,40,976,0
-2020-10-27,Anaheim,42,975,1
+2020-10-27,Anaheim,42,977,1
 2020-10-28,Anaheim,41,945,1
 2020-10-29,Anaheim,44,890,0
 2020-10-30,Anaheim,42,857,1
 2020-10-31,Anaheim,25,396,0
 2020-11-01,Anaheim,20,277,0
 2020-11-02,Anaheim,62,1075,2
-2020-11-03,Anaheim,79,1260,0
-2020-11-04,Anaheim,91,1086,2
-2020-11-05,Anaheim,90,1023,2
-2020-11-06,Anaheim,83,983,1
+2020-11-03,Anaheim,79,1261,0
+2020-11-04,Anaheim,91,1087,2
+2020-11-05,Anaheim,90,1024,2
+2020-11-06,Anaheim,83,984,1
 2020-11-07,Anaheim,32,409,0
 2020-11-08,Anaheim,25,328,0
 2020-11-09,Anaheim,103,1350,1
-2020-11-10,Anaheim,88,1342,1
+2020-11-10,Anaheim,88,1344,1
 2020-11-11,Anaheim,53,835,2
-2020-11-12,Anaheim,100,1179,2
+2020-11-12,Anaheim,100,1180,2
 2020-11-13,Anaheim,112,1222,2
 2020-11-14,Anaheim,75,654,2
 2020-11-15,Anaheim,57,438,1
-2020-11-16,Anaheim,178,1502,1
-2020-11-17,Anaheim,172,1654,1
-2020-11-18,Anaheim,155,1639,2
-2020-11-19,Anaheim,148,1441,0
+2020-11-16,Anaheim,178,1503,1
+2020-11-17,Anaheim,172,1655,1
+2020-11-18,Anaheim,156,1640,2
+2020-11-19,Anaheim,148,1447,0
 2020-11-20,Anaheim,206,1798,0
-2020-11-21,Anaheim,120,927,2
+2020-11-21,Anaheim,121,928,2
 2020-11-22,Anaheim,69,526,1
 2020-11-23,Anaheim,225,1991,0
 2020-11-24,Anaheim,239,2031,2
-2020-11-25,Anaheim,279,1909,1
-2020-11-26,Anaheim,58,351,1
+2020-11-25,Anaheim,279,1914,1
+2020-11-26,Anaheim,58,352,1
 2020-11-27,Anaheim,130,945,0
 2020-11-28,Anaheim,194,1096,3
 2020-11-29,Anaheim,133,606,2
 2020-11-30,Anaheim,363,2378,2
-2020-12-01,Anaheim,315,2473,2
-2020-12-02,Anaheim,333,2359,0
+2020-12-01,Anaheim,315,2474,2
+2020-12-02,Anaheim,333,2363,0
 2020-12-03,Anaheim,401,2345,2
 2020-12-04,Anaheim,459,2549,3
 2020-12-05,Anaheim,302,1616,2
-2020-12-06,Anaheim,161,687,3
+2020-12-06,Anaheim,162,688,3
 2020-12-07,Anaheim,565,2891,3
 2020-12-08,Anaheim,553,3049,3
-2020-12-09,Anaheim,597,3151,4
-2020-12-10,Anaheim,477,2468,2
-2020-12-11,Anaheim,580,2969,1
+2020-12-09,Anaheim,597,3154,4
+2020-12-10,Anaheim,475,2466,2
+2020-12-11,Anaheim,580,2969,2
 2020-12-12,Anaheim,339,1656,3
 2020-12-13,Anaheim,169,682,8
-2020-12-14,Anaheim,640,3003,6
+2020-12-14,Anaheim,641,3004,6
 2020-12-15,Anaheim,608,2916,5
-2020-12-16,Anaheim,757,3366,3
-2020-12-17,Anaheim,579,3105,1
-2020-12-18,Anaheim,744,3420,7
-2020-12-19,Anaheim,328,1975,5
-2020-12-20,Anaheim,201,807,5
-2020-12-21,Anaheim,626,3241,5
+2020-12-16,Anaheim,757,3371,3
+2020-12-17,Anaheim,578,3104,1
+2020-12-18,Anaheim,744,3421,8
+2020-12-19,Anaheim,330,1977,6
+2020-12-20,Anaheim,201,808,5
+2020-12-21,Anaheim,627,3242,5
 2020-12-22,Anaheim,613,3002,7
-2020-12-23,Anaheim,740,3455,9
-2020-12-24,Anaheim,388,1638,4
+2020-12-23,Anaheim,738,3455,9
+2020-12-24,Anaheim,387,1637,5
 2020-12-25,Anaheim,131,368,10
 2020-12-26,Anaheim,383,1434,6
 2020-12-27,Anaheim,212,806,9
-2020-12-28,Anaheim,721,3029,5
-2020-12-29,Anaheim,746,3125,8
-2020-12-30,Anaheim,812,3659,8
+2020-12-28,Anaheim,720,3028,6
+2020-12-29,Anaheim,745,3124,8
+2020-12-30,Anaheim,812,3661,8
 2020-12-31,Anaheim,433,1985,11
 2021-01-01,Anaheim,152,578,12
 2021-01-02,Anaheim,425,2037,11
@@ -719,18 +726,18 @@ date,city,cases,tests,deaths
 2021-01-04,Anaheim,768,3639,9
 2021-01-05,Anaheim,729,3437,10
 2021-01-06,Anaheim,744,3552,8
-2021-01-07,Anaheim,637,3243,9
+2021-01-07,Anaheim,637,3243,10
 2021-01-08,Anaheim,580,2974,2
 2021-01-09,Anaheim,264,1519,9
-2021-01-10,Anaheim,165,837,7
+2021-01-10,Anaheim,165,838,7
 2021-01-11,Anaheim,507,3311,6
-2021-01-12,Anaheim,437,3032,9
+2021-01-12,Anaheim,437,3033,9
 2021-01-13,Anaheim,472,3066,6
-2021-01-14,Anaheim,337,2834,8
+2021-01-14,Anaheim,337,2834,9
 2021-01-15,Anaheim,364,2726,8
 2021-01-16,Anaheim,188,1201,7
 2021-01-17,Anaheim,105,678,10
-2021-01-18,Anaheim,335,2395,9
+2021-01-18,Anaheim,335,2396,9
 2021-01-19,Anaheim,329,2426,4
 2021-01-20,Anaheim,312,2817,12
 2021-01-21,Anaheim,240,2389,6
@@ -740,9 +747,9 @@ date,city,cases,tests,deaths
 2021-01-25,Anaheim,222,2060,3
 2021-01-26,Anaheim,222,2030,9
 2021-01-27,Anaheim,203,2069,9
-2021-01-28,Anaheim,155,2046,5
+2021-01-28,Anaheim,155,2046,6
 2021-01-29,Anaheim,183,1983,4
-2021-01-30,Anaheim,109,895,2
+2021-01-30,Anaheim,109,895,3
 2021-01-31,Anaheim,73,594,3
 2021-02-01,Anaheim,194,1924,4
 2021-02-02,Anaheim,139,1831,6
@@ -751,9 +758,9 @@ date,city,cases,tests,deaths
 2021-02-05,Anaheim,131,1508,5
 2021-02-06,Anaheim,68,760,3
 2021-02-07,Anaheim,42,452,0
-2021-02-08,Anaheim,97,1783,3
+2021-02-08,Anaheim,97,1784,3
 2021-02-09,Anaheim,77,1559,5
-2021-02-10,Anaheim,68,1547,3
+2021-02-10,Anaheim,68,1547,4
 2021-02-11,Anaheim,69,1490,2
 2021-02-12,Anaheim,77,1225,3
 2021-02-13,Anaheim,25,594,3
@@ -772,48 +779,55 @@ date,city,cases,tests,deaths
 2021-02-26,Anaheim,28,1071,5
 2021-02-27,Anaheim,15,464,3
 2021-02-28,Anaheim,12,344,0
-2021-03-01,Anaheim,36,1257,3
-2021-03-02,Anaheim,24,1384,1
+2021-03-01,Anaheim,37,1258,3
+2021-03-02,Anaheim,24,1384,2
 2021-03-03,Anaheim,12,1074,3
 2021-03-04,Anaheim,19,988,0
 2021-03-05,Anaheim,20,1153,2
 2021-03-06,Anaheim,20,457,2
 2021-03-07,Anaheim,11,351,0
 2021-03-08,Anaheim,31,1281,0
-2021-03-09,Anaheim,23,1125,2
+2021-03-09,Anaheim,23,1126,2
 2021-03-10,Anaheim,21,1048,1
 2021-03-11,Anaheim,37,903,0
-2021-03-12,Anaheim,29,979,0
+2021-03-12,Anaheim,29,979,1
 2021-03-13,Anaheim,18,481,1
 2021-03-14,Anaheim,14,324,0
 2021-03-15,Anaheim,19,1132,0
-2021-03-16,Anaheim,24,1178,1
-2021-03-17,Anaheim,25,1041,1
+2021-03-16,Anaheim,24,1180,1
+2021-03-17,Anaheim,25,1041,2
 2021-03-18,Anaheim,14,908,1
 2021-03-19,Anaheim,12,1001,0
 2021-03-20,Anaheim,13,438,0
 2021-03-21,Anaheim,6,354,0
-2021-03-22,Anaheim,17,1249,0
-2021-03-23,Anaheim,15,1203,0
-2021-03-24,Anaheim,11,1055,0
-2021-03-25,Anaheim,18,886,0
-2021-03-26,Anaheim,20,981,1
+2021-03-22,Anaheim,17,1252,0
+2021-03-23,Anaheim,15,1211,0
+2021-03-24,Anaheim,11,1056,1
+2021-03-25,Anaheim,18,898,0
+2021-03-26,Anaheim,20,983,1
 2021-03-27,Anaheim,8,439,0
 2021-03-28,Anaheim,12,400,0
-2021-03-29,Anaheim,11,1153,1
-2021-03-30,Anaheim,16,1160,0
-2021-03-31,Anaheim,17,933,0
-2021-04-01,Anaheim,13,931,0
-2021-04-02,Anaheim,16,912,0
+2021-03-29,Anaheim,11,1168,1
+2021-03-30,Anaheim,17,1161,0
+2021-03-31,Anaheim,17,936,0
+2021-04-01,Anaheim,13,937,0
+2021-04-02,Anaheim,16,918,0
 2021-04-03,Anaheim,12,451,0
-2021-04-04,Anaheim,7,353,0
-2021-04-05,Anaheim,18,1149,0
-2021-04-06,Anaheim,12,1155,0
-2021-04-07,Anaheim,12,953,0
-2021-04-08,Anaheim,10,711,0
-2021-04-09,Anaheim,11,663,0
-2021-04-10,Anaheim,13,217,0
-2021-04-11,Anaheim,2,46,0
+2021-04-04,Anaheim,7,356,0
+2021-04-05,Anaheim,19,1289,0
+2021-04-06,Anaheim,12,1188,0
+2021-04-07,Anaheim,13,1017,0
+2021-04-08,Anaheim,10,953,0
+2021-04-09,Anaheim,14,931,0
+2021-04-10,Anaheim,18,433,0
+2021-04-11,Anaheim,9,399,0
+2021-04-12,Anaheim,20,1336,0
+2021-04-13,Anaheim,9,1124,0
+2021-04-14,Anaheim,5,969,0
+2021-04-15,Anaheim,14,849,0
+2021-04-16,Anaheim,7,923,0
+2021-04-17,Anaheim,2,178,0
+2021-04-18,Anaheim,0,36,0
 2020-01-28,Brea,0,1,0
 2020-03-12,Brea,0,3,0
 2020-03-13,Brea,0,2,0
@@ -1099,7 +1113,7 @@ date,city,cases,tests,deaths
 2020-12-20,Brea,22,125,1
 2020-12-21,Brea,34,324,1
 2020-12-22,Brea,38,307,0
-2020-12-23,Brea,36,299,1
+2020-12-23,Brea,35,298,1
 2020-12-24,Brea,24,152,1
 2020-12-25,Brea,6,34,1
 2020-12-26,Brea,28,132,1
@@ -1111,7 +1125,7 @@ date,city,cases,tests,deaths
 2021-01-01,Brea,5,47,1
 2021-01-02,Brea,22,152,1
 2021-01-03,Brea,14,129,2
-2021-01-04,Brea,42,393,1
+2021-01-04,Brea,42,394,1
 2021-01-05,Brea,45,297,0
 2021-01-06,Brea,46,314,0
 2021-01-07,Brea,32,265,2
@@ -1137,10 +1151,10 @@ date,city,cases,tests,deaths
 2021-01-27,Brea,16,154,4
 2021-01-28,Brea,28,231,2
 2021-01-29,Brea,9,207,1
-2021-01-30,Brea,6,105,0
+2021-01-30,Brea,6,106,0
 2021-01-31,Brea,4,65,1
 2021-02-01,Brea,12,229,2
-2021-02-02,Brea,21,242,1
+2021-02-02,Brea,20,241,1
 2021-02-03,Brea,15,202,1
 2021-02-04,Brea,5,189,0
 2021-02-05,Brea,9,194,0
@@ -1163,9 +1177,9 @@ date,city,cases,tests,deaths
 2021-02-22,Brea,4,145,0
 2021-02-23,Brea,1,172,0
 2021-02-24,Brea,5,142,0
-2021-02-25,Brea,3,122,0
+2021-02-25,Brea,3,123,0
 2021-02-26,Brea,2,142,0
-2021-02-27,Brea,1,72,1
+2021-02-27,Brea,0,71,1
 2021-02-28,Brea,0,39,0
 2021-03-01,Brea,2,201,0
 2021-03-02,Brea,3,152,0
@@ -1182,33 +1196,40 @@ date,city,cases,tests,deaths
 2021-03-13,Brea,2,51,0
 2021-03-14,Brea,0,39,0
 2021-03-15,Brea,2,188,0
-2021-03-16,Brea,0,143,0
-2021-03-17,Brea,3,141,0
+2021-03-16,Brea,0,145,0
+2021-03-17,Brea,3,147,0
 2021-03-18,Brea,1,82,1
 2021-03-19,Brea,1,132,0
 2021-03-20,Brea,1,43,0
 2021-03-21,Brea,0,29,0
 2021-03-22,Brea,1,155,0
-2021-03-23,Brea,1,135,0
+2021-03-23,Brea,1,136,0
 2021-03-24,Brea,0,134,0
-2021-03-25,Brea,1,116,0
+2021-03-25,Brea,1,118,0
 2021-03-26,Brea,1,97,0
 2021-03-27,Brea,1,37,0
 2021-03-28,Brea,1,66,0
-2021-03-29,Brea,1,167,1
+2021-03-29,Brea,1,169,1
 2021-03-30,Brea,0,175,0
-2021-03-31,Brea,1,139,0
+2021-03-31,Brea,1,140,0
 2021-04-01,Brea,0,126,0
 2021-04-02,Brea,3,135,0
 2021-04-03,Brea,1,48,0
 2021-04-04,Brea,1,40,0
-2021-04-05,Brea,2,129,0
-2021-04-06,Brea,1,125,0
-2021-04-07,Brea,2,123,0
-2021-04-08,Brea,5,105,0
-2021-04-09,Brea,0,89,0
-2021-04-10,Brea,4,35,0
-2021-04-11,Brea,0,5,0
+2021-04-05,Brea,2,159,0
+2021-04-06,Brea,1,134,0
+2021-04-07,Brea,2,157,0
+2021-04-08,Brea,5,121,0
+2021-04-09,Brea,0,128,0
+2021-04-10,Brea,4,55,0
+2021-04-11,Brea,2,31,0
+2021-04-12,Brea,1,164,0
+2021-04-13,Brea,1,123,0
+2021-04-14,Brea,0,147,0
+2021-04-15,Brea,0,102,0
+2021-04-16,Brea,3,134,0
+2021-04-17,Brea,1,32,0
+2021-04-18,Brea,0,5,0
 2020-02-29,Buena Park,0,1,0
 2020-03-02,Buena Park,0,1,0
 2020-03-09,Buena Park,0,1,0
@@ -1374,7 +1395,7 @@ date,city,cases,tests,deaths
 2020-08-17,Buena Park,4,155,0
 2020-08-18,Buena Park,10,171,0
 2020-08-19,Buena Park,8,168,0
-2020-08-20,Buena Park,7,129,0
+2020-08-20,Buena Park,7,130,0
 2020-08-21,Buena Park,9,113,0
 2020-08-22,Buena Park,3,71,0
 2020-08-23,Buena Park,2,50,0
@@ -1487,10 +1508,10 @@ date,city,cases,tests,deaths
 2020-12-08,Buena Park,101,566,1
 2020-12-09,Buena Park,250,1428,0
 2020-12-10,Buena Park,96,528,1
-2020-12-11,Buena Park,93,493,2
+2020-12-11,Buena Park,93,493,1
 2020-12-12,Buena Park,64,347,0
 2020-12-13,Buena Park,45,210,3
-2020-12-14,Buena Park,152,805,2
+2020-12-14,Buena Park,151,804,2
 2020-12-15,Buena Park,104,586,2
 2020-12-16,Buena Park,123,647,2
 2020-12-17,Buena Park,88,594,0
@@ -1499,7 +1520,7 @@ date,city,cases,tests,deaths
 2020-12-20,Buena Park,43,212,0
 2020-12-21,Buena Park,134,659,0
 2020-12-22,Buena Park,117,745,0
-2020-12-23,Buena Park,110,700,1
+2020-12-23,Buena Park,111,701,1
 2020-12-24,Buena Park,72,384,1
 2020-12-25,Buena Park,26,122,5
 2020-12-26,Buena Park,80,305,2
@@ -1535,7 +1556,7 @@ date,city,cases,tests,deaths
 2021-01-25,Buena Park,41,413,0
 2021-01-26,Buena Park,31,457,0
 2021-01-27,Buena Park,41,394,0
-2021-01-28,Buena Park,51,521,1
+2021-01-28,Buena Park,51,521,2
 2021-01-29,Buena Park,29,363,1
 2021-01-30,Buena Park,25,196,0
 2021-01-31,Buena Park,22,126,0
@@ -1552,10 +1573,10 @@ date,city,cases,tests,deaths
 2021-02-11,Buena Park,16,367,1
 2021-02-12,Buena Park,10,246,1
 2021-02-13,Buena Park,10,111,1
-2021-02-14,Buena Park,8,80,0
+2021-02-14,Buena Park,8,81,0
 2021-02-15,Buena Park,9,241,0
 2021-02-16,Buena Park,10,331,1
-2021-02-17,Buena Park,6,292,1
+2021-02-17,Buena Park,6,293,1
 2021-02-18,Buena Park,6,308,2
 2021-02-19,Buena Park,4,247,0
 2021-02-20,Buena Park,10,119,0
@@ -1582,33 +1603,40 @@ date,city,cases,tests,deaths
 2021-03-13,Buena Park,5,91,1
 2021-03-14,Buena Park,0,62,0
 2021-03-15,Buena Park,5,315,0
-2021-03-16,Buena Park,3,276,0
+2021-03-16,Buena Park,3,277,0
 2021-03-17,Buena Park,5,254,0
 2021-03-18,Buena Park,5,177,0
 2021-03-19,Buena Park,2,199,0
 2021-03-20,Buena Park,0,116,0
 2021-03-21,Buena Park,2,78,0
-2021-03-22,Buena Park,5,308,0
-2021-03-23,Buena Park,1,250,0
+2021-03-22,Buena Park,5,309,0
+2021-03-23,Buena Park,1,254,0
 2021-03-24,Buena Park,6,275,0
-2021-03-25,Buena Park,2,219,1
-2021-03-26,Buena Park,5,193,0
+2021-03-25,Buena Park,2,223,2
+2021-03-26,Buena Park,5,195,0
 2021-03-27,Buena Park,0,90,0
 2021-03-28,Buena Park,2,76,0
-2021-03-29,Buena Park,4,266,0
-2021-03-30,Buena Park,2,280,0
-2021-03-31,Buena Park,3,222,0
-2021-04-01,Buena Park,3,204,0
-2021-04-02,Buena Park,1,214,0
+2021-03-29,Buena Park,4,268,0
+2021-03-30,Buena Park,2,281,0
+2021-03-31,Buena Park,3,224,0
+2021-04-01,Buena Park,3,208,0
+2021-04-02,Buena Park,1,217,0
 2021-04-03,Buena Park,1,75,0
 2021-04-04,Buena Park,2,57,0
-2021-04-05,Buena Park,2,291,0
-2021-04-06,Buena Park,2,215,0
-2021-04-07,Buena Park,1,202,0
-2021-04-08,Buena Park,0,140,0
-2021-04-09,Buena Park,0,135,0
-2021-04-10,Buena Park,0,51,0
-2021-04-11,Buena Park,0,10,0
+2021-04-05,Buena Park,2,347,0
+2021-04-06,Buena Park,4,239,0
+2021-04-07,Buena Park,1,275,0
+2021-04-08,Buena Park,0,182,0
+2021-04-09,Buena Park,2,245,0
+2021-04-10,Buena Park,1,93,0
+2021-04-11,Buena Park,1,88,0
+2021-04-12,Buena Park,4,298,0
+2021-04-13,Buena Park,2,272,0
+2021-04-14,Buena Park,2,277,0
+2021-04-15,Buena Park,4,190,0
+2021-04-16,Buena Park,1,211,0
+2021-04-17,Buena Park,0,57,0
+2021-04-18,Buena Park,0,8,0
 2020-03-13,Capistrano Beach,0,1,0
 2020-03-15,Capistrano Beach,0,1,0
 2020-03-16,Capistrano Beach,0,2,0
@@ -1853,7 +1881,7 @@ date,city,cases,tests,deaths
 2020-11-28,Capistrano Beach,4,22,0
 2020-11-29,Capistrano Beach,3,11,0
 2020-11-30,Capistrano Beach,1,22,0
-2020-12-01,Capistrano Beach,7,38,0
+2020-12-01,Capistrano Beach,7,38,1
 2020-12-02,Capistrano Beach,4,25,0
 2020-12-03,Capistrano Beach,5,34,0
 2020-12-04,Capistrano Beach,3,62,0
@@ -1875,7 +1903,7 @@ date,city,cases,tests,deaths
 2020-12-20,Capistrano Beach,1,16,1
 2020-12-21,Capistrano Beach,9,40,0
 2020-12-22,Capistrano Beach,4,49,1
-2020-12-23,Capistrano Beach,17,42,0
+2020-12-23,Capistrano Beach,18,43,0
 2020-12-24,Capistrano Beach,1,16,1
 2020-12-25,Capistrano Beach,0,1,2
 2020-12-26,Capistrano Beach,5,26,0
@@ -1977,13 +2005,21 @@ date,city,cases,tests,deaths
 2021-04-01,Capistrano Beach,0,16,0
 2021-04-02,Capistrano Beach,0,17,0
 2021-04-03,Capistrano Beach,0,10,0
-2021-04-04,Capistrano Beach,0,3,0
+2021-04-04,Capistrano Beach,0,4,0
 2021-04-05,Capistrano Beach,0,15,0
 2021-04-06,Capistrano Beach,0,14,0
-2021-04-07,Capistrano Beach,0,10,0
-2021-04-08,Capistrano Beach,0,11,0
-2021-04-09,Capistrano Beach,0,11,0
-2021-04-10,Capistrano Beach,0,9,0
+2021-04-07,Capistrano Beach,0,11,0
+2021-04-08,Capistrano Beach,0,12,0
+2021-04-09,Capistrano Beach,0,14,0
+2021-04-10,Capistrano Beach,0,10,0
+2021-04-11,Capistrano Beach,0,7,0
+2021-04-12,Capistrano Beach,0,18,0
+2021-04-13,Capistrano Beach,0,14,0
+2021-04-14,Capistrano Beach,0,12,0
+2021-04-15,Capistrano Beach,0,14,0
+2021-04-16,Capistrano Beach,0,14,0
+2021-04-17,Capistrano Beach,0,6,0
+2021-04-18,Capistrano Beach,0,1,0
 2020-03-09,Corona Del Mar,0,1,0
 2020-03-12,Corona Del Mar,1,1,0
 2020-03-13,Corona Del Mar,1,3,0
@@ -2315,7 +2351,7 @@ date,city,cases,tests,deaths
 2021-02-09,Corona Del Mar,0,39,0
 2021-02-10,Corona Del Mar,2,56,0
 2021-02-11,Corona Del Mar,2,60,0
-2021-02-12,Corona Del Mar,1,32,0
+2021-02-12,Corona Del Mar,1,33,0
 2021-02-13,Corona Del Mar,0,15,0
 2021-02-14,Corona Del Mar,0,19,0
 2021-02-15,Corona Del Mar,2,35,0
@@ -2367,12 +2403,20 @@ date,city,cases,tests,deaths
 2021-04-02,Corona Del Mar,0,33,0
 2021-04-03,Corona Del Mar,0,25,0
 2021-04-04,Corona Del Mar,0,13,0
-2021-04-05,Corona Del Mar,0,45,0
-2021-04-06,Corona Del Mar,1,68,0
-2021-04-07,Corona Del Mar,1,46,0
-2021-04-08,Corona Del Mar,0,48,0
-2021-04-09,Corona Del Mar,0,25,0
-2021-04-10,Corona Del Mar,1,12,0
+2021-04-05,Corona Del Mar,0,46,0
+2021-04-06,Corona Del Mar,1,69,0
+2021-04-07,Corona Del Mar,1,52,0
+2021-04-08,Corona Del Mar,0,55,0
+2021-04-09,Corona Del Mar,0,33,0
+2021-04-10,Corona Del Mar,1,19,0
+2021-04-11,Corona Del Mar,0,12,0
+2021-04-12,Corona Del Mar,1,44,0
+2021-04-13,Corona Del Mar,0,42,0
+2021-04-14,Corona Del Mar,0,27,0
+2021-04-15,Corona Del Mar,0,25,0
+2021-04-16,Corona Del Mar,0,18,0
+2021-04-17,Corona Del Mar,1,9,0
+2021-04-18,Corona Del Mar,0,2,0
 2020-02-15,Costa Mesa,0,3,0
 2020-02-22,Costa Mesa,0,2,0
 2020-03-01,Costa Mesa,0,1,0
@@ -2463,7 +2507,7 @@ date,city,cases,tests,deaths
 2020-06-02,Costa Mesa,11,167,0
 2020-06-03,Costa Mesa,4,103,0
 2020-06-04,Costa Mesa,6,113,0
-2020-06-05,Costa Mesa,2,116,0
+2020-06-05,Costa Mesa,2,117,0
 2020-06-06,Costa Mesa,1,86,0
 2020-06-07,Costa Mesa,6,42,0
 2020-06-08,Costa Mesa,3,91,0
@@ -2483,7 +2527,7 @@ date,city,cases,tests,deaths
 2020-06-22,Costa Mesa,19,148,2
 2020-06-23,Costa Mesa,34,201,0
 2020-06-24,Costa Mesa,50,244,1
-2020-06-25,Costa Mesa,33,221,0
+2020-06-25,Costa Mesa,33,222,0
 2020-06-26,Costa Mesa,35,218,0
 2020-06-27,Costa Mesa,28,202,0
 2020-06-28,Costa Mesa,26,110,0
@@ -2498,7 +2542,7 @@ date,city,cases,tests,deaths
 2020-07-07,Costa Mesa,33,227,1
 2020-07-08,Costa Mesa,41,243,0
 2020-07-09,Costa Mesa,29,220,0
-2020-07-10,Costa Mesa,33,209,0
+2020-07-10,Costa Mesa,33,210,0
 2020-07-11,Costa Mesa,17,113,0
 2020-07-12,Costa Mesa,18,89,0
 2020-07-13,Costa Mesa,23,246,0
@@ -2530,7 +2574,7 @@ date,city,cases,tests,deaths
 2020-08-08,Costa Mesa,2,237,2
 2020-08-09,Costa Mesa,4,237,0
 2020-08-10,Costa Mesa,19,277,0
-2020-08-11,Costa Mesa,10,242,1
+2020-08-11,Costa Mesa,10,243,1
 2020-08-12,Costa Mesa,4,344,0
 2020-08-13,Costa Mesa,29,374,0
 2020-08-14,Costa Mesa,11,316,0
@@ -2539,17 +2583,17 @@ date,city,cases,tests,deaths
 2020-08-17,Costa Mesa,3,301,0
 2020-08-18,Costa Mesa,10,304,0
 2020-08-19,Costa Mesa,13,342,1
-2020-08-20,Costa Mesa,12,303,0
+2020-08-20,Costa Mesa,12,304,0
 2020-08-21,Costa Mesa,5,278,1
 2020-08-22,Costa Mesa,6,249,3
 2020-08-23,Costa Mesa,7,234,0
 2020-08-24,Costa Mesa,6,320,0
 2020-08-25,Costa Mesa,7,297,0
 2020-08-26,Costa Mesa,14,373,0
-2020-08-27,Costa Mesa,3,311,0
+2020-08-27,Costa Mesa,3,312,0
 2020-08-28,Costa Mesa,7,309,1
 2020-08-29,Costa Mesa,5,221,1
-2020-08-30,Costa Mesa,6,230,1
+2020-08-30,Costa Mesa,6,231,1
 2020-08-31,Costa Mesa,8,335,0
 2020-09-01,Costa Mesa,8,318,0
 2020-09-02,Costa Mesa,5,347,0
@@ -2567,7 +2611,7 @@ date,city,cases,tests,deaths
 2020-09-14,Costa Mesa,4,302,1
 2020-09-15,Costa Mesa,5,257,0
 2020-09-16,Costa Mesa,1,298,0
-2020-09-17,Costa Mesa,2,299,0
+2020-09-17,Costa Mesa,2,300,0
 2020-09-18,Costa Mesa,1,311,0
 2020-09-19,Costa Mesa,2,209,0
 2020-09-20,Costa Mesa,3,78,0
@@ -2577,7 +2621,7 @@ date,city,cases,tests,deaths
 2020-09-24,Costa Mesa,8,331,0
 2020-09-25,Costa Mesa,4,347,0
 2020-09-26,Costa Mesa,3,215,0
-2020-09-27,Costa Mesa,3,77,0
+2020-09-27,Costa Mesa,3,78,0
 2020-09-28,Costa Mesa,7,318,0
 2020-09-29,Costa Mesa,9,336,0
 2020-09-30,Costa Mesa,7,326,0
@@ -2585,27 +2629,27 @@ date,city,cases,tests,deaths
 2020-10-02,Costa Mesa,6,361,0
 2020-10-03,Costa Mesa,3,204,0
 2020-10-04,Costa Mesa,5,82,0
-2020-10-05,Costa Mesa,7,375,2
+2020-10-05,Costa Mesa,7,376,2
 2020-10-06,Costa Mesa,15,426,0
 2020-10-07,Costa Mesa,5,374,0
 2020-10-08,Costa Mesa,7,373,0
 2020-10-09,Costa Mesa,14,388,0
 2020-10-10,Costa Mesa,7,246,0
-2020-10-11,Costa Mesa,5,205,0
+2020-10-11,Costa Mesa,5,206,0
 2020-10-12,Costa Mesa,8,297,0
 2020-10-13,Costa Mesa,3,417,0
 2020-10-14,Costa Mesa,10,356,0
 2020-10-15,Costa Mesa,9,341,1
 2020-10-16,Costa Mesa,10,244,0
 2020-10-17,Costa Mesa,2,117,0
-2020-10-18,Costa Mesa,8,100,0
+2020-10-18,Costa Mesa,8,101,0
 2020-10-19,Costa Mesa,13,393,0
 2020-10-20,Costa Mesa,8,413,0
 2020-10-21,Costa Mesa,8,358,0
 2020-10-22,Costa Mesa,12,366,0
 2020-10-23,Costa Mesa,4,385,0
 2020-10-24,Costa Mesa,6,217,0
-2020-10-25,Costa Mesa,4,204,0
+2020-10-25,Costa Mesa,4,205,0
 2020-10-26,Costa Mesa,11,328,0
 2020-10-27,Costa Mesa,11,374,0
 2020-10-28,Costa Mesa,6,333,0
@@ -2613,13 +2657,13 @@ date,city,cases,tests,deaths
 2020-10-30,Costa Mesa,11,345,0
 2020-10-31,Costa Mesa,9,245,0
 2020-11-01,Costa Mesa,3,194,0
-2020-11-02,Costa Mesa,12,427,0
+2020-11-02,Costa Mesa,12,428,0
 2020-11-03,Costa Mesa,9,436,0
 2020-11-04,Costa Mesa,17,441,0
 2020-11-05,Costa Mesa,11,425,0
 2020-11-06,Costa Mesa,13,458,0
 2020-11-07,Costa Mesa,7,227,0
-2020-11-08,Costa Mesa,5,205,0
+2020-11-08,Costa Mesa,5,206,0
 2020-11-09,Costa Mesa,22,527,0
 2020-11-10,Costa Mesa,17,457,0
 2020-11-11,Costa Mesa,15,388,0
@@ -2627,7 +2671,7 @@ date,city,cases,tests,deaths
 2020-11-13,Costa Mesa,29,468,0
 2020-11-14,Costa Mesa,10,269,0
 2020-11-15,Costa Mesa,9,251,0
-2020-11-16,Costa Mesa,27,538,0
+2020-11-16,Costa Mesa,27,539,0
 2020-11-17,Costa Mesa,39,614,0
 2020-11-18,Costa Mesa,36,590,0
 2020-11-19,Costa Mesa,35,626,0
@@ -2654,7 +2698,7 @@ date,city,cases,tests,deaths
 2020-12-10,Costa Mesa,116,774,1
 2020-12-11,Costa Mesa,61,748,1
 2020-12-12,Costa Mesa,47,354,0
-2020-12-13,Costa Mesa,36,281,2
+2020-12-13,Costa Mesa,37,282,2
 2020-12-14,Costa Mesa,102,776,0
 2020-12-15,Costa Mesa,139,949,1
 2020-12-16,Costa Mesa,139,978,1
@@ -2671,7 +2715,7 @@ date,city,cases,tests,deaths
 2020-12-27,Costa Mesa,55,347,0
 2020-12-28,Costa Mesa,185,968,1
 2020-12-29,Costa Mesa,191,1064,3
-2020-12-30,Costa Mesa,125,899,2
+2020-12-30,Costa Mesa,125,900,3
 2020-12-31,Costa Mesa,79,633,2
 2021-01-01,Costa Mesa,30,239,1
 2021-01-02,Costa Mesa,82,524,2
@@ -2704,7 +2748,7 @@ date,city,cases,tests,deaths
 2021-01-29,Costa Mesa,34,482,0
 2021-01-30,Costa Mesa,20,196,1
 2021-01-31,Costa Mesa,17,173,2
-2021-02-01,Costa Mesa,44,581,1
+2021-02-01,Costa Mesa,44,581,2
 2021-02-02,Costa Mesa,29,540,0
 2021-02-03,Costa Mesa,31,474,0
 2021-02-04,Costa Mesa,38,456,1
@@ -2716,7 +2760,7 @@ date,city,cases,tests,deaths
 2021-02-10,Costa Mesa,14,492,2
 2021-02-11,Costa Mesa,24,432,0
 2021-02-12,Costa Mesa,24,348,1
-2021-02-13,Costa Mesa,8,153,0
+2021-02-13,Costa Mesa,8,153,1
 2021-02-14,Costa Mesa,9,127,0
 2021-02-15,Costa Mesa,14,386,3
 2021-02-16,Costa Mesa,15,419,2
@@ -2754,26 +2798,33 @@ date,city,cases,tests,deaths
 2021-03-20,Costa Mesa,2,111,0
 2021-03-21,Costa Mesa,2,94,0
 2021-03-22,Costa Mesa,4,405,0
-2021-03-23,Costa Mesa,7,475,0
+2021-03-23,Costa Mesa,7,475,1
 2021-03-24,Costa Mesa,8,329,0
-2021-03-25,Costa Mesa,5,392,0
+2021-03-25,Costa Mesa,5,393,0
 2021-03-26,Costa Mesa,9,260,0
 2021-03-27,Costa Mesa,6,105,0
 2021-03-28,Costa Mesa,2,104,0
-2021-03-29,Costa Mesa,7,483,0
+2021-03-29,Costa Mesa,7,486,0
 2021-03-30,Costa Mesa,4,406,0
 2021-03-31,Costa Mesa,6,406,0
-2021-04-01,Costa Mesa,8,351,0
+2021-04-01,Costa Mesa,7,350,0
 2021-04-02,Costa Mesa,8,346,0
 2021-04-03,Costa Mesa,7,115,0
 2021-04-04,Costa Mesa,3,92,0
-2021-04-05,Costa Mesa,8,455,0
-2021-04-06,Costa Mesa,7,472,0
-2021-04-07,Costa Mesa,7,385,0
-2021-04-08,Costa Mesa,6,387,0
-2021-04-09,Costa Mesa,4,220,0
-2021-04-10,Costa Mesa,1,51,0
-2021-04-11,Costa Mesa,1,11,0
+2021-04-05,Costa Mesa,8,460,0
+2021-04-06,Costa Mesa,7,476,0
+2021-04-07,Costa Mesa,9,399,0
+2021-04-08,Costa Mesa,7,416,0
+2021-04-09,Costa Mesa,7,285,0
+2021-04-10,Costa Mesa,1,99,0
+2021-04-11,Costa Mesa,4,93,0
+2021-04-12,Costa Mesa,4,417,0
+2021-04-13,Costa Mesa,4,408,0
+2021-04-14,Costa Mesa,2,281,0
+2021-04-15,Costa Mesa,5,239,0
+2021-04-16,Costa Mesa,2,162,0
+2021-04-17,Costa Mesa,0,36,0
+2021-04-18,Costa Mesa,0,8,0
 2020-02-01,Cypress,0,1,0
 2020-02-07,Cypress,25,124,0
 2020-03-07,Cypress,11,113,0
@@ -3032,7 +3083,7 @@ date,city,cases,tests,deaths
 2020-11-21,Cypress,10,120,0
 2020-11-22,Cypress,10,79,0
 2020-11-23,Cypress,12,216,0
-2020-11-24,Cypress,13,352,0
+2020-11-24,Cypress,13,351,0
 2020-11-25,Cypress,12,172,0
 2020-11-26,Cypress,5,38,0
 2020-11-27,Cypress,7,93,0
@@ -3048,7 +3099,7 @@ date,city,cases,tests,deaths
 2020-12-07,Cypress,39,327,0
 2020-12-08,Cypress,41,440,0
 2020-12-09,Cypress,36,260,0
-2020-12-10,Cypress,30,451,0
+2020-12-10,Cypress,29,450,0
 2020-12-11,Cypress,22,278,0
 2020-12-12,Cypress,33,213,0
 2020-12-13,Cypress,16,124,1
@@ -3067,7 +3118,7 @@ date,city,cases,tests,deaths
 2020-12-26,Cypress,29,146,0
 2020-12-27,Cypress,21,131,0
 2020-12-28,Cypress,53,341,0
-2020-12-29,Cypress,69,452,1
+2020-12-29,Cypress,68,451,1
 2020-12-30,Cypress,54,393,0
 2020-12-31,Cypress,32,221,1
 2021-01-01,Cypress,18,78,0
@@ -3117,7 +3168,7 @@ date,city,cases,tests,deaths
 2021-02-14,Cypress,3,65,1
 2021-02-15,Cypress,6,139,0
 2021-02-16,Cypress,8,238,0
-2021-02-17,Cypress,6,202,1
+2021-02-17,Cypress,6,203,1
 2021-02-18,Cypress,6,197,0
 2021-02-19,Cypress,2,139,0
 2021-02-20,Cypress,6,65,1
@@ -3144,33 +3195,40 @@ date,city,cases,tests,deaths
 2021-03-13,Cypress,3,64,0
 2021-03-14,Cypress,1,59,0
 2021-03-15,Cypress,1,189,0
-2021-03-16,Cypress,4,170,0
+2021-03-16,Cypress,4,171,0
 2021-03-17,Cypress,1,187,0
 2021-03-18,Cypress,0,93,0
 2021-03-19,Cypress,3,142,0
 2021-03-20,Cypress,1,65,0
 2021-03-21,Cypress,0,48,0
 2021-03-22,Cypress,5,239,0
-2021-03-23,Cypress,3,182,0
+2021-03-23,Cypress,3,184,0
 2021-03-24,Cypress,3,149,0
-2021-03-25,Cypress,0,138,0
+2021-03-25,Cypress,0,142,0
 2021-03-26,Cypress,1,128,0
 2021-03-27,Cypress,0,63,0
 2021-03-28,Cypress,0,43,0
-2021-03-29,Cypress,1,177,0
-2021-03-30,Cypress,2,152,0
+2021-03-29,Cypress,1,181,0
+2021-03-30,Cypress,2,153,0
 2021-03-31,Cypress,0,148,0
 2021-04-01,Cypress,0,117,0
-2021-04-02,Cypress,0,118,0
+2021-04-02,Cypress,0,121,0
 2021-04-03,Cypress,2,69,0
 2021-04-04,Cypress,0,43,0
-2021-04-05,Cypress,4,253,0
-2021-04-06,Cypress,1,146,0
-2021-04-07,Cypress,2,169,0
-2021-04-08,Cypress,0,130,0
-2021-04-09,Cypress,0,118,0
-2021-04-10,Cypress,0,27,0
-2021-04-11,Cypress,0,9,0
+2021-04-05,Cypress,4,259,0
+2021-04-06,Cypress,1,150,0
+2021-04-07,Cypress,2,179,0
+2021-04-08,Cypress,0,141,0
+2021-04-09,Cypress,0,150,0
+2021-04-10,Cypress,2,50,0
+2021-04-11,Cypress,1,53,0
+2021-04-12,Cypress,5,196,0
+2021-04-13,Cypress,0,194,0
+2021-04-14,Cypress,2,166,0
+2021-04-15,Cypress,1,129,0
+2021-04-16,Cypress,0,141,0
+2021-04-17,Cypress,0,38,0
+2021-04-18,Cypress,0,2,0
 2020-03-10,Dana Point,0,2,0
 2020-03-12,Dana Point,0,3,0
 2020-03-13,Dana Point,1,4,0
@@ -3502,7 +3560,7 @@ date,city,cases,tests,deaths
 2021-02-04,Dana Point,3,77,0
 2021-02-05,Dana Point,8,68,0
 2021-02-06,Dana Point,0,52,1
-2021-02-07,Dana Point,0,36,0
+2021-02-07,Dana Point,0,37,0
 2021-02-08,Dana Point,6,81,0
 2021-02-09,Dana Point,5,92,0
 2021-02-10,Dana Point,2,77,0
@@ -3552,20 +3610,27 @@ date,city,cases,tests,deaths
 2021-03-26,Dana Point,1,32,0
 2021-03-27,Dana Point,1,27,0
 2021-03-28,Dana Point,0,39,0
-2021-03-29,Dana Point,0,107,0
+2021-03-29,Dana Point,0,108,0
 2021-03-30,Dana Point,0,112,0
 2021-03-31,Dana Point,1,79,0
 2021-04-01,Dana Point,0,41,0
 2021-04-02,Dana Point,1,63,0
 2021-04-03,Dana Point,2,36,0
-2021-04-04,Dana Point,1,16,0
-2021-04-05,Dana Point,0,63,0
-2021-04-06,Dana Point,1,55,0
-2021-04-07,Dana Point,0,47,0
-2021-04-08,Dana Point,1,44,0
-2021-04-09,Dana Point,0,39,0
-2021-04-10,Dana Point,0,20,0
-2021-04-11,Dana Point,0,7,0
+2021-04-04,Dana Point,1,17,0
+2021-04-05,Dana Point,0,64,0
+2021-04-06,Dana Point,1,57,0
+2021-04-07,Dana Point,0,49,0
+2021-04-08,Dana Point,1,47,0
+2021-04-09,Dana Point,0,46,0
+2021-04-10,Dana Point,0,31,0
+2021-04-11,Dana Point,2,26,0
+2021-04-12,Dana Point,0,108,0
+2021-04-13,Dana Point,1,53,0
+2021-04-14,Dana Point,0,53,0
+2021-04-15,Dana Point,0,51,0
+2021-04-16,Dana Point,1,42,0
+2021-04-17,Dana Point,0,27,0
+2021-04-18,Dana Point,0,7,0
 2020-03-16,Foothill Ranch,0,4,0
 2020-03-17,Foothill Ranch,0,3,0
 2020-03-18,Foothill Ranch,1,1,0
@@ -3948,11 +4013,18 @@ date,city,cases,tests,deaths
 2021-04-04,Foothill Ranch,0,10,0
 2021-04-05,Foothill Ranch,1,25,0
 2021-04-06,Foothill Ranch,0,18,0
-2021-04-07,Foothill Ranch,1,24,0
-2021-04-08,Foothill Ranch,0,20,0
-2021-04-09,Foothill Ranch,0,24,0
-2021-04-10,Foothill Ranch,0,3,0
-2021-04-11,Foothill Ranch,0,1,0
+2021-04-07,Foothill Ranch,1,25,0
+2021-04-08,Foothill Ranch,0,23,0
+2021-04-09,Foothill Ranch,0,31,0
+2021-04-10,Foothill Ranch,0,13,0
+2021-04-11,Foothill Ranch,0,11,0
+2021-04-12,Foothill Ranch,0,33,0
+2021-04-13,Foothill Ranch,0,17,0
+2021-04-14,Foothill Ranch,0,28,0
+2021-04-15,Foothill Ranch,0,23,0
+2021-04-16,Foothill Ranch,1,23,0
+2021-04-17,Foothill Ranch,0,4,0
+2021-04-18,Foothill Ranch,0,1,0
 2020-02-15,Fountain Valley,0,2,0
 2020-02-22,Fountain Valley,0,2,0
 2020-03-04,Fountain Valley,0,1,0
@@ -4249,7 +4321,7 @@ date,city,cases,tests,deaths
 2020-12-25,Fountain Valley,7,33,0
 2020-12-26,Fountain Valley,25,143,1
 2020-12-27,Fountain Valley,24,101,0
-2020-12-28,Fountain Valley,83,401,0
+2020-12-28,Fountain Valley,82,400,0
 2020-12-29,Fountain Valley,71,413,1
 2020-12-30,Fountain Valley,58,403,1
 2020-12-31,Fountain Valley,42,245,1
@@ -4333,27 +4405,34 @@ date,city,cases,tests,deaths
 2021-03-19,Fountain Valley,3,134,0
 2021-03-20,Fountain Valley,0,44,0
 2021-03-21,Fountain Valley,1,61,0
-2021-03-22,Fountain Valley,1,177,0
+2021-03-22,Fountain Valley,1,184,0
 2021-03-23,Fountain Valley,1,172,0
 2021-03-24,Fountain Valley,6,172,0
-2021-03-25,Fountain Valley,2,140,0
+2021-03-25,Fountain Valley,2,141,0
 2021-03-26,Fountain Valley,3,137,0
 2021-03-27,Fountain Valley,0,49,0
 2021-03-28,Fountain Valley,1,50,0
-2021-03-29,Fountain Valley,3,167,0
-2021-03-30,Fountain Valley,1,168,0
-2021-03-31,Fountain Valley,4,169,0
-2021-04-01,Fountain Valley,1,112,0
+2021-03-29,Fountain Valley,3,168,0
+2021-03-30,Fountain Valley,1,169,0
+2021-03-31,Fountain Valley,4,170,1
+2021-04-01,Fountain Valley,1,113,0
 2021-04-02,Fountain Valley,0,105,0
-2021-04-03,Fountain Valley,3,60,0
+2021-04-03,Fountain Valley,2,59,0
 2021-04-04,Fountain Valley,0,48,0
-2021-04-05,Fountain Valley,1,214,0
-2021-04-06,Fountain Valley,2,139,0
-2021-04-07,Fountain Valley,0,125,0
-2021-04-08,Fountain Valley,1,111,0
-2021-04-09,Fountain Valley,5,90,0
-2021-04-10,Fountain Valley,1,40,0
-2021-04-11,Fountain Valley,0,7,0
+2021-04-05,Fountain Valley,1,217,0
+2021-04-06,Fountain Valley,2,146,0
+2021-04-07,Fountain Valley,0,132,0
+2021-04-08,Fountain Valley,1,125,0
+2021-04-09,Fountain Valley,5,109,0
+2021-04-10,Fountain Valley,1,62,0
+2021-04-11,Fountain Valley,2,61,0
+2021-04-12,Fountain Valley,5,179,0
+2021-04-13,Fountain Valley,1,157,0
+2021-04-14,Fountain Valley,4,132,0
+2021-04-15,Fountain Valley,1,88,0
+2021-04-16,Fountain Valley,3,97,0
+2021-04-17,Fountain Valley,1,27,0
+2021-04-18,Fountain Valley,1,11,0
 2020-01-25,Fullerton,0,2,0
 2020-02-07,Fullerton,0,1,0
 2020-02-08,Fullerton,0,1,0
@@ -4424,33 +4503,33 @@ date,city,cases,tests,deaths
 2020-05-10,Fullerton,3,23,0
 2020-05-11,Fullerton,7,134,0
 2020-05-12,Fullerton,3,106,0
-2020-05-13,Fullerton,13,130,1
+2020-05-13,Fullerton,13,129,1
 2020-05-14,Fullerton,3,99,0
 2020-05-15,Fullerton,3,147,0
 2020-05-16,Fullerton,2,80,0
 2020-05-17,Fullerton,2,23,0
 2020-05-18,Fullerton,5,94,1
 2020-05-19,Fullerton,3,106,0
-2020-05-20,Fullerton,4,120,0
+2020-05-20,Fullerton,4,119,0
 2020-05-21,Fullerton,4,124,0
-2020-05-22,Fullerton,10,163,0
+2020-05-22,Fullerton,10,162,0
 2020-05-23,Fullerton,5,65,0
 2020-05-24,Fullerton,3,35,1
 2020-05-25,Fullerton,2,42,0
-2020-05-26,Fullerton,9,172,0
-2020-05-27,Fullerton,6,163,0
+2020-05-26,Fullerton,9,171,0
+2020-05-27,Fullerton,6,162,0
 2020-05-28,Fullerton,6,136,0
 2020-05-29,Fullerton,11,178,1
 2020-05-30,Fullerton,4,65,0
 2020-05-31,Fullerton,2,50,0
-2020-06-01,Fullerton,10,165,0
-2020-06-02,Fullerton,13,197,0
+2020-06-01,Fullerton,10,163,0
+2020-06-02,Fullerton,13,196,0
 2020-06-03,Fullerton,14,166,0
 2020-06-04,Fullerton,13,170,0
 2020-06-05,Fullerton,13,191,2
 2020-06-06,Fullerton,8,80,1
 2020-06-07,Fullerton,3,101,0
-2020-06-08,Fullerton,14,191,0
+2020-06-08,Fullerton,14,189,0
 2020-06-09,Fullerton,14,263,1
 2020-06-10,Fullerton,7,192,1
 2020-06-11,Fullerton,17,203,0
@@ -4464,7 +4543,7 @@ date,city,cases,tests,deaths
 2020-06-19,Fullerton,34,303,1
 2020-06-20,Fullerton,20,152,1
 2020-06-21,Fullerton,16,90,0
-2020-06-22,Fullerton,39,299,1
+2020-06-22,Fullerton,39,297,1
 2020-06-23,Fullerton,35,296,0
 2020-06-24,Fullerton,48,355,0
 2020-06-25,Fullerton,47,298,0
@@ -4485,7 +4564,7 @@ date,city,cases,tests,deaths
 2020-07-10,Fullerton,43,291,0
 2020-07-11,Fullerton,36,160,0
 2020-07-12,Fullerton,16,216,1
-2020-07-13,Fullerton,30,427,0
+2020-07-13,Fullerton,29,426,0
 2020-07-14,Fullerton,31,294,1
 2020-07-15,Fullerton,30,302,1
 2020-07-16,Fullerton,43,347,0
@@ -4598,7 +4677,7 @@ date,city,cases,tests,deaths
 2020-10-31,Fullerton,14,214,0
 2020-11-01,Fullerton,7,138,0
 2020-11-02,Fullerton,19,555,1
-2020-11-03,Fullerton,15,485,0
+2020-11-03,Fullerton,15,484,0
 2020-11-04,Fullerton,15,436,0
 2020-11-05,Fullerton,32,384,0
 2020-11-06,Fullerton,22,417,0
@@ -4611,7 +4690,7 @@ date,city,cases,tests,deaths
 2020-11-13,Fullerton,27,453,0
 2020-11-14,Fullerton,26,278,0
 2020-11-15,Fullerton,27,215,1
-2020-11-16,Fullerton,49,671,0
+2020-11-16,Fullerton,50,672,0
 2020-11-17,Fullerton,40,670,1
 2020-11-18,Fullerton,54,794,1
 2020-11-19,Fullerton,63,621,0
@@ -4644,14 +4723,14 @@ date,city,cases,tests,deaths
 2020-12-16,Fullerton,145,959,3
 2020-12-17,Fullerton,168,1112,1
 2020-12-18,Fullerton,159,909,0
-2020-12-19,Fullerton,98,730,3
+2020-12-19,Fullerton,98,730,2
 2020-12-20,Fullerton,54,316,4
 2020-12-21,Fullerton,135,1089,0
 2020-12-22,Fullerton,146,1163,0
 2020-12-23,Fullerton,146,1030,3
 2020-12-24,Fullerton,88,549,2
 2020-12-25,Fullerton,32,116,4
-2020-12-26,Fullerton,83,441,2
+2020-12-26,Fullerton,82,440,2
 2020-12-27,Fullerton,62,294,2
 2020-12-28,Fullerton,181,1046,5
 2020-12-29,Fullerton,185,1127,6
@@ -4677,7 +4756,7 @@ date,city,cases,tests,deaths
 2021-01-18,Fullerton,136,947,2
 2021-01-19,Fullerton,109,1090,5
 2021-01-20,Fullerton,69,844,0
-2021-01-21,Fullerton,100,926,2
+2021-01-21,Fullerton,98,924,3
 2021-01-22,Fullerton,49,709,2
 2021-01-23,Fullerton,36,337,1
 2021-01-24,Fullerton,34,217,0
@@ -4685,7 +4764,7 @@ date,city,cases,tests,deaths
 2021-01-26,Fullerton,68,870,2
 2021-01-27,Fullerton,57,676,1
 2021-01-28,Fullerton,56,718,1
-2021-01-29,Fullerton,49,689,2
+2021-01-29,Fullerton,49,689,3
 2021-01-30,Fullerton,21,310,0
 2021-01-31,Fullerton,15,255,2
 2021-02-01,Fullerton,56,836,1
@@ -4713,51 +4792,58 @@ date,city,cases,tests,deaths
 2021-02-23,Fullerton,11,676,2
 2021-02-24,Fullerton,9,448,1
 2021-02-25,Fullerton,11,351,1
-2021-02-26,Fullerton,6,386,0
+2021-02-26,Fullerton,5,385,0
 2021-02-27,Fullerton,10,165,3
 2021-02-28,Fullerton,3,155,0
 2021-03-01,Fullerton,12,706,0
 2021-03-02,Fullerton,11,698,0
-2021-03-03,Fullerton,6,552,0
+2021-03-03,Fullerton,6,553,0
 2021-03-04,Fullerton,15,367,2
 2021-03-05,Fullerton,8,393,0
 2021-03-06,Fullerton,3,159,1
 2021-03-07,Fullerton,1,111,0
 2021-03-08,Fullerton,2,517,1
 2021-03-09,Fullerton,7,540,0
-2021-03-10,Fullerton,5,383,0
+2021-03-10,Fullerton,5,384,0
 2021-03-11,Fullerton,6,327,0
 2021-03-12,Fullerton,6,332,0
 2021-03-13,Fullerton,3,124,0
 2021-03-14,Fullerton,6,119,0
 2021-03-15,Fullerton,5,874,1
-2021-03-16,Fullerton,3,520,0
-2021-03-17,Fullerton,4,460,0
+2021-03-16,Fullerton,3,521,0
+2021-03-17,Fullerton,4,461,0
 2021-03-18,Fullerton,7,389,0
 2021-03-19,Fullerton,6,363,0
 2021-03-20,Fullerton,4,147,0
 2021-03-21,Fullerton,3,150,0
-2021-03-22,Fullerton,5,704,0
-2021-03-23,Fullerton,3,507,0
-2021-03-24,Fullerton,3,627,0
-2021-03-25,Fullerton,3,386,0
+2021-03-22,Fullerton,5,708,0
+2021-03-23,Fullerton,3,516,0
+2021-03-24,Fullerton,3,630,0
+2021-03-25,Fullerton,3,401,1
 2021-03-26,Fullerton,2,291,0
 2021-03-27,Fullerton,2,119,0
 2021-03-28,Fullerton,1,158,0
-2021-03-29,Fullerton,10,540,0
-2021-03-30,Fullerton,4,512,0
-2021-03-31,Fullerton,4,365,0
-2021-04-01,Fullerton,1,325,0
-2021-04-02,Fullerton,5,285,0
+2021-03-29,Fullerton,10,558,0
+2021-03-30,Fullerton,4,516,0
+2021-03-31,Fullerton,4,369,0
+2021-04-01,Fullerton,1,332,0
+2021-04-02,Fullerton,5,292,0
 2021-04-03,Fullerton,3,151,0
-2021-04-04,Fullerton,1,120,0
-2021-04-05,Fullerton,6,538,0
-2021-04-06,Fullerton,6,470,0
-2021-04-07,Fullerton,3,276,0
-2021-04-08,Fullerton,5,275,0
-2021-04-09,Fullerton,5,270,0
-2021-04-10,Fullerton,2,118,0
-2021-04-11,Fullerton,0,27,0
+2021-04-04,Fullerton,1,121,0
+2021-04-05,Fullerton,6,852,0
+2021-04-06,Fullerton,7,531,0
+2021-04-07,Fullerton,5,613,0
+2021-04-08,Fullerton,6,327,0
+2021-04-09,Fullerton,7,634,0
+2021-04-10,Fullerton,4,167,0
+2021-04-11,Fullerton,4,127,0
+2021-04-12,Fullerton,4,816,0
+2021-04-13,Fullerton,4,449,0
+2021-04-14,Fullerton,2,653,0
+2021-04-15,Fullerton,5,274,0
+2021-04-16,Fullerton,4,585,0
+2021-04-17,Fullerton,1,53,0
+2021-04-18,Fullerton,0,13,0
 2020-01-25,Garden Grove,2,4,0
 2020-02-07,Garden Grove,2,19,0
 2020-02-15,Garden Grove,0,1,0
@@ -4818,18 +4904,18 @@ date,city,cases,tests,deaths
 2020-04-28,Garden Grove,11,88,0
 2020-04-29,Garden Grove,5,60,1
 2020-04-30,Garden Grove,10,57,0
-2020-05-01,Garden Grove,15,166,0
+2020-05-01,Garden Grove,15,167,0
 2020-05-02,Garden Grove,3,49,1
 2020-05-03,Garden Grove,1,30,0
 2020-05-04,Garden Grove,6,90,0
-2020-05-05,Garden Grove,7,78,0
+2020-05-05,Garden Grove,7,79,0
 2020-05-06,Garden Grove,5,53,0
 2020-05-07,Garden Grove,4,78,1
 2020-05-08,Garden Grove,12,108,0
 2020-05-09,Garden Grove,6,51,0
-2020-05-10,Garden Grove,0,77,0
+2020-05-10,Garden Grove,0,78,0
 2020-05-11,Garden Grove,9,106,0
-2020-05-12,Garden Grove,9,146,0
+2020-05-12,Garden Grove,9,147,0
 2020-05-13,Garden Grove,8,97,0
 2020-05-14,Garden Grove,6,64,0
 2020-05-15,Garden Grove,7,112,0
@@ -4839,12 +4925,12 @@ date,city,cases,tests,deaths
 2020-05-19,Garden Grove,9,116,0
 2020-05-20,Garden Grove,10,98,2
 2020-05-21,Garden Grove,12,132,0
-2020-05-22,Garden Grove,9,199,0
+2020-05-22,Garden Grove,9,200,0
 2020-05-23,Garden Grove,4,49,0
 2020-05-24,Garden Grove,5,31,0
 2020-05-25,Garden Grove,6,58,0
 2020-05-26,Garden Grove,11,142,0
-2020-05-27,Garden Grove,12,134,0
+2020-05-27,Garden Grove,12,135,0
 2020-05-28,Garden Grove,16,253,0
 2020-05-29,Garden Grove,7,152,0
 2020-05-30,Garden Grove,10,109,0
@@ -4860,7 +4946,7 @@ date,city,cases,tests,deaths
 2020-06-09,Garden Grove,15,267,0
 2020-06-10,Garden Grove,11,182,0
 2020-06-11,Garden Grove,13,217,0
-2020-06-12,Garden Grove,16,181,0
+2020-06-12,Garden Grove,16,182,0
 2020-06-13,Garden Grove,11,121,0
 2020-06-14,Garden Grove,10,63,0
 2020-06-15,Garden Grove,19,199,0
@@ -4893,12 +4979,12 @@ date,city,cases,tests,deaths
 2020-07-12,Garden Grove,20,106,2
 2020-07-13,Garden Grove,49,420,1
 2020-07-14,Garden Grove,36,380,0
-2020-07-15,Garden Grove,54,333,2
+2020-07-15,Garden Grove,54,334,2
 2020-07-16,Garden Grove,42,417,1
 2020-07-17,Garden Grove,40,327,0
 2020-07-18,Garden Grove,36,190,1
 2020-07-19,Garden Grove,18,128,1
-2020-07-20,Garden Grove,25,272,0
+2020-07-20,Garden Grove,25,273,0
 2020-07-21,Garden Grove,25,284,2
 2020-07-22,Garden Grove,23,382,0
 2020-07-23,Garden Grove,31,312,1
@@ -4914,7 +5000,7 @@ date,city,cases,tests,deaths
 2020-08-02,Garden Grove,16,160,0
 2020-08-03,Garden Grove,16,223,1
 2020-08-04,Garden Grove,41,337,0
-2020-08-05,Garden Grove,24,417,4
+2020-08-05,Garden Grove,24,418,4
 2020-08-06,Garden Grove,16,214,4
 2020-08-07,Garden Grove,18,263,2
 2020-08-08,Garden Grove,6,139,1
@@ -4926,7 +5012,7 @@ date,city,cases,tests,deaths
 2020-08-14,Garden Grove,12,197,0
 2020-08-15,Garden Grove,12,132,2
 2020-08-16,Garden Grove,6,103,1
-2020-08-17,Garden Grove,13,273,1
+2020-08-17,Garden Grove,13,274,1
 2020-08-18,Garden Grove,14,407,2
 2020-08-19,Garden Grove,11,306,2
 2020-08-20,Garden Grove,4,261,1
@@ -4949,7 +5035,7 @@ date,city,cases,tests,deaths
 2020-09-06,Garden Grove,4,79,1
 2020-09-07,Garden Grove,1,64,0
 2020-09-08,Garden Grove,14,295,0
-2020-09-09,Garden Grove,9,361,0
+2020-09-09,Garden Grove,9,362,0
 2020-09-10,Garden Grove,8,188,0
 2020-09-11,Garden Grove,10,230,0
 2020-09-12,Garden Grove,10,123,1
@@ -4977,7 +5063,7 @@ date,city,cases,tests,deaths
 2020-10-04,Garden Grove,4,87,3
 2020-10-05,Garden Grove,8,303,0
 2020-10-06,Garden Grove,12,481,0
-2020-10-07,Garden Grove,6,442,0
+2020-10-07,Garden Grove,6,443,0
 2020-10-08,Garden Grove,13,289,2
 2020-10-09,Garden Grove,8,275,2
 2020-10-10,Garden Grove,10,172,0
@@ -4985,7 +5071,7 @@ date,city,cases,tests,deaths
 2020-10-12,Garden Grove,8,267,0
 2020-10-13,Garden Grove,10,457,0
 2020-10-14,Garden Grove,12,455,1
-2020-10-15,Garden Grove,10,298,0
+2020-10-15,Garden Grove,10,299,0
 2020-10-16,Garden Grove,15,286,0
 2020-10-17,Garden Grove,1,156,1
 2020-10-18,Garden Grove,5,105,0
@@ -5007,10 +5093,10 @@ date,city,cases,tests,deaths
 2020-11-03,Garden Grove,28,527,0
 2020-11-04,Garden Grove,39,505,1
 2020-11-05,Garden Grove,24,341,0
-2020-11-06,Garden Grove,20,424,0
+2020-11-06,Garden Grove,20,425,0
 2020-11-07,Garden Grove,22,165,0
 2020-11-08,Garden Grove,11,141,0
-2020-11-09,Garden Grove,40,430,0
+2020-11-09,Garden Grove,40,431,0
 2020-11-10,Garden Grove,25,575,0
 2020-11-11,Garden Grove,22,472,0
 2020-11-12,Garden Grove,41,482,0
@@ -5034,28 +5120,28 @@ date,city,cases,tests,deaths
 2020-11-30,Garden Grove,142,866,1
 2020-12-01,Garden Grove,139,1178,0
 2020-12-02,Garden Grove,148,1061,0
-2020-12-03,Garden Grove,174,897,3
+2020-12-03,Garden Grove,174,898,3
 2020-12-04,Garden Grove,194,929,0
 2020-12-05,Garden Grove,131,596,0
 2020-12-06,Garden Grove,54,246,1
 2020-12-07,Garden Grove,167,959,2
 2020-12-08,Garden Grove,259,1353,2
-2020-12-09,Garden Grove,213,1193,0
+2020-12-09,Garden Grove,213,1194,0
 2020-12-10,Garden Grove,189,1078,3
-2020-12-11,Garden Grove,215,1068,2
+2020-12-11,Garden Grove,216,1069,2
 2020-12-12,Garden Grove,151,712,2
 2020-12-13,Garden Grove,65,313,0
 2020-12-14,Garden Grove,203,1201,0
 2020-12-15,Garden Grove,285,1377,1
-2020-12-16,Garden Grove,288,1450,2
+2020-12-16,Garden Grove,288,1452,2
 2020-12-17,Garden Grove,235,1186,5
 2020-12-18,Garden Grove,246,1173,0
-2020-12-19,Garden Grove,160,801,3
+2020-12-19,Garden Grove,159,800,3
 2020-12-20,Garden Grove,78,381,1
 2020-12-21,Garden Grove,259,1341,6
 2020-12-22,Garden Grove,237,1261,7
 2020-12-23,Garden Grove,270,1377,2
-2020-12-24,Garden Grove,127,611,4
+2020-12-24,Garden Grove,126,610,4
 2020-12-25,Garden Grove,46,141,4
 2020-12-26,Garden Grove,131,614,2
 2020-12-27,Garden Grove,79,328,2
@@ -5073,24 +5159,24 @@ date,city,cases,tests,deaths
 2021-01-08,Garden Grove,236,1182,4
 2021-01-09,Garden Grove,129,664,6
 2021-01-10,Garden Grove,75,303,5
-2021-01-11,Garden Grove,227,1321,3
+2021-01-11,Garden Grove,228,1322,3
 2021-01-12,Garden Grove,226,1512,9
-2021-01-13,Garden Grove,174,1314,6
-2021-01-14,Garden Grove,152,1210,6
+2021-01-13,Garden Grove,173,1313,6
+2021-01-14,Garden Grove,152,1210,5
 2021-01-15,Garden Grove,154,1105,4
-2021-01-16,Garden Grove,94,542,2
+2021-01-16,Garden Grove,95,543,2
 2021-01-17,Garden Grove,56,323,5
 2021-01-18,Garden Grove,142,1083,6
-2021-01-19,Garden Grove,179,1255,0
+2021-01-19,Garden Grove,180,1256,0
 2021-01-20,Garden Grove,119,1132,5
 2021-01-21,Garden Grove,132,998,8
 2021-01-22,Garden Grove,112,872,4
-2021-01-23,Garden Grove,64,407,2
+2021-01-23,Garden Grove,63,406,2
 2021-01-24,Garden Grove,42,221,3
 2021-01-25,Garden Grove,95,1038,2
 2021-01-26,Garden Grove,111,977,4
 2021-01-27,Garden Grove,99,870,2
-2021-01-28,Garden Grove,91,885,1
+2021-01-28,Garden Grove,91,884,1
 2021-01-29,Garden Grove,70,687,4
 2021-01-30,Garden Grove,52,403,2
 2021-01-31,Garden Grove,33,261,2
@@ -5123,7 +5209,7 @@ date,city,cases,tests,deaths
 2021-02-27,Garden Grove,11,171,1
 2021-02-28,Garden Grove,17,148,0
 2021-03-01,Garden Grove,25,584,0
-2021-03-02,Garden Grove,17,611,1
+2021-03-02,Garden Grove,17,612,1
 2021-03-03,Garden Grove,8,464,0
 2021-03-04,Garden Grove,14,477,3
 2021-03-05,Garden Grove,8,370,0
@@ -5132,7 +5218,7 @@ date,city,cases,tests,deaths
 2021-03-08,Garden Grove,15,748,0
 2021-03-09,Garden Grove,9,491,1
 2021-03-10,Garden Grove,14,525,1
-2021-03-11,Garden Grove,5,337,1
+2021-03-11,Garden Grove,5,338,1
 2021-03-12,Garden Grove,9,388,0
 2021-03-13,Garden Grove,5,139,0
 2021-03-14,Garden Grove,5,106,1
@@ -5142,28 +5228,35 @@ date,city,cases,tests,deaths
 2021-03-18,Garden Grove,6,354,0
 2021-03-19,Garden Grove,8,395,0
 2021-03-20,Garden Grove,3,151,1
-2021-03-21,Garden Grove,6,138,0
-2021-03-22,Garden Grove,10,847,0
-2021-03-23,Garden Grove,11,512,0
-2021-03-24,Garden Grove,15,455,0
-2021-03-25,Garden Grove,8,422,1
-2021-03-26,Garden Grove,11,390,0
+2021-03-21,Garden Grove,6,138,1
+2021-03-22,Garden Grove,10,848,0
+2021-03-23,Garden Grove,11,516,1
+2021-03-24,Garden Grove,15,456,1
+2021-03-25,Garden Grove,8,425,1
+2021-03-26,Garden Grove,10,389,0
 2021-03-27,Garden Grove,1,169,0
 2021-03-28,Garden Grove,0,134,0
-2021-03-29,Garden Grove,7,491,0
+2021-03-29,Garden Grove,7,494,0
 2021-03-30,Garden Grove,3,406,0
-2021-03-31,Garden Grove,4,352,0
+2021-03-31,Garden Grove,4,354,0
 2021-04-01,Garden Grove,4,297,0
-2021-04-02,Garden Grove,8,389,0
+2021-04-02,Garden Grove,8,392,0
 2021-04-03,Garden Grove,2,133,0
 2021-04-04,Garden Grove,0,82,0
-2021-04-05,Garden Grove,3,779,0
-2021-04-06,Garden Grove,10,560,0
-2021-04-07,Garden Grove,6,437,0
-2021-04-08,Garden Grove,2,331,0
-2021-04-09,Garden Grove,6,243,0
-2021-04-10,Garden Grove,0,121,0
-2021-04-11,Garden Grove,0,27,0
+2021-04-05,Garden Grove,4,802,0
+2021-04-06,Garden Grove,10,566,0
+2021-04-07,Garden Grove,6,452,0
+2021-04-08,Garden Grove,2,404,0
+2021-04-09,Garden Grove,10,498,0
+2021-04-10,Garden Grove,1,182,0
+2021-04-11,Garden Grove,3,137,0
+2021-04-12,Garden Grove,8,622,0
+2021-04-13,Garden Grove,7,524,0
+2021-04-14,Garden Grove,7,414,0
+2021-04-15,Garden Grove,6,359,0
+2021-04-16,Garden Grove,5,425,0
+2021-04-17,Garden Grove,2,72,0
+2021-04-18,Garden Grove,0,19,0
 2020-01-22,Huntington Beach,0,1,0
 2020-02-15,Huntington Beach,0,2,0
 2020-02-22,Huntington Beach,0,2,0
@@ -5336,7 +5429,7 @@ date,city,cases,tests,deaths
 2020-08-17,Huntington Beach,13,337,2
 2020-08-18,Huntington Beach,8,331,0
 2020-08-19,Huntington Beach,20,290,0
-2020-08-20,Huntington Beach,17,302,1
+2020-08-20,Huntington Beach,17,303,1
 2020-08-21,Huntington Beach,9,299,1
 2020-08-22,Huntington Beach,2,149,0
 2020-08-23,Huntington Beach,1,138,0
@@ -5397,7 +5490,7 @@ date,city,cases,tests,deaths
 2020-10-17,Huntington Beach,5,197,0
 2020-10-18,Huntington Beach,2,174,0
 2020-10-19,Huntington Beach,11,419,0
-2020-10-20,Huntington Beach,8,487,0
+2020-10-20,Huntington Beach,8,488,0
 2020-10-21,Huntington Beach,9,550,0
 2020-10-22,Huntington Beach,9,423,0
 2020-10-23,Huntington Beach,9,401,0
@@ -5457,19 +5550,19 @@ date,city,cases,tests,deaths
 2020-12-16,Huntington Beach,157,1147,0
 2020-12-17,Huntington Beach,144,1141,3
 2020-12-18,Huntington Beach,131,1091,5
-2020-12-19,Huntington Beach,85,624,2
+2020-12-19,Huntington Beach,86,625,2
 2020-12-20,Huntington Beach,53,365,1
 2020-12-21,Huntington Beach,146,1278,0
 2020-12-22,Huntington Beach,144,1233,1
 2020-12-23,Huntington Beach,132,1018,2
-2020-12-24,Huntington Beach,103,592,1
+2020-12-24,Huntington Beach,104,593,1
 2020-12-25,Huntington Beach,19,104,2
 2020-12-26,Huntington Beach,91,478,4
 2020-12-27,Huntington Beach,96,495,1
 2020-12-28,Huntington Beach,194,1138,1
 2020-12-29,Huntington Beach,180,1132,2
 2020-12-30,Huntington Beach,161,1031,1
-2020-12-31,Huntington Beach,146,755,1
+2020-12-31,Huntington Beach,145,755,1
 2021-01-01,Huntington Beach,47,217,2
 2021-01-02,Huntington Beach,105,593,2
 2021-01-03,Huntington Beach,91,469,3
@@ -5485,8 +5578,8 @@ date,city,cases,tests,deaths
 2021-01-13,Huntington Beach,107,1019,3
 2021-01-14,Huntington Beach,111,940,3
 2021-01-15,Huntington Beach,88,848,2
-2021-01-16,Huntington Beach,54,404,3
-2021-01-17,Huntington Beach,35,277,0
+2021-01-16,Huntington Beach,53,403,3
+2021-01-17,Huntington Beach,35,277,1
 2021-01-18,Huntington Beach,91,938,1
 2021-01-19,Huntington Beach,94,911,1
 2021-01-20,Huntington Beach,73,906,3
@@ -5517,7 +5610,7 @@ date,city,cases,tests,deaths
 2021-02-14,Huntington Beach,15,283,0
 2021-02-15,Huntington Beach,9,462,2
 2021-02-16,Huntington Beach,26,695,1
-2021-02-17,Huntington Beach,20,659,0
+2021-02-17,Huntington Beach,20,660,0
 2021-02-18,Huntington Beach,18,520,0
 2021-02-19,Huntington Beach,20,429,2
 2021-02-20,Huntington Beach,8,230,0
@@ -5539,38 +5632,45 @@ date,city,cases,tests,deaths
 2021-03-08,Huntington Beach,7,526,0
 2021-03-09,Huntington Beach,15,528,1
 2021-03-10,Huntington Beach,3,527,0
-2021-03-11,Huntington Beach,19,367,1
+2021-03-11,Huntington Beach,19,368,1
 2021-03-12,Huntington Beach,10,350,0
 2021-03-13,Huntington Beach,3,179,0
 2021-03-14,Huntington Beach,4,176,0
-2021-03-15,Huntington Beach,12,548,0
-2021-03-16,Huntington Beach,9,585,0
+2021-03-15,Huntington Beach,12,549,0
+2021-03-16,Huntington Beach,9,586,0
 2021-03-17,Huntington Beach,6,508,1
 2021-03-18,Huntington Beach,7,365,0
 2021-03-19,Huntington Beach,6,376,0
 2021-03-20,Huntington Beach,8,201,0
 2021-03-21,Huntington Beach,10,191,0
 2021-03-22,Huntington Beach,8,583,0
-2021-03-23,Huntington Beach,8,525,0
+2021-03-23,Huntington Beach,8,527,0
 2021-03-24,Huntington Beach,7,526,1
-2021-03-25,Huntington Beach,9,401,0
+2021-03-25,Huntington Beach,9,407,0
 2021-03-26,Huntington Beach,3,394,0
-2021-03-27,Huntington Beach,2,202,0
+2021-03-27,Huntington Beach,2,202,1
 2021-03-28,Huntington Beach,3,205,0
-2021-03-29,Huntington Beach,10,568,0
-2021-03-30,Huntington Beach,11,609,0
-2021-03-31,Huntington Beach,10,520,0
-2021-04-01,Huntington Beach,11,459,0
-2021-04-02,Huntington Beach,9,431,0
+2021-03-29,Huntington Beach,11,576,0
+2021-03-30,Huntington Beach,12,611,2
+2021-03-31,Huntington Beach,11,522,0
+2021-04-01,Huntington Beach,11,459,1
+2021-04-02,Huntington Beach,10,435,0
 2021-04-03,Huntington Beach,9,236,0
-2021-04-04,Huntington Beach,8,194,0
-2021-04-05,Huntington Beach,13,607,0
-2021-04-06,Huntington Beach,11,504,0
-2021-04-07,Huntington Beach,10,466,0
-2021-04-08,Huntington Beach,6,306,0
-2021-04-09,Huntington Beach,4,271,0
-2021-04-10,Huntington Beach,1,94,0
-2021-04-11,Huntington Beach,0,9,0
+2021-04-04,Huntington Beach,8,195,0
+2021-04-05,Huntington Beach,13,622,0
+2021-04-06,Huntington Beach,11,522,0
+2021-04-07,Huntington Beach,16,507,0
+2021-04-08,Huntington Beach,8,364,0
+2021-04-09,Huntington Beach,3,344,0
+2021-04-10,Huntington Beach,5,187,0
+2021-04-11,Huntington Beach,9,172,0
+2021-04-12,Huntington Beach,13,623,0
+2021-04-13,Huntington Beach,10,562,0
+2021-04-14,Huntington Beach,4,463,0
+2021-04-15,Huntington Beach,6,383,0
+2021-04-16,Huntington Beach,4,292,0
+2021-04-17,Huntington Beach,1,82,0
+2021-04-18,Huntington Beach,0,11,0
 2020-01-26,Irvine,0,1,0
 2020-01-29,Irvine,0,1,0
 2020-02-07,Irvine,0,1,0
@@ -5840,7 +5940,7 @@ date,city,cases,tests,deaths
 2020-11-21,Irvine,43,744,0
 2020-11-22,Irvine,27,506,0
 2020-11-23,Irvine,57,1698,1
-2020-11-24,Irvine,60,1623,0
+2020-11-24,Irvine,60,1624,0
 2020-11-25,Irvine,57,1243,1
 2020-11-26,Irvine,8,149,0
 2020-11-27,Irvine,53,560,0
@@ -5856,20 +5956,20 @@ date,city,cases,tests,deaths
 2020-12-07,Irvine,136,1643,1
 2020-12-08,Irvine,108,1509,0
 2020-12-09,Irvine,125,1534,0
-2020-12-10,Irvine,138,1522,0
+2020-12-10,Irvine,139,1523,0
 2020-12-11,Irvine,98,1385,1
 2020-12-12,Irvine,66,660,0
 2020-12-13,Irvine,55,495,0
 2020-12-14,Irvine,173,1703,1
-2020-12-15,Irvine,156,1825,0
+2020-12-15,Irvine,157,1826,0
 2020-12-16,Irvine,150,1763,1
 2020-12-17,Irvine,170,2057,0
 2020-12-18,Irvine,121,1486,1
-2020-12-19,Irvine,56,835,0
+2020-12-19,Irvine,55,834,0
 2020-12-20,Irvine,50,544,0
 2020-12-21,Irvine,146,1967,1
 2020-12-22,Irvine,114,1760,1
-2020-12-23,Irvine,141,1793,0
+2020-12-23,Irvine,140,1792,0
 2020-12-24,Irvine,74,799,1
 2020-12-25,Irvine,11,125,0
 2020-12-26,Irvine,91,667,1
@@ -5888,7 +5988,7 @@ date,city,cases,tests,deaths
 2021-01-08,Irvine,127,1552,1
 2021-01-09,Irvine,87,694,1
 2021-01-10,Irvine,54,552,0
-2021-01-11,Irvine,162,2091,1
+2021-01-11,Irvine,162,2092,1
 2021-01-12,Irvine,138,2004,0
 2021-01-13,Irvine,151,1948,3
 2021-01-14,Irvine,133,1737,1
@@ -5904,12 +6004,12 @@ date,city,cases,tests,deaths
 2021-01-24,Irvine,24,345,0
 2021-01-25,Irvine,96,1708,0
 2021-01-26,Irvine,70,1326,1
-2021-01-27,Irvine,79,1426,0
+2021-01-27,Irvine,79,1428,0
 2021-01-28,Irvine,88,1535,1
 2021-01-29,Irvine,37,1095,0
 2021-01-30,Irvine,30,487,1
 2021-01-31,Irvine,31,327,2
-2021-02-01,Irvine,70,1470,0
+2021-02-01,Irvine,70,1471,0
 2021-02-02,Irvine,63,1422,0
 2021-02-03,Irvine,51,1262,1
 2021-02-04,Irvine,57,1315,0
@@ -5920,19 +6020,19 @@ date,city,cases,tests,deaths
 2021-02-09,Irvine,33,1300,1
 2021-02-10,Irvine,26,1250,0
 2021-02-11,Irvine,34,1120,1
-2021-02-12,Irvine,19,879,1
+2021-02-12,Irvine,19,880,1
 2021-02-13,Irvine,10,355,1
 2021-02-14,Irvine,7,228,0
 2021-02-15,Irvine,25,809,0
 2021-02-16,Irvine,34,1425,1
-2021-02-17,Irvine,18,1134,0
+2021-02-17,Irvine,18,1135,0
 2021-02-18,Irvine,15,1114,0
 2021-02-19,Irvine,12,872,1
 2021-02-20,Irvine,13,401,0
 2021-02-21,Irvine,12,280,0
 2021-02-22,Irvine,35,1181,0
 2021-02-23,Irvine,9,1251,0
-2021-02-24,Irvine,17,1126,1
+2021-02-24,Irvine,17,1127,1
 2021-02-25,Irvine,27,1057,0
 2021-02-26,Irvine,7,843,0
 2021-02-27,Irvine,9,355,0
@@ -5944,41 +6044,48 @@ date,city,cases,tests,deaths
 2021-03-05,Irvine,11,800,0
 2021-03-06,Irvine,3,323,0
 2021-03-07,Irvine,3,256,0
-2021-03-08,Irvine,11,1145,1
+2021-03-08,Irvine,11,1146,1
 2021-03-09,Irvine,3,1016,0
 2021-03-10,Irvine,13,1032,0
-2021-03-11,Irvine,15,991,0
+2021-03-11,Irvine,15,993,0
 2021-03-12,Irvine,6,695,0
 2021-03-13,Irvine,3,387,0
 2021-03-14,Irvine,6,258,0
-2021-03-15,Irvine,4,1098,0
+2021-03-15,Irvine,4,1099,0
 2021-03-16,Irvine,8,970,1
 2021-03-17,Irvine,9,990,0
 2021-03-18,Irvine,3,862,0
 2021-03-19,Irvine,3,790,0
 2021-03-20,Irvine,1,324,0
 2021-03-21,Irvine,5,285,0
-2021-03-22,Irvine,14,1010,0
-2021-03-23,Irvine,13,958,0
-2021-03-24,Irvine,8,1061,0
-2021-03-25,Irvine,6,940,0
+2021-03-22,Irvine,14,1014,0
+2021-03-23,Irvine,13,960,0
+2021-03-24,Irvine,8,1063,0
+2021-03-25,Irvine,6,942,0
 2021-03-26,Irvine,9,832,0
-2021-03-27,Irvine,7,359,0
+2021-03-27,Irvine,7,360,0
 2021-03-28,Irvine,6,291,0
-2021-03-29,Irvine,8,1022,0
+2021-03-29,Irvine,8,1024,0
 2021-03-30,Irvine,10,848,0
-2021-03-31,Irvine,13,817,0
-2021-04-01,Irvine,14,846,0
-2021-04-02,Irvine,15,772,0
-2021-04-03,Irvine,8,328,0
+2021-03-31,Irvine,13,819,0
+2021-04-01,Irvine,14,846,1
+2021-04-02,Irvine,15,774,0
+2021-04-03,Irvine,7,328,0
 2021-04-04,Irvine,13,248,0
-2021-04-05,Irvine,15,1098,0
-2021-04-06,Irvine,15,1190,0
-2021-04-07,Irvine,16,906,0
-2021-04-08,Irvine,9,690,0
-2021-04-09,Irvine,7,624,0
-2021-04-10,Irvine,3,164,0
-2021-04-11,Irvine,0,18,0
+2021-04-05,Irvine,13,1113,0
+2021-04-06,Irvine,14,1197,0
+2021-04-07,Irvine,17,948,0
+2021-04-08,Irvine,15,928,0
+2021-04-09,Irvine,7,766,0
+2021-04-10,Irvine,6,289,0
+2021-04-11,Irvine,5,266,0
+2021-04-12,Irvine,5,1018,0
+2021-04-13,Irvine,7,883,0
+2021-04-14,Irvine,15,917,0
+2021-04-15,Irvine,5,754,0
+2021-04-16,Irvine,4,610,0
+2021-04-17,Irvine,6,165,0
+2021-04-18,Irvine,0,15,0
 2020-01-25,La Habra,0,1,0
 2020-02-23,La Habra,0,1,0
 2020-03-09,La Habra,0,3,0
@@ -6131,7 +6238,7 @@ date,city,cases,tests,deaths
 2020-08-07,La Habra,11,130,0
 2020-08-08,La Habra,9,68,1
 2020-08-09,La Habra,1,34,3
-2020-08-10,La Habra,12,86,1
+2020-08-10,La Habra,12,87,1
 2020-08-11,La Habra,10,121,2
 2020-08-12,La Habra,19,213,0
 2020-08-13,La Habra,6,107,4
@@ -6258,15 +6365,15 @@ date,city,cases,tests,deaths
 2020-12-12,La Habra,59,217,1
 2020-12-13,La Habra,38,156,0
 2020-12-14,La Habra,99,417,4
-2020-12-15,La Habra,138,537,0
+2020-12-15,La Habra,137,536,0
 2020-12-16,La Habra,89,504,1
 2020-12-17,La Habra,102,478,2
 2020-12-18,La Habra,106,456,1
 2020-12-19,La Habra,58,256,2
 2020-12-20,La Habra,30,133,1
 2020-12-21,La Habra,99,450,0
-2020-12-22,La Habra,105,486,2
-2020-12-23,La Habra,108,493,1
+2020-12-22,La Habra,104,484,2
+2020-12-23,La Habra,109,495,1
 2020-12-24,La Habra,59,259,2
 2020-12-25,La Habra,18,64,1
 2020-12-26,La Habra,76,221,2
@@ -6282,16 +6389,16 @@ date,city,cases,tests,deaths
 2021-01-05,La Habra,102,505,0
 2021-01-06,La Habra,69,587,0
 2021-01-07,La Habra,88,476,1
-2021-01-08,La Habra,67,395,1
+2021-01-08,La Habra,67,395,2
 2021-01-09,La Habra,50,232,1
 2021-01-10,La Habra,49,147,3
 2021-01-11,La Habra,64,474,0
 2021-01-12,La Habra,60,495,3
-2021-01-13,La Habra,63,541,3
+2021-01-13,La Habra,64,542,3
 2021-01-14,La Habra,56,377,0
 2021-01-15,La Habra,52,312,1
 2021-01-16,La Habra,27,168,2
-2021-01-17,La Habra,19,100,1
+2021-01-17,La Habra,19,100,3
 2021-01-18,La Habra,48,399,1
 2021-01-19,La Habra,43,378,4
 2021-01-20,La Habra,49,463,0
@@ -6317,7 +6424,7 @@ date,city,cases,tests,deaths
 2021-02-09,La Habra,12,208,1
 2021-02-10,La Habra,14,260,0
 2021-02-11,La Habra,11,199,1
-2021-02-12,La Habra,21,190,0
+2021-02-12,La Habra,21,190,1
 2021-02-13,La Habra,4,68,2
 2021-02-14,La Habra,4,54,1
 2021-02-15,La Habra,9,257,0
@@ -6350,14 +6457,14 @@ date,city,cases,tests,deaths
 2021-03-14,La Habra,3,68,1
 2021-03-15,La Habra,3,358,0
 2021-03-16,La Habra,6,171,0
-2021-03-17,La Habra,1,173,0
+2021-03-17,La Habra,1,177,0
 2021-03-18,La Habra,2,158,0
 2021-03-19,La Habra,4,137,0
 2021-03-20,La Habra,2,46,0
 2021-03-21,La Habra,0,66,1
 2021-03-22,La Habra,0,309,0
-2021-03-23,La Habra,2,187,0
-2021-03-24,La Habra,3,248,0
+2021-03-23,La Habra,2,188,0
+2021-03-24,La Habra,3,248,1
 2021-03-25,La Habra,3,158,0
 2021-03-26,La Habra,2,117,0
 2021-03-27,La Habra,0,56,0
@@ -6369,13 +6476,20 @@ date,city,cases,tests,deaths
 2021-04-02,La Habra,2,132,0
 2021-04-03,La Habra,0,56,0
 2021-04-04,La Habra,1,60,0
-2021-04-05,La Habra,4,240,0
-2021-04-06,La Habra,1,167,0
-2021-04-07,La Habra,3,149,0
-2021-04-08,La Habra,4,131,0
-2021-04-09,La Habra,2,87,0
-2021-04-10,La Habra,0,25,0
-2021-04-11,La Habra,0,15,0
+2021-04-05,La Habra,4,348,0
+2021-04-06,La Habra,1,180,0
+2021-04-07,La Habra,3,257,0
+2021-04-08,La Habra,6,146,0
+2021-04-09,La Habra,2,211,0
+2021-04-10,La Habra,1,45,0
+2021-04-11,La Habra,0,56,0
+2021-04-12,La Habra,6,331,0
+2021-04-13,La Habra,1,201,0
+2021-04-14,La Habra,2,277,0
+2021-04-15,La Habra,1,139,0
+2021-04-16,La Habra,1,201,0
+2021-04-17,La Habra,0,20,0
+2021-04-18,La Habra,0,7,0
 2020-02-07,La Palma,1,2,0
 2020-03-09,La Palma,0,1,0
 2020-03-10,La Palma,1,2,0
@@ -6680,7 +6794,7 @@ date,city,cases,tests,deaths
 2021-01-15,La Palma,6,99,1
 2021-01-16,La Palma,3,45,0
 2021-01-17,La Palma,7,38,0
-2021-01-18,La Palma,11,103,0
+2021-01-18,La Palma,10,102,0
 2021-01-19,La Palma,6,96,1
 2021-01-20,La Palma,4,125,1
 2021-01-21,La Palma,3,92,0
@@ -6744,26 +6858,33 @@ date,city,cases,tests,deaths
 2021-03-20,La Palma,0,24,0
 2021-03-21,La Palma,1,16,0
 2021-03-22,La Palma,0,63,0
-2021-03-23,La Palma,0,58,0
+2021-03-23,La Palma,0,61,0
 2021-03-24,La Palma,1,58,0
-2021-03-25,La Palma,0,34,0
+2021-03-25,La Palma,0,36,0
 2021-03-26,La Palma,0,54,0
 2021-03-27,La Palma,0,20,0
 2021-03-28,La Palma,0,18,0
-2021-03-29,La Palma,0,64,0
+2021-03-29,La Palma,0,66,0
 2021-03-30,La Palma,1,52,0
 2021-03-31,La Palma,1,72,0
 2021-04-01,La Palma,0,46,0
-2021-04-02,La Palma,1,37,0
+2021-04-02,La Palma,1,39,0
 2021-04-03,La Palma,0,20,0
 2021-04-04,La Palma,0,14,0
-2021-04-05,La Palma,0,66,0
-2021-04-06,La Palma,0,59,0
-2021-04-07,La Palma,1,63,0
-2021-04-08,La Palma,0,36,0
-2021-04-09,La Palma,1,40,0
-2021-04-10,La Palma,0,12,0
-2021-04-11,La Palma,0,2,0
+2021-04-05,La Palma,0,69,0
+2021-04-06,La Palma,0,64,0
+2021-04-07,La Palma,1,67,0
+2021-04-08,La Palma,0,44,0
+2021-04-09,La Palma,1,50,0
+2021-04-10,La Palma,0,28,0
+2021-04-11,La Palma,0,14,0
+2021-04-12,La Palma,0,87,0
+2021-04-13,La Palma,0,65,0
+2021-04-14,La Palma,0,64,0
+2021-04-15,La Palma,1,45,0
+2021-04-16,La Palma,0,49,0
+2021-04-17,La Palma,0,9,0
+2021-04-18,La Palma,0,2,0
 2020-01-25,Ladera Ranch,0,1,0
 2020-02-15,Ladera Ranch,0,1,0
 2020-03-12,Ladera Ranch,0,2,0
@@ -6820,7 +6941,7 @@ date,city,cases,tests,deaths
 2020-05-02,Ladera Ranch,0,7,0
 2020-05-03,Ladera Ranch,0,2,0
 2020-05-04,Ladera Ranch,0,8,0
-2020-05-05,Ladera Ranch,0,10,0
+2020-05-05,Ladera Ranch,0,11,0
 2020-05-06,Ladera Ranch,0,14,0
 2020-05-07,Ladera Ranch,1,10,0
 2020-05-08,Ladera Ranch,0,19,0
@@ -7044,7 +7165,7 @@ date,city,cases,tests,deaths
 2020-12-12,Ladera Ranch,15,74,0
 2020-12-13,Ladera Ranch,13,59,0
 2020-12-14,Ladera Ranch,17,132,0
-2020-12-15,Ladera Ranch,11,106,0
+2020-12-15,Ladera Ranch,12,107,0
 2020-12-16,Ladera Ranch,15,147,0
 2020-12-17,Ladera Ranch,18,142,0
 2020-12-18,Ladera Ranch,16,115,0
@@ -7108,7 +7229,7 @@ date,city,cases,tests,deaths
 2021-02-14,Ladera Ranch,0,23,0
 2021-02-15,Ladera Ranch,3,66,0
 2021-02-16,Ladera Ranch,1,79,1
-2021-02-17,Ladera Ranch,1,78,0
+2021-02-17,Ladera Ranch,1,79,0
 2021-02-18,Ladera Ranch,2,75,0
 2021-02-19,Ladera Ranch,0,67,0
 2021-02-20,Ladera Ranch,1,37,0
@@ -7155,13 +7276,20 @@ date,city,cases,tests,deaths
 2021-04-02,Ladera Ranch,2,92,0
 2021-04-03,Ladera Ranch,0,46,0
 2021-04-04,Ladera Ranch,0,30,0
-2021-04-05,Ladera Ranch,1,152,0
-2021-04-06,Ladera Ranch,0,94,0
-2021-04-07,Ladera Ranch,2,72,0
-2021-04-08,Ladera Ranch,0,49,0
-2021-04-09,Ladera Ranch,0,49,0
-2021-04-10,Ladera Ranch,1,16,0
-2021-04-11,Ladera Ranch,0,3,0
+2021-04-05,Ladera Ranch,2,156,0
+2021-04-06,Ladera Ranch,0,99,0
+2021-04-07,Ladera Ranch,2,76,0
+2021-04-08,Ladera Ranch,1,62,0
+2021-04-09,Ladera Ranch,0,59,0
+2021-04-10,Ladera Ranch,1,30,0
+2021-04-11,Ladera Ranch,0,23,0
+2021-04-12,Ladera Ranch,2,172,0
+2021-04-13,Ladera Ranch,0,85,0
+2021-04-14,Ladera Ranch,3,73,0
+2021-04-15,Ladera Ranch,1,85,0
+2021-04-16,Ladera Ranch,0,63,0
+2021-04-17,Ladera Ranch,0,20,0
+2021-04-18,Ladera Ranch,0,12,0
 2020-01-26,Laguna Beach,0,1,0
 2020-03-06,Laguna Beach,0,1,0
 2020-03-10,Laguna Beach,0,2,0
@@ -7552,13 +7680,20 @@ date,city,cases,tests,deaths
 2021-04-02,Laguna Beach,0,64,0
 2021-04-03,Laguna Beach,0,38,0
 2021-04-04,Laguna Beach,0,23,0
-2021-04-05,Laguna Beach,0,67,0
-2021-04-06,Laguna Beach,0,67,0
-2021-04-07,Laguna Beach,2,70,0
-2021-04-08,Laguna Beach,0,42,0
-2021-04-09,Laguna Beach,0,41,0
-2021-04-10,Laguna Beach,0,17,0
-2021-04-11,Laguna Beach,0,5,0
+2021-04-05,Laguna Beach,0,102,0
+2021-04-06,Laguna Beach,0,69,0
+2021-04-07,Laguna Beach,3,102,0
+2021-04-08,Laguna Beach,0,47,0
+2021-04-09,Laguna Beach,2,61,0
+2021-04-10,Laguna Beach,0,25,0
+2021-04-11,Laguna Beach,0,26,0
+2021-04-12,Laguna Beach,5,128,0
+2021-04-13,Laguna Beach,4,104,0
+2021-04-14,Laguna Beach,2,108,0
+2021-04-15,Laguna Beach,2,57,0
+2021-04-16,Laguna Beach,1,36,0
+2021-04-17,Laguna Beach,1,13,0
+2021-04-18,Laguna Beach,0,4,0
 2020-02-09,Laguna Hills,0,1,0
 2020-03-02,Laguna Hills,0,1,0
 2020-03-04,Laguna Hills,0,1,0
@@ -7840,13 +7975,13 @@ date,city,cases,tests,deaths
 2020-12-12,Laguna Hills,10,74,0
 2020-12-13,Laguna Hills,12,53,0
 2020-12-14,Laguna Hills,19,159,0
-2020-12-15,Laguna Hills,28,148,0
+2020-12-15,Laguna Hills,27,147,0
 2020-12-16,Laguna Hills,34,190,0
 2020-12-17,Laguna Hills,19,180,0
 2020-12-18,Laguna Hills,26,172,0
 2020-12-19,Laguna Hills,10,113,0
 2020-12-20,Laguna Hills,5,51,0
-2020-12-21,Laguna Hills,27,205,2
+2020-12-21,Laguna Hills,28,206,2
 2020-12-22,Laguna Hills,17,166,0
 2020-12-23,Laguna Hills,27,169,0
 2020-12-24,Laguna Hills,6,84,0
@@ -7863,7 +7998,7 @@ date,city,cases,tests,deaths
 2021-01-04,Laguna Hills,27,173,1
 2021-01-05,Laguna Hills,33,206,3
 2021-01-06,Laguna Hills,28,174,4
-2021-01-07,Laguna Hills,25,176,3
+2021-01-07,Laguna Hills,26,177,3
 2021-01-08,Laguna Hills,6,132,1
 2021-01-09,Laguna Hills,16,99,1
 2021-01-10,Laguna Hills,13,67,3
@@ -7917,7 +8052,7 @@ date,city,cases,tests,deaths
 2021-02-27,Laguna Hills,0,30,0
 2021-02-28,Laguna Hills,0,38,0
 2021-03-01,Laguna Hills,3,86,0
-2021-03-02,Laguna Hills,0,107,1
+2021-03-02,Laguna Hills,0,108,1
 2021-03-03,Laguna Hills,2,94,0
 2021-03-04,Laguna Hills,2,65,0
 2021-03-05,Laguna Hills,0,60,0
@@ -7951,13 +8086,20 @@ date,city,cases,tests,deaths
 2021-04-02,Laguna Hills,1,65,0
 2021-04-03,Laguna Hills,0,31,0
 2021-04-04,Laguna Hills,0,30,0
-2021-04-05,Laguna Hills,0,89,0
-2021-04-06,Laguna Hills,2,103,0
-2021-04-07,Laguna Hills,0,64,0
-2021-04-08,Laguna Hills,0,69,0
-2021-04-09,Laguna Hills,2,47,0
-2021-04-10,Laguna Hills,0,12,0
-2021-04-11,Laguna Hills,0,5,0
+2021-04-05,Laguna Hills,0,91,0
+2021-04-06,Laguna Hills,2,108,0
+2021-04-07,Laguna Hills,0,72,0
+2021-04-08,Laguna Hills,1,78,0
+2021-04-09,Laguna Hills,1,68,0
+2021-04-10,Laguna Hills,0,30,0
+2021-04-11,Laguna Hills,0,28,0
+2021-04-12,Laguna Hills,1,102,0
+2021-04-13,Laguna Hills,2,96,0
+2021-04-14,Laguna Hills,0,65,0
+2021-04-15,Laguna Hills,0,54,0
+2021-04-16,Laguna Hills,0,49,0
+2021-04-17,Laguna Hills,1,21,0
+2021-04-18,Laguna Hills,0,6,0
 2020-03-02,Laguna Niguel,2,2,0
 2020-03-04,Laguna Niguel,0,1,0
 2020-03-05,Laguna Niguel,0,2,0
@@ -8042,7 +8184,7 @@ date,city,cases,tests,deaths
 2020-05-27,Laguna Niguel,2,38,0
 2020-05-28,Laguna Niguel,1,58,0
 2020-05-29,Laguna Niguel,1,63,0
-2020-05-30,Laguna Niguel,0,30,0
+2020-05-30,Laguna Niguel,0,31,0
 2020-05-31,Laguna Niguel,0,20,0
 2020-06-01,Laguna Niguel,0,54,0
 2020-06-02,Laguna Niguel,2,75,0
@@ -8052,7 +8194,7 @@ date,city,cases,tests,deaths
 2020-06-06,Laguna Niguel,0,31,0
 2020-06-07,Laguna Niguel,0,16,0
 2020-06-08,Laguna Niguel,0,40,0
-2020-06-09,Laguna Niguel,0,75,0
+2020-06-09,Laguna Niguel,0,76,0
 2020-06-10,Laguna Niguel,2,45,0
 2020-06-11,Laguna Niguel,0,54,0
 2020-06-12,Laguna Niguel,1,55,0
@@ -8086,7 +8228,7 @@ date,city,cases,tests,deaths
 2020-07-10,Laguna Niguel,13,118,0
 2020-07-11,Laguna Niguel,4,65,1
 2020-07-12,Laguna Niguel,3,45,0
-2020-07-13,Laguna Niguel,5,87,0
+2020-07-13,Laguna Niguel,5,88,0
 2020-07-14,Laguna Niguel,10,84,0
 2020-07-15,Laguna Niguel,11,92,0
 2020-07-16,Laguna Niguel,4,116,0
@@ -8157,7 +8299,7 @@ date,city,cases,tests,deaths
 2020-09-19,Laguna Niguel,1,56,0
 2020-09-20,Laguna Niguel,1,42,0
 2020-09-21,Laguna Niguel,0,91,0
-2020-09-22,Laguna Niguel,1,96,0
+2020-09-22,Laguna Niguel,1,97,0
 2020-09-23,Laguna Niguel,3,93,0
 2020-09-24,Laguna Niguel,3,91,0
 2020-09-25,Laguna Niguel,6,92,0
@@ -8269,7 +8411,7 @@ date,city,cases,tests,deaths
 2021-01-09,Laguna Niguel,23,175,0
 2021-01-10,Laguna Niguel,9,95,1
 2021-01-11,Laguna Niguel,28,301,0
-2021-01-12,Laguna Niguel,30,307,0
+2021-01-12,Laguna Niguel,30,307,1
 2021-01-13,Laguna Niguel,36,261,1
 2021-01-14,Laguna Niguel,28,222,0
 2021-01-15,Laguna Niguel,21,221,0
@@ -8286,21 +8428,21 @@ date,city,cases,tests,deaths
 2021-01-26,Laguna Niguel,17,230,2
 2021-01-27,Laguna Niguel,19,222,1
 2021-01-28,Laguna Niguel,16,344,0
-2021-01-29,Laguna Niguel,15,173,1
+2021-01-29,Laguna Niguel,15,174,1
 2021-01-30,Laguna Niguel,12,108,1
 2021-01-31,Laguna Niguel,3,56,0
-2021-02-01,Laguna Niguel,8,205,0
-2021-02-02,Laguna Niguel,15,235,1
+2021-02-01,Laguna Niguel,9,206,0
+2021-02-02,Laguna Niguel,15,236,1
 2021-02-03,Laguna Niguel,12,176,1
 2021-02-04,Laguna Niguel,10,216,0
 2021-02-05,Laguna Niguel,10,172,1
-2021-02-06,Laguna Niguel,6,113,0
+2021-02-06,Laguna Niguel,6,114,0
 2021-02-07,Laguna Niguel,3,54,0
 2021-02-08,Laguna Niguel,5,215,1
 2021-02-09,Laguna Niguel,8,230,0
 2021-02-10,Laguna Niguel,4,167,1
 2021-02-11,Laguna Niguel,4,120,0
-2021-02-12,Laguna Niguel,7,137,0
+2021-02-12,Laguna Niguel,7,138,0
 2021-02-13,Laguna Niguel,2,80,0
 2021-02-14,Laguna Niguel,1,49,0
 2021-02-15,Laguna Niguel,4,157,0
@@ -8318,7 +8460,7 @@ date,city,cases,tests,deaths
 2021-02-27,Laguna Niguel,0,73,0
 2021-02-28,Laguna Niguel,2,52,0
 2021-03-01,Laguna Niguel,3,152,0
-2021-03-02,Laguna Niguel,2,175,1
+2021-03-02,Laguna Niguel,2,176,1
 2021-03-03,Laguna Niguel,4,154,0
 2021-03-04,Laguna Niguel,1,132,0
 2021-03-05,Laguna Niguel,2,123,1
@@ -8327,7 +8469,7 @@ date,city,cases,tests,deaths
 2021-03-08,Laguna Niguel,2,176,0
 2021-03-09,Laguna Niguel,8,167,0
 2021-03-10,Laguna Niguel,4,147,0
-2021-03-11,Laguna Niguel,1,149,0
+2021-03-11,Laguna Niguel,1,151,0
 2021-03-12,Laguna Niguel,0,124,0
 2021-03-13,Laguna Niguel,2,63,0
 2021-03-14,Laguna Niguel,0,38,1
@@ -8342,7 +8484,7 @@ date,city,cases,tests,deaths
 2021-03-23,Laguna Niguel,3,172,0
 2021-03-24,Laguna Niguel,1,149,0
 2021-03-25,Laguna Niguel,1,123,0
-2021-03-26,Laguna Niguel,2,131,0
+2021-03-26,Laguna Niguel,2,132,0
 2021-03-27,Laguna Niguel,1,73,0
 2021-03-28,Laguna Niguel,1,52,0
 2021-03-29,Laguna Niguel,6,277,0
@@ -8350,15 +8492,22 @@ date,city,cases,tests,deaths
 2021-03-31,Laguna Niguel,2,245,0
 2021-04-01,Laguna Niguel,1,184,0
 2021-04-02,Laguna Niguel,1,125,0
-2021-04-03,Laguna Niguel,1,67,0
+2021-04-03,Laguna Niguel,1,68,0
 2021-04-04,Laguna Niguel,0,49,0
-2021-04-05,Laguna Niguel,1,159,0
-2021-04-06,Laguna Niguel,3,200,0
-2021-04-07,Laguna Niguel,2,130,0
-2021-04-08,Laguna Niguel,1,114,0
-2021-04-09,Laguna Niguel,0,88,0
-2021-04-10,Laguna Niguel,1,51,0
-2021-04-11,Laguna Niguel,0,7,0
+2021-04-05,Laguna Niguel,1,160,0
+2021-04-06,Laguna Niguel,3,202,0
+2021-04-07,Laguna Niguel,2,135,0
+2021-04-08,Laguna Niguel,1,124,0
+2021-04-09,Laguna Niguel,1,108,0
+2021-04-10,Laguna Niguel,1,73,0
+2021-04-11,Laguna Niguel,3,57,0
+2021-04-12,Laguna Niguel,1,226,0
+2021-04-13,Laguna Niguel,2,208,0
+2021-04-14,Laguna Niguel,1,169,0
+2021-04-15,Laguna Niguel,2,117,0
+2021-04-16,Laguna Niguel,1,88,0
+2021-04-17,Laguna Niguel,0,49,0
+2021-04-18,Laguna Niguel,0,11,0
 2020-03-05,Laguna Woods,0,2,0
 2020-03-14,Laguna Woods,0,1,0
 2020-03-15,Laguna Woods,0,3,0
@@ -8651,7 +8800,7 @@ date,city,cases,tests,deaths
 2020-12-31,Laguna Woods,6,70,1
 2021-01-01,Laguna Woods,1,17,2
 2021-01-02,Laguna Woods,3,38,2
-2021-01-03,Laguna Woods,2,33,3
+2021-01-03,Laguna Woods,2,33,4
 2021-01-04,Laguna Woods,9,73,0
 2021-01-05,Laguna Woods,6,92,0
 2021-01-06,Laguna Woods,14,85,0
@@ -8709,7 +8858,7 @@ date,city,cases,tests,deaths
 2021-02-27,Laguna Woods,2,31,0
 2021-02-28,Laguna Woods,0,24,0
 2021-03-01,Laguna Woods,0,53,1
-2021-03-02,Laguna Woods,0,45,0
+2021-03-02,Laguna Woods,0,46,0
 2021-03-03,Laguna Woods,0,29,1
 2021-03-04,Laguna Woods,1,36,0
 2021-03-05,Laguna Woods,0,47,0
@@ -8732,7 +8881,7 @@ date,city,cases,tests,deaths
 2021-03-22,Laguna Woods,0,53,0
 2021-03-23,Laguna Woods,0,49,0
 2021-03-24,Laguna Woods,0,32,0
-2021-03-25,Laguna Woods,0,26,0
+2021-03-25,Laguna Woods,0,27,0
 2021-03-26,Laguna Woods,0,33,0
 2021-03-27,Laguna Woods,0,29,0
 2021-03-28,Laguna Woods,0,27,0
@@ -8744,12 +8893,19 @@ date,city,cases,tests,deaths
 2021-04-03,Laguna Woods,0,28,0
 2021-04-04,Laguna Woods,0,15,0
 2021-04-05,Laguna Woods,0,45,0
-2021-04-06,Laguna Woods,1,34,0
+2021-04-06,Laguna Woods,1,35,0
 2021-04-07,Laguna Woods,0,39,0
-2021-04-08,Laguna Woods,0,38,0
-2021-04-09,Laguna Woods,0,45,0
-2021-04-10,Laguna Woods,0,25,0
-2021-04-11,Laguna Woods,0,9,0
+2021-04-08,Laguna Woods,0,44,0
+2021-04-09,Laguna Woods,0,50,0
+2021-04-10,Laguna Woods,0,34,0
+2021-04-11,Laguna Woods,0,25,0
+2021-04-12,Laguna Woods,1,52,0
+2021-04-13,Laguna Woods,0,26,0
+2021-04-14,Laguna Woods,0,41,0
+2021-04-15,Laguna Woods,0,32,0
+2021-04-16,Laguna Woods,0,41,0
+2021-04-17,Laguna Woods,0,18,0
+2021-04-18,Laguna Woods,0,5,0
 2020-02-07,Lake Forest,0,1,0
 2020-02-15,Lake Forest,0,1,0
 2020-03-04,Lake Forest,0,1,0
@@ -8919,7 +9075,7 @@ date,city,cases,tests,deaths
 2020-08-21,Lake Forest,5,97,0
 2020-08-22,Lake Forest,2,48,0
 2020-08-23,Lake Forest,0,34,0
-2020-08-24,Lake Forest,2,80,0
+2020-08-24,Lake Forest,2,81,0
 2020-08-25,Lake Forest,1,93,0
 2020-08-26,Lake Forest,0,94,0
 2020-08-27,Lake Forest,2,148,0
@@ -9006,7 +9162,7 @@ date,city,cases,tests,deaths
 2020-11-16,Lake Forest,7,249,0
 2020-11-17,Lake Forest,18,294,0
 2020-11-18,Lake Forest,7,290,0
-2020-11-19,Lake Forest,24,347,0
+2020-11-19,Lake Forest,23,346,0
 2020-11-20,Lake Forest,23,325,0
 2020-11-21,Lake Forest,14,216,0
 2020-11-22,Lake Forest,12,128,0
@@ -9045,7 +9201,7 @@ date,city,cases,tests,deaths
 2020-12-25,Lake Forest,10,55,0
 2020-12-26,Lake Forest,41,195,1
 2020-12-27,Lake Forest,26,118,0
-2020-12-28,Lake Forest,67,339,0
+2020-12-28,Lake Forest,66,338,0
 2020-12-29,Lake Forest,78,500,0
 2020-12-30,Lake Forest,73,371,2
 2020-12-31,Lake Forest,34,307,0
@@ -9061,8 +9217,8 @@ date,city,cases,tests,deaths
 2021-01-10,Lake Forest,14,110,0
 2021-01-11,Lake Forest,46,387,1
 2021-01-12,Lake Forest,52,445,1
-2021-01-13,Lake Forest,48,315,0
-2021-01-14,Lake Forest,29,301,0
+2021-01-13,Lake Forest,49,316,0
+2021-01-14,Lake Forest,28,300,0
 2021-01-15,Lake Forest,26,241,0
 2021-01-16,Lake Forest,23,159,0
 2021-01-17,Lake Forest,18,101,1
@@ -9109,7 +9265,7 @@ date,city,cases,tests,deaths
 2021-02-27,Lake Forest,3,55,0
 2021-02-28,Lake Forest,3,47,1
 2021-03-01,Lake Forest,4,206,1
-2021-03-02,Lake Forest,1,169,0
+2021-03-02,Lake Forest,1,170,0
 2021-03-03,Lake Forest,2,154,0
 2021-03-04,Lake Forest,3,151,0
 2021-03-05,Lake Forest,2,159,0
@@ -9118,7 +9274,7 @@ date,city,cases,tests,deaths
 2021-03-08,Lake Forest,2,170,0
 2021-03-09,Lake Forest,5,245,0
 2021-03-10,Lake Forest,3,155,1
-2021-03-11,Lake Forest,1,107,0
+2021-03-11,Lake Forest,1,108,0
 2021-03-12,Lake Forest,0,103,0
 2021-03-13,Lake Forest,1,66,0
 2021-03-14,Lake Forest,0,59,0
@@ -9134,22 +9290,29 @@ date,city,cases,tests,deaths
 2021-03-24,Lake Forest,2,125,0
 2021-03-25,Lake Forest,3,99,0
 2021-03-26,Lake Forest,1,155,0
-2021-03-27,Lake Forest,0,49,0
+2021-03-27,Lake Forest,0,50,0
 2021-03-28,Lake Forest,1,48,0
 2021-03-29,Lake Forest,1,186,0
 2021-03-30,Lake Forest,1,179,0
 2021-03-31,Lake Forest,1,145,0
 2021-04-01,Lake Forest,3,145,0
 2021-04-02,Lake Forest,3,122,0
-2021-04-03,Lake Forest,2,67,0
+2021-04-03,Lake Forest,4,69,0
 2021-04-04,Lake Forest,3,56,0
-2021-04-05,Lake Forest,4,173,0
-2021-04-06,Lake Forest,1,145,0
-2021-04-07,Lake Forest,0,126,0
-2021-04-08,Lake Forest,0,92,0
-2021-04-09,Lake Forest,0,98,0
-2021-04-10,Lake Forest,0,26,0
-2021-04-11,Lake Forest,0,5,0
+2021-04-05,Lake Forest,4,180,0
+2021-04-06,Lake Forest,2,154,0
+2021-04-07,Lake Forest,0,137,0
+2021-04-08,Lake Forest,0,116,0
+2021-04-09,Lake Forest,0,118,0
+2021-04-10,Lake Forest,0,50,0
+2021-04-11,Lake Forest,0,49,0
+2021-04-12,Lake Forest,2,173,0
+2021-04-13,Lake Forest,1,126,0
+2021-04-14,Lake Forest,2,96,0
+2021-04-15,Lake Forest,1,116,0
+2021-04-16,Lake Forest,0,91,0
+2021-04-17,Lake Forest,0,23,0
+2021-04-18,Lake Forest,0,3,0
 2020-02-25,Los Alamitos,0,1,0
 2020-03-13,Los Alamitos,0,1,0
 2020-03-17,Los Alamitos,0,1,0
@@ -9419,7 +9582,7 @@ date,city,cases,tests,deaths
 2020-12-07,Los Alamitos,13,161,0
 2020-12-08,Los Alamitos,14,140,0
 2020-12-09,Los Alamitos,5,114,0
-2020-12-10,Los Alamitos,5,147,0
+2020-12-10,Los Alamitos,6,148,0
 2020-12-11,Los Alamitos,13,142,0
 2020-12-12,Los Alamitos,8,61,0
 2020-12-13,Los Alamitos,12,54,0
@@ -9522,25 +9685,33 @@ date,city,cases,tests,deaths
 2021-03-20,Los Alamitos,1,45,0
 2021-03-21,Los Alamitos,0,19,0
 2021-03-22,Los Alamitos,1,194,0
-2021-03-23,Los Alamitos,0,80,0
+2021-03-23,Los Alamitos,0,81,0
 2021-03-24,Los Alamitos,0,90,0
-2021-03-25,Los Alamitos,1,54,0
+2021-03-25,Los Alamitos,1,55,0
 2021-03-26,Los Alamitos,1,51,0
 2021-03-27,Los Alamitos,0,25,0
 2021-03-28,Los Alamitos,2,31,0
-2021-03-29,Los Alamitos,1,160,0
+2021-03-29,Los Alamitos,1,161,0
 2021-03-30,Los Alamitos,0,87,0
 2021-03-31,Los Alamitos,1,111,0
 2021-04-01,Los Alamitos,0,71,0
-2021-04-02,Los Alamitos,0,56,0
+2021-04-02,Los Alamitos,0,57,0
 2021-04-03,Los Alamitos,1,42,0
 2021-04-04,Los Alamitos,1,21,0
-2021-04-05,Los Alamitos,1,140,0
-2021-04-06,Los Alamitos,0,59,0
-2021-04-07,Los Alamitos,0,79,0
-2021-04-08,Los Alamitos,1,50,0
-2021-04-09,Los Alamitos,0,24,0
-2021-04-10,Los Alamitos,0,15,0
+2021-04-05,Los Alamitos,1,142,0
+2021-04-06,Los Alamitos,0,62,0
+2021-04-07,Los Alamitos,0,83,0
+2021-04-08,Los Alamitos,1,52,0
+2021-04-09,Los Alamitos,0,31,0
+2021-04-10,Los Alamitos,1,23,0
+2021-04-11,Los Alamitos,0,30,0
+2021-04-12,Los Alamitos,1,121,0
+2021-04-13,Los Alamitos,0,101,0
+2021-04-14,Los Alamitos,0,80,0
+2021-04-15,Los Alamitos,0,55,0
+2021-04-16,Los Alamitos,3,60,0
+2021-04-17,Los Alamitos,1,16,0
+2021-04-18,Los Alamitos,0,4,0
 2020-02-29,Midway City,0,1,0
 2020-03-15,Midway City,0,1,0
 2020-03-17,Midway City,0,2,0
@@ -9904,20 +10075,26 @@ date,city,cases,tests,deaths
 2021-03-26,Midway City,0,15,0
 2021-03-27,Midway City,1,5,0
 2021-03-28,Midway City,0,2,0
-2021-03-29,Midway City,0,13,0
+2021-03-29,Midway City,0,17,0
 2021-03-30,Midway City,0,19,0
 2021-03-31,Midway City,0,10,0
 2021-04-01,Midway City,0,20,0
 2021-04-02,Midway City,0,8,0
 2021-04-03,Midway City,1,8,0
 2021-04-04,Midway City,0,7,0
-2021-04-05,Midway City,0,25,0
+2021-04-05,Midway City,0,29,0
 2021-04-06,Midway City,0,19,0
 2021-04-07,Midway City,0,17,0
 2021-04-08,Midway City,0,6,0
-2021-04-09,Midway City,1,12,0
-2021-04-10,Midway City,0,4,0
-2021-04-11,Midway City,0,1,0
+2021-04-09,Midway City,1,14,0
+2021-04-10,Midway City,0,7,0
+2021-04-11,Midway City,0,8,0
+2021-04-12,Midway City,0,9,0
+2021-04-13,Midway City,0,13,0
+2021-04-14,Midway City,0,18,0
+2021-04-15,Midway City,0,14,0
+2021-04-16,Midway City,1,14,0
+2021-04-17,Midway City,0,5,0
 2020-02-07,Mission Viejo,0,1,0
 2020-02-15,Mission Viejo,0,3,0
 2020-02-22,Mission Viejo,0,3,0
@@ -10180,7 +10357,7 @@ date,city,cases,tests,deaths
 2020-11-19,Mission Viejo,22,336,0
 2020-11-20,Mission Viejo,32,376,0
 2020-11-21,Mission Viejo,11,226,1
-2020-11-22,Mission Viejo,13,142,0
+2020-11-22,Mission Viejo,13,144,0
 2020-11-23,Mission Viejo,24,332,1
 2020-11-24,Mission Viejo,27,342,0
 2020-11-25,Mission Viejo,22,279,0
@@ -10221,12 +10398,12 @@ date,city,cases,tests,deaths
 2020-12-30,Mission Viejo,89,416,0
 2020-12-31,Mission Viejo,62,279,0
 2021-01-01,Mission Viejo,24,139,1
-2021-01-02,Mission Viejo,53,278,1
+2021-01-02,Mission Viejo,52,277,1
 2021-01-03,Mission Viejo,36,187,0
 2021-01-04,Mission Viejo,69,463,1
 2021-01-05,Mission Viejo,80,530,0
 2021-01-06,Mission Viejo,77,505,1
-2021-01-07,Mission Viejo,53,441,1
+2021-01-07,Mission Viejo,52,440,1
 2021-01-08,Mission Viejo,57,385,1
 2021-01-09,Mission Viejo,37,267,0
 2021-01-10,Mission Viejo,32,213,0
@@ -10238,7 +10415,7 @@ date,city,cases,tests,deaths
 2021-01-16,Mission Viejo,28,213,2
 2021-01-17,Mission Viejo,21,135,0
 2021-01-18,Mission Viejo,42,384,3
-2021-01-19,Mission Viejo,35,474,2
+2021-01-19,Mission Viejo,35,475,2
 2021-01-20,Mission Viejo,32,335,1
 2021-01-21,Mission Viejo,40,372,2
 2021-01-22,Mission Viejo,31,300,2
@@ -10251,14 +10428,14 @@ date,city,cases,tests,deaths
 2021-01-29,Mission Viejo,18,259,0
 2021-01-30,Mission Viejo,21,165,0
 2021-01-31,Mission Viejo,8,117,1
-2021-02-01,Mission Viejo,23,372,1
-2021-02-02,Mission Viejo,23,461,0
-2021-02-03,Mission Viejo,14,252,0
+2021-02-01,Mission Viejo,22,371,1
+2021-02-02,Mission Viejo,24,462,0
+2021-02-03,Mission Viejo,13,251,0
 2021-02-04,Mission Viejo,15,278,1
 2021-02-05,Mission Viejo,18,227,0
 2021-02-06,Mission Viejo,13,141,0
-2021-02-07,Mission Viejo,10,113,1
-2021-02-08,Mission Viejo,11,333,0
+2021-02-07,Mission Viejo,10,114,1
+2021-02-08,Mission Viejo,11,334,0
 2021-02-09,Mission Viejo,19,420,0
 2021-02-10,Mission Viejo,11,229,0
 2021-02-11,Mission Viejo,10,220,1
@@ -10290,7 +10467,7 @@ date,city,cases,tests,deaths
 2021-03-09,Mission Viejo,11,300,1
 2021-03-10,Mission Viejo,4,232,0
 2021-03-11,Mission Viejo,3,178,0
-2021-03-12,Mission Viejo,4,197,0
+2021-03-12,Mission Viejo,4,198,0
 2021-03-13,Mission Viejo,2,100,0
 2021-03-14,Mission Viejo,0,73,1
 2021-03-15,Mission Viejo,1,297,0
@@ -10304,23 +10481,30 @@ date,city,cases,tests,deaths
 2021-03-23,Mission Viejo,2,213,0
 2021-03-24,Mission Viejo,7,281,0
 2021-03-25,Mission Viejo,4,190,0
-2021-03-26,Mission Viejo,0,164,1
+2021-03-26,Mission Viejo,0,166,1
 2021-03-27,Mission Viejo,0,105,0
 2021-03-28,Mission Viejo,1,84,1
-2021-03-29,Mission Viejo,4,238,0
+2021-03-29,Mission Viejo,4,239,0
 2021-03-30,Mission Viejo,7,246,0
-2021-03-31,Mission Viejo,2,317,0
+2021-03-31,Mission Viejo,2,317,1
 2021-04-01,Mission Viejo,2,219,0
-2021-04-02,Mission Viejo,1,173,0
+2021-04-02,Mission Viejo,2,174,0
 2021-04-03,Mission Viejo,1,115,0
-2021-04-04,Mission Viejo,0,57,0
-2021-04-05,Mission Viejo,3,257,0
-2021-04-06,Mission Viejo,1,197,0
-2021-04-07,Mission Viejo,2,250,0
-2021-04-08,Mission Viejo,2,136,0
-2021-04-09,Mission Viejo,0,130,0
-2021-04-10,Mission Viejo,0,46,0
-2021-04-11,Mission Viejo,0,11,0
+2021-04-04,Mission Viejo,0,60,0
+2021-04-05,Mission Viejo,4,260,0
+2021-04-06,Mission Viejo,2,207,0
+2021-04-07,Mission Viejo,2,261,0
+2021-04-08,Mission Viejo,2,168,0
+2021-04-09,Mission Viejo,1,165,0
+2021-04-10,Mission Viejo,0,79,0
+2021-04-11,Mission Viejo,1,78,0
+2021-04-12,Mission Viejo,0,261,0
+2021-04-13,Mission Viejo,6,174,0
+2021-04-14,Mission Viejo,2,235,0
+2021-04-15,Mission Viejo,2,161,0
+2021-04-16,Mission Viejo,0,162,0
+2021-04-17,Mission Viejo,0,47,0
+2021-04-18,Mission Viejo,0,14,0
 2020-02-09,Newport Beach,0,1,0
 2020-02-28,Newport Beach,0,2,0
 2020-03-06,Newport Beach,0,3,0
@@ -10579,7 +10763,7 @@ date,city,cases,tests,deaths
 2020-11-17,Newport Beach,18,274,0
 2020-11-18,Newport Beach,13,313,0
 2020-11-19,Newport Beach,13,310,0
-2020-11-20,Newport Beach,7,316,0
+2020-11-20,Newport Beach,7,317,0
 2020-11-21,Newport Beach,6,190,0
 2020-11-22,Newport Beach,4,105,0
 2020-11-23,Newport Beach,20,373,0
@@ -10589,13 +10773,13 @@ date,city,cases,tests,deaths
 2020-11-27,Newport Beach,10,136,0
 2020-11-28,Newport Beach,5,122,0
 2020-11-29,Newport Beach,14,100,0
-2020-11-30,Newport Beach,12,269,0
+2020-11-30,Newport Beach,12,270,0
 2020-12-01,Newport Beach,23,374,1
 2020-12-02,Newport Beach,18,278,0
 2020-12-03,Newport Beach,20,311,0
 2020-12-04,Newport Beach,20,260,0
 2020-12-05,Newport Beach,6,122,0
-2020-12-06,Newport Beach,8,104,1
+2020-12-06,Newport Beach,7,103,1
 2020-12-07,Newport Beach,13,281,0
 2020-12-08,Newport Beach,24,392,0
 2020-12-09,Newport Beach,23,328,0
@@ -10611,13 +10795,13 @@ date,city,cases,tests,deaths
 2020-12-19,Newport Beach,22,239,0
 2020-12-20,Newport Beach,12,143,0
 2020-12-21,Newport Beach,39,450,1
-2020-12-22,Newport Beach,45,622,0
+2020-12-22,Newport Beach,46,623,0
 2020-12-23,Newport Beach,39,355,1
 2020-12-24,Newport Beach,13,201,0
 2020-12-25,Newport Beach,2,44,1
 2020-12-26,Newport Beach,18,124,2
 2020-12-27,Newport Beach,10,120,1
-2020-12-28,Newport Beach,36,420,2
+2020-12-28,Newport Beach,35,419,2
 2020-12-29,Newport Beach,46,450,1
 2020-12-30,Newport Beach,49,354,1
 2020-12-31,Newport Beach,19,202,1
@@ -10670,7 +10854,7 @@ date,city,cases,tests,deaths
 2021-02-16,Newport Beach,8,277,0
 2021-02-17,Newport Beach,6,286,0
 2021-02-18,Newport Beach,3,227,0
-2021-02-19,Newport Beach,4,161,0
+2021-02-19,Newport Beach,4,162,0
 2021-02-20,Newport Beach,3,90,0
 2021-02-21,Newport Beach,2,66,0
 2021-02-22,Newport Beach,5,365,1
@@ -10688,7 +10872,7 @@ date,city,cases,tests,deaths
 2021-03-06,Newport Beach,2,276,0
 2021-03-07,Newport Beach,1,58,0
 2021-03-08,Newport Beach,11,328,0
-2021-03-09,Newport Beach,7,352,0
+2021-03-09,Newport Beach,6,351,0
 2021-03-10,Newport Beach,3,216,0
 2021-03-11,Newport Beach,7,239,0
 2021-03-12,Newport Beach,5,131,0
@@ -10696,7 +10880,7 @@ date,city,cases,tests,deaths
 2021-03-14,Newport Beach,0,70,0
 2021-03-15,Newport Beach,4,378,0
 2021-03-16,Newport Beach,4,267,0
-2021-03-17,Newport Beach,5,175,0
+2021-03-17,Newport Beach,5,187,0
 2021-03-18,Newport Beach,1,286,0
 2021-03-19,Newport Beach,3,146,0
 2021-03-20,Newport Beach,4,74,0
@@ -10711,17 +10895,24 @@ date,city,cases,tests,deaths
 2021-03-29,Newport Beach,8,349,0
 2021-03-30,Newport Beach,5,256,0
 2021-03-31,Newport Beach,6,289,0
-2021-04-01,Newport Beach,4,264,0
-2021-04-02,Newport Beach,5,241,0
+2021-04-01,Newport Beach,5,265,0
+2021-04-02,Newport Beach,6,242,0
 2021-04-03,Newport Beach,2,80,0
-2021-04-04,Newport Beach,0,55,0
-2021-04-05,Newport Beach,4,326,0
-2021-04-06,Newport Beach,2,401,0
-2021-04-07,Newport Beach,3,416,0
-2021-04-08,Newport Beach,5,332,0
-2021-04-09,Newport Beach,2,173,0
-2021-04-10,Newport Beach,0,50,0
-2021-04-11,Newport Beach,0,10,0
+2021-04-04,Newport Beach,0,56,0
+2021-04-05,Newport Beach,5,331,0
+2021-04-06,Newport Beach,2,408,0
+2021-04-07,Newport Beach,4,434,0
+2021-04-08,Newport Beach,5,377,0
+2021-04-09,Newport Beach,2,207,0
+2021-04-10,Newport Beach,1,92,0
+2021-04-11,Newport Beach,1,73,0
+2021-04-12,Newport Beach,4,404,0
+2021-04-13,Newport Beach,1,321,0
+2021-04-14,Newport Beach,2,209,0
+2021-04-15,Newport Beach,0,178,0
+2021-04-16,Newport Beach,2,159,0
+2021-04-17,Newport Beach,1,27,0
+2021-04-18,Newport Beach,0,4,0
 2020-03-12,Newport Coast,0,1,0
 2020-03-13,Newport Coast,0,2,0
 2020-03-15,Newport Coast,2,3,0
@@ -11103,13 +11294,20 @@ date,city,cases,tests,deaths
 2021-04-02,Newport Coast,0,29,0
 2021-04-03,Newport Coast,0,18,0
 2021-04-04,Newport Coast,0,16,0
-2021-04-05,Newport Coast,0,45,0
-2021-04-06,Newport Coast,1,122,0
-2021-04-07,Newport Coast,0,56,0
-2021-04-08,Newport Coast,0,66,0
-2021-04-09,Newport Coast,0,18,0
-2021-04-10,Newport Coast,0,10,0
-2021-04-11,Newport Coast,0,1,0
+2021-04-05,Newport Coast,0,47,0
+2021-04-06,Newport Coast,1,123,0
+2021-04-07,Newport Coast,0,62,0
+2021-04-08,Newport Coast,0,72,0
+2021-04-09,Newport Coast,0,27,0
+2021-04-10,Newport Coast,0,20,0
+2021-04-11,Newport Coast,0,12,0
+2021-04-12,Newport Coast,3,47,0
+2021-04-13,Newport Coast,0,32,0
+2021-04-14,Newport Coast,0,24,0
+2021-04-15,Newport Coast,0,18,0
+2021-04-16,Newport Coast,0,24,0
+2021-04-17,Newport Coast,0,6,0
+2021-04-18,Newport Coast,0,3,0
 2020-02-07,Orange,0,3,0
 2020-02-29,Orange,0,1,0
 2020-03-04,Orange,0,1,0
@@ -11333,7 +11531,7 @@ date,city,cases,tests,deaths
 2020-10-12,Orange,11,314,1
 2020-10-13,Orange,11,447,0
 2020-10-14,Orange,14,420,0
-2020-10-15,Orange,14,342,0
+2020-10-15,Orange,15,343,0
 2020-10-16,Orange,11,425,0
 2020-10-17,Orange,11,159,0
 2020-10-18,Orange,7,134,0
@@ -11353,9 +11551,9 @@ date,city,cases,tests,deaths
 2020-11-01,Orange,7,126,0
 2020-11-02,Orange,17,356,0
 2020-11-03,Orange,32,444,0
-2020-11-04,Orange,17,524,0
+2020-11-04,Orange,17,523,0
 2020-11-05,Orange,22,402,0
-2020-11-06,Orange,22,325,1
+2020-11-06,Orange,22,324,1
 2020-11-07,Orange,12,162,0
 2020-11-08,Orange,10,141,1
 2020-11-09,Orange,29,439,0
@@ -11363,9 +11561,9 @@ date,city,cases,tests,deaths
 2020-11-11,Orange,27,493,0
 2020-11-12,Orange,46,470,0
 2020-11-13,Orange,38,453,0
-2020-11-14,Orange,28,247,0
+2020-11-14,Orange,29,248,0
 2020-11-15,Orange,13,178,0
-2020-11-16,Orange,50,541,1
+2020-11-16,Orange,50,540,1
 2020-11-17,Orange,34,664,1
 2020-11-18,Orange,57,788,0
 2020-11-19,Orange,77,760,0
@@ -11384,40 +11582,40 @@ date,city,cases,tests,deaths
 2020-12-02,Orange,99,789,1
 2020-12-03,Orange,113,794,1
 2020-12-04,Orange,98,735,0
-2020-12-05,Orange,88,414,1
+2020-12-05,Orange,88,413,1
 2020-12-06,Orange,46,241,1
-2020-12-07,Orange,146,732,1
+2020-12-07,Orange,146,731,1
 2020-12-08,Orange,167,908,0
 2020-12-09,Orange,175,956,3
-2020-12-10,Orange,149,867,1
+2020-12-10,Orange,150,868,1
 2020-12-11,Orange,134,816,2
 2020-12-12,Orange,108,506,0
 2020-12-13,Orange,61,267,3
-2020-12-14,Orange,160,930,1
+2020-12-14,Orange,160,929,1
 2020-12-15,Orange,194,1124,3
 2020-12-16,Orange,169,900,2
 2020-12-17,Orange,289,1288,1
 2020-12-18,Orange,185,980,1
-2020-12-19,Orange,144,755,2
-2020-12-20,Orange,106,358,2
-2020-12-21,Orange,149,1000,3
+2020-12-19,Orange,145,756,2
+2020-12-20,Orange,105,357,2
+2020-12-21,Orange,149,999,3
 2020-12-22,Orange,213,1249,4
-2020-12-23,Orange,181,1047,1
+2020-12-23,Orange,181,1048,1
 2020-12-24,Orange,106,567,2
 2020-12-25,Orange,44,154,3
 2020-12-26,Orange,120,544,4
 2020-12-27,Orange,92,322,1
-2020-12-28,Orange,226,1044,1
+2020-12-28,Orange,225,1042,1
 2020-12-29,Orange,212,1100,3
 2020-12-30,Orange,197,1088,2
 2020-12-31,Orange,141,658,2
 2021-01-01,Orange,53,224,2
-2021-01-02,Orange,166,654,1
+2021-01-02,Orange,166,653,1
 2021-01-03,Orange,76,354,1
 2021-01-04,Orange,183,1062,3
 2021-01-05,Orange,211,1238,6
 2021-01-06,Orange,162,1017,5
-2021-01-07,Orange,194,1179,3
+2021-01-07,Orange,195,1180,3
 2021-01-08,Orange,161,813,4
 2021-01-09,Orange,77,507,1
 2021-01-10,Orange,46,283,3
@@ -11443,17 +11641,17 @@ date,city,cases,tests,deaths
 2021-01-30,Orange,39,382,2
 2021-01-31,Orange,20,225,1
 2021-02-01,Orange,50,626,1
-2021-02-02,Orange,43,646,0
+2021-02-02,Orange,44,647,0
 2021-02-03,Orange,37,614,0
 2021-02-04,Orange,34,576,3
 2021-02-05,Orange,47,527,6
-2021-02-06,Orange,28,335,0
-2021-02-07,Orange,18,248,2
+2021-02-06,Orange,28,337,1
+2021-02-07,Orange,18,248,3
 2021-02-08,Orange,28,552,0
 2021-02-09,Orange,27,570,3
 2021-02-10,Orange,21,579,1
 2021-02-11,Orange,23,553,2
-2021-02-12,Orange,14,543,3
+2021-02-12,Orange,14,544,3
 2021-02-13,Orange,16,224,1
 2021-02-14,Orange,11,160,2
 2021-02-15,Orange,6,419,0
@@ -11463,7 +11661,7 @@ date,city,cases,tests,deaths
 2021-02-19,Orange,8,394,0
 2021-02-20,Orange,5,275,1
 2021-02-21,Orange,4,212,0
-2021-02-22,Orange,6,397,2
+2021-02-22,Orange,6,396,2
 2021-02-23,Orange,9,461,0
 2021-02-24,Orange,5,592,0
 2021-02-25,Orange,7,418,1
@@ -11478,40 +11676,47 @@ date,city,cases,tests,deaths
 2021-03-06,Orange,4,203,1
 2021-03-07,Orange,4,172,1
 2021-03-08,Orange,8,418,0
-2021-03-09,Orange,7,617,0
+2021-03-09,Orange,7,617,1
 2021-03-10,Orange,17,393,0
-2021-03-11,Orange,8,348,1
+2021-03-11,Orange,8,349,1
 2021-03-12,Orange,3,331,0
 2021-03-13,Orange,2,163,0
 2021-03-14,Orange,1,154,0
 2021-03-15,Orange,6,574,0
-2021-03-16,Orange,9,412,0
+2021-03-16,Orange,9,413,0
 2021-03-17,Orange,1,383,0
 2021-03-18,Orange,6,358,0
 2021-03-19,Orange,8,324,0
 2021-03-20,Orange,12,217,1
 2021-03-21,Orange,4,164,0
-2021-03-22,Orange,4,587,1
-2021-03-23,Orange,6,415,0
-2021-03-24,Orange,5,418,0
+2021-03-22,Orange,4,587,2
+2021-03-23,Orange,6,416,0
+2021-03-24,Orange,5,420,0
 2021-03-25,Orange,9,431,0
 2021-03-26,Orange,6,355,0
 2021-03-27,Orange,3,201,0
 2021-03-28,Orange,3,172,0
-2021-03-29,Orange,5,341,0
-2021-03-30,Orange,4,426,0
-2021-03-31,Orange,8,348,0
-2021-04-01,Orange,4,341,0
-2021-04-02,Orange,10,336,0
+2021-03-29,Orange,5,343,0
+2021-03-30,Orange,4,427,0
+2021-03-31,Orange,8,350,0
+2021-04-01,Orange,4,342,0
+2021-04-02,Orange,11,340,0
 2021-04-03,Orange,2,167,0
-2021-04-04,Orange,1,156,0
-2021-04-05,Orange,6,371,0
-2021-04-06,Orange,4,404,0
-2021-04-07,Orange,3,352,0
-2021-04-08,Orange,2,294,0
-2021-04-09,Orange,5,260,0
-2021-04-10,Orange,2,106,0
-2021-04-11,Orange,3,25,0
+2021-04-04,Orange,1,156,1
+2021-04-05,Orange,6,584,0
+2021-04-06,Orange,5,439,0
+2021-04-07,Orange,3,398,0
+2021-04-08,Orange,4,531,0
+2021-04-09,Orange,6,331,0
+2021-04-10,Orange,3,161,0
+2021-04-11,Orange,6,121,0
+2021-04-12,Orange,8,617,0
+2021-04-13,Orange,4,374,0
+2021-04-14,Orange,9,385,0
+2021-04-15,Orange,2,473,0
+2021-04-16,Orange,4,274,0
+2021-04-17,Orange,1,80,0
+2021-04-18,Orange,1,13,0
 2020-02-27,Placentia,0,1,0
 2020-03-06,Placentia,0,2,0
 2020-03-10,Placentia,1,1,0
@@ -11749,11 +11954,11 @@ date,city,cases,tests,deaths
 2020-10-31,Placentia,5,55,0
 2020-11-01,Placentia,6,47,0
 2020-11-02,Placentia,14,151,0
-2020-11-03,Placentia,11,183,0
+2020-11-03,Placentia,11,184,0
 2020-11-04,Placentia,12,194,0
 2020-11-05,Placentia,5,138,0
 2020-11-06,Placentia,8,131,0
-2020-11-07,Placentia,4,59,0
+2020-11-07,Placentia,4,60,0
 2020-11-08,Placentia,8,70,0
 2020-11-09,Placentia,16,163,0
 2020-11-10,Placentia,17,205,1
@@ -11797,9 +12002,9 @@ date,city,cases,tests,deaths
 2020-12-18,Placentia,47,298,1
 2020-12-19,Placentia,51,225,0
 2020-12-20,Placentia,34,113,1
-2020-12-21,Placentia,55,396,1
+2020-12-21,Placentia,54,395,1
 2020-12-22,Placentia,58,362,1
-2020-12-23,Placentia,51,315,1
+2020-12-23,Placentia,52,316,1
 2020-12-24,Placentia,51,209,2
 2020-12-25,Placentia,13,55,1
 2020-12-26,Placentia,31,137,1
@@ -11835,7 +12040,7 @@ date,city,cases,tests,deaths
 2021-01-25,Placentia,26,301,0
 2021-01-26,Placentia,22,277,0
 2021-01-27,Placentia,20,241,0
-2021-01-28,Placentia,14,227,0
+2021-01-28,Placentia,13,226,0
 2021-01-29,Placentia,22,324,1
 2021-01-30,Placentia,15,112,0
 2021-01-31,Placentia,11,92,0
@@ -11888,27 +12093,34 @@ date,city,cases,tests,deaths
 2021-03-19,Placentia,3,117,0
 2021-03-20,Placentia,1,59,0
 2021-03-21,Placentia,0,49,0
-2021-03-22,Placentia,4,142,0
-2021-03-23,Placentia,3,157,0
+2021-03-22,Placentia,4,145,0
+2021-03-23,Placentia,3,161,0
 2021-03-24,Placentia,0,269,0
-2021-03-25,Placentia,2,172,0
+2021-03-25,Placentia,2,182,0
 2021-03-26,Placentia,0,103,0
 2021-03-27,Placentia,0,34,0
 2021-03-28,Placentia,0,36,0
-2021-03-29,Placentia,0,134,0
+2021-03-29,Placentia,0,147,0
 2021-03-30,Placentia,12,162,0
 2021-03-31,Placentia,6,107,0
 2021-04-01,Placentia,3,115,0
-2021-04-02,Placentia,1,130,0
+2021-04-02,Placentia,1,134,0
 2021-04-03,Placentia,5,61,0
-2021-04-04,Placentia,0,35,0
-2021-04-05,Placentia,1,155,0
-2021-04-06,Placentia,1,191,0
-2021-04-07,Placentia,2,163,0
-2021-04-08,Placentia,3,136,0
-2021-04-09,Placentia,2,92,0
-2021-04-10,Placentia,0,31,0
-2021-04-11,Placentia,1,12,0
+2021-04-04,Placentia,0,36,0
+2021-04-05,Placentia,1,175,0
+2021-04-06,Placentia,1,210,0
+2021-04-07,Placentia,4,186,0
+2021-04-08,Placentia,6,165,0
+2021-04-09,Placentia,2,117,0
+2021-04-10,Placentia,0,57,0
+2021-04-11,Placentia,3,54,0
+2021-04-12,Placentia,1,199,0
+2021-04-13,Placentia,4,162,0
+2021-04-14,Placentia,1,155,0
+2021-04-15,Placentia,4,95,0
+2021-04-16,Placentia,1,106,0
+2021-04-17,Placentia,2,27,0
+2021-04-18,Placentia,0,7,0
 2020-02-15,Rancho Santa Margarita,0,1,0
 2020-02-22,Rancho Santa Margarita,0,1,0
 2020-03-07,Rancho Santa Margarita,0,1,0
@@ -12250,7 +12462,7 @@ date,city,cases,tests,deaths
 2021-02-08,Rancho Santa Margarita,10,167,0
 2021-02-09,Rancho Santa Margarita,1,152,0
 2021-02-10,Rancho Santa Margarita,6,117,0
-2021-02-11,Rancho Santa Margarita,4,121,0
+2021-02-11,Rancho Santa Margarita,4,123,0
 2021-02-12,Rancho Santa Margarita,6,85,0
 2021-02-13,Rancho Santa Margarita,6,48,0
 2021-02-14,Rancho Santa Margarita,0,28,0
@@ -12269,7 +12481,7 @@ date,city,cases,tests,deaths
 2021-02-27,Rancho Santa Margarita,0,43,0
 2021-02-28,Rancho Santa Margarita,1,37,0
 2021-03-01,Rancho Santa Margarita,1,125,0
-2021-03-02,Rancho Santa Margarita,3,121,0
+2021-03-02,Rancho Santa Margarita,3,122,0
 2021-03-03,Rancho Santa Margarita,2,104,0
 2021-03-04,Rancho Santa Margarita,3,80,0
 2021-03-05,Rancho Santa Margarita,0,90,0
@@ -12300,16 +12512,23 @@ date,city,cases,tests,deaths
 2021-03-30,Rancho Santa Margarita,4,127,0
 2021-03-31,Rancho Santa Margarita,1,132,0
 2021-04-01,Rancho Santa Margarita,1,141,0
-2021-04-02,Rancho Santa Margarita,3,83,0
+2021-04-02,Rancho Santa Margarita,3,84,0
 2021-04-03,Rancho Santa Margarita,0,41,0
 2021-04-04,Rancho Santa Margarita,1,33,0
-2021-04-05,Rancho Santa Margarita,1,123,0
-2021-04-06,Rancho Santa Margarita,1,87,0
-2021-04-07,Rancho Santa Margarita,2,91,0
-2021-04-08,Rancho Santa Margarita,0,56,0
-2021-04-09,Rancho Santa Margarita,0,50,0
-2021-04-10,Rancho Santa Margarita,1,13,0
-2021-04-11,Rancho Santa Margarita,0,5,0
+2021-04-05,Rancho Santa Margarita,2,128,0
+2021-04-06,Rancho Santa Margarita,2,96,0
+2021-04-07,Rancho Santa Margarita,2,98,0
+2021-04-08,Rancho Santa Margarita,1,73,0
+2021-04-09,Rancho Santa Margarita,3,73,0
+2021-04-10,Rancho Santa Margarita,2,30,0
+2021-04-11,Rancho Santa Margarita,0,31,0
+2021-04-12,Rancho Santa Margarita,2,103,0
+2021-04-13,Rancho Santa Margarita,2,77,0
+2021-04-14,Rancho Santa Margarita,2,92,0
+2021-04-15,Rancho Santa Margarita,1,115,0
+2021-04-16,Rancho Santa Margarita,1,75,0
+2021-04-17,Rancho Santa Margarita,0,23,0
+2021-04-18,Rancho Santa Margarita,0,5,0
 2020-03-09,San Clemente,0,2,0
 2020-03-11,San Clemente,0,1,0
 2020-03-12,San Clemente,0,5,0
@@ -12696,18 +12915,25 @@ date,city,cases,tests,deaths
 2021-03-28,San Clemente,1,50,0
 2021-03-29,San Clemente,2,189,0
 2021-03-30,San Clemente,0,219,0
-2021-03-31,San Clemente,4,173,0
+2021-03-31,San Clemente,4,173,1
 2021-04-01,San Clemente,2,204,0
 2021-04-02,San Clemente,7,289,0
 2021-04-03,San Clemente,0,132,0
 2021-04-04,San Clemente,0,74,0
-2021-04-05,San Clemente,2,142,0
+2021-04-05,San Clemente,2,145,0
 2021-04-06,San Clemente,1,131,0
-2021-04-07,San Clemente,2,137,0
-2021-04-08,San Clemente,1,115,0
-2021-04-09,San Clemente,3,180,0
-2021-04-10,San Clemente,1,56,0
-2021-04-11,San Clemente,0,16,0
+2021-04-07,San Clemente,2,141,0
+2021-04-08,San Clemente,1,123,0
+2021-04-09,San Clemente,3,205,0
+2021-04-10,San Clemente,1,70,0
+2021-04-11,San Clemente,0,78,0
+2021-04-12,San Clemente,8,169,0
+2021-04-13,San Clemente,3,149,0
+2021-04-14,San Clemente,2,152,0
+2021-04-15,San Clemente,3,92,0
+2021-04-16,San Clemente,2,276,0
+2021-04-17,San Clemente,2,36,0
+2021-04-18,San Clemente,0,13,0
 2020-03-12,San Juan Capistrano,0,3,0
 2020-03-13,San Juan Capistrano,3,4,0
 2020-03-14,San Juan Capistrano,1,1,0
@@ -13040,7 +13266,7 @@ date,city,cases,tests,deaths
 2021-02-05,San Juan Capistrano,5,84,2
 2021-02-06,San Juan Capistrano,13,111,0
 2021-02-07,San Juan Capistrano,1,24,0
-2021-02-08,San Juan Capistrano,7,106,0
+2021-02-08,San Juan Capistrano,7,107,0
 2021-02-09,San Juan Capistrano,3,197,0
 2021-02-10,San Juan Capistrano,3,70,0
 2021-02-11,San Juan Capistrano,0,87,0
@@ -13085,24 +13311,31 @@ date,city,cases,tests,deaths
 2021-03-22,San Juan Capistrano,0,99,0
 2021-03-23,San Juan Capistrano,1,93,0
 2021-03-24,San Juan Capistrano,3,105,0
-2021-03-25,San Juan Capistrano,1,68,0
+2021-03-25,San Juan Capistrano,1,70,0
 2021-03-26,San Juan Capistrano,0,60,0
 2021-03-27,San Juan Capistrano,1,40,0
 2021-03-28,San Juan Capistrano,1,33,0
 2021-03-29,San Juan Capistrano,8,106,0
 2021-03-30,San Juan Capistrano,0,134,0
 2021-03-31,San Juan Capistrano,1,85,0
-2021-04-01,San Juan Capistrano,4,88,0
+2021-04-01,San Juan Capistrano,4,92,0
 2021-04-02,San Juan Capistrano,0,68,0
 2021-04-03,San Juan Capistrano,0,52,0
-2021-04-04,San Juan Capistrano,2,26,0
-2021-04-05,San Juan Capistrano,1,90,0
-2021-04-06,San Juan Capistrano,0,68,0
-2021-04-07,San Juan Capistrano,0,77,0
-2021-04-08,San Juan Capistrano,4,45,0
-2021-04-09,San Juan Capistrano,7,53,0
-2021-04-10,San Juan Capistrano,0,23,0
-2021-04-11,San Juan Capistrano,0,4,0
+2021-04-04,San Juan Capistrano,2,27,0
+2021-04-05,San Juan Capistrano,1,91,0
+2021-04-06,San Juan Capistrano,0,71,0
+2021-04-07,San Juan Capistrano,0,83,0
+2021-04-08,San Juan Capistrano,4,54,0
+2021-04-09,San Juan Capistrano,7,59,0
+2021-04-10,San Juan Capistrano,1,38,0
+2021-04-11,San Juan Capistrano,1,25,0
+2021-04-12,San Juan Capistrano,2,117,0
+2021-04-13,San Juan Capistrano,1,95,0
+2021-04-14,San Juan Capistrano,3,80,0
+2021-04-15,San Juan Capistrano,1,49,0
+2021-04-16,San Juan Capistrano,0,41,0
+2021-04-17,San Juan Capistrano,0,15,0
+2021-04-18,San Juan Capistrano,1,2,0
 2020-01-24,Santa Ana,0,1,0
 2020-01-25,Santa Ana,0,2,0
 2020-02-07,Santa Ana,16,57,0
@@ -13297,7 +13530,7 @@ date,city,cases,tests,deaths
 2020-09-08,Santa Ana,41,661,1
 2020-09-09,Santa Ana,32,853,0
 2020-09-10,Santa Ana,49,622,0
-2020-09-11,Santa Ana,29,431,0
+2020-09-11,Santa Ana,29,430,0
 2020-09-12,Santa Ana,36,424,2
 2020-09-13,Santa Ana,20,248,0
 2020-09-14,Santa Ana,33,585,0
@@ -13365,12 +13598,12 @@ date,city,cases,tests,deaths
 2020-11-15,Santa Ana,90,488,1
 2020-11-16,Santa Ana,186,1267,1
 2020-11-17,Santa Ana,204,1671,2
-2020-11-18,Santa Ana,201,1569,1
+2020-11-18,Santa Ana,200,1568,1
 2020-11-19,Santa Ana,291,1719,2
 2020-11-20,Santa Ana,212,1492,0
 2020-11-21,Santa Ana,68,564,0
 2020-11-22,Santa Ana,193,1158,0
-2020-11-23,Santa Ana,251,1554,0
+2020-11-23,Santa Ana,251,1553,0
 2020-11-24,Santa Ana,309,2160,1
 2020-11-25,Santa Ana,323,1800,1
 2020-11-26,Santa Ana,72,231,3
@@ -13380,34 +13613,34 @@ date,city,cases,tests,deaths
 2020-11-30,Santa Ana,447,1997,1
 2020-12-01,Santa Ana,328,1918,2
 2020-12-02,Santa Ana,423,2190,1
-2020-12-03,Santa Ana,598,2532,2
+2020-12-03,Santa Ana,598,2531,2
 2020-12-04,Santa Ana,478,2265,2
-2020-12-05,Santa Ana,366,1676,3
+2020-12-05,Santa Ana,366,1677,3
 2020-12-06,Santa Ana,282,1020,3
 2020-12-07,Santa Ana,592,2356,4
 2020-12-08,Santa Ana,698,3298,2
 2020-12-09,Santa Ana,643,2764,3
-2020-12-10,Santa Ana,628,2377,0
+2020-12-10,Santa Ana,629,2378,0
 2020-12-11,Santa Ana,649,2743,3
 2020-12-12,Santa Ana,312,1254,3
 2020-12-13,Santa Ana,434,1590,5
 2020-12-14,Santa Ana,916,3102,7
 2020-12-15,Santa Ana,1159,4227,1
 2020-12-16,Santa Ana,682,2352,2
-2020-12-17,Santa Ana,821,3265,5
+2020-12-17,Santa Ana,820,3264,5
 2020-12-18,Santa Ana,607,2716,4
 2020-12-19,Santa Ana,492,2212,4
-2020-12-20,Santa Ana,257,1214,4
-2020-12-21,Santa Ana,491,2222,9
-2020-12-22,Santa Ana,709,3232,7
-2020-12-23,Santa Ana,560,2448,5
+2020-12-20,Santa Ana,258,1215,4
+2020-12-21,Santa Ana,490,2221,9
+2020-12-22,Santa Ana,709,3233,7
+2020-12-23,Santa Ana,559,2447,5
 2020-12-24,Santa Ana,343,1435,11
 2020-12-25,Santa Ana,166,543,9
 2020-12-26,Santa Ana,381,1485,4
-2020-12-27,Santa Ana,205,811,5
-2020-12-28,Santa Ana,694,2530,7
-2020-12-29,Santa Ana,865,3311,6
-2020-12-30,Santa Ana,650,2647,8
+2020-12-27,Santa Ana,204,810,5
+2020-12-28,Santa Ana,693,2529,7
+2020-12-29,Santa Ana,864,3310,6
+2020-12-30,Santa Ana,649,2647,8
 2020-12-31,Santa Ana,418,1764,10
 2021-01-01,Santa Ana,104,408,7
 2021-01-02,Santa Ana,474,1918,13
@@ -13415,7 +13648,7 @@ date,city,cases,tests,deaths
 2021-01-04,Santa Ana,670,3032,6
 2021-01-05,Santa Ana,781,3629,14
 2021-01-06,Santa Ana,680,2776,8
-2021-01-07,Santa Ana,746,3070,7
+2021-01-07,Santa Ana,745,3069,6
 2021-01-08,Santa Ana,538,2517,8
 2021-01-09,Santa Ana,235,1141,7
 2021-01-10,Santa Ana,172,890,5
@@ -13430,23 +13663,23 @@ date,city,cases,tests,deaths
 2021-01-19,Santa Ana,423,2761,13
 2021-01-20,Santa Ana,234,1913,8
 2021-01-21,Santa Ana,329,2383,15
-2021-01-22,Santa Ana,245,1880,7
+2021-01-22,Santa Ana,245,1881,7
 2021-01-23,Santa Ana,127,782,6
-2021-01-24,Santa Ana,87,486,4
+2021-01-24,Santa Ana,87,486,5
 2021-01-25,Santa Ana,236,1736,5
 2021-01-26,Santa Ana,272,2163,9
 2021-01-27,Santa Ana,181,1447,9
 2021-01-28,Santa Ana,235,1965,4
 2021-01-29,Santa Ana,158,1469,4
 2021-01-30,Santa Ana,105,760,7
-2021-01-31,Santa Ana,71,446,5
+2021-01-31,Santa Ana,71,446,6
 2021-02-01,Santa Ana,170,1566,8
 2021-02-02,Santa Ana,174,1891,6
-2021-02-03,Santa Ana,125,1293,3
+2021-02-03,Santa Ana,125,1293,4
 2021-02-04,Santa Ana,124,1518,3
-2021-02-05,Santa Ana,108,1186,3
+2021-02-05,Santa Ana,108,1185,3
 2021-02-06,Santa Ana,57,646,7
-2021-02-07,Santa Ana,58,442,4
+2021-02-07,Santa Ana,57,441,4
 2021-02-08,Santa Ana,72,1277,2
 2021-02-09,Santa Ana,76,1348,5
 2021-02-10,Santa Ana,63,1114,5
@@ -13460,15 +13693,15 @@ date,city,cases,tests,deaths
 2021-02-18,Santa Ana,30,986,2
 2021-02-19,Santa Ana,27,860,3
 2021-02-20,Santa Ana,20,467,2
-2021-02-21,Santa Ana,21,419,3
+2021-02-21,Santa Ana,21,420,3
 2021-02-22,Santa Ana,41,993,1
 2021-02-23,Santa Ana,50,1178,2
 2021-02-24,Santa Ana,21,990,2
 2021-02-25,Santa Ana,32,859,2
-2021-02-26,Santa Ana,25,775,1
+2021-02-26,Santa Ana,25,775,2
 2021-02-27,Santa Ana,16,422,3
 2021-02-28,Santa Ana,13,301,0
-2021-03-01,Santa Ana,23,905,2
+2021-03-01,Santa Ana,22,904,2
 2021-03-02,Santa Ana,46,1301,4
 2021-03-03,Santa Ana,27,962,3
 2021-03-04,Santa Ana,26,893,2
@@ -13478,38 +13711,45 @@ date,city,cases,tests,deaths
 2021-03-08,Santa Ana,16,979,0
 2021-03-09,Santa Ana,27,1193,0
 2021-03-10,Santa Ana,13,864,1
-2021-03-11,Santa Ana,31,778,1
+2021-03-11,Santa Ana,31,779,1
 2021-03-12,Santa Ana,24,705,1
 2021-03-13,Santa Ana,16,349,0
 2021-03-14,Santa Ana,4,343,1
-2021-03-15,Santa Ana,19,811,0
+2021-03-15,Santa Ana,19,811,1
 2021-03-16,Santa Ana,19,997,0
-2021-03-17,Santa Ana,18,785,1
-2021-03-18,Santa Ana,11,725,1
+2021-03-17,Santa Ana,17,785,1
+2021-03-18,Santa Ana,11,724,1
 2021-03-19,Santa Ana,12,738,0
 2021-03-20,Santa Ana,8,429,0
 2021-03-21,Santa Ana,8,369,0
-2021-03-22,Santa Ana,16,984,2
-2021-03-23,Santa Ana,19,1150,0
+2021-03-22,Santa Ana,16,985,2
+2021-03-23,Santa Ana,19,1152,0
 2021-03-24,Santa Ana,16,825,0
-2021-03-25,Santa Ana,11,795,0
-2021-03-26,Santa Ana,15,798,0
+2021-03-25,Santa Ana,11,799,0
+2021-03-26,Santa Ana,15,797,0
 2021-03-27,Santa Ana,2,453,0
-2021-03-28,Santa Ana,8,311,0
-2021-03-29,Santa Ana,11,818,0
-2021-03-30,Santa Ana,8,946,0
+2021-03-28,Santa Ana,8,314,0
+2021-03-29,Santa Ana,11,820,0
+2021-03-30,Santa Ana,8,947,0
 2021-03-31,Santa Ana,10,770,0
 2021-04-01,Santa Ana,11,728,0
-2021-04-02,Santa Ana,6,765,0
+2021-04-02,Santa Ana,6,768,0
 2021-04-03,Santa Ana,4,346,0
 2021-04-04,Santa Ana,5,290,0
-2021-04-05,Santa Ana,10,1088,0
-2021-04-06,Santa Ana,6,993,0
-2021-04-07,Santa Ana,8,723,0
-2021-04-08,Santa Ana,16,595,0
-2021-04-09,Santa Ana,15,558,0
-2021-04-10,Santa Ana,2,329,0
-2021-04-11,Santa Ana,2,65,0
+2021-04-05,Santa Ana,10,1109,0
+2021-04-06,Santa Ana,6,1016,0
+2021-04-07,Santa Ana,9,763,0
+2021-04-08,Santa Ana,17,678,0
+2021-04-09,Santa Ana,17,742,0
+2021-04-10,Santa Ana,3,436,0
+2021-04-11,Santa Ana,10,329,0
+2021-04-12,Santa Ana,10,855,0
+2021-04-13,Santa Ana,11,944,0
+2021-04-14,Santa Ana,6,692,0
+2021-04-15,Santa Ana,8,672,0
+2021-04-16,Santa Ana,11,648,0
+2021-04-17,Santa Ana,3,243,0
+2021-04-18,Santa Ana,2,34,0
 2020-02-07,Seal Beach,0,1,0
 2020-03-07,Seal Beach,0,2,0
 2020-03-12,Seal Beach,0,2,0
@@ -13864,7 +14104,7 @@ date,city,cases,tests,deaths
 2021-03-01,Seal Beach,2,107,0
 2021-03-02,Seal Beach,0,84,0
 2021-03-03,Seal Beach,0,90,0
-2021-03-04,Seal Beach,2,59,0
+2021-03-04,Seal Beach,2,60,0
 2021-03-05,Seal Beach,1,66,0
 2021-03-06,Seal Beach,0,25,0
 2021-03-07,Seal Beach,0,32,0
@@ -13875,7 +14115,7 @@ date,city,cases,tests,deaths
 2021-03-12,Seal Beach,2,67,0
 2021-03-13,Seal Beach,0,34,0
 2021-03-14,Seal Beach,0,23,0
-2021-03-15,Seal Beach,0,127,0
+2021-03-15,Seal Beach,0,128,1
 2021-03-16,Seal Beach,1,64,0
 2021-03-17,Seal Beach,0,71,0
 2021-03-18,Seal Beach,0,88,0
@@ -13897,12 +14137,19 @@ date,city,cases,tests,deaths
 2021-04-03,Seal Beach,0,36,0
 2021-04-04,Seal Beach,0,30,0
 2021-04-05,Seal Beach,1,111,0
-2021-04-06,Seal Beach,1,79,0
-2021-04-07,Seal Beach,1,88,0
-2021-04-08,Seal Beach,1,60,0
-2021-04-09,Seal Beach,0,41,0
-2021-04-10,Seal Beach,0,29,0
-2021-04-11,Seal Beach,0,4,0
+2021-04-06,Seal Beach,1,81,0
+2021-04-07,Seal Beach,2,90,0
+2021-04-08,Seal Beach,1,61,0
+2021-04-09,Seal Beach,0,52,0
+2021-04-10,Seal Beach,0,40,0
+2021-04-11,Seal Beach,0,25,0
+2021-04-12,Seal Beach,1,86,0
+2021-04-13,Seal Beach,0,83,0
+2021-04-14,Seal Beach,0,94,0
+2021-04-15,Seal Beach,3,59,0
+2021-04-16,Seal Beach,0,66,0
+2021-04-17,Seal Beach,0,17,0
+2021-04-18,Seal Beach,0,12,0
 2020-01-25,Stanton,0,1,0
 2020-02-07,Stanton,0,2,0
 2020-03-13,Stanton,0,1,0
@@ -14186,13 +14433,13 @@ date,city,cases,tests,deaths
 2020-12-23,Stanton,57,240,0
 2020-12-24,Stanton,27,143,1
 2020-12-25,Stanton,16,31,1
-2020-12-26,Stanton,23,90,0
+2020-12-26,Stanton,22,89,0
 2020-12-27,Stanton,23,80,1
 2020-12-28,Stanton,63,235,1
 2020-12-29,Stanton,40,271,0
 2020-12-30,Stanton,57,233,2
 2020-12-31,Stanton,38,155,1
-2021-01-01,Stanton,13,47,1
+2021-01-01,Stanton,12,46,1
 2021-01-02,Stanton,51,163,1
 2021-01-03,Stanton,20,76,1
 2021-01-04,Stanton,59,274,1
@@ -14210,7 +14457,7 @@ date,city,cases,tests,deaths
 2021-01-16,Stanton,17,98,1
 2021-01-17,Stanton,15,58,0
 2021-01-18,Stanton,20,169,1
-2021-01-19,Stanton,22,237,1
+2021-01-19,Stanton,21,236,1
 2021-01-20,Stanton,24,204,1
 2021-01-21,Stanton,19,160,1
 2021-01-22,Stanton,13,128,0
@@ -14238,10 +14485,10 @@ date,city,cases,tests,deaths
 2021-02-13,Stanton,2,44,1
 2021-02-14,Stanton,4,33,0
 2021-02-15,Stanton,4,71,0
-2021-02-16,Stanton,5,177,1
+2021-02-16,Stanton,5,178,1
 2021-02-17,Stanton,3,85,0
-2021-02-18,Stanton,6,99,0
-2021-02-19,Stanton,2,69,1
+2021-02-18,Stanton,6,100,0
+2021-02-19,Stanton,2,69,2
 2021-02-20,Stanton,3,49,1
 2021-02-21,Stanton,1,18,0
 2021-02-22,Stanton,2,73,0
@@ -14286,13 +14533,20 @@ date,city,cases,tests,deaths
 2021-04-02,Stanton,1,54,0
 2021-04-03,Stanton,1,29,0
 2021-04-04,Stanton,0,11,0
-2021-04-05,Stanton,1,80,0
-2021-04-06,Stanton,1,119,0
-2021-04-07,Stanton,0,83,0
-2021-04-08,Stanton,4,49,0
-2021-04-09,Stanton,2,42,0
-2021-04-10,Stanton,0,19,0
-2021-04-11,Stanton,0,2,0
+2021-04-05,Stanton,1,82,0
+2021-04-06,Stanton,1,120,0
+2021-04-07,Stanton,0,85,0
+2021-04-08,Stanton,6,58,0
+2021-04-09,Stanton,3,81,0
+2021-04-10,Stanton,1,28,0
+2021-04-11,Stanton,1,17,0
+2021-04-12,Stanton,1,79,0
+2021-04-13,Stanton,1,121,0
+2021-04-14,Stanton,0,71,0
+2021-04-15,Stanton,0,42,0
+2021-04-16,Stanton,1,62,0
+2021-04-17,Stanton,0,9,0
+2021-04-18,Stanton,0,3,0
 2020-03-16,Sunset Beach,0,1,0
 2020-04-08,Sunset Beach,0,1,0
 2020-04-21,Sunset Beach,0,1,0
@@ -14564,8 +14818,14 @@ date,city,cases,tests,deaths
 2021-04-06,Sunset Beach,0,1,0
 2021-04-07,Sunset Beach,0,1,0
 2021-04-08,Sunset Beach,0,1,0
-2021-04-09,Sunset Beach,0,3,0
+2021-04-09,Sunset Beach,0,4,0
 2021-04-10,Sunset Beach,0,1,0
+2021-04-12,Sunset Beach,0,3,0
+2021-04-13,Sunset Beach,0,4,0
+2021-04-14,Sunset Beach,0,2,0
+2021-04-15,Sunset Beach,0,1,0
+2021-04-16,Sunset Beach,0,1,0
+2021-04-17,Sunset Beach,0,3,0
 2020-03-05,Trabuco Canyon,0,1,0
 2020-03-09,Trabuco Canyon,0,1,0
 2020-03-12,Trabuco Canyon,0,1,0
@@ -14904,12 +15164,12 @@ date,city,cases,tests,deaths
 2021-02-09,Trabuco Canyon,3,116,0
 2021-02-10,Trabuco Canyon,2,87,0
 2021-02-11,Trabuco Canyon,4,73,0
-2021-02-12,Trabuco Canyon,4,109,0
+2021-02-12,Trabuco Canyon,4,110,0
 2021-02-13,Trabuco Canyon,1,60,0
 2021-02-14,Trabuco Canyon,2,42,0
 2021-02-15,Trabuco Canyon,4,94,0
 2021-02-16,Trabuco Canyon,3,97,0
-2021-02-17,Trabuco Canyon,5,99,0
+2021-02-17,Trabuco Canyon,5,100,0
 2021-02-18,Trabuco Canyon,1,83,0
 2021-02-19,Trabuco Canyon,3,133,0
 2021-02-20,Trabuco Canyon,2,74,0
@@ -14918,7 +15178,7 @@ date,city,cases,tests,deaths
 2021-02-23,Trabuco Canyon,1,81,0
 2021-02-24,Trabuco Canyon,4,110,0
 2021-02-25,Trabuco Canyon,0,67,0
-2021-02-26,Trabuco Canyon,3,121,0
+2021-02-26,Trabuco Canyon,3,122,0
 2021-02-27,Trabuco Canyon,0,55,0
 2021-02-28,Trabuco Canyon,3,25,0
 2021-03-01,Trabuco Canyon,0,73,0
@@ -14945,24 +15205,31 @@ date,city,cases,tests,deaths
 2021-03-22,Trabuco Canyon,3,112,0
 2021-03-23,Trabuco Canyon,6,81,0
 2021-03-24,Trabuco Canyon,1,94,0
-2021-03-25,Trabuco Canyon,2,64,0
+2021-03-25,Trabuco Canyon,2,65,0
 2021-03-26,Trabuco Canyon,1,99,0
 2021-03-27,Trabuco Canyon,1,67,0
 2021-03-28,Trabuco Canyon,0,27,0
-2021-03-29,Trabuco Canyon,2,105,0
+2021-03-29,Trabuco Canyon,2,106,0
 2021-03-30,Trabuco Canyon,4,145,0
 2021-03-31,Trabuco Canyon,4,132,0
 2021-04-01,Trabuco Canyon,1,147,0
 2021-04-02,Trabuco Canyon,0,108,0
 2021-04-03,Trabuco Canyon,0,54,0
 2021-04-04,Trabuco Canyon,0,38,0
-2021-04-05,Trabuco Canyon,1,104,0
-2021-04-06,Trabuco Canyon,2,103,0
-2021-04-07,Trabuco Canyon,1,88,0
-2021-04-08,Trabuco Canyon,1,60,0
-2021-04-09,Trabuco Canyon,0,47,0
-2021-04-10,Trabuco Canyon,0,9,0
-2021-04-11,Trabuco Canyon,0,4,0
+2021-04-05,Trabuco Canyon,1,108,0
+2021-04-06,Trabuco Canyon,2,116,0
+2021-04-07,Trabuco Canyon,1,99,0
+2021-04-08,Trabuco Canyon,1,72,0
+2021-04-09,Trabuco Canyon,0,62,0
+2021-04-10,Trabuco Canyon,1,45,0
+2021-04-11,Trabuco Canyon,1,34,0
+2021-04-12,Trabuco Canyon,1,115,0
+2021-04-13,Trabuco Canyon,1,83,0
+2021-04-14,Trabuco Canyon,0,87,0
+2021-04-15,Trabuco Canyon,1,107,0
+2021-04-16,Trabuco Canyon,1,53,0
+2021-04-17,Trabuco Canyon,0,17,0
+2021-04-18,Trabuco Canyon,0,7,0
 2020-02-07,Tustin,0,1,0
 2020-02-20,Tustin,1,1,0
 2020-03-01,Tustin,0,1,0
@@ -15151,7 +15418,7 @@ date,city,cases,tests,deaths
 2020-09-08,Tustin,5,133,0
 2020-09-09,Tustin,6,114,0
 2020-09-10,Tustin,5,102,0
-2020-09-11,Tustin,0,121,0
+2020-09-11,Tustin,0,122,0
 2020-09-12,Tustin,2,78,0
 2020-09-13,Tustin,1,55,0
 2020-09-14,Tustin,8,118,0
@@ -15224,8 +15491,8 @@ date,city,cases,tests,deaths
 2020-11-20,Tustin,25,313,0
 2020-11-21,Tustin,19,193,0
 2020-11-22,Tustin,18,158,0
-2020-11-23,Tustin,30,348,0
-2020-11-24,Tustin,28,372,0
+2020-11-23,Tustin,30,349,0
+2020-11-24,Tustin,28,373,0
 2020-11-25,Tustin,62,347,0
 2020-11-26,Tustin,14,43,0
 2020-11-27,Tustin,15,185,0
@@ -15234,7 +15501,7 @@ date,city,cases,tests,deaths
 2020-11-30,Tustin,47,358,0
 2020-12-01,Tustin,51,389,0
 2020-12-02,Tustin,37,349,0
-2020-12-03,Tustin,61,352,0
+2020-12-03,Tustin,61,353,0
 2020-12-04,Tustin,64,400,0
 2020-12-05,Tustin,36,212,0
 2020-12-06,Tustin,16,135,0
@@ -15253,7 +15520,7 @@ date,city,cases,tests,deaths
 2020-12-19,Tustin,39,282,0
 2020-12-20,Tustin,25,171,0
 2020-12-21,Tustin,69,523,0
-2020-12-22,Tustin,75,594,2
+2020-12-22,Tustin,74,593,2
 2020-12-23,Tustin,82,447,0
 2020-12-24,Tustin,57,290,1
 2020-12-25,Tustin,13,54,0
@@ -15272,15 +15539,15 @@ date,city,cases,tests,deaths
 2021-01-07,Tustin,124,562,1
 2021-01-08,Tustin,81,511,3
 2021-01-09,Tustin,42,246,0
-2021-01-10,Tustin,38,202,0
+2021-01-10,Tustin,38,201,0
 2021-01-11,Tustin,79,554,0
-2021-01-12,Tustin,107,587,1
+2021-01-12,Tustin,107,586,1
 2021-01-13,Tustin,72,491,0
 2021-01-14,Tustin,69,514,0
 2021-01-15,Tustin,46,402,0
 2021-01-16,Tustin,24,201,0
 2021-01-17,Tustin,23,169,0
-2021-01-18,Tustin,47,408,0
+2021-01-18,Tustin,47,407,0
 2021-01-19,Tustin,51,490,1
 2021-01-20,Tustin,56,437,0
 2021-01-21,Tustin,51,469,0
@@ -15292,7 +15559,7 @@ date,city,cases,tests,deaths
 2021-01-27,Tustin,40,352,0
 2021-01-28,Tustin,26,341,1
 2021-01-29,Tustin,27,290,0
-2021-01-30,Tustin,17,141,0
+2021-01-30,Tustin,16,140,0
 2021-01-31,Tustin,9,106,1
 2021-02-01,Tustin,24,333,1
 2021-02-02,Tustin,36,340,1
@@ -15300,7 +15567,7 @@ date,city,cases,tests,deaths
 2021-02-04,Tustin,19,307,2
 2021-02-05,Tustin,11,274,0
 2021-02-06,Tustin,10,136,0
-2021-02-07,Tustin,8,91,0
+2021-02-07,Tustin,8,92,0
 2021-02-08,Tustin,24,345,0
 2021-02-09,Tustin,9,303,0
 2021-02-10,Tustin,14,308,2
@@ -15337,33 +15604,40 @@ date,city,cases,tests,deaths
 2021-03-13,Tustin,5,76,0
 2021-03-14,Tustin,3,55,0
 2021-03-15,Tustin,3,228,0
-2021-03-16,Tustin,5,229,0
+2021-03-16,Tustin,5,231,0
 2021-03-17,Tustin,2,189,0
 2021-03-18,Tustin,4,173,0
 2021-03-19,Tustin,6,282,0
 2021-03-20,Tustin,3,70,0
 2021-03-21,Tustin,1,63,0
-2021-03-22,Tustin,4,218,0
-2021-03-23,Tustin,3,211,0
+2021-03-22,Tustin,4,219,0
+2021-03-23,Tustin,3,221,0
 2021-03-24,Tustin,2,235,0
-2021-03-25,Tustin,3,192,1
+2021-03-25,Tustin,3,196,1
 2021-03-26,Tustin,2,324,0
 2021-03-27,Tustin,1,85,0
 2021-03-28,Tustin,8,82,0
-2021-03-29,Tustin,1,190,0
+2021-03-29,Tustin,1,196,0
 2021-03-30,Tustin,4,220,0
 2021-03-31,Tustin,1,169,0
 2021-04-01,Tustin,3,192,0
-2021-04-02,Tustin,4,323,0
-2021-04-03,Tustin,3,79,0
+2021-04-02,Tustin,4,325,0
+2021-04-03,Tustin,3,80,0
 2021-04-04,Tustin,1,45,0
-2021-04-05,Tustin,1,191,0
-2021-04-06,Tustin,3,233,0
-2021-04-07,Tustin,3,187,0
-2021-04-08,Tustin,2,134,0
-2021-04-09,Tustin,4,243,0
-2021-04-10,Tustin,0,50,0
-2021-04-11,Tustin,0,19,0
+2021-04-05,Tustin,1,207,0
+2021-04-06,Tustin,3,234,0
+2021-04-07,Tustin,3,197,0
+2021-04-08,Tustin,2,154,0
+2021-04-09,Tustin,4,329,0
+2021-04-10,Tustin,0,81,0
+2021-04-11,Tustin,2,80,0
+2021-04-12,Tustin,5,258,0
+2021-04-13,Tustin,3,217,0
+2021-04-14,Tustin,5,188,0
+2021-04-15,Tustin,1,135,0
+2021-04-16,Tustin,3,250,0
+2021-04-17,Tustin,2,54,0
+2021-04-18,Tustin,0,8,0
 2020-03-16,Villa Park,1,3,0
 2020-03-18,Villa Park,1,2,0
 2020-03-19,Villa Park,0,2,0
@@ -15397,7 +15671,7 @@ date,city,cases,tests,deaths
 2020-05-01,Villa Park,0,2,0
 2020-05-03,Villa Park,0,1,0
 2020-05-04,Villa Park,0,1,0
-2020-05-05,Villa Park,0,7,0
+2020-05-05,Villa Park,0,6,0
 2020-05-06,Villa Park,0,2,0
 2020-05-07,Villa Park,0,2,0
 2020-05-09,Villa Park,0,1,0
@@ -15709,32 +15983,40 @@ date,city,cases,tests,deaths
 2021-03-13,Villa Park,0,4,0
 2021-03-14,Villa Park,0,7,0
 2021-03-15,Villa Park,0,22,0
-2021-03-16,Villa Park,0,15,0
+2021-03-16,Villa Park,0,16,0
 2021-03-17,Villa Park,0,14,0
 2021-03-18,Villa Park,0,6,0
 2021-03-19,Villa Park,0,10,0
 2021-03-20,Villa Park,0,4,0
 2021-03-21,Villa Park,0,7,0
 2021-03-22,Villa Park,1,26,0
-2021-03-23,Villa Park,0,15,0
+2021-03-23,Villa Park,0,16,0
 2021-03-24,Villa Park,0,11,0
-2021-03-25,Villa Park,0,9,0
+2021-03-25,Villa Park,0,11,0
 2021-03-26,Villa Park,0,11,0
 2021-03-27,Villa Park,0,9,0
 2021-03-28,Villa Park,0,13,0
-2021-03-29,Villa Park,0,13,0
+2021-03-29,Villa Park,0,14,0
 2021-03-30,Villa Park,0,19,0
 2021-03-31,Villa Park,0,21,0
 2021-04-01,Villa Park,0,13,0
 2021-04-02,Villa Park,0,7,0
 2021-04-03,Villa Park,0,13,0
 2021-04-04,Villa Park,1,8,0
-2021-04-05,Villa Park,0,17,0
+2021-04-05,Villa Park,0,27,0
 2021-04-06,Villa Park,0,14,0
-2021-04-07,Villa Park,1,8,0
-2021-04-08,Villa Park,0,7,0
+2021-04-07,Villa Park,1,9,0
+2021-04-08,Villa Park,0,16,0
 2021-04-09,Villa Park,0,12,0
-2021-04-10,Villa Park,0,2,0
+2021-04-10,Villa Park,0,4,0
+2021-04-11,Villa Park,0,3,0
+2021-04-12,Villa Park,0,33,0
+2021-04-13,Villa Park,0,12,0
+2021-04-14,Villa Park,0,9,0
+2021-04-15,Villa Park,0,16,0
+2021-04-16,Villa Park,0,6,0
+2021-04-17,Villa Park,0,2,0
+2021-04-18,Villa Park,0,2,0
 2020-03-12,Westminster,0,1,0
 2020-03-13,Westminster,0,2,0
 2020-03-14,Westminster,1,4,0
@@ -15984,7 +16266,7 @@ date,city,cases,tests,deaths
 2020-11-13,Westminster,28,231,0
 2020-11-14,Westminster,16,119,0
 2020-11-15,Westminster,15,121,1
-2020-11-16,Westminster,20,340,0
+2020-11-16,Westminster,20,341,0
 2020-11-17,Westminster,36,282,1
 2020-11-18,Westminster,38,333,0
 2020-11-19,Westminster,29,311,1
@@ -16000,38 +16282,38 @@ date,city,cases,tests,deaths
 2020-11-29,Westminster,29,147,0
 2020-11-30,Westminster,74,418,1
 2020-12-01,Westminster,75,474,0
-2020-12-02,Westminster,48,426,0
+2020-12-02,Westminster,49,427,0
 2020-12-03,Westminster,72,428,1
 2020-12-04,Westminster,79,489,0
 2020-12-05,Westminster,43,286,0
 2020-12-06,Westminster,28,108,0
-2020-12-07,Westminster,92,542,0
+2020-12-07,Westminster,92,543,0
 2020-12-08,Westminster,109,610,1
 2020-12-09,Westminster,97,562,0
 2020-12-10,Westminster,86,537,0
 2020-12-11,Westminster,118,520,1
 2020-12-12,Westminster,91,450,0
 2020-12-13,Westminster,42,148,0
-2020-12-14,Westminster,120,657,1
+2020-12-14,Westminster,121,659,1
 2020-12-15,Westminster,151,647,1
 2020-12-16,Westminster,127,714,3
 2020-12-17,Westminster,116,587,5
-2020-12-18,Westminster,104,538,1
-2020-12-19,Westminster,98,490,1
+2020-12-18,Westminster,105,539,1
+2020-12-19,Westminster,99,491,1
 2020-12-20,Westminster,34,164,4
-2020-12-21,Westminster,142,742,3
+2020-12-21,Westminster,142,743,3
 2020-12-22,Westminster,100,625,6
 2020-12-23,Westminster,85,586,4
 2020-12-24,Westminster,77,364,5
 2020-12-25,Westminster,23,75,5
 2020-12-26,Westminster,69,278,3
 2020-12-27,Westminster,42,172,4
-2020-12-28,Westminster,148,660,1
+2020-12-28,Westminster,148,661,1
 2020-12-29,Westminster,136,634,1
 2020-12-30,Westminster,146,713,5
 2020-12-31,Westminster,71,379,5
 2021-01-01,Westminster,30,114,1
-2021-01-02,Westminster,75,375,4
+2021-01-02,Westminster,75,376,4
 2021-01-03,Westminster,44,243,3
 2021-01-04,Westminster,129,961,1
 2021-01-05,Westminster,137,681,5
@@ -16072,11 +16354,11 @@ date,city,cases,tests,deaths
 2021-02-09,Westminster,12,341,1
 2021-02-10,Westminster,17,367,0
 2021-02-11,Westminster,25,276,1
-2021-02-12,Westminster,10,183,1
+2021-02-12,Westminster,10,184,1
 2021-02-13,Westminster,13,121,2
 2021-02-14,Westminster,5,94,0
 2021-02-15,Westminster,22,258,0
-2021-02-16,Westminster,11,272,0
+2021-02-16,Westminster,12,273,0
 2021-02-17,Westminster,12,323,1
 2021-02-18,Westminster,10,234,2
 2021-02-19,Westminster,7,237,0
@@ -16099,38 +16381,45 @@ date,city,cases,tests,deaths
 2021-03-08,Westminster,4,343,0
 2021-03-09,Westminster,6,242,0
 2021-03-10,Westminster,6,225,0
-2021-03-11,Westminster,2,193,1
+2021-03-11,Westminster,2,194,1
 2021-03-12,Westminster,0,167,0
 2021-03-13,Westminster,4,93,0
 2021-03-14,Westminster,3,98,2
 2021-03-15,Westminster,2,175,2
-2021-03-16,Westminster,1,193,0
+2021-03-16,Westminster,1,194,0
 2021-03-17,Westminster,4,229,0
 2021-03-18,Westminster,2,160,1
 2021-03-19,Westminster,5,186,1
-2021-03-20,Westminster,4,104,0
+2021-03-20,Westminster,3,103,0
 2021-03-21,Westminster,2,58,0
-2021-03-22,Westminster,7,328,0
-2021-03-23,Westminster,6,221,0
+2021-03-22,Westminster,7,329,0
+2021-03-23,Westminster,6,222,1
 2021-03-24,Westminster,5,237,0
-2021-03-25,Westminster,3,191,0
-2021-03-26,Westminster,5,183,0
+2021-03-25,Westminster,3,192,0
+2021-03-26,Westminster,5,184,0
 2021-03-27,Westminster,1,72,0
 2021-03-28,Westminster,1,73,0
-2021-03-29,Westminster,3,173,0
-2021-03-30,Westminster,4,191,0
-2021-03-31,Westminster,1,206,0
+2021-03-29,Westminster,3,174,0
+2021-03-30,Westminster,5,192,0
+2021-03-31,Westminster,1,206,1
 2021-04-01,Westminster,2,171,0
 2021-04-02,Westminster,2,156,0
-2021-04-03,Westminster,4,83,0
+2021-04-03,Westminster,4,86,0
 2021-04-04,Westminster,3,60,0
-2021-04-05,Westminster,0,293,0
-2021-04-06,Westminster,2,222,0
-2021-04-07,Westminster,3,188,0
-2021-04-08,Westminster,0,132,0
-2021-04-09,Westminster,0,155,0
-2021-04-10,Westminster,1,51,0
-2021-04-11,Westminster,1,7,0
+2021-04-05,Westminster,0,299,0
+2021-04-06,Westminster,2,225,0
+2021-04-07,Westminster,5,200,0
+2021-04-08,Westminster,0,145,0
+2021-04-09,Westminster,1,183,0
+2021-04-10,Westminster,2,81,0
+2021-04-11,Westminster,2,60,0
+2021-04-12,Westminster,0,199,0
+2021-04-13,Westminster,2,208,0
+2021-04-14,Westminster,6,207,0
+2021-04-15,Westminster,3,127,0
+2021-04-16,Westminster,1,155,0
+2021-04-17,Westminster,1,42,0
+2021-04-18,Westminster,0,13,0
 2020-02-07,Yorba Linda,1,1,0
 2020-02-28,Yorba Linda,0,1,0
 2020-03-04,Yorba Linda,0,1,0
@@ -16435,7 +16724,7 @@ date,city,cases,tests,deaths
 2021-01-01,Yorba Linda,26,103,0
 2021-01-02,Yorba Linda,42,206,1
 2021-01-03,Yorba Linda,47,185,1
-2021-01-04,Yorba Linda,74,483,1
+2021-01-04,Yorba Linda,74,482,1
 2021-01-05,Yorba Linda,82,403,1
 2021-01-06,Yorba Linda,88,415,1
 2021-01-07,Yorba Linda,74,393,0
@@ -16459,7 +16748,7 @@ date,city,cases,tests,deaths
 2021-01-25,Yorba Linda,26,377,0
 2021-01-26,Yorba Linda,26,325,0
 2021-01-27,Yorba Linda,13,326,0
-2021-01-28,Yorba Linda,16,287,1
+2021-01-28,Yorba Linda,17,288,1
 2021-01-29,Yorba Linda,15,316,1
 2021-01-30,Yorba Linda,15,118,1
 2021-01-31,Yorba Linda,3,88,3
@@ -16474,7 +16763,7 @@ date,city,cases,tests,deaths
 2021-02-09,Yorba Linda,6,216,0
 2021-02-10,Yorba Linda,7,212,0
 2021-02-11,Yorba Linda,13,204,0
-2021-02-12,Yorba Linda,4,154,1
+2021-02-12,Yorba Linda,4,155,1
 2021-02-13,Yorba Linda,6,59,0
 2021-02-14,Yorba Linda,4,64,0
 2021-02-15,Yorba Linda,15,174,1
@@ -16494,7 +16783,7 @@ date,city,cases,tests,deaths
 2021-03-01,Yorba Linda,5,202,0
 2021-03-02,Yorba Linda,2,213,0
 2021-03-03,Yorba Linda,3,263,0
-2021-03-04,Yorba Linda,4,131,0
+2021-03-04,Yorba Linda,4,132,0
 2021-03-05,Yorba Linda,3,142,0
 2021-03-06,Yorba Linda,1,65,0
 2021-03-07,Yorba Linda,1,64,0
@@ -16506,30 +16795,37 @@ date,city,cases,tests,deaths
 2021-03-13,Yorba Linda,1,50,0
 2021-03-14,Yorba Linda,0,49,0
 2021-03-15,Yorba Linda,6,188,0
-2021-03-16,Yorba Linda,5,159,0
-2021-03-17,Yorba Linda,2,471,0
+2021-03-16,Yorba Linda,5,160,0
+2021-03-17,Yorba Linda,2,472,0
 2021-03-18,Yorba Linda,2,185,0
 2021-03-19,Yorba Linda,3,154,0
 2021-03-20,Yorba Linda,1,86,0
 2021-03-21,Yorba Linda,1,61,0
-2021-03-22,Yorba Linda,0,244,0
-2021-03-23,Yorba Linda,0,206,0
+2021-03-22,Yorba Linda,0,247,0
+2021-03-23,Yorba Linda,0,213,0
 2021-03-24,Yorba Linda,1,471,0
-2021-03-25,Yorba Linda,3,242,0
+2021-03-25,Yorba Linda,3,252,0
 2021-03-26,Yorba Linda,1,156,0
 2021-03-27,Yorba Linda,2,73,0
 2021-03-28,Yorba Linda,1,78,0
-2021-03-29,Yorba Linda,3,237,0
-2021-03-30,Yorba Linda,2,180,0
+2021-03-29,Yorba Linda,3,251,0
+2021-03-30,Yorba Linda,2,180,1
 2021-03-31,Yorba Linda,2,167,0
 2021-04-01,Yorba Linda,3,149,0
-2021-04-02,Yorba Linda,3,151,0
+2021-04-02,Yorba Linda,3,158,0
 2021-04-03,Yorba Linda,6,78,0
 2021-04-04,Yorba Linda,2,42,0
-2021-04-05,Yorba Linda,4,237,0
-2021-04-06,Yorba Linda,5,226,0
-2021-04-07,Yorba Linda,4,231,0
-2021-04-08,Yorba Linda,1,152,0
-2021-04-09,Yorba Linda,1,109,0
-2021-04-10,Yorba Linda,0,32,0
-2021-04-11,Yorba Linda,1,10,0
+2021-04-05,Yorba Linda,4,264,0
+2021-04-06,Yorba Linda,5,232,0
+2021-04-07,Yorba Linda,4,246,0
+2021-04-08,Yorba Linda,2,190,0
+2021-04-09,Yorba Linda,1,133,0
+2021-04-10,Yorba Linda,1,58,0
+2021-04-11,Yorba Linda,2,61,0
+2021-04-12,Yorba Linda,0,283,0
+2021-04-13,Yorba Linda,2,201,0
+2021-04-14,Yorba Linda,3,217,0
+2021-04-15,Yorba Linda,1,111,0
+2021-04-16,Yorba Linda,1,146,0
+2021-04-17,Yorba Linda,0,31,0
+2021-04-18,Yorba Linda,1,12,0
