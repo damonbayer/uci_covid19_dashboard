@@ -35,7 +35,7 @@ get_county_plots <- function(counties_of_interest){
   #                      tests = resources$resource_id[resources$name == "COVID-19 Testing"],
   #                      hosp = resources$resource_id[resources$name == "Hospitals By County"])
 
-  resource_ids <- list(cases_deaths = resources$id[resources$name == "Statewide COVID-19 Cases Deaths"],
+  resource_ids <- list(cases_deaths = resources$id[resources$name == "Statewide COVID-19 Cases Deaths Tests"],
                        hosp = resources$id[resources$name == "Statewide Covid-19 Hospital County Data"])
 
 
