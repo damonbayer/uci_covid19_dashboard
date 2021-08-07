@@ -190,32 +190,16 @@ prep_and_save_map_data <- function(
 
 
   # Save aggregated OCHCA data to dashboard
-  saveRDS(
-    list(
-      "cases_plot_data" = cases_plot_data,
-      "cases_legend_label" = cases_legend_label,
-      "max_date_in_data" = max(covid_zip_data$posted_date)
-    ),
-    file = paste0(path_to_save_folder, "/cases_map_data.rds")
-  )
+  writeLines(paste0(max(covid_zip_data$posted_date)), paste0(path_to_save_folder, "/max_date_in_map_data.txt"))
 
-  saveRDS(
-    list(
-      "tests_plot_data" = tests_plot_data,
-      "tests_legend_label" = tests_legend_label,
-      "max_date_in_data" = max(covid_zip_data$posted_date)
-    ),
-    file = paste0(path_to_save_folder, "/tests_map_data.rds")
-  )
+  write.csv(cases_plot_data, file = paste0(path_to_save_folder, "/cases_map_data.csv"))
+  writeLines(cases_legend_label, paste0(path_to_save_folder, "/cases_legend_label.txt"))
 
-  saveRDS(
-    list(
-      "pos_plot_data" = pos_plot_data,
-      "pos_legend_label" = pos_legend_label,
-      "max_date_in_data" = max(covid_zip_data$posted_date)
-    ),
-    file = paste0(path_to_save_folder, "/pos_map_data.rds")
-  )
+  write.csv(tests_plot_data, file = paste0(path_to_save_folder, "/tests_map_data.csv"))
+  writeLines(tests_legend_label, paste0(path_to_save_folder, "/tests_legend_label.txt"))
+
+  write.csv(pos_plot_data, file = paste0(path_to_save_folder, "/pos_map_data.csv"))
+  writeLines(pos_legend_label, paste0(path_to_save_folder, "/pos_legend_label.txt"))
 }
 
 
