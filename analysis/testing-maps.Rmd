@@ -40,8 +40,6 @@ tests_plot_data$zip <- as.character(tests_plot_data$zip)
 tests_legend_label <- readLines("data/tests_legend_label.txt")
 max_date_in_data <- readLines("data/max_date_in_map_data.txt")
 
-#cases_covid_zip_data <- readRDS("data/cases_map_data.rds")
-
 date_seq <- zoo::as.yearmon(
   seq(as.Date("2020-03-01"), as.Date(max_date_in_data), by = "months"), 
   "%m/%Y"
@@ -53,7 +51,7 @@ gen_map_gif(
   ca_shp_file = "data/shape-files/ca-counties/cnty19_1.shp", 
   legend_label = tests_legend_label, 
   month_seq = date_seq, 
-  var_type = "cases"
+  var_type = "tests"
 )
 ```
 
