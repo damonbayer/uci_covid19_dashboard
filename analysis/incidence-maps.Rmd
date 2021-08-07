@@ -39,9 +39,7 @@ source("code/map-functions.R")
 cases_plot_data <- read.csv("data/cases_map_data.csv")[, -1]
 cases_plot_data$zip <- as.character(cases_plot_data$zip)
 cases_legend_label <- readLines("data/cases_legend_label.txt")
-max_date_in_data <- readLines("data/max_date_in_cases_data.txt")
-
-#cases_covid_zip_data <- readRDS("data/cases_map_data.rds")
+max_date_in_data <- readLines("data/max_date_in_map_data.txt")
 
 date_seq <- zoo::as.yearmon(
   seq(as.Date("2020-03-01"), as.Date(max_date_in_data), by = "months"), 
