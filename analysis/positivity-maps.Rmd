@@ -35,18 +35,21 @@ source("code/map-functions.R")
 
 
 ```{r generate-pos-map}
-pos_covid_zip_data <- readRDS("data/pos_map_data.rds")
+pos_plot_data <- read.csv("data/pos_map_data.csv")[, -1]
+pos_plot_data$zip <- as.character(pos_plot_data$zip)
+pos_legend_label <- readLines("data/pos_legend_label.txt")
+max_date_in_data <- readLines("data/max_date_in_map_data.txt")
 
 date_seq <- zoo::as.yearmon(
-  seq(as.Date("2020-03-01"), pos_covid_zip_data$max_date_in_data, by = "months"), 
+  seq(as.Date("2020-03-01"), as.Date(max_date_in_data), by = "months"), 
   "%m/%Y"
 )
 
 gen_map_gif(
-  plot_data = pos_covid_zip_data$pos_plot_data, 
+  plot_data = pos_plot_data, 
   socal_shp_file = "data/shape-files/socal-zip/Zipcode_boundary_scag_2009.shp", 
   ca_shp_file = "data/shape-files/ca-counties/cnty19_1.shp", 
-  legend_label = pos_covid_zip_data$pos_legend_label, 
+  legend_label = pos_legend_label, 
   month_seq = date_seq, 
   var_type = "pos"
 )
