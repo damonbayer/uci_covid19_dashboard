@@ -98,7 +98,7 @@ prep_and_save_map_data <- function(
     summarize(new_cases_in_frame = sum(new_cases)) %>%
     inner_join(oc_zips, by = "zip") %>%
     mutate(new_cases_scaled = new_cases_in_frame / cases_scaled_pop) %>%
-    mutate(plot_var = factor(
+    mutate(plot_var_dis = factor(
       case_when(
         new_cases_scaled <= 5 ~ "0-5",
         new_cases_scaled <= 30 ~ "5-30",
@@ -117,7 +117,8 @@ prep_and_save_map_data <- function(
         "240-480",
         ">480"
       ))) %>%
-    select(zip, plot_var, month_date)
+    select(zip, plot_var_dis, month_date) %>%
+    mutate(plot_var_cont = new_cases_scaled)
 
   cases_legend_label <- paste0(
     "Reported cases per\n",
@@ -134,7 +135,7 @@ prep_and_save_map_data <- function(
     summarize(new_tests_in_frame = sum(new_tests)) %>%
     inner_join(oc_zips, by = "zip") %>%
     mutate(new_tests_scaled = new_tests_in_frame / tests_scaled_pop) %>%
-    mutate(plot_var = factor(
+    mutate(plot_var_dis = factor(
       case_when(
         new_tests_scaled <= 100 ~ "0-100",
         new_tests_scaled <= 200 ~ "100-200",
@@ -152,7 +153,8 @@ prep_and_save_map_data <- function(
         ">2400"
       )
     )) %>%
-    select(zip, plot_var, month_date)
+    select(zip, plot_var_dis, month_date) %>%
+    mutate(plot_var_cont = new_tests_scaled)
 
   tests_legend_label <- paste0(
     "Tests per\n",
@@ -166,7 +168,7 @@ prep_and_save_map_data <- function(
     group_by(zip, month_date) %>%
     summarize(per_pos = 100 * sum(new_cases) / sum(new_tests)) %>%
     inner_join(oc_zips, by = "zip") %>%
-    mutate(plot_var = factor(
+    mutate(plot_var_dis = factor(
       case_when(
         per_pos <= 6 ~ "0-6",
         per_pos <= 12 ~ "6-12",
@@ -184,7 +186,8 @@ prep_and_save_map_data <- function(
         ">30"
       )
     )) %>%
-    select(zip, plot_var, month_date)
+    select(zip, plot_var_dis, month_date) %>%
+    mutate(plot_var_cont = per_pos)
 
   pos_legend_label <- paste0("Percent of COVID-19\ntest positive")
 
@@ -426,7 +429,7 @@ gen_map_gif <- function(
         geom_sf(data = ca_shp_oc_only, fill = "khaki1", color = "black", size = 1.25) +
         geom_sf(
           data = oc_shp,
-          mapping = aes(fill = new_cases_scaled, group = ID),
+          mapping = aes(fill = plot_var_cont, group = ID),
           color = "black"
         ) +
         coord_sf( # Outlines Orange County
@@ -472,7 +475,7 @@ gen_map_gif <- function(
         ) +
         scale_fill_viridis(
           direction = -1,
-          limits = c(0, round(max(plot_data[4]), -2))
+          limits = c(0, round(max(plot_var_cont), -2))
         )
 
       grid.arrange(
