@@ -426,7 +426,7 @@ gen_map_gif <- function(
         geom_sf(data = ca_shp_oc_only, fill = "khaki1", color = "black", size = 1.25) +
         geom_sf(
           data = oc_shp,
-          mapping = aes(fill = plot_var, group = ID),
+          mapping = aes(fill = new_cases_scaled, group = ID),
           color = "black"
         ) +
         coord_sf( # Outlines Orange County
@@ -434,16 +434,17 @@ gen_map_gif <- function(
           ylim = c(3694363, 3759819),
           expand = FALSE
         ) +
-        labs(fill = legend_label) +
+        labs(fill = paste0(legend_label[1], "\n", legend_label[2])) +
         theme_void() +
         theme(
           panel.background = element_rect(fill = "darkslategray2"),
           #legend.position = "bl",
           legend.justification = c(0, 0),
-          legend.position = c(0.01, 0.01),
+          legend.position = c(0, 0),
           legend.background = element_rect(fill = "white"),
-          # legend.title = element_text(size = 5, color = "black"),
-          # legend.text = element_text(size = 5, color = "black"),
+          legend.title = element_text(size = 10, color = "black"),
+          legend.text = element_text(vjust = 0, size = 10, color = "black"),
+          legend.text.align = 1,
           legend.margin = margin(1, 1, 1, 1),
           panel.border = element_rect(colour = "black", fill = NA)
         ) +
@@ -469,7 +470,7 @@ gen_map_gif <- function(
           size = 7,
           fontface="bold"
         ) +
-        scale_fill_viridis(drop = FALSE, discrete = TRUE, direction = -1)
+        scale_fill_viridis(direction = -1)
 
       grid.arrange(
         curr_map,
