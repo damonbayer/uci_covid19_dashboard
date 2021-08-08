@@ -63,5 +63,5 @@ htmltools::includeHTML("docs/cases-map-gif.html")
 
 
 Data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).  
-Most recent date in data used was `r cases_covid_zip_data$max_date_in_data`.  
+Most recent date in data used was `r max_date_in_data`.  
 Last updated on `r lubridate::today()`.
