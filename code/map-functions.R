@@ -442,8 +442,8 @@ gen_map_gif <- function(
           legend.justification = c(0, 0),
           legend.position = c(0, 0),
           legend.background = element_rect(fill = "white"),
-          legend.title = element_text(size = 10, color = "black"),
-          legend.text = element_text(vjust = 0, size = 10, color = "black"),
+          legend.title = element_text(size = 15, color = "black"),
+          legend.text = element_text(vjust = 0, size = 15, color = "black"),
           legend.text.align = 1,
           legend.margin = margin(1, 1, 1, 1),
           panel.border = element_rect(colour = "black", fill = NA)
@@ -470,7 +470,10 @@ gen_map_gif <- function(
           size = 7,
           fontface="bold"
         ) +
-        scale_fill_viridis(direction = -1)
+        scale_fill_viridis(
+          direction = -1,
+          limits = c(0, round(max(plot_data[4]), -2))
+        )
 
       grid.arrange(
         curr_map,
