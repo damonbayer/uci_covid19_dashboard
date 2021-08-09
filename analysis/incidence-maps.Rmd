@@ -36,18 +36,21 @@ source("code/map-functions.R")
 
 
 ```{r generate-cases-map}
-cases_covid_zip_data <- readRDS("data/cases_map_data.rds")
+cases_plot_data <- read.csv("data/cases_map_data.csv")[, -1]
+cases_plot_data$zip <- as.character(cases_plot_data$zip)
+cases_legend_label <- readLines("data/cases_legend_label.txt")
+max_date_in_data <- readLines("data/max_date_in_map_data.txt")
 
 date_seq <- zoo::as.yearmon(
-  seq(as.Date("2020-03-01"), cases_covid_zip_data$max_date_in_data, by = "months"), 
+  seq(as.Date("2020-03-01"), as.Date(max_date_in_data), by = "months"), 
   "%m/%Y"
 )
 
 gen_map_gif(
-  plot_data = cases_covid_zip_data$cases_plot_data, 
+  plot_data = cases_plot_data, 
   socal_shp_file = "data/shape-files/socal-zip/Zipcode_boundary_scag_2009.shp", 
   ca_shp_file = "data/shape-files/ca-counties/cnty19_1.shp", 
-  legend_label = cases_covid_zip_data$cases_legend_label, 
+  legend_label = cases_legend_label, 
   month_seq = date_seq, 
   var_type = "cases"
 )
@@ -60,5 +63,5 @@ htmltools::includeHTML("docs/cases-map-gif.html")
 
 
 Data provided by the [Orange County Health Care Agency](https://www.ochealthinfo.com).  
-Most recent date in data used was `r cases_covid_zip_data$max_date_in_data`.  
+Most recent date in data used was `r max_date_in_data`.  
 Last updated on `r lubridate::today()`.
