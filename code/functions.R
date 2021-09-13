@@ -113,7 +113,13 @@ get_county_plots <- function(counties_of_interest){
                  `San Bernardino` = "#1980E6",
                  Sacramento = "#CC625E",
                  `Contra Costa` = "#CAA1E6",
-                 `San Francisco` = "#E6CA5C")
+                 `San Francisco` = "#E6CA5C",
+                 `Fresno` = "#CAA1E6",
+                 `Merced` = "#E6CA5C",
+                 `Monterey` = "#1980E6",
+                 `Stanislaus` = "#0072B2",
+                 `Tulare` = "#CC79A7")
+
 
   sah_alpha <- 0.2
 
