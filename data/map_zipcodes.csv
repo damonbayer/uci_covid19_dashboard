@@ -1,87 +1,90 @@
-﻿Zip,City,Population
-92656,Aliso Viejo,49046
-92801,Anaheim,62068
-92802,Anaheim,42709
-92804,Anaheim,85914
-92805,Anaheim,70401
-92806,Anaheim,37173
-92807,Anaheim,36171
-92808,Anaheim,20039
-92821,Brea,35533
-92823,Brea,3613
-90620,Buena Park,45113
-90621,Buena Park,35153
-92624,Capistrano Beach,7248
-92625,Corona del Mar,12478
-92626,Costa Mesa,49341
-92627,Costa Mesa,61510
-90630,Cypress,47993
-92629,Dana Point,25756
-92610,Foothill Ranch,11248
-92708,Fountain Valley,56004
-92831,Fullerton,34204
-92832,Fullerton,24752
-92833,Fullerton,51767
-92835,Fullerton,24010
-92840,Garden Grove,54083
-92841,Garden Grove,32845
-92843,Garden Grove,45214
-92844,Garden Grove,24307
-92845,Garden Grove,16333
-92646,Huntington Beach,55224
-92647,Huntington Beach,57245
-92648,Huntington Beach,45317
-92649,Huntington Beach,32463
-92602,Irvine,22871
-92603,Irvine,20184
-92604,Irvine,26853
-92606,Irvine,21495
-92612,Irvine,27522
-92614,Irvine,24748
-92617,Irvine,14044
-92618,Irvine,16366
-92620,Irvine,38486
-90631,La Habra,67619
-90623,La Palma,15554
-92694,Ladera Ranch,21944
-92651,Laguna Beach,23881
-92653,Laguna Hills,29291
-92677,Laguna Niguel,63297
-92637,Laguna Woods,16012
-92630,Lake Forest,59182
-90720,Los Alamitos,21751
-92655,Midway City,8337
-92691,Mission Viejo,47582
-92692,Mission Viejo,47222
-92660,Newport Beach,34797
-92661,Newport Beach,3744
-92662,Newport Beach,2756
-92663,Newport Beach,21649
-92657,Newport Coast,9741
-92865,Orange,19704
-92866,Orange,14885
-92867,Orange,44515
-92868,Orange,25404
-92869,Orange,37184
-92870,Placentia,52033
-92688,Rancho Santa Margarita,43792
-92672,San Clemente,34464
-92673,San Clemente,29309
-92675,San Juan Capistrano,34731
-92701,Santa Ana,53908
-92703,Santa Ana,65445
-92704,Santa Ana,88123
-92705,Santa Ana,44706
-92706,Santa Ana,36457
-92707,Santa Ana,59492
-90740,Seal Beach,23729
-90680,Stanton,29945
-90742,Sunset Beach,831
-92679,Trabuco Canyon,32611
-92780,Tustin,57741
-92782,Tustin,23032
-92861,Villa Park,5781
-92683,Westminster,89747
-92886,Yorba Linda,46564
-92887,Yorba Linda,20006
-92697,Irvine,918
+﻿zip,city,population
+90620,Buena Park,45709
+90621,Buena Park,36961
+90623,La Palma,16309
+90630,Cypress,49551
+90631,La Habra,70485
+90680,Stanton,31557
+90720,Los Alamitos,22367
+90740,Seal Beach,25125
+90742,Sunset Beach,1116
+90743,Surfside,429
+92602,Irvine,30363
+92603,Irvine,22719
+92604,Irvine,27649
+92606,Irvine,23857
+92610,Foothill Ranch,10793
+92612,Irvine,32969
+92614,Irvine,26675
+92617,Irvine,16531
+92618,Irvine,34878
+92620,Irvine,49298
+92624,Capistrano Beach,7215
+92625,Corona Del Mar,12540
+92626,Costa Mesa,52228
+92627,Costa Mesa,64900
+92629,Dana Point,26930
+92630,Lake Forest,65142
+92637,Laguna Woods,16999
+92646,Huntington Beach,56496
+92647,Huntington Beach,60269
+92648,Huntington Beach,47906
+92649,Huntington Beach,33800
+92651,Laguna Beach,25316
+92653,Laguna Hills,29183
+92655,Midway City,8618
+92656,Aliso Viejo,52966
+92657,Newport Coast,12157
+92660,Newport Beach,36123
+92661,Newport Beach,3938
+92662,Newport Beach,2848
+92663,Newport Beach,22489
+92672,San Clemente,41674
+92673,San Clemente,33456
+92675,San Juan Capistrano,37978
+92676,Silverado,2009
+92677,Laguna Niguel,67124
+92679,Trabuco Canyon,33336
+92683,Westminster,92938
+92688,Rancho Santa Margarita,45484
+92691,Mission Viejo,48837
+92692,Mission Viejo,48026
+92694,Ladera Ranch,32279
+92697,Irvine,36
+92701,Santa Ana,55137
+92703,Santa Ana,68242
+92704,Santa Ana,89021
+92705,Santa Ana,47039
+92706,Santa Ana,37260
+92707,Santa Ana,62175
+92708,Fountain Valley,57354
+92780,Tustin,57006
+92782,Tustin,28855
+92801,Anaheim,63542
+92802,Anaheim,44506
+92804,Anaheim,92468
+92805,Anaheim,76299
+92806,Anaheim,41759
+92807,Anaheim,37263
+92808,Anaheim,21301
+92821,Brea,39917
+92823,Brea,5076
+92831,Fullerton,35725
+92832,Fullerton,26225
+92833,Fullerton,55716
+92835,Fullerton,26247
+92840,Garden Grove,55661
+92841,Garden Grove,33921
+92843,Garden Grove,48185
+92844,Garden Grove,26068
+92845,Garden Grove,16541
+92861,Villa Park,5864
+92862,Orange,14
+92865,Orange,21028
+92866,Orange,15345
+92867,Orange,46436
+92868,Orange,26803
+92869,Orange,38271
+92870,Placentia,54323
+92886,Yorba Linda,49595
+92887,Yorba Linda,21185
