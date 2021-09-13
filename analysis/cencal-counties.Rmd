@@ -1,0 +1,59 @@
+---
+title: "COVID-19 Trends by UCI Statistics"
+site: workflowr::wflow_site
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+<style type="text/css">
+.main-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+#### Use <span style="color:#FFF; background-color: #0064A4">CA County Trends</span> dropdown menu for other county comparisons and <span style="color:#FFF; background-color: #0064A4">OC Maps</span> dropdown menu for maps of Orange County, CA
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.retina = 2)
+```
+
+```{r get_plots}
+source("code/functions.R")
+counties_of_interest <- c("Fresno", "Merced", "Monterey", "Stanislaus", "Tulare")
+plots <- get_county_plots(counties_of_interest)
+```
+
+<div class = "row">
+<div class = "col-md-6">
+```{r hospitalizations_plot}
+watermark(plots$hospitalizations_plot)
+```
+</div>
+<div class = "col-md-6">
+```{r icu_plot}
+watermark(plots$icu_plot)
+```
+</div>
+</div>
+<div class = "row">
+<div class = "col-md-6">
+```{r cases_plot}
+watermark(plots$cases_plot)
+```
+</div>
+<div class = "col-md-6">
+```{r deaths_plot}
+watermark(plots$deaths_plot)
+```
+</div>
+</div>
+
+Data collected from the [California Open Data Portal](https://data.ca.gov/group/covid-19).
+
+Last updated on `r Sys.Date()`. 
+
+Last available date in the [California Open Data Portal](https://data.ca.gov/group/covid-19) is `r as.Date(plots$data_date)`.
