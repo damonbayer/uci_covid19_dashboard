@@ -17,6 +17,8 @@ navbar:
         href: oc-norcal.html
       - text: "LA v. NorCal"
         href: la-norcal.html
+      - text: "Central CA"
+        href: cencal-counties.html
   - text: "OC City Trends"
     icon: fas fa-chart-line
     href: oc-populous-cities.html
