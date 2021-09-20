@@ -15,7 +15,7 @@ gen_city_map_labeled <- function(
 ) {
 
   # Load OC zip code file
-  oc_zips <- read_csv(zip_code_file, col_types = cols(Zip = col_character())) %>%
+  oc_zips <- read_csv(zip_code_file, col_types = cols(zip = col_character())) %>%
     rename_all(str_to_lower)
 
   oc_cities <- oc_zips %>%
@@ -196,6 +196,8 @@ gen_map_gif <- function(
 
   ca_shp_oc_only <- ca_shp_og %>% filter(COUNTY_NAM == "Orange")
 
+  max_var_cont_val <- round(max(plot_data$plot_var_cont), -1)
+
   map_labeled <- gen_city_map_labeled()
 
   prev_directory <- getwd()
@@ -270,7 +272,7 @@ gen_map_gif <- function(
         ) +
         scale_fill_viridis(
           direction = -1,
-          limits = c(0, round(max(plot_data$plot_var_cont), -1))
+          limits = c(0, max_var_cont_val)
         )
 
       grid.arrange(
