@@ -29,13 +29,6 @@ knitr::opts_chunk$set(
 ```
 
 
-```{r delete-old-map-docs}
-if(dir.exists("docs/images")) {
-  unlink("docs/images", recursive = TRUE)
-}
-```
-
-
 ```{r libraries}
 source("code/map-functions.R")
 ```
