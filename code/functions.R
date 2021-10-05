@@ -123,7 +123,7 @@ get_county_plots <- function(counties_of_interest){
 
   sah_alpha <- 0.2
 
-  break_vec <- seq(from = sah_end, to = max(hosp_tidy$date, cases_tidy$date), by = "28 day")
+  break_vec <- seq(from = sah_end, to = max(hosp_tidy$date, cases_tidy$date), by = "42 day")
 
   gglayers = list(
     geom_line(size = 1.5),
@@ -327,9 +327,9 @@ get_city_plots <- function(cities_of_interest){
     geom_line(size = 1.5),
     scale_color_manual(name = "City", values = cbPalette),
     scale_x_date(name = "Date",
-                 breaks = "28 day",
+                 breaks = "42 day",
                  date_labels = "%b %d",
-                 expand = expansion(add=c(0,7))),
+                 expand = expansion(add=c(0,14))),
     scale_y_continuous(label = comma)
   )
 
