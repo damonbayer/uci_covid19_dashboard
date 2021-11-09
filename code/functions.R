@@ -118,7 +118,7 @@ get_county_plots <- function(counties_of_interest){
                  `Merced` = "#E6CA5C",
                  `Monterey` = "#1980E6",
                  `Stanislaus` = "#0072B2",
-                 `Tulare` = "#CC79A7")
+                 `Tulare` = "#CC79A7")[counties_of_interest]
 
 
   sah_alpha <- 0.2
@@ -329,7 +329,7 @@ get_city_plots <- function(cities_of_interest){
     scale_x_date(name = "Date",
                  breaks = "42 day",
                  date_labels = "%b %d",
-                 expand = expansion(add=c(0,14))),
+                 expand = expansion(add=c(0,0))),
     scale_y_continuous(label = comma)
   )
 
