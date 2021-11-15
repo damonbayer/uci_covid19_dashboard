@@ -13,13 +13,22 @@
 
 <title>COVID-19 Trends by UCI Statistics</title>
 
-<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -36,12 +45,16 @@ div.section {
 
 
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -54,32 +67,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -90,10 +78,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -110,40 +94,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -171,7 +128,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -183,7 +140,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -194,10 +151,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -209,7 +179,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -287,7 +256,7 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa fas fa-chart-line"></span>
+    <span class="fas fa-chart-line"></span>
      
     CA County Trends
      
@@ -316,7 +285,7 @@ $(document).ready(function () {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa fas fa-chart-line"></span>
+    <span class="fas fa-chart-line"></span>
      
     OC City Trends
      
@@ -339,7 +308,7 @@ $(document).ready(function () {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="far fa far fa-map"></span>
+    <span class="far fa-map"></span>
      
     OC Maps
      
@@ -359,7 +328,7 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="about.html">
-    <span class="fas fa fas fa-users"></span>
+    <span class="fas fa-users"></span>
      
     About
   </a>
@@ -375,7 +344,7 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/damonbayer/uci_covid19_dashboard">
-    <span class="fab fa fab fa-github"></span>
+    <span class="fab fa-github"></span>
      
     Source code
   </a>
@@ -385,7 +354,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -505,27 +474,31 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefsshgitgithubcomdamonbayerucicovid19dashboardtree391cfa4ebed4fad3b46727249126b6db75e8222etargetblank391cfa4a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/tree/391cfa4ebed4fad3b46727249126b6db75e8222e" target="_blank">391cfa4</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreea61f46be459e154ddb1863e168f7a9e2c22826e6targetblanka61f46ba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/a61f46be459e154ddb1863e168f7a9e2c22826e6" target="_blank">a61f46b</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefsshgitgithubcomdamonbayerucicovid19dashboardtree391cfa4ebed4fad3b46727249126b6db75e8222etargetblank391cfa4a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdamonbayerucicovid19dashboardtreea61f46be459e154ddb1863e168f7a9e2c22826e6targetblanka61f46ba" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/tree/391cfa4ebed4fad3b46727249126b6db75e8222e" target="_blank">391cfa4</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/damonbayer/uci_covid19_dashboard/tree/a61f46be459e154ddb1863e168f7a9e2c22826e6" target="_blank">a61f46b</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .Renviron
+    Ignored:    .DS_Store
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+    Ignored:    analysis/.DS_Store
+    Ignored:    data/.DS_Store
 
-Untracked files:
-    Untracked:  r_env.yml
-    Untracked:  rebuild
+Unstaged changes:
+    Modified:   data/oc_city_data.csv
+    Modified:   data/oc_zip_month_data.csv
 
 </code></pre>
 <p>
@@ -569,7 +542,24 @@ Message
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/391cfa4ebed4fad3b46727249126b6db75e8222e/docs/cencal-counties.html" target="_blank">391cfa4</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/a61f46be459e154ddb1863e168f7a9e2c22826e6/docs/cencal-counties.html" target="_blank">a61f46b</a>
+</td>
+<td>
+markellekelly
+</td>
+<td>
+2021-11-15
+</td>
+<td>
+automatic update - 2021-11-15
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/391cfa4ebed4fad3b46727249126b6db75e8222e/docs/cencal-counties.html" target="_blank">391cfa4</a>
 </td>
 <td>
 markellekelly
@@ -586,7 +576,7 @@ automatic update - 2021-11-14
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5f67bc3964a078401572a14edc70e609fe2a0832/docs/cencal-counties.html" target="_blank">5f67bc3</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/5f67bc3964a078401572a14edc70e609fe2a0832/docs/cencal-counties.html" target="_blank">5f67bc3</a>
 </td>
 <td>
 markellekelly
@@ -603,7 +593,7 @@ automatic update - 2021-11-13
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e8476c68824fb345f1b24f6f0f1ee80294235980/docs/cencal-counties.html" target="_blank">e8476c6</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/e8476c68824fb345f1b24f6f0f1ee80294235980/docs/cencal-counties.html" target="_blank">e8476c6</a>
 </td>
 <td>
 markellekelly
@@ -620,7 +610,7 @@ automatic update - 2021-11-12
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/13e241eada4adab1e2542b00874b0cd782a54520/docs/cencal-counties.html" target="_blank">13e241e</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/13e241eada4adab1e2542b00874b0cd782a54520/docs/cencal-counties.html" target="_blank">13e241e</a>
 </td>
 <td>
 markellekelly
@@ -637,7 +627,7 @@ automatic update - 2021-11-11
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d2b95be166a2387f88fea3e37a552534082cfdea/docs/cencal-counties.html" target="_blank">d2b95be</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/d2b95be166a2387f88fea3e37a552534082cfdea/docs/cencal-counties.html" target="_blank">d2b95be</a>
 </td>
 <td>
 markellekelly
@@ -654,7 +644,7 @@ automatic update - 2021-11-10
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/20836d64a5d230b841b107c7484c8c9f7f8351a4/docs/cencal-counties.html" target="_blank">20836d6</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/20836d64a5d230b841b107c7484c8c9f7f8351a4/docs/cencal-counties.html" target="_blank">20836d6</a>
 </td>
 <td>
 markellekelly
@@ -671,7 +661,7 @@ automatic update - 2021-11-09
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/427010d4d69f24a7d35123b78f2425f5fc3c962d/docs/cencal-counties.html" target="_blank">427010d</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/427010d4d69f24a7d35123b78f2425f5fc3c962d/docs/cencal-counties.html" target="_blank">427010d</a>
 </td>
 <td>
 Damon Bayer
@@ -688,7 +678,7 @@ Damon Bayer
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2cc66a5d91dcb86a6ea4758213e03d24a7d5ef6c/docs/cencal-counties.html" target="_blank">2cc66a5</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/2cc66a5d91dcb86a6ea4758213e03d24a7d5ef6c/docs/cencal-counties.html" target="_blank">2cc66a5</a>
 </td>
 <td>
 Damon Bayer
@@ -705,7 +695,7 @@ Damon Bayer
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/41ba87004135fe68385ea31c4f8a88c281d936e1/docs/cencal-counties.html" target="_blank">41ba870</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/41ba87004135fe68385ea31c4f8a88c281d936e1/docs/cencal-counties.html" target="_blank">41ba870</a>
 </td>
 <td>
 markellekelly
@@ -722,7 +712,7 @@ automatic update - 2021-11-08
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/dc4218e639787d2524392eacbed9379d8ad602dd/docs/cencal-counties.html" target="_blank">dc4218e</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/dc4218e639787d2524392eacbed9379d8ad602dd/docs/cencal-counties.html" target="_blank">dc4218e</a>
 </td>
 <td>
 markellekelly
@@ -739,7 +729,7 @@ automatic update - 2021-11-07
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c5da767e70d7b514008bf1075bda4777cbe10708/docs/cencal-counties.html" target="_blank">c5da767</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/c5da767e70d7b514008bf1075bda4777cbe10708/docs/cencal-counties.html" target="_blank">c5da767</a>
 </td>
 <td>
 markellekelly
@@ -756,7 +746,7 @@ automatic update - 2021-11-06
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c1ea835969f0c56ffe9db39212b3413170058883/docs/cencal-counties.html" target="_blank">c1ea835</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/c1ea835969f0c56ffe9db39212b3413170058883/docs/cencal-counties.html" target="_blank">c1ea835</a>
 </td>
 <td>
 markellekelly
@@ -773,7 +763,7 @@ automatic update - 2021-11-05
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e3218b712fc525c44bcf7acb4c42bb320103520d/docs/cencal-counties.html" target="_blank">e3218b7</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/e3218b712fc525c44bcf7acb4c42bb320103520d/docs/cencal-counties.html" target="_blank">e3218b7</a>
 </td>
 <td>
 Damon Bayer
@@ -790,7 +780,7 @@ Damon Bayer
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/ce715a6e8b7dff5e4883a0550831fcd9ba59c0a9/docs/cencal-counties.html" target="_blank">ce715a6</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/ce715a6e8b7dff5e4883a0550831fcd9ba59c0a9/docs/cencal-counties.html" target="_blank">ce715a6</a>
 </td>
 <td>
 markellekelly
@@ -807,7 +797,7 @@ automatic update - 2021-11-04
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/dc9c2a60c5c5c482cb584ec6f611e0e83cdf5bbc/docs/cencal-counties.html" target="_blank">dc9c2a6</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/dc9c2a60c5c5c482cb584ec6f611e0e83cdf5bbc/docs/cencal-counties.html" target="_blank">dc9c2a6</a>
 </td>
 <td>
 markellekelly
@@ -824,7 +814,7 @@ automatic update - 2021-11-03
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/805e558ac97727c2870ebb970fb628a47609babf/docs/cencal-counties.html" target="_blank">805e558</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/805e558ac97727c2870ebb970fb628a47609babf/docs/cencal-counties.html" target="_blank">805e558</a>
 </td>
 <td>
 markellekelly
@@ -841,7 +831,7 @@ automatic update - 2021-11-02
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/73ffebdda86091ff74df966f9b141fca9c767d29/docs/cencal-counties.html" target="_blank">73ffebd</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/73ffebdda86091ff74df966f9b141fca9c767d29/docs/cencal-counties.html" target="_blank">73ffebd</a>
 </td>
 <td>
 markellekelly
@@ -858,7 +848,7 @@ automatic update - 2021-11-01
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/29d0de083699ffca75a352a3de38aac251c427c6/docs/cencal-counties.html" target="_blank">29d0de0</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/29d0de083699ffca75a352a3de38aac251c427c6/docs/cencal-counties.html" target="_blank">29d0de0</a>
 </td>
 <td>
 Damon Bayer
@@ -875,7 +865,7 @@ Damon Bayer
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/1acdaf6f8b111b81da3f016df146270766b62873/docs/cencal-counties.html" target="_blank">1acdaf6</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/1acdaf6f8b111b81da3f016df146270766b62873/docs/cencal-counties.html" target="_blank">1acdaf6</a>
 </td>
 <td>
 markellekelly
@@ -892,7 +882,7 @@ automatic update - 2021-10-31
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/61e9868bb4340390c8385201c8ab7b74e0265155/docs/cencal-counties.html" target="_blank">61e9868</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/61e9868bb4340390c8385201c8ab7b74e0265155/docs/cencal-counties.html" target="_blank">61e9868</a>
 </td>
 <td>
 markellekelly
@@ -909,7 +899,7 @@ automatic update - 2021-10-30
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/edfd60677e4efe6a9ed97b127ec5956b35530025/docs/cencal-counties.html" target="_blank">edfd606</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/edfd60677e4efe6a9ed97b127ec5956b35530025/docs/cencal-counties.html" target="_blank">edfd606</a>
 </td>
 <td>
 markellekelly
@@ -926,7 +916,7 @@ automatic update - 2021-10-29
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/974177ee2388440a45c84489eaf218f737f99b5e/docs/cencal-counties.html" target="_blank">974177e</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/974177ee2388440a45c84489eaf218f737f99b5e/docs/cencal-counties.html" target="_blank">974177e</a>
 </td>
 <td>
 markellekelly
@@ -943,7 +933,7 @@ automatic update - 2021-10-28
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/add1d3c2baced622bb7203f3db51fac44af872e1/docs/cencal-counties.html" target="_blank">add1d3c</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/add1d3c2baced622bb7203f3db51fac44af872e1/docs/cencal-counties.html" target="_blank">add1d3c</a>
 </td>
 <td>
 markellekelly
@@ -960,7 +950,7 @@ automatic update - 2021-10-27
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/9ee1cf6e1cd4eceaf89d5c520d501cd4ce12036c/docs/cencal-counties.html" target="_blank">9ee1cf6</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/9ee1cf6e1cd4eceaf89d5c520d501cd4ce12036c/docs/cencal-counties.html" target="_blank">9ee1cf6</a>
 </td>
 <td>
 markellekelly
@@ -977,7 +967,7 @@ automatic update - 2021-10-26
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/4465525b5a4bbf00807d4438d717c977331e39f5/docs/cencal-counties.html" target="_blank">4465525</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/4465525b5a4bbf00807d4438d717c977331e39f5/docs/cencal-counties.html" target="_blank">4465525</a>
 </td>
 <td>
 markellekelly
@@ -994,7 +984,7 @@ automatic update - 2021-10-25
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/8eb3c1811ab255d4396ef35e4f378bb87477394f/docs/cencal-counties.html" target="_blank">8eb3c18</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/8eb3c1811ab255d4396ef35e4f378bb87477394f/docs/cencal-counties.html" target="_blank">8eb3c18</a>
 </td>
 <td>
 Damon Bayer
@@ -1011,7 +1001,7 @@ Damon Bayer
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2bc98e266242b0438ce6493d5333f18af7d163f8/docs/cencal-counties.html" target="_blank">2bc98e2</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/2bc98e266242b0438ce6493d5333f18af7d163f8/docs/cencal-counties.html" target="_blank">2bc98e2</a>
 </td>
 <td>
 markellekelly
@@ -1028,7 +1018,7 @@ automatic update - 2021-10-24
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5103ea09873e43f9d1f5abd6f89b2c8098ef8105/docs/cencal-counties.html" target="_blank">5103ea0</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/5103ea09873e43f9d1f5abd6f89b2c8098ef8105/docs/cencal-counties.html" target="_blank">5103ea0</a>
 </td>
 <td>
 markellekelly
@@ -1045,7 +1035,7 @@ automatic update - 2021-10-23
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/928264d640dde7510040c300ef70dc8f96ac439f/docs/cencal-counties.html" target="_blank">928264d</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/928264d640dde7510040c300ef70dc8f96ac439f/docs/cencal-counties.html" target="_blank">928264d</a>
 </td>
 <td>
 markellekelly
@@ -1062,7 +1052,7 @@ automatic update - 2021-10-22
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/70b42165b2fd72b4086d655bfd154d43051d4387/docs/cencal-counties.html" target="_blank">70b4216</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/70b42165b2fd72b4086d655bfd154d43051d4387/docs/cencal-counties.html" target="_blank">70b4216</a>
 </td>
 <td>
 markellekelly
@@ -1079,7 +1069,7 @@ automatic update - 2021-10-21
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/596843ddb6c5b77ab47e221ac2da18d5826378eb/docs/cencal-counties.html" target="_blank">596843d</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/596843ddb6c5b77ab47e221ac2da18d5826378eb/docs/cencal-counties.html" target="_blank">596843d</a>
 </td>
 <td>
 markellekelly
@@ -1096,7 +1086,7 @@ automatic update - 2021-10-20
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/fd90c95d514c46af9162c281b367742b25295fa2/docs/cencal-counties.html" target="_blank">fd90c95</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/fd90c95d514c46af9162c281b367742b25295fa2/docs/cencal-counties.html" target="_blank">fd90c95</a>
 </td>
 <td>
 markellekelly
@@ -1113,7 +1103,7 @@ automatic update - 2021-10-19
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/1a79f986be66f9a046a0da67917c7f3d36d17887/docs/cencal-counties.html" target="_blank">1a79f98</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/1a79f986be66f9a046a0da67917c7f3d36d17887/docs/cencal-counties.html" target="_blank">1a79f98</a>
 </td>
 <td>
 Damon Bayer
@@ -1130,7 +1120,7 @@ Damon Bayer
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/47e164879ebeb0373e1dc2fe436c392c3ac71c74/docs/cencal-counties.html" target="_blank">47e1648</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/47e164879ebeb0373e1dc2fe436c392c3ac71c74/docs/cencal-counties.html" target="_blank">47e1648</a>
 </td>
 <td>
 markellekelly
@@ -1147,7 +1137,7 @@ automatic update - 2021-10-18
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f93d4bf3f14e0b9f1182e77f39edea13df86033d/docs/cencal-counties.html" target="_blank">f93d4bf</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/f93d4bf3f14e0b9f1182e77f39edea13df86033d/docs/cencal-counties.html" target="_blank">f93d4bf</a>
 </td>
 <td>
 markellekelly
@@ -1164,7 +1154,7 @@ automatic update - 2021-10-17
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e5a8ef7c17f0648e2445660cb1961c941ded068c/docs/cencal-counties.html" target="_blank">e5a8ef7</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/e5a8ef7c17f0648e2445660cb1961c941ded068c/docs/cencal-counties.html" target="_blank">e5a8ef7</a>
 </td>
 <td>
 markellekelly
@@ -1181,7 +1171,7 @@ automatic update - 2021-10-16
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2e8651e0926e8768d9755b97be0a60448d49619b/docs/cencal-counties.html" target="_blank">2e8651e</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/2e8651e0926e8768d9755b97be0a60448d49619b/docs/cencal-counties.html" target="_blank">2e8651e</a>
 </td>
 <td>
 markellekelly
@@ -1198,7 +1188,7 @@ automatic update - 2021-10-15
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/afbc0a1fd19a636de5b64bfdbcfdd17087a7dc3a/docs/cencal-counties.html" target="_blank">afbc0a1</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/afbc0a1fd19a636de5b64bfdbcfdd17087a7dc3a/docs/cencal-counties.html" target="_blank">afbc0a1</a>
 </td>
 <td>
 markellekelly
@@ -1215,7 +1205,7 @@ automatic update - 2021-10-14
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5a7977de7a1b78dd76b8b96de158402e23eaeaff/docs/cencal-counties.html" target="_blank">5a7977d</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/5a7977de7a1b78dd76b8b96de158402e23eaeaff/docs/cencal-counties.html" target="_blank">5a7977d</a>
 </td>
 <td>
 vnminin
@@ -1232,7 +1222,7 @@ rebuilt to update city trend plots
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2829fd0e2fbbdb0d15d4a3e7ed3123dc8023fb7a/docs/cencal-counties.html" target="_blank">2829fd0</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/2829fd0e2fbbdb0d15d4a3e7ed3123dc8023fb7a/docs/cencal-counties.html" target="_blank">2829fd0</a>
 </td>
 <td>
 markellekelly
@@ -1249,7 +1239,7 @@ automatic update - 2021-10-13
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/3f02cb53d497fe8cecfbc72f35247b056227dc75/docs/cencal-counties.html" target="_blank">3f02cb5</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/3f02cb53d497fe8cecfbc72f35247b056227dc75/docs/cencal-counties.html" target="_blank">3f02cb5</a>
 </td>
 <td>
 markellekelly
@@ -1266,7 +1256,7 @@ automatic update - 2021-10-12
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5e2357e661dc5299a856294e882e19fdb8e96c85/docs/cencal-counties.html" target="_blank">5e2357e</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/5e2357e661dc5299a856294e882e19fdb8e96c85/docs/cencal-counties.html" target="_blank">5e2357e</a>
 </td>
 <td>
 markellekelly
@@ -1283,7 +1273,7 @@ automatic update - 2021-10-11
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/68471444cba5ae13504ecc858ddeaa1f877833d2/docs/cencal-counties.html" target="_blank">6847144</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/68471444cba5ae13504ecc858ddeaa1f877833d2/docs/cencal-counties.html" target="_blank">6847144</a>
 </td>
 <td>
 markellekelly
@@ -1300,7 +1290,7 @@ automatic update - 2021-10-10
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/311566445dcec84923ff127050aafd069b034026/docs/cencal-counties.html" target="_blank">3115664</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/311566445dcec84923ff127050aafd069b034026/docs/cencal-counties.html" target="_blank">3115664</a>
 </td>
 <td>
 markellekelly
@@ -1317,7 +1307,7 @@ automatic update - 2021-10-09
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f9a5bc11a8118fe5e885307a093d33c063f572b9/docs/cencal-counties.html" target="_blank">f9a5bc1</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/f9a5bc11a8118fe5e885307a093d33c063f572b9/docs/cencal-counties.html" target="_blank">f9a5bc1</a>
 </td>
 <td>
 markellekelly
@@ -1334,7 +1324,7 @@ automatic update - 2021-10-08
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/0bacb1ab4f08415664424c207034a6dd121e3eab/docs/cencal-counties.html" target="_blank">0bacb1a</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/0bacb1ab4f08415664424c207034a6dd121e3eab/docs/cencal-counties.html" target="_blank">0bacb1a</a>
 </td>
 <td>
 markellekelly
@@ -1351,7 +1341,7 @@ automatic update - 2021-10-07
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/05c4c323a5cb0483c3a44f0b44788d2d1b8c8f28/docs/cencal-counties.html" target="_blank">05c4c32</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/05c4c323a5cb0483c3a44f0b44788d2d1b8c8f28/docs/cencal-counties.html" target="_blank">05c4c32</a>
 </td>
 <td>
 markellekelly
@@ -1368,7 +1358,7 @@ automatic update - 2021-10-06
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/093bd02ab1f8dc70de2f797633d4c6cbf69d363e/docs/cencal-counties.html" target="_blank">093bd02</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/093bd02ab1f8dc70de2f797633d4c6cbf69d363e/docs/cencal-counties.html" target="_blank">093bd02</a>
 </td>
 <td>
 markellekelly
@@ -1385,7 +1375,7 @@ automatic update - 2021-10-05
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d9631ef974bed649c5a854a51425fdccfe0376dc/docs/cencal-counties.html" target="_blank">d9631ef</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/d9631ef974bed649c5a854a51425fdccfe0376dc/docs/cencal-counties.html" target="_blank">d9631ef</a>
 </td>
 <td>
 vnminin
@@ -1402,7 +1392,7 @@ another small date tweak
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/bc0d8fc804639e99c89041e95cb8a0c93cd0da46/docs/cencal-counties.html" target="_blank">bc0d8fc</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/bc0d8fc804639e99c89041e95cb8a0c93cd0da46/docs/cencal-counties.html" target="_blank">bc0d8fc</a>
 </td>
 <td>
 vnminin
@@ -1419,7 +1409,7 @@ made dates more spread out
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/327a14f5afdcb7ea375e748ebd8fb3b3825305ef/docs/cencal-counties.html" target="_blank">327a14f</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/327a14f5afdcb7ea375e748ebd8fb3b3825305ef/docs/cencal-counties.html" target="_blank">327a14f</a>
 </td>
 <td>
 vnminin
@@ -1436,7 +1426,7 @@ publishing city update
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5f822fd5ff8925e55133ba668c14b280ba6dc232/docs/cencal-counties.html" target="_blank">5f822fd</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/5f822fd5ff8925e55133ba668c14b280ba6dc232/docs/cencal-counties.html" target="_blank">5f822fd</a>
 </td>
 <td>
 markellekelly
@@ -1453,7 +1443,7 @@ automatic update - 2021-10-04
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/345f55ec5933ebf239e427ebd631307e018288d9/docs/cencal-counties.html" target="_blank">345f55e</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/345f55ec5933ebf239e427ebd631307e018288d9/docs/cencal-counties.html" target="_blank">345f55e</a>
 </td>
 <td>
 markellekelly
@@ -1470,7 +1460,7 @@ automatic update - 2021-10-03
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/732e040a9c2dff26b7768a3f8447d9aac6a7c524/docs/cencal-counties.html" target="_blank">732e040</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/732e040a9c2dff26b7768a3f8447d9aac6a7c524/docs/cencal-counties.html" target="_blank">732e040</a>
 </td>
 <td>
 markellekelly
@@ -1487,7 +1477,7 @@ automatic update - 2021-10-02
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/70e2c65d789b89a1f8177f39c2ab14bbfe371424/docs/cencal-counties.html" target="_blank">70e2c65</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/70e2c65d789b89a1f8177f39c2ab14bbfe371424/docs/cencal-counties.html" target="_blank">70e2c65</a>
 </td>
 <td>
 markellekelly
@@ -1504,7 +1494,7 @@ automatic update - 2021-10-01
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f3a63125f7826a34300a5b8363eb074c07c199ca/docs/cencal-counties.html" target="_blank">f3a6312</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/f3a63125f7826a34300a5b8363eb074c07c199ca/docs/cencal-counties.html" target="_blank">f3a6312</a>
 </td>
 <td>
 markellekelly
@@ -1521,7 +1511,7 @@ automatic update - 2021-09-30
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/a5b7069ecc54d664222c1aacf80e81e3e01a216f/docs/cencal-counties.html" target="_blank">a5b7069</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/a5b7069ecc54d664222c1aacf80e81e3e01a216f/docs/cencal-counties.html" target="_blank">a5b7069</a>
 </td>
 <td>
 markellekelly
@@ -1538,7 +1528,7 @@ automatic update - 2021-09-29
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/68c376ca19e08628c96cb782c4bce22176b01a14/docs/cencal-counties.html" target="_blank">68c376c</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/68c376ca19e08628c96cb782c4bce22176b01a14/docs/cencal-counties.html" target="_blank">68c376c</a>
 </td>
 <td>
 markellekelly
@@ -1555,7 +1545,7 @@ automatic update - 2021-09-28
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/97a0f92749c94d3e88fc2025901ef4feab2037c4/docs/cencal-counties.html" target="_blank">97a0f92</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/97a0f92749c94d3e88fc2025901ef4feab2037c4/docs/cencal-counties.html" target="_blank">97a0f92</a>
 </td>
 <td>
 markellekelly
@@ -1572,7 +1562,7 @@ automatic update - 2021-09-27
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/8fc7e76bfa38845af2d968c2da575154ae3482a6/docs/cencal-counties.html" target="_blank">8fc7e76</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/8fc7e76bfa38845af2d968c2da575154ae3482a6/docs/cencal-counties.html" target="_blank">8fc7e76</a>
 </td>
 <td>
 markellekelly
@@ -1589,7 +1579,7 @@ automatic update - 2021-09-26
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/4f060a3f34347ad3f739752b42267e4216b20586/docs/cencal-counties.html" target="_blank">4f060a3</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/4f060a3f34347ad3f739752b42267e4216b20586/docs/cencal-counties.html" target="_blank">4f060a3</a>
 </td>
 <td>
 markellekelly
@@ -1606,7 +1596,7 @@ automatic update - 2021-09-25
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/6b921f7501c48cca388328ddf86777e1910d41a6/docs/cencal-counties.html" target="_blank">6b921f7</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/6b921f7501c48cca388328ddf86777e1910d41a6/docs/cencal-counties.html" target="_blank">6b921f7</a>
 </td>
 <td>
 markellekelly
@@ -1623,7 +1613,7 @@ automatic update - 2021-09-24
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/14eb77b7e4b82a8ed8329e6d67c480844b7a299c/docs/cencal-counties.html" target="_blank">14eb77b</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/14eb77b7e4b82a8ed8329e6d67c480844b7a299c/docs/cencal-counties.html" target="_blank">14eb77b</a>
 </td>
 <td>
 markellekelly
@@ -1640,7 +1630,7 @@ automatic update - 2021-09-23
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/833dd76f8610eb8a94b6e4f9bf5b8a604ba4db0d/docs/cencal-counties.html" target="_blank">833dd76</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/833dd76f8610eb8a94b6e4f9bf5b8a604ba4db0d/docs/cencal-counties.html" target="_blank">833dd76</a>
 </td>
 <td>
 markellekelly
@@ -1657,7 +1647,7 @@ automatic update - 2021-09-22
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/866712e56ce1cd880f2651a22c1e6c4eafc98ab7/docs/cencal-counties.html" target="_blank">866712e</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/866712e56ce1cd880f2651a22c1e6c4eafc98ab7/docs/cencal-counties.html" target="_blank">866712e</a>
 </td>
 <td>
 markellekelly
@@ -1674,7 +1664,7 @@ automatic update - 2021-09-21
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/67b0c809245c4c5735ef15e5891bdf415667fd11/docs/cencal-counties.html" target="_blank">67b0c80</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/67b0c809245c4c5735ef15e5891bdf415667fd11/docs/cencal-counties.html" target="_blank">67b0c80</a>
 </td>
 <td>
 vnminin
@@ -1691,7 +1681,7 @@ Sep 20, 2021 update
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/bc9db27319686becbeb3d9e04886ba95104cac37/docs/cencal-counties.html" target="_blank">bc9db27</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/bc9db27319686becbeb3d9e04886ba95104cac37/docs/cencal-counties.html" target="_blank">bc9db27</a>
 </td>
 <td>
 markellekelly
@@ -1708,7 +1698,7 @@ automatic update - 2021-09-20
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/499fd2d7c60755bb9c29b66dedae2f10a6520755/docs/cencal-counties.html" target="_blank">499fd2d</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/499fd2d7c60755bb9c29b66dedae2f10a6520755/docs/cencal-counties.html" target="_blank">499fd2d</a>
 </td>
 <td>
 markellekelly
@@ -1725,7 +1715,7 @@ automatic update - 2021-09-19
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c1d71c6b00cfafba40571659b08b752e605d9bed/docs/cencal-counties.html" target="_blank">c1d71c6</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/c1d71c6b00cfafba40571659b08b752e605d9bed/docs/cencal-counties.html" target="_blank">c1d71c6</a>
 </td>
 <td>
 markellekelly
@@ -1742,7 +1732,7 @@ automatic update - 2021-09-18
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d21bc1d2182b34e0e9fba093bc16d4abed2d072d/docs/cencal-counties.html" target="_blank">d21bc1d</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/d21bc1d2182b34e0e9fba093bc16d4abed2d072d/docs/cencal-counties.html" target="_blank">d21bc1d</a>
 </td>
 <td>
 vnminin
@@ -1759,7 +1749,7 @@ Sep 13 2021 update
 Rmd
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/analysis/cencal-counties.Rmd" target="_blank">09c2819</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/analysis/cencal-counties.Rmd" target="_blank">09c2819</a>
 </td>
 <td>
 vnminin
@@ -1776,7 +1766,7 @@ added central California
 html
 </td>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/docs/cencal-counties.html" target="_blank">09c2819</a>
+<a href="https://rawcdn.githack.com/damonbayer/uci_covid19_dashboard/09c2819ee0e42d107a28f2729e62ff42574d45e7/docs/cencal-counties.html" target="_blank">09c2819</a>
 </td>
 <td>
 vnminin
@@ -1831,7 +1821,18 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/391cfa4ebed4fad3b46727249126b6db75e8222e/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">391cfa4</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/a61f46be459e154ddb1863e168f7a9e2c22826e6/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">a61f46b</a>
+</td>
+<td>
+markellekelly
+</td>
+<td>
+2021-11-15
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/391cfa4ebed4fad3b46727249126b6db75e8222e/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">391cfa4</a>
 </td>
 <td>
 markellekelly
@@ -1842,7 +1843,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5f67bc3964a078401572a14edc70e609fe2a0832/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">5f67bc3</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5f67bc3964a078401572a14edc70e609fe2a0832/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">5f67bc3</a>
 </td>
 <td>
 markellekelly
@@ -1853,7 +1854,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e8476c68824fb345f1b24f6f0f1ee80294235980/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">e8476c6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e8476c68824fb345f1b24f6f0f1ee80294235980/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">e8476c6</a>
 </td>
 <td>
 markellekelly
@@ -1864,7 +1865,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/13e241eada4adab1e2542b00874b0cd782a54520/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">13e241e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/13e241eada4adab1e2542b00874b0cd782a54520/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">13e241e</a>
 </td>
 <td>
 markellekelly
@@ -1875,7 +1876,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d2b95be166a2387f88fea3e37a552534082cfdea/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">d2b95be</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d2b95be166a2387f88fea3e37a552534082cfdea/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">d2b95be</a>
 </td>
 <td>
 markellekelly
@@ -1886,7 +1887,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/20836d64a5d230b841b107c7484c8c9f7f8351a4/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">20836d6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/20836d64a5d230b841b107c7484c8c9f7f8351a4/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">20836d6</a>
 </td>
 <td>
 markellekelly
@@ -1897,7 +1898,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/427010d4d69f24a7d35123b78f2425f5fc3c962d/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">427010d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/427010d4d69f24a7d35123b78f2425f5fc3c962d/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">427010d</a>
 </td>
 <td>
 Damon Bayer
@@ -1908,7 +1909,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2cc66a5d91dcb86a6ea4758213e03d24a7d5ef6c/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">2cc66a5</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2cc66a5d91dcb86a6ea4758213e03d24a7d5ef6c/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">2cc66a5</a>
 </td>
 <td>
 Damon Bayer
@@ -1919,7 +1920,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/41ba87004135fe68385ea31c4f8a88c281d936e1/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">41ba870</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/41ba87004135fe68385ea31c4f8a88c281d936e1/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">41ba870</a>
 </td>
 <td>
 markellekelly
@@ -1930,7 +1931,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c5da767e70d7b514008bf1075bda4777cbe10708/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">c5da767</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c5da767e70d7b514008bf1075bda4777cbe10708/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">c5da767</a>
 </td>
 <td>
 markellekelly
@@ -1941,7 +1942,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c1ea835969f0c56ffe9db39212b3413170058883/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">c1ea835</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c1ea835969f0c56ffe9db39212b3413170058883/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">c1ea835</a>
 </td>
 <td>
 markellekelly
@@ -1952,7 +1953,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e3218b712fc525c44bcf7acb4c42bb320103520d/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">e3218b7</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e3218b712fc525c44bcf7acb4c42bb320103520d/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">e3218b7</a>
 </td>
 <td>
 Damon Bayer
@@ -1963,7 +1964,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/ce715a6e8b7dff5e4883a0550831fcd9ba59c0a9/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">ce715a6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ce715a6e8b7dff5e4883a0550831fcd9ba59c0a9/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">ce715a6</a>
 </td>
 <td>
 markellekelly
@@ -1974,7 +1975,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/dc9c2a60c5c5c482cb584ec6f611e0e83cdf5bbc/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">dc9c2a6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/dc9c2a60c5c5c482cb584ec6f611e0e83cdf5bbc/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">dc9c2a6</a>
 </td>
 <td>
 markellekelly
@@ -1985,7 +1986,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/805e558ac97727c2870ebb970fb628a47609babf/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">805e558</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/805e558ac97727c2870ebb970fb628a47609babf/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">805e558</a>
 </td>
 <td>
 markellekelly
@@ -1996,7 +1997,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/73ffebdda86091ff74df966f9b141fca9c767d29/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">73ffebd</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/73ffebdda86091ff74df966f9b141fca9c767d29/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">73ffebd</a>
 </td>
 <td>
 markellekelly
@@ -2007,7 +2008,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/29d0de083699ffca75a352a3de38aac251c427c6/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">29d0de0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/29d0de083699ffca75a352a3de38aac251c427c6/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">29d0de0</a>
 </td>
 <td>
 Damon Bayer
@@ -2018,7 +2019,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/1acdaf6f8b111b81da3f016df146270766b62873/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">1acdaf6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/1acdaf6f8b111b81da3f016df146270766b62873/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">1acdaf6</a>
 </td>
 <td>
 markellekelly
@@ -2029,7 +2030,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/61e9868bb4340390c8385201c8ab7b74e0265155/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">61e9868</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/61e9868bb4340390c8385201c8ab7b74e0265155/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">61e9868</a>
 </td>
 <td>
 markellekelly
@@ -2040,7 +2041,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/edfd60677e4efe6a9ed97b127ec5956b35530025/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">edfd606</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/edfd60677e4efe6a9ed97b127ec5956b35530025/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">edfd606</a>
 </td>
 <td>
 markellekelly
@@ -2051,7 +2052,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/974177ee2388440a45c84489eaf218f737f99b5e/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">974177e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/974177ee2388440a45c84489eaf218f737f99b5e/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">974177e</a>
 </td>
 <td>
 markellekelly
@@ -2062,7 +2063,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/add1d3c2baced622bb7203f3db51fac44af872e1/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">add1d3c</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/add1d3c2baced622bb7203f3db51fac44af872e1/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">add1d3c</a>
 </td>
 <td>
 markellekelly
@@ -2073,7 +2074,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/9ee1cf6e1cd4eceaf89d5c520d501cd4ce12036c/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">9ee1cf6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9ee1cf6e1cd4eceaf89d5c520d501cd4ce12036c/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">9ee1cf6</a>
 </td>
 <td>
 markellekelly
@@ -2084,7 +2085,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/4465525b5a4bbf00807d4438d717c977331e39f5/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">4465525</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/4465525b5a4bbf00807d4438d717c977331e39f5/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">4465525</a>
 </td>
 <td>
 markellekelly
@@ -2095,7 +2096,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/8eb3c1811ab255d4396ef35e4f378bb87477394f/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">8eb3c18</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/8eb3c1811ab255d4396ef35e4f378bb87477394f/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">8eb3c18</a>
 </td>
 <td>
 Damon Bayer
@@ -2106,7 +2107,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2bc98e266242b0438ce6493d5333f18af7d163f8/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">2bc98e2</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2bc98e266242b0438ce6493d5333f18af7d163f8/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">2bc98e2</a>
 </td>
 <td>
 markellekelly
@@ -2117,7 +2118,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5103ea09873e43f9d1f5abd6f89b2c8098ef8105/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">5103ea0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5103ea09873e43f9d1f5abd6f89b2c8098ef8105/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">5103ea0</a>
 </td>
 <td>
 markellekelly
@@ -2128,7 +2129,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/928264d640dde7510040c300ef70dc8f96ac439f/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">928264d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/928264d640dde7510040c300ef70dc8f96ac439f/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">928264d</a>
 </td>
 <td>
 markellekelly
@@ -2139,7 +2140,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/70b42165b2fd72b4086d655bfd154d43051d4387/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">70b4216</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/70b42165b2fd72b4086d655bfd154d43051d4387/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">70b4216</a>
 </td>
 <td>
 markellekelly
@@ -2150,7 +2151,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/596843ddb6c5b77ab47e221ac2da18d5826378eb/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">596843d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/596843ddb6c5b77ab47e221ac2da18d5826378eb/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">596843d</a>
 </td>
 <td>
 markellekelly
@@ -2161,7 +2162,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/fd90c95d514c46af9162c281b367742b25295fa2/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">fd90c95</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/fd90c95d514c46af9162c281b367742b25295fa2/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">fd90c95</a>
 </td>
 <td>
 markellekelly
@@ -2172,7 +2173,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/1a79f986be66f9a046a0da67917c7f3d36d17887/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">1a79f98</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/1a79f986be66f9a046a0da67917c7f3d36d17887/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">1a79f98</a>
 </td>
 <td>
 Damon Bayer
@@ -2183,7 +2184,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/47e164879ebeb0373e1dc2fe436c392c3ac71c74/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">47e1648</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/47e164879ebeb0373e1dc2fe436c392c3ac71c74/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">47e1648</a>
 </td>
 <td>
 markellekelly
@@ -2194,7 +2195,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f93d4bf3f14e0b9f1182e77f39edea13df86033d/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">f93d4bf</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f93d4bf3f14e0b9f1182e77f39edea13df86033d/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">f93d4bf</a>
 </td>
 <td>
 markellekelly
@@ -2205,7 +2206,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e5a8ef7c17f0648e2445660cb1961c941ded068c/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">e5a8ef7</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e5a8ef7c17f0648e2445660cb1961c941ded068c/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">e5a8ef7</a>
 </td>
 <td>
 markellekelly
@@ -2216,7 +2217,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2e8651e0926e8768d9755b97be0a60448d49619b/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">2e8651e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2e8651e0926e8768d9755b97be0a60448d49619b/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">2e8651e</a>
 </td>
 <td>
 markellekelly
@@ -2227,7 +2228,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/afbc0a1fd19a636de5b64bfdbcfdd17087a7dc3a/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">afbc0a1</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/afbc0a1fd19a636de5b64bfdbcfdd17087a7dc3a/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">afbc0a1</a>
 </td>
 <td>
 markellekelly
@@ -2238,7 +2239,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5a7977de7a1b78dd76b8b96de158402e23eaeaff/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">5a7977d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5a7977de7a1b78dd76b8b96de158402e23eaeaff/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">5a7977d</a>
 </td>
 <td>
 vnminin
@@ -2249,7 +2250,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2829fd0e2fbbdb0d15d4a3e7ed3123dc8023fb7a/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">2829fd0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2829fd0e2fbbdb0d15d4a3e7ed3123dc8023fb7a/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">2829fd0</a>
 </td>
 <td>
 markellekelly
@@ -2260,7 +2261,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/3f02cb53d497fe8cecfbc72f35247b056227dc75/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">3f02cb5</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/3f02cb53d497fe8cecfbc72f35247b056227dc75/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">3f02cb5</a>
 </td>
 <td>
 markellekelly
@@ -2271,7 +2272,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5e2357e661dc5299a856294e882e19fdb8e96c85/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">5e2357e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5e2357e661dc5299a856294e882e19fdb8e96c85/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">5e2357e</a>
 </td>
 <td>
 markellekelly
@@ -2282,7 +2283,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/68471444cba5ae13504ecc858ddeaa1f877833d2/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">6847144</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/68471444cba5ae13504ecc858ddeaa1f877833d2/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">6847144</a>
 </td>
 <td>
 markellekelly
@@ -2293,7 +2294,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/311566445dcec84923ff127050aafd069b034026/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">3115664</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/311566445dcec84923ff127050aafd069b034026/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">3115664</a>
 </td>
 <td>
 markellekelly
@@ -2304,7 +2305,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f9a5bc11a8118fe5e885307a093d33c063f572b9/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">f9a5bc1</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f9a5bc11a8118fe5e885307a093d33c063f572b9/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">f9a5bc1</a>
 </td>
 <td>
 markellekelly
@@ -2315,7 +2316,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/0bacb1ab4f08415664424c207034a6dd121e3eab/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">0bacb1a</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0bacb1ab4f08415664424c207034a6dd121e3eab/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">0bacb1a</a>
 </td>
 <td>
 markellekelly
@@ -2326,7 +2327,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/05c4c323a5cb0483c3a44f0b44788d2d1b8c8f28/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">05c4c32</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/05c4c323a5cb0483c3a44f0b44788d2d1b8c8f28/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">05c4c32</a>
 </td>
 <td>
 markellekelly
@@ -2337,7 +2338,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/093bd02ab1f8dc70de2f797633d4c6cbf69d363e/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">093bd02</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/093bd02ab1f8dc70de2f797633d4c6cbf69d363e/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">093bd02</a>
 </td>
 <td>
 markellekelly
@@ -2348,7 +2349,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d9631ef974bed649c5a854a51425fdccfe0376dc/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">d9631ef</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d9631ef974bed649c5a854a51425fdccfe0376dc/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">d9631ef</a>
 </td>
 <td>
 vnminin
@@ -2359,7 +2360,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/bc0d8fc804639e99c89041e95cb8a0c93cd0da46/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">bc0d8fc</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/bc0d8fc804639e99c89041e95cb8a0c93cd0da46/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">bc0d8fc</a>
 </td>
 <td>
 vnminin
@@ -2370,7 +2371,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/327a14f5afdcb7ea375e748ebd8fb3b3825305ef/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">327a14f</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/327a14f5afdcb7ea375e748ebd8fb3b3825305ef/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">327a14f</a>
 </td>
 <td>
 vnminin
@@ -2381,7 +2382,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5f822fd5ff8925e55133ba668c14b280ba6dc232/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">5f822fd</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5f822fd5ff8925e55133ba668c14b280ba6dc232/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">5f822fd</a>
 </td>
 <td>
 markellekelly
@@ -2392,7 +2393,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/345f55ec5933ebf239e427ebd631307e018288d9/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">345f55e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/345f55ec5933ebf239e427ebd631307e018288d9/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">345f55e</a>
 </td>
 <td>
 markellekelly
@@ -2403,7 +2404,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/732e040a9c2dff26b7768a3f8447d9aac6a7c524/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">732e040</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/732e040a9c2dff26b7768a3f8447d9aac6a7c524/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">732e040</a>
 </td>
 <td>
 markellekelly
@@ -2414,7 +2415,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/70e2c65d789b89a1f8177f39c2ab14bbfe371424/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">70e2c65</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/70e2c65d789b89a1f8177f39c2ab14bbfe371424/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">70e2c65</a>
 </td>
 <td>
 markellekelly
@@ -2425,7 +2426,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f3a63125f7826a34300a5b8363eb074c07c199ca/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">f3a6312</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f3a63125f7826a34300a5b8363eb074c07c199ca/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">f3a6312</a>
 </td>
 <td>
 markellekelly
@@ -2436,7 +2437,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/a5b7069ecc54d664222c1aacf80e81e3e01a216f/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">a5b7069</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/a5b7069ecc54d664222c1aacf80e81e3e01a216f/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">a5b7069</a>
 </td>
 <td>
 markellekelly
@@ -2447,7 +2448,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/68c376ca19e08628c96cb782c4bce22176b01a14/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">68c376c</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/68c376ca19e08628c96cb782c4bce22176b01a14/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">68c376c</a>
 </td>
 <td>
 markellekelly
@@ -2458,7 +2459,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/97a0f92749c94d3e88fc2025901ef4feab2037c4/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">97a0f92</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/97a0f92749c94d3e88fc2025901ef4feab2037c4/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">97a0f92</a>
 </td>
 <td>
 markellekelly
@@ -2469,7 +2470,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/8fc7e76bfa38845af2d968c2da575154ae3482a6/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">8fc7e76</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/8fc7e76bfa38845af2d968c2da575154ae3482a6/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">8fc7e76</a>
 </td>
 <td>
 markellekelly
@@ -2480,7 +2481,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/4f060a3f34347ad3f739752b42267e4216b20586/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">4f060a3</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/4f060a3f34347ad3f739752b42267e4216b20586/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">4f060a3</a>
 </td>
 <td>
 markellekelly
@@ -2491,7 +2492,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/6b921f7501c48cca388328ddf86777e1910d41a6/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">6b921f7</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6b921f7501c48cca388328ddf86777e1910d41a6/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">6b921f7</a>
 </td>
 <td>
 markellekelly
@@ -2502,7 +2503,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/14eb77b7e4b82a8ed8329e6d67c480844b7a299c/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">14eb77b</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/14eb77b7e4b82a8ed8329e6d67c480844b7a299c/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">14eb77b</a>
 </td>
 <td>
 markellekelly
@@ -2513,7 +2514,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/833dd76f8610eb8a94b6e4f9bf5b8a604ba4db0d/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">833dd76</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/833dd76f8610eb8a94b6e4f9bf5b8a604ba4db0d/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">833dd76</a>
 </td>
 <td>
 markellekelly
@@ -2524,7 +2525,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/866712e56ce1cd880f2651a22c1e6c4eafc98ab7/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">866712e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/866712e56ce1cd880f2651a22c1e6c4eafc98ab7/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">866712e</a>
 </td>
 <td>
 markellekelly
@@ -2535,7 +2536,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/67b0c809245c4c5735ef15e5891bdf415667fd11/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">67b0c80</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/67b0c809245c4c5735ef15e5891bdf415667fd11/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">67b0c80</a>
 </td>
 <td>
 vnminin
@@ -2546,7 +2547,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/bc9db27319686becbeb3d9e04886ba95104cac37/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">bc9db27</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/bc9db27319686becbeb3d9e04886ba95104cac37/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">bc9db27</a>
 </td>
 <td>
 markellekelly
@@ -2557,7 +2558,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/499fd2d7c60755bb9c29b66dedae2f10a6520755/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">499fd2d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/499fd2d7c60755bb9c29b66dedae2f10a6520755/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">499fd2d</a>
 </td>
 <td>
 markellekelly
@@ -2568,7 +2569,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c1d71c6b00cfafba40571659b08b752e605d9bed/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">c1d71c6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c1d71c6b00cfafba40571659b08b752e605d9bed/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">c1d71c6</a>
 </td>
 <td>
 markellekelly
@@ -2579,7 +2580,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d21bc1d2182b34e0e9fba093bc16d4abed2d072d/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">d21bc1d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d21bc1d2182b34e0e9fba093bc16d4abed2d072d/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">d21bc1d</a>
 </td>
 <td>
 vnminin
@@ -2590,7 +2591,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">09c2819</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/docs/figure/cencal-counties.Rmd/hospitalizations_plot-1.png" target="_blank">09c2819</a>
 </td>
 <td>
 vnminin
@@ -2630,7 +2631,18 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/391cfa4ebed4fad3b46727249126b6db75e8222e/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">391cfa4</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/a61f46be459e154ddb1863e168f7a9e2c22826e6/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">a61f46b</a>
+</td>
+<td>
+markellekelly
+</td>
+<td>
+2021-11-15
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/391cfa4ebed4fad3b46727249126b6db75e8222e/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">391cfa4</a>
 </td>
 <td>
 markellekelly
@@ -2641,7 +2653,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5f67bc3964a078401572a14edc70e609fe2a0832/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">5f67bc3</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5f67bc3964a078401572a14edc70e609fe2a0832/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">5f67bc3</a>
 </td>
 <td>
 markellekelly
@@ -2652,7 +2664,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e8476c68824fb345f1b24f6f0f1ee80294235980/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">e8476c6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e8476c68824fb345f1b24f6f0f1ee80294235980/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">e8476c6</a>
 </td>
 <td>
 markellekelly
@@ -2663,7 +2675,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/13e241eada4adab1e2542b00874b0cd782a54520/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">13e241e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/13e241eada4adab1e2542b00874b0cd782a54520/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">13e241e</a>
 </td>
 <td>
 markellekelly
@@ -2674,7 +2686,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d2b95be166a2387f88fea3e37a552534082cfdea/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">d2b95be</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d2b95be166a2387f88fea3e37a552534082cfdea/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">d2b95be</a>
 </td>
 <td>
 markellekelly
@@ -2685,7 +2697,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/20836d64a5d230b841b107c7484c8c9f7f8351a4/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">20836d6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/20836d64a5d230b841b107c7484c8c9f7f8351a4/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">20836d6</a>
 </td>
 <td>
 markellekelly
@@ -2696,7 +2708,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/427010d4d69f24a7d35123b78f2425f5fc3c962d/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">427010d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/427010d4d69f24a7d35123b78f2425f5fc3c962d/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">427010d</a>
 </td>
 <td>
 Damon Bayer
@@ -2707,7 +2719,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2cc66a5d91dcb86a6ea4758213e03d24a7d5ef6c/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">2cc66a5</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2cc66a5d91dcb86a6ea4758213e03d24a7d5ef6c/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">2cc66a5</a>
 </td>
 <td>
 Damon Bayer
@@ -2718,7 +2730,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/41ba87004135fe68385ea31c4f8a88c281d936e1/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">41ba870</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/41ba87004135fe68385ea31c4f8a88c281d936e1/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">41ba870</a>
 </td>
 <td>
 markellekelly
@@ -2729,7 +2741,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c5da767e70d7b514008bf1075bda4777cbe10708/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">c5da767</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c5da767e70d7b514008bf1075bda4777cbe10708/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">c5da767</a>
 </td>
 <td>
 markellekelly
@@ -2740,7 +2752,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c1ea835969f0c56ffe9db39212b3413170058883/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">c1ea835</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c1ea835969f0c56ffe9db39212b3413170058883/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">c1ea835</a>
 </td>
 <td>
 markellekelly
@@ -2751,7 +2763,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e3218b712fc525c44bcf7acb4c42bb320103520d/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">e3218b7</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e3218b712fc525c44bcf7acb4c42bb320103520d/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">e3218b7</a>
 </td>
 <td>
 Damon Bayer
@@ -2762,7 +2774,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/ce715a6e8b7dff5e4883a0550831fcd9ba59c0a9/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">ce715a6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ce715a6e8b7dff5e4883a0550831fcd9ba59c0a9/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">ce715a6</a>
 </td>
 <td>
 markellekelly
@@ -2773,7 +2785,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/dc9c2a60c5c5c482cb584ec6f611e0e83cdf5bbc/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">dc9c2a6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/dc9c2a60c5c5c482cb584ec6f611e0e83cdf5bbc/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">dc9c2a6</a>
 </td>
 <td>
 markellekelly
@@ -2784,7 +2796,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/805e558ac97727c2870ebb970fb628a47609babf/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">805e558</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/805e558ac97727c2870ebb970fb628a47609babf/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">805e558</a>
 </td>
 <td>
 markellekelly
@@ -2795,7 +2807,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/73ffebdda86091ff74df966f9b141fca9c767d29/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">73ffebd</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/73ffebdda86091ff74df966f9b141fca9c767d29/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">73ffebd</a>
 </td>
 <td>
 markellekelly
@@ -2806,7 +2818,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/29d0de083699ffca75a352a3de38aac251c427c6/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">29d0de0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/29d0de083699ffca75a352a3de38aac251c427c6/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">29d0de0</a>
 </td>
 <td>
 Damon Bayer
@@ -2817,7 +2829,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/1acdaf6f8b111b81da3f016df146270766b62873/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">1acdaf6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/1acdaf6f8b111b81da3f016df146270766b62873/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">1acdaf6</a>
 </td>
 <td>
 markellekelly
@@ -2828,7 +2840,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/61e9868bb4340390c8385201c8ab7b74e0265155/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">61e9868</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/61e9868bb4340390c8385201c8ab7b74e0265155/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">61e9868</a>
 </td>
 <td>
 markellekelly
@@ -2839,7 +2851,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/edfd60677e4efe6a9ed97b127ec5956b35530025/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">edfd606</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/edfd60677e4efe6a9ed97b127ec5956b35530025/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">edfd606</a>
 </td>
 <td>
 markellekelly
@@ -2850,7 +2862,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/974177ee2388440a45c84489eaf218f737f99b5e/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">974177e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/974177ee2388440a45c84489eaf218f737f99b5e/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">974177e</a>
 </td>
 <td>
 markellekelly
@@ -2861,7 +2873,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/add1d3c2baced622bb7203f3db51fac44af872e1/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">add1d3c</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/add1d3c2baced622bb7203f3db51fac44af872e1/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">add1d3c</a>
 </td>
 <td>
 markellekelly
@@ -2872,7 +2884,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/9ee1cf6e1cd4eceaf89d5c520d501cd4ce12036c/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">9ee1cf6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9ee1cf6e1cd4eceaf89d5c520d501cd4ce12036c/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">9ee1cf6</a>
 </td>
 <td>
 markellekelly
@@ -2883,7 +2895,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/4465525b5a4bbf00807d4438d717c977331e39f5/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">4465525</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/4465525b5a4bbf00807d4438d717c977331e39f5/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">4465525</a>
 </td>
 <td>
 markellekelly
@@ -2894,7 +2906,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/8eb3c1811ab255d4396ef35e4f378bb87477394f/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">8eb3c18</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/8eb3c1811ab255d4396ef35e4f378bb87477394f/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">8eb3c18</a>
 </td>
 <td>
 Damon Bayer
@@ -2905,7 +2917,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2bc98e266242b0438ce6493d5333f18af7d163f8/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">2bc98e2</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2bc98e266242b0438ce6493d5333f18af7d163f8/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">2bc98e2</a>
 </td>
 <td>
 markellekelly
@@ -2916,7 +2928,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5103ea09873e43f9d1f5abd6f89b2c8098ef8105/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">5103ea0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5103ea09873e43f9d1f5abd6f89b2c8098ef8105/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">5103ea0</a>
 </td>
 <td>
 markellekelly
@@ -2927,7 +2939,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/928264d640dde7510040c300ef70dc8f96ac439f/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">928264d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/928264d640dde7510040c300ef70dc8f96ac439f/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">928264d</a>
 </td>
 <td>
 markellekelly
@@ -2938,7 +2950,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/70b42165b2fd72b4086d655bfd154d43051d4387/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">70b4216</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/70b42165b2fd72b4086d655bfd154d43051d4387/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">70b4216</a>
 </td>
 <td>
 markellekelly
@@ -2949,7 +2961,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/596843ddb6c5b77ab47e221ac2da18d5826378eb/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">596843d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/596843ddb6c5b77ab47e221ac2da18d5826378eb/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">596843d</a>
 </td>
 <td>
 markellekelly
@@ -2960,7 +2972,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/fd90c95d514c46af9162c281b367742b25295fa2/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">fd90c95</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/fd90c95d514c46af9162c281b367742b25295fa2/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">fd90c95</a>
 </td>
 <td>
 markellekelly
@@ -2971,7 +2983,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/1a79f986be66f9a046a0da67917c7f3d36d17887/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">1a79f98</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/1a79f986be66f9a046a0da67917c7f3d36d17887/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">1a79f98</a>
 </td>
 <td>
 Damon Bayer
@@ -2982,7 +2994,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/47e164879ebeb0373e1dc2fe436c392c3ac71c74/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">47e1648</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/47e164879ebeb0373e1dc2fe436c392c3ac71c74/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">47e1648</a>
 </td>
 <td>
 markellekelly
@@ -2993,7 +3005,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f93d4bf3f14e0b9f1182e77f39edea13df86033d/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">f93d4bf</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f93d4bf3f14e0b9f1182e77f39edea13df86033d/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">f93d4bf</a>
 </td>
 <td>
 markellekelly
@@ -3004,7 +3016,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e5a8ef7c17f0648e2445660cb1961c941ded068c/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">e5a8ef7</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e5a8ef7c17f0648e2445660cb1961c941ded068c/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">e5a8ef7</a>
 </td>
 <td>
 markellekelly
@@ -3015,7 +3027,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2e8651e0926e8768d9755b97be0a60448d49619b/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">2e8651e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2e8651e0926e8768d9755b97be0a60448d49619b/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">2e8651e</a>
 </td>
 <td>
 markellekelly
@@ -3026,7 +3038,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/afbc0a1fd19a636de5b64bfdbcfdd17087a7dc3a/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">afbc0a1</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/afbc0a1fd19a636de5b64bfdbcfdd17087a7dc3a/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">afbc0a1</a>
 </td>
 <td>
 markellekelly
@@ -3037,7 +3049,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5a7977de7a1b78dd76b8b96de158402e23eaeaff/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">5a7977d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5a7977de7a1b78dd76b8b96de158402e23eaeaff/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">5a7977d</a>
 </td>
 <td>
 vnminin
@@ -3048,7 +3060,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2829fd0e2fbbdb0d15d4a3e7ed3123dc8023fb7a/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">2829fd0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2829fd0e2fbbdb0d15d4a3e7ed3123dc8023fb7a/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">2829fd0</a>
 </td>
 <td>
 markellekelly
@@ -3059,7 +3071,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/3f02cb53d497fe8cecfbc72f35247b056227dc75/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">3f02cb5</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/3f02cb53d497fe8cecfbc72f35247b056227dc75/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">3f02cb5</a>
 </td>
 <td>
 markellekelly
@@ -3070,7 +3082,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5e2357e661dc5299a856294e882e19fdb8e96c85/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">5e2357e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5e2357e661dc5299a856294e882e19fdb8e96c85/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">5e2357e</a>
 </td>
 <td>
 markellekelly
@@ -3081,7 +3093,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/68471444cba5ae13504ecc858ddeaa1f877833d2/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">6847144</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/68471444cba5ae13504ecc858ddeaa1f877833d2/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">6847144</a>
 </td>
 <td>
 markellekelly
@@ -3092,7 +3104,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/311566445dcec84923ff127050aafd069b034026/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">3115664</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/311566445dcec84923ff127050aafd069b034026/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">3115664</a>
 </td>
 <td>
 markellekelly
@@ -3103,7 +3115,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f9a5bc11a8118fe5e885307a093d33c063f572b9/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">f9a5bc1</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f9a5bc11a8118fe5e885307a093d33c063f572b9/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">f9a5bc1</a>
 </td>
 <td>
 markellekelly
@@ -3114,7 +3126,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/0bacb1ab4f08415664424c207034a6dd121e3eab/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">0bacb1a</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0bacb1ab4f08415664424c207034a6dd121e3eab/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">0bacb1a</a>
 </td>
 <td>
 markellekelly
@@ -3125,7 +3137,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/05c4c323a5cb0483c3a44f0b44788d2d1b8c8f28/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">05c4c32</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/05c4c323a5cb0483c3a44f0b44788d2d1b8c8f28/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">05c4c32</a>
 </td>
 <td>
 markellekelly
@@ -3136,7 +3148,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/093bd02ab1f8dc70de2f797633d4c6cbf69d363e/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">093bd02</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/093bd02ab1f8dc70de2f797633d4c6cbf69d363e/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">093bd02</a>
 </td>
 <td>
 markellekelly
@@ -3147,7 +3159,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d9631ef974bed649c5a854a51425fdccfe0376dc/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">d9631ef</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d9631ef974bed649c5a854a51425fdccfe0376dc/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">d9631ef</a>
 </td>
 <td>
 vnminin
@@ -3158,7 +3170,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/bc0d8fc804639e99c89041e95cb8a0c93cd0da46/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">bc0d8fc</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/bc0d8fc804639e99c89041e95cb8a0c93cd0da46/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">bc0d8fc</a>
 </td>
 <td>
 vnminin
@@ -3169,7 +3181,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/327a14f5afdcb7ea375e748ebd8fb3b3825305ef/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">327a14f</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/327a14f5afdcb7ea375e748ebd8fb3b3825305ef/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">327a14f</a>
 </td>
 <td>
 vnminin
@@ -3180,7 +3192,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5f822fd5ff8925e55133ba668c14b280ba6dc232/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">5f822fd</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5f822fd5ff8925e55133ba668c14b280ba6dc232/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">5f822fd</a>
 </td>
 <td>
 markellekelly
@@ -3191,7 +3203,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/345f55ec5933ebf239e427ebd631307e018288d9/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">345f55e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/345f55ec5933ebf239e427ebd631307e018288d9/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">345f55e</a>
 </td>
 <td>
 markellekelly
@@ -3202,7 +3214,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/732e040a9c2dff26b7768a3f8447d9aac6a7c524/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">732e040</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/732e040a9c2dff26b7768a3f8447d9aac6a7c524/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">732e040</a>
 </td>
 <td>
 markellekelly
@@ -3213,7 +3225,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/70e2c65d789b89a1f8177f39c2ab14bbfe371424/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">70e2c65</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/70e2c65d789b89a1f8177f39c2ab14bbfe371424/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">70e2c65</a>
 </td>
 <td>
 markellekelly
@@ -3224,7 +3236,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f3a63125f7826a34300a5b8363eb074c07c199ca/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">f3a6312</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f3a63125f7826a34300a5b8363eb074c07c199ca/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">f3a6312</a>
 </td>
 <td>
 markellekelly
@@ -3235,7 +3247,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/a5b7069ecc54d664222c1aacf80e81e3e01a216f/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">a5b7069</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/a5b7069ecc54d664222c1aacf80e81e3e01a216f/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">a5b7069</a>
 </td>
 <td>
 markellekelly
@@ -3246,7 +3258,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/68c376ca19e08628c96cb782c4bce22176b01a14/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">68c376c</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/68c376ca19e08628c96cb782c4bce22176b01a14/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">68c376c</a>
 </td>
 <td>
 markellekelly
@@ -3257,7 +3269,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/97a0f92749c94d3e88fc2025901ef4feab2037c4/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">97a0f92</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/97a0f92749c94d3e88fc2025901ef4feab2037c4/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">97a0f92</a>
 </td>
 <td>
 markellekelly
@@ -3268,7 +3280,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/8fc7e76bfa38845af2d968c2da575154ae3482a6/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">8fc7e76</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/8fc7e76bfa38845af2d968c2da575154ae3482a6/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">8fc7e76</a>
 </td>
 <td>
 markellekelly
@@ -3279,7 +3291,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/4f060a3f34347ad3f739752b42267e4216b20586/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">4f060a3</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/4f060a3f34347ad3f739752b42267e4216b20586/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">4f060a3</a>
 </td>
 <td>
 markellekelly
@@ -3290,7 +3302,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/6b921f7501c48cca388328ddf86777e1910d41a6/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">6b921f7</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6b921f7501c48cca388328ddf86777e1910d41a6/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">6b921f7</a>
 </td>
 <td>
 markellekelly
@@ -3301,7 +3313,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/14eb77b7e4b82a8ed8329e6d67c480844b7a299c/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">14eb77b</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/14eb77b7e4b82a8ed8329e6d67c480844b7a299c/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">14eb77b</a>
 </td>
 <td>
 markellekelly
@@ -3312,7 +3324,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/833dd76f8610eb8a94b6e4f9bf5b8a604ba4db0d/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">833dd76</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/833dd76f8610eb8a94b6e4f9bf5b8a604ba4db0d/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">833dd76</a>
 </td>
 <td>
 markellekelly
@@ -3323,7 +3335,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/866712e56ce1cd880f2651a22c1e6c4eafc98ab7/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">866712e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/866712e56ce1cd880f2651a22c1e6c4eafc98ab7/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">866712e</a>
 </td>
 <td>
 markellekelly
@@ -3334,7 +3346,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/67b0c809245c4c5735ef15e5891bdf415667fd11/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">67b0c80</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/67b0c809245c4c5735ef15e5891bdf415667fd11/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">67b0c80</a>
 </td>
 <td>
 vnminin
@@ -3345,7 +3357,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/bc9db27319686becbeb3d9e04886ba95104cac37/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">bc9db27</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/bc9db27319686becbeb3d9e04886ba95104cac37/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">bc9db27</a>
 </td>
 <td>
 markellekelly
@@ -3356,7 +3368,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/499fd2d7c60755bb9c29b66dedae2f10a6520755/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">499fd2d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/499fd2d7c60755bb9c29b66dedae2f10a6520755/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">499fd2d</a>
 </td>
 <td>
 markellekelly
@@ -3367,7 +3379,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c1d71c6b00cfafba40571659b08b752e605d9bed/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">c1d71c6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c1d71c6b00cfafba40571659b08b752e605d9bed/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">c1d71c6</a>
 </td>
 <td>
 markellekelly
@@ -3378,7 +3390,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d21bc1d2182b34e0e9fba093bc16d4abed2d072d/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">d21bc1d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d21bc1d2182b34e0e9fba093bc16d4abed2d072d/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">d21bc1d</a>
 </td>
 <td>
 vnminin
@@ -3389,7 +3401,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">09c2819</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/docs/figure/cencal-counties.Rmd/icu_plot-1.png" target="_blank">09c2819</a>
 </td>
 <td>
 vnminin
@@ -3431,7 +3443,18 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5f67bc3964a078401572a14edc70e609fe2a0832/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">5f67bc3</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/a61f46be459e154ddb1863e168f7a9e2c22826e6/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">a61f46b</a>
+</td>
+<td>
+markellekelly
+</td>
+<td>
+2021-11-15
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5f67bc3964a078401572a14edc70e609fe2a0832/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">5f67bc3</a>
 </td>
 <td>
 markellekelly
@@ -3442,7 +3465,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/13e241eada4adab1e2542b00874b0cd782a54520/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">13e241e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/13e241eada4adab1e2542b00874b0cd782a54520/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">13e241e</a>
 </td>
 <td>
 markellekelly
@@ -3453,7 +3476,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d2b95be166a2387f88fea3e37a552534082cfdea/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">d2b95be</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d2b95be166a2387f88fea3e37a552534082cfdea/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">d2b95be</a>
 </td>
 <td>
 markellekelly
@@ -3464,7 +3487,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/20836d64a5d230b841b107c7484c8c9f7f8351a4/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">20836d6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/20836d64a5d230b841b107c7484c8c9f7f8351a4/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">20836d6</a>
 </td>
 <td>
 markellekelly
@@ -3475,7 +3498,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/427010d4d69f24a7d35123b78f2425f5fc3c962d/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">427010d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/427010d4d69f24a7d35123b78f2425f5fc3c962d/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">427010d</a>
 </td>
 <td>
 Damon Bayer
@@ -3486,7 +3509,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2cc66a5d91dcb86a6ea4758213e03d24a7d5ef6c/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">2cc66a5</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2cc66a5d91dcb86a6ea4758213e03d24a7d5ef6c/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">2cc66a5</a>
 </td>
 <td>
 Damon Bayer
@@ -3497,7 +3520,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/41ba87004135fe68385ea31c4f8a88c281d936e1/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">41ba870</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/41ba87004135fe68385ea31c4f8a88c281d936e1/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">41ba870</a>
 </td>
 <td>
 markellekelly
@@ -3508,7 +3531,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c1ea835969f0c56ffe9db39212b3413170058883/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">c1ea835</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c1ea835969f0c56ffe9db39212b3413170058883/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">c1ea835</a>
 </td>
 <td>
 markellekelly
@@ -3519,7 +3542,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e3218b712fc525c44bcf7acb4c42bb320103520d/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">e3218b7</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e3218b712fc525c44bcf7acb4c42bb320103520d/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">e3218b7</a>
 </td>
 <td>
 Damon Bayer
@@ -3530,7 +3553,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/ce715a6e8b7dff5e4883a0550831fcd9ba59c0a9/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">ce715a6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ce715a6e8b7dff5e4883a0550831fcd9ba59c0a9/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">ce715a6</a>
 </td>
 <td>
 markellekelly
@@ -3541,7 +3564,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/dc9c2a60c5c5c482cb584ec6f611e0e83cdf5bbc/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">dc9c2a6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/dc9c2a60c5c5c482cb584ec6f611e0e83cdf5bbc/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">dc9c2a6</a>
 </td>
 <td>
 markellekelly
@@ -3552,7 +3575,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/805e558ac97727c2870ebb970fb628a47609babf/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">805e558</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/805e558ac97727c2870ebb970fb628a47609babf/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">805e558</a>
 </td>
 <td>
 markellekelly
@@ -3563,7 +3586,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/73ffebdda86091ff74df966f9b141fca9c767d29/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">73ffebd</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/73ffebdda86091ff74df966f9b141fca9c767d29/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">73ffebd</a>
 </td>
 <td>
 markellekelly
@@ -3574,7 +3597,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/29d0de083699ffca75a352a3de38aac251c427c6/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">29d0de0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/29d0de083699ffca75a352a3de38aac251c427c6/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">29d0de0</a>
 </td>
 <td>
 Damon Bayer
@@ -3585,7 +3608,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/edfd60677e4efe6a9ed97b127ec5956b35530025/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">edfd606</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/edfd60677e4efe6a9ed97b127ec5956b35530025/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">edfd606</a>
 </td>
 <td>
 markellekelly
@@ -3596,7 +3619,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/974177ee2388440a45c84489eaf218f737f99b5e/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">974177e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/974177ee2388440a45c84489eaf218f737f99b5e/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">974177e</a>
 </td>
 <td>
 markellekelly
@@ -3607,7 +3630,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/add1d3c2baced622bb7203f3db51fac44af872e1/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">add1d3c</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/add1d3c2baced622bb7203f3db51fac44af872e1/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">add1d3c</a>
 </td>
 <td>
 markellekelly
@@ -3618,7 +3641,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/9ee1cf6e1cd4eceaf89d5c520d501cd4ce12036c/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">9ee1cf6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9ee1cf6e1cd4eceaf89d5c520d501cd4ce12036c/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">9ee1cf6</a>
 </td>
 <td>
 markellekelly
@@ -3629,7 +3652,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/4465525b5a4bbf00807d4438d717c977331e39f5/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">4465525</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/4465525b5a4bbf00807d4438d717c977331e39f5/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">4465525</a>
 </td>
 <td>
 markellekelly
@@ -3640,7 +3663,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/8eb3c1811ab255d4396ef35e4f378bb87477394f/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">8eb3c18</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/8eb3c1811ab255d4396ef35e4f378bb87477394f/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">8eb3c18</a>
 </td>
 <td>
 Damon Bayer
@@ -3651,7 +3674,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5103ea09873e43f9d1f5abd6f89b2c8098ef8105/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">5103ea0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5103ea09873e43f9d1f5abd6f89b2c8098ef8105/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">5103ea0</a>
 </td>
 <td>
 markellekelly
@@ -3662,7 +3685,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/70b42165b2fd72b4086d655bfd154d43051d4387/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">70b4216</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/70b42165b2fd72b4086d655bfd154d43051d4387/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">70b4216</a>
 </td>
 <td>
 markellekelly
@@ -3673,7 +3696,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/596843ddb6c5b77ab47e221ac2da18d5826378eb/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">596843d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/596843ddb6c5b77ab47e221ac2da18d5826378eb/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">596843d</a>
 </td>
 <td>
 markellekelly
@@ -3684,7 +3707,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/fd90c95d514c46af9162c281b367742b25295fa2/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">fd90c95</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/fd90c95d514c46af9162c281b367742b25295fa2/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">fd90c95</a>
 </td>
 <td>
 markellekelly
@@ -3695,7 +3718,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/1a79f986be66f9a046a0da67917c7f3d36d17887/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">1a79f98</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/1a79f986be66f9a046a0da67917c7f3d36d17887/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">1a79f98</a>
 </td>
 <td>
 Damon Bayer
@@ -3706,7 +3729,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/47e164879ebeb0373e1dc2fe436c392c3ac71c74/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">47e1648</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/47e164879ebeb0373e1dc2fe436c392c3ac71c74/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">47e1648</a>
 </td>
 <td>
 markellekelly
@@ -3717,7 +3740,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2e8651e0926e8768d9755b97be0a60448d49619b/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">2e8651e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2e8651e0926e8768d9755b97be0a60448d49619b/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">2e8651e</a>
 </td>
 <td>
 markellekelly
@@ -3728,7 +3751,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/afbc0a1fd19a636de5b64bfdbcfdd17087a7dc3a/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">afbc0a1</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/afbc0a1fd19a636de5b64bfdbcfdd17087a7dc3a/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">afbc0a1</a>
 </td>
 <td>
 markellekelly
@@ -3739,7 +3762,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5a7977de7a1b78dd76b8b96de158402e23eaeaff/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">5a7977d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5a7977de7a1b78dd76b8b96de158402e23eaeaff/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">5a7977d</a>
 </td>
 <td>
 vnminin
@@ -3750,7 +3773,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2829fd0e2fbbdb0d15d4a3e7ed3123dc8023fb7a/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">2829fd0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2829fd0e2fbbdb0d15d4a3e7ed3123dc8023fb7a/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">2829fd0</a>
 </td>
 <td>
 markellekelly
@@ -3761,7 +3784,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/3f02cb53d497fe8cecfbc72f35247b056227dc75/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">3f02cb5</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/3f02cb53d497fe8cecfbc72f35247b056227dc75/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">3f02cb5</a>
 </td>
 <td>
 markellekelly
@@ -3772,7 +3795,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5e2357e661dc5299a856294e882e19fdb8e96c85/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">5e2357e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5e2357e661dc5299a856294e882e19fdb8e96c85/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">5e2357e</a>
 </td>
 <td>
 markellekelly
@@ -3783,7 +3806,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f9a5bc11a8118fe5e885307a093d33c063f572b9/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">f9a5bc1</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f9a5bc11a8118fe5e885307a093d33c063f572b9/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">f9a5bc1</a>
 </td>
 <td>
 markellekelly
@@ -3794,7 +3817,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/0bacb1ab4f08415664424c207034a6dd121e3eab/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">0bacb1a</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0bacb1ab4f08415664424c207034a6dd121e3eab/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">0bacb1a</a>
 </td>
 <td>
 markellekelly
@@ -3805,7 +3828,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/05c4c323a5cb0483c3a44f0b44788d2d1b8c8f28/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">05c4c32</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/05c4c323a5cb0483c3a44f0b44788d2d1b8c8f28/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">05c4c32</a>
 </td>
 <td>
 markellekelly
@@ -3816,7 +3839,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/093bd02ab1f8dc70de2f797633d4c6cbf69d363e/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">093bd02</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/093bd02ab1f8dc70de2f797633d4c6cbf69d363e/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">093bd02</a>
 </td>
 <td>
 markellekelly
@@ -3827,7 +3850,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d9631ef974bed649c5a854a51425fdccfe0376dc/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">d9631ef</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d9631ef974bed649c5a854a51425fdccfe0376dc/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">d9631ef</a>
 </td>
 <td>
 vnminin
@@ -3838,7 +3861,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/bc0d8fc804639e99c89041e95cb8a0c93cd0da46/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">bc0d8fc</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/bc0d8fc804639e99c89041e95cb8a0c93cd0da46/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">bc0d8fc</a>
 </td>
 <td>
 vnminin
@@ -3849,7 +3872,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/327a14f5afdcb7ea375e748ebd8fb3b3825305ef/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">327a14f</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/327a14f5afdcb7ea375e748ebd8fb3b3825305ef/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">327a14f</a>
 </td>
 <td>
 vnminin
@@ -3860,7 +3883,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5f822fd5ff8925e55133ba668c14b280ba6dc232/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">5f822fd</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5f822fd5ff8925e55133ba668c14b280ba6dc232/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">5f822fd</a>
 </td>
 <td>
 markellekelly
@@ -3871,7 +3894,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/70e2c65d789b89a1f8177f39c2ab14bbfe371424/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">70e2c65</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/70e2c65d789b89a1f8177f39c2ab14bbfe371424/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">70e2c65</a>
 </td>
 <td>
 markellekelly
@@ -3882,7 +3905,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f3a63125f7826a34300a5b8363eb074c07c199ca/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">f3a6312</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f3a63125f7826a34300a5b8363eb074c07c199ca/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">f3a6312</a>
 </td>
 <td>
 markellekelly
@@ -3893,7 +3916,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/a5b7069ecc54d664222c1aacf80e81e3e01a216f/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">a5b7069</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/a5b7069ecc54d664222c1aacf80e81e3e01a216f/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">a5b7069</a>
 </td>
 <td>
 markellekelly
@@ -3904,7 +3927,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/68c376ca19e08628c96cb782c4bce22176b01a14/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">68c376c</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/68c376ca19e08628c96cb782c4bce22176b01a14/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">68c376c</a>
 </td>
 <td>
 markellekelly
@@ -3915,7 +3938,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/97a0f92749c94d3e88fc2025901ef4feab2037c4/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">97a0f92</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/97a0f92749c94d3e88fc2025901ef4feab2037c4/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">97a0f92</a>
 </td>
 <td>
 markellekelly
@@ -3926,7 +3949,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/4f060a3f34347ad3f739752b42267e4216b20586/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">4f060a3</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/4f060a3f34347ad3f739752b42267e4216b20586/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">4f060a3</a>
 </td>
 <td>
 markellekelly
@@ -3937,7 +3960,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/6b921f7501c48cca388328ddf86777e1910d41a6/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">6b921f7</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6b921f7501c48cca388328ddf86777e1910d41a6/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">6b921f7</a>
 </td>
 <td>
 markellekelly
@@ -3948,7 +3971,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/14eb77b7e4b82a8ed8329e6d67c480844b7a299c/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">14eb77b</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/14eb77b7e4b82a8ed8329e6d67c480844b7a299c/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">14eb77b</a>
 </td>
 <td>
 markellekelly
@@ -3959,7 +3982,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/833dd76f8610eb8a94b6e4f9bf5b8a604ba4db0d/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">833dd76</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/833dd76f8610eb8a94b6e4f9bf5b8a604ba4db0d/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">833dd76</a>
 </td>
 <td>
 markellekelly
@@ -3970,7 +3993,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/866712e56ce1cd880f2651a22c1e6c4eafc98ab7/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">866712e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/866712e56ce1cd880f2651a22c1e6c4eafc98ab7/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">866712e</a>
 </td>
 <td>
 markellekelly
@@ -3981,7 +4004,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/67b0c809245c4c5735ef15e5891bdf415667fd11/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">67b0c80</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/67b0c809245c4c5735ef15e5891bdf415667fd11/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">67b0c80</a>
 </td>
 <td>
 vnminin
@@ -3992,7 +4015,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/bc9db27319686becbeb3d9e04886ba95104cac37/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">bc9db27</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/bc9db27319686becbeb3d9e04886ba95104cac37/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">bc9db27</a>
 </td>
 <td>
 markellekelly
@@ -4003,7 +4026,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/499fd2d7c60755bb9c29b66dedae2f10a6520755/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">499fd2d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/499fd2d7c60755bb9c29b66dedae2f10a6520755/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">499fd2d</a>
 </td>
 <td>
 markellekelly
@@ -4014,7 +4037,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c1d71c6b00cfafba40571659b08b752e605d9bed/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">c1d71c6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c1d71c6b00cfafba40571659b08b752e605d9bed/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">c1d71c6</a>
 </td>
 <td>
 markellekelly
@@ -4025,7 +4048,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d21bc1d2182b34e0e9fba093bc16d4abed2d072d/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">d21bc1d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d21bc1d2182b34e0e9fba093bc16d4abed2d072d/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">d21bc1d</a>
 </td>
 <td>
 vnminin
@@ -4036,7 +4059,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">09c2819</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/docs/figure/cencal-counties.Rmd/cases_plot-1.png" target="_blank">09c2819</a>
 </td>
 <td>
 vnminin
@@ -4076,7 +4099,18 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5f67bc3964a078401572a14edc70e609fe2a0832/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">5f67bc3</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/a61f46be459e154ddb1863e168f7a9e2c22826e6/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">a61f46b</a>
+</td>
+<td>
+markellekelly
+</td>
+<td>
+2021-11-15
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5f67bc3964a078401572a14edc70e609fe2a0832/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">5f67bc3</a>
 </td>
 <td>
 markellekelly
@@ -4087,7 +4121,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/13e241eada4adab1e2542b00874b0cd782a54520/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">13e241e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/13e241eada4adab1e2542b00874b0cd782a54520/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">13e241e</a>
 </td>
 <td>
 markellekelly
@@ -4098,7 +4132,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d2b95be166a2387f88fea3e37a552534082cfdea/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">d2b95be</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d2b95be166a2387f88fea3e37a552534082cfdea/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">d2b95be</a>
 </td>
 <td>
 markellekelly
@@ -4109,7 +4143,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/20836d64a5d230b841b107c7484c8c9f7f8351a4/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">20836d6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/20836d64a5d230b841b107c7484c8c9f7f8351a4/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">20836d6</a>
 </td>
 <td>
 markellekelly
@@ -4120,7 +4154,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/427010d4d69f24a7d35123b78f2425f5fc3c962d/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">427010d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/427010d4d69f24a7d35123b78f2425f5fc3c962d/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">427010d</a>
 </td>
 <td>
 Damon Bayer
@@ -4131,7 +4165,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2cc66a5d91dcb86a6ea4758213e03d24a7d5ef6c/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">2cc66a5</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2cc66a5d91dcb86a6ea4758213e03d24a7d5ef6c/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">2cc66a5</a>
 </td>
 <td>
 Damon Bayer
@@ -4142,7 +4176,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/41ba87004135fe68385ea31c4f8a88c281d936e1/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">41ba870</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/41ba87004135fe68385ea31c4f8a88c281d936e1/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">41ba870</a>
 </td>
 <td>
 markellekelly
@@ -4153,7 +4187,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c1ea835969f0c56ffe9db39212b3413170058883/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">c1ea835</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c1ea835969f0c56ffe9db39212b3413170058883/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">c1ea835</a>
 </td>
 <td>
 markellekelly
@@ -4164,7 +4198,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/e3218b712fc525c44bcf7acb4c42bb320103520d/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">e3218b7</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/e3218b712fc525c44bcf7acb4c42bb320103520d/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">e3218b7</a>
 </td>
 <td>
 Damon Bayer
@@ -4175,7 +4209,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/ce715a6e8b7dff5e4883a0550831fcd9ba59c0a9/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">ce715a6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/ce715a6e8b7dff5e4883a0550831fcd9ba59c0a9/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">ce715a6</a>
 </td>
 <td>
 markellekelly
@@ -4186,7 +4220,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/dc9c2a60c5c5c482cb584ec6f611e0e83cdf5bbc/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">dc9c2a6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/dc9c2a60c5c5c482cb584ec6f611e0e83cdf5bbc/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">dc9c2a6</a>
 </td>
 <td>
 markellekelly
@@ -4197,7 +4231,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/805e558ac97727c2870ebb970fb628a47609babf/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">805e558</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/805e558ac97727c2870ebb970fb628a47609babf/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">805e558</a>
 </td>
 <td>
 markellekelly
@@ -4208,7 +4242,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/73ffebdda86091ff74df966f9b141fca9c767d29/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">73ffebd</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/73ffebdda86091ff74df966f9b141fca9c767d29/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">73ffebd</a>
 </td>
 <td>
 markellekelly
@@ -4219,7 +4253,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/29d0de083699ffca75a352a3de38aac251c427c6/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">29d0de0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/29d0de083699ffca75a352a3de38aac251c427c6/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">29d0de0</a>
 </td>
 <td>
 Damon Bayer
@@ -4230,7 +4264,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/edfd60677e4efe6a9ed97b127ec5956b35530025/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">edfd606</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/edfd60677e4efe6a9ed97b127ec5956b35530025/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">edfd606</a>
 </td>
 <td>
 markellekelly
@@ -4241,7 +4275,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/974177ee2388440a45c84489eaf218f737f99b5e/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">974177e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/974177ee2388440a45c84489eaf218f737f99b5e/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">974177e</a>
 </td>
 <td>
 markellekelly
@@ -4252,7 +4286,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/add1d3c2baced622bb7203f3db51fac44af872e1/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">add1d3c</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/add1d3c2baced622bb7203f3db51fac44af872e1/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">add1d3c</a>
 </td>
 <td>
 markellekelly
@@ -4263,7 +4297,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/9ee1cf6e1cd4eceaf89d5c520d501cd4ce12036c/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">9ee1cf6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/9ee1cf6e1cd4eceaf89d5c520d501cd4ce12036c/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">9ee1cf6</a>
 </td>
 <td>
 markellekelly
@@ -4274,7 +4308,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/4465525b5a4bbf00807d4438d717c977331e39f5/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">4465525</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/4465525b5a4bbf00807d4438d717c977331e39f5/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">4465525</a>
 </td>
 <td>
 markellekelly
@@ -4285,7 +4319,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/8eb3c1811ab255d4396ef35e4f378bb87477394f/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">8eb3c18</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/8eb3c1811ab255d4396ef35e4f378bb87477394f/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">8eb3c18</a>
 </td>
 <td>
 Damon Bayer
@@ -4296,7 +4330,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5103ea09873e43f9d1f5abd6f89b2c8098ef8105/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">5103ea0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5103ea09873e43f9d1f5abd6f89b2c8098ef8105/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">5103ea0</a>
 </td>
 <td>
 markellekelly
@@ -4307,7 +4341,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/70b42165b2fd72b4086d655bfd154d43051d4387/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">70b4216</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/70b42165b2fd72b4086d655bfd154d43051d4387/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">70b4216</a>
 </td>
 <td>
 markellekelly
@@ -4318,7 +4352,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/596843ddb6c5b77ab47e221ac2da18d5826378eb/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">596843d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/596843ddb6c5b77ab47e221ac2da18d5826378eb/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">596843d</a>
 </td>
 <td>
 markellekelly
@@ -4329,7 +4363,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/fd90c95d514c46af9162c281b367742b25295fa2/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">fd90c95</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/fd90c95d514c46af9162c281b367742b25295fa2/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">fd90c95</a>
 </td>
 <td>
 markellekelly
@@ -4340,7 +4374,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/1a79f986be66f9a046a0da67917c7f3d36d17887/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">1a79f98</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/1a79f986be66f9a046a0da67917c7f3d36d17887/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">1a79f98</a>
 </td>
 <td>
 Damon Bayer
@@ -4351,7 +4385,7 @@ Damon Bayer
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/47e164879ebeb0373e1dc2fe436c392c3ac71c74/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">47e1648</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/47e164879ebeb0373e1dc2fe436c392c3ac71c74/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">47e1648</a>
 </td>
 <td>
 markellekelly
@@ -4362,7 +4396,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2e8651e0926e8768d9755b97be0a60448d49619b/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">2e8651e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2e8651e0926e8768d9755b97be0a60448d49619b/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">2e8651e</a>
 </td>
 <td>
 markellekelly
@@ -4373,7 +4407,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/afbc0a1fd19a636de5b64bfdbcfdd17087a7dc3a/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">afbc0a1</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/afbc0a1fd19a636de5b64bfdbcfdd17087a7dc3a/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">afbc0a1</a>
 </td>
 <td>
 markellekelly
@@ -4384,7 +4418,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5a7977de7a1b78dd76b8b96de158402e23eaeaff/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">5a7977d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5a7977de7a1b78dd76b8b96de158402e23eaeaff/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">5a7977d</a>
 </td>
 <td>
 vnminin
@@ -4395,7 +4429,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/2829fd0e2fbbdb0d15d4a3e7ed3123dc8023fb7a/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">2829fd0</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/2829fd0e2fbbdb0d15d4a3e7ed3123dc8023fb7a/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">2829fd0</a>
 </td>
 <td>
 markellekelly
@@ -4406,7 +4440,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/3f02cb53d497fe8cecfbc72f35247b056227dc75/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">3f02cb5</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/3f02cb53d497fe8cecfbc72f35247b056227dc75/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">3f02cb5</a>
 </td>
 <td>
 markellekelly
@@ -4417,7 +4451,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5e2357e661dc5299a856294e882e19fdb8e96c85/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">5e2357e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5e2357e661dc5299a856294e882e19fdb8e96c85/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">5e2357e</a>
 </td>
 <td>
 markellekelly
@@ -4428,7 +4462,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f9a5bc11a8118fe5e885307a093d33c063f572b9/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">f9a5bc1</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f9a5bc11a8118fe5e885307a093d33c063f572b9/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">f9a5bc1</a>
 </td>
 <td>
 markellekelly
@@ -4439,7 +4473,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/0bacb1ab4f08415664424c207034a6dd121e3eab/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">0bacb1a</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/0bacb1ab4f08415664424c207034a6dd121e3eab/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">0bacb1a</a>
 </td>
 <td>
 markellekelly
@@ -4450,7 +4484,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/05c4c323a5cb0483c3a44f0b44788d2d1b8c8f28/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">05c4c32</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/05c4c323a5cb0483c3a44f0b44788d2d1b8c8f28/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">05c4c32</a>
 </td>
 <td>
 markellekelly
@@ -4461,7 +4495,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/093bd02ab1f8dc70de2f797633d4c6cbf69d363e/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">093bd02</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/093bd02ab1f8dc70de2f797633d4c6cbf69d363e/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">093bd02</a>
 </td>
 <td>
 markellekelly
@@ -4472,7 +4506,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d9631ef974bed649c5a854a51425fdccfe0376dc/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">d9631ef</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d9631ef974bed649c5a854a51425fdccfe0376dc/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">d9631ef</a>
 </td>
 <td>
 vnminin
@@ -4483,7 +4517,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/bc0d8fc804639e99c89041e95cb8a0c93cd0da46/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">bc0d8fc</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/bc0d8fc804639e99c89041e95cb8a0c93cd0da46/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">bc0d8fc</a>
 </td>
 <td>
 vnminin
@@ -4494,7 +4528,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/327a14f5afdcb7ea375e748ebd8fb3b3825305ef/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">327a14f</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/327a14f5afdcb7ea375e748ebd8fb3b3825305ef/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">327a14f</a>
 </td>
 <td>
 vnminin
@@ -4505,7 +4539,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/5f822fd5ff8925e55133ba668c14b280ba6dc232/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">5f822fd</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/5f822fd5ff8925e55133ba668c14b280ba6dc232/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">5f822fd</a>
 </td>
 <td>
 markellekelly
@@ -4516,7 +4550,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/70e2c65d789b89a1f8177f39c2ab14bbfe371424/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">70e2c65</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/70e2c65d789b89a1f8177f39c2ab14bbfe371424/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">70e2c65</a>
 </td>
 <td>
 markellekelly
@@ -4527,7 +4561,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/f3a63125f7826a34300a5b8363eb074c07c199ca/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">f3a6312</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/f3a63125f7826a34300a5b8363eb074c07c199ca/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">f3a6312</a>
 </td>
 <td>
 markellekelly
@@ -4538,7 +4572,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/a5b7069ecc54d664222c1aacf80e81e3e01a216f/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">a5b7069</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/a5b7069ecc54d664222c1aacf80e81e3e01a216f/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">a5b7069</a>
 </td>
 <td>
 markellekelly
@@ -4549,7 +4583,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/68c376ca19e08628c96cb782c4bce22176b01a14/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">68c376c</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/68c376ca19e08628c96cb782c4bce22176b01a14/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">68c376c</a>
 </td>
 <td>
 markellekelly
@@ -4560,7 +4594,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/97a0f92749c94d3e88fc2025901ef4feab2037c4/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">97a0f92</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/97a0f92749c94d3e88fc2025901ef4feab2037c4/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">97a0f92</a>
 </td>
 <td>
 markellekelly
@@ -4571,7 +4605,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/4f060a3f34347ad3f739752b42267e4216b20586/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">4f060a3</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/4f060a3f34347ad3f739752b42267e4216b20586/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">4f060a3</a>
 </td>
 <td>
 markellekelly
@@ -4582,7 +4616,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/6b921f7501c48cca388328ddf86777e1910d41a6/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">6b921f7</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/6b921f7501c48cca388328ddf86777e1910d41a6/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">6b921f7</a>
 </td>
 <td>
 markellekelly
@@ -4593,7 +4627,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/14eb77b7e4b82a8ed8329e6d67c480844b7a299c/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">14eb77b</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/14eb77b7e4b82a8ed8329e6d67c480844b7a299c/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">14eb77b</a>
 </td>
 <td>
 markellekelly
@@ -4604,7 +4638,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/833dd76f8610eb8a94b6e4f9bf5b8a604ba4db0d/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">833dd76</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/833dd76f8610eb8a94b6e4f9bf5b8a604ba4db0d/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">833dd76</a>
 </td>
 <td>
 markellekelly
@@ -4615,7 +4649,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/866712e56ce1cd880f2651a22c1e6c4eafc98ab7/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">866712e</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/866712e56ce1cd880f2651a22c1e6c4eafc98ab7/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">866712e</a>
 </td>
 <td>
 markellekelly
@@ -4626,7 +4660,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/67b0c809245c4c5735ef15e5891bdf415667fd11/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">67b0c80</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/67b0c809245c4c5735ef15e5891bdf415667fd11/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">67b0c80</a>
 </td>
 <td>
 vnminin
@@ -4637,7 +4671,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/bc9db27319686becbeb3d9e04886ba95104cac37/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">bc9db27</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/bc9db27319686becbeb3d9e04886ba95104cac37/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">bc9db27</a>
 </td>
 <td>
 markellekelly
@@ -4648,7 +4682,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/499fd2d7c60755bb9c29b66dedae2f10a6520755/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">499fd2d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/499fd2d7c60755bb9c29b66dedae2f10a6520755/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">499fd2d</a>
 </td>
 <td>
 markellekelly
@@ -4659,7 +4693,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/c1d71c6b00cfafba40571659b08b752e605d9bed/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">c1d71c6</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/c1d71c6b00cfafba40571659b08b752e605d9bed/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">c1d71c6</a>
 </td>
 <td>
 markellekelly
@@ -4670,7 +4704,7 @@ markellekelly
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/d21bc1d2182b34e0e9fba093bc16d4abed2d072d/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">d21bc1d</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/d21bc1d2182b34e0e9fba093bc16d4abed2d072d/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">d21bc1d</a>
 </td>
 <td>
 vnminin
@@ -4681,7 +4715,7 @@ vnminin
 </tr>
 <tr>
 <td>
-<a href="ssh://git@github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">09c2819</a>
+<a href="https://github.com/damonbayer/uci_covid19_dashboard/blob/09c2819ee0e42d107a28f2729e62ff42574d45e7/docs/figure/cencal-counties.Rmd/deaths_plot-1.png" target="_blank">09c2819</a>
 </td>
 <td>
 vnminin
@@ -4706,47 +4740,47 @@ vnminin
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<pre><code>R version 3.6.1 (2019-07-05)
-Platform: x86_64-conda_cos6-linux-gnu (64-bit)
-Running under: Ubuntu 18.04.5 LTS
+<pre><code>R version 4.1.1 (2021-08-10)
+Platform: aarch64-apple-darwin20 (64-bit)
+Running under: macOS Monterey 12.0.1
 
 Matrix products: default
-BLAS/LAPACK: /home/kmarke/anaconda3/envs/issue-216/lib/libopenblasp-r0.3.10.so
+BLAS:   /opt/homebrew/Cellar/openblas/0.3.18/lib/libopenblasp-r0.3.18.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
 
 locale:
- [1] LC_CTYPE=en_US       LC_NUMERIC=C         LC_TIME=en_US       
- [4] LC_COLLATE=en_US     LC_MONETARY=en_US    LC_MESSAGES=en_US   
- [7] LC_PAPER=en_US       LC_NAME=C            LC_ADDRESS=C        
-[10] LC_TELEPHONE=C       LC_MEASUREMENT=en_US LC_IDENTIFICATION=C 
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] cowplot_1.0.0   ckanr_0.5.0     DBI_1.1.0       ggtext_0.1.0   
- [5] glue_1.4.1      TTR_0.24.0      scales_1.1.1    lubridate_1.7.9
- [9] forcats_0.5.0   stringr_1.4.0   dplyr_1.0.1     purrr_0.3.4    
-[13] readr_1.3.1     tidyr_1.1.1     tibble_3.0.3    ggplot2_3.3.2  
-[17] tidyverse_1.3.0
+ [1] cowplot_1.1.1   ckanr_0.6.0     DBI_1.1.1       ggtext_0.1.1   
+ [5] glue_1.4.2      TTR_0.24.2      scales_1.1.1    lubridate_1.8.0
+ [9] forcats_0.5.1   stringr_1.4.0   dplyr_1.0.7     purrr_0.3.4    
+[13] readr_2.0.2     tidyr_1.1.4     tibble_3.1.5    ggplot2_3.3.5  
+[17] tidyverse_1.3.1 workflowr_1.6.2
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.5       lattice_0.20-41  zoo_1.8-8        assertthat_0.2.1
- [5] rprojroot_1.3-2  digest_0.6.25    R6_2.4.1         cellranger_1.1.0
- [9] backports_1.1.8  reprex_0.3.0     evaluate_0.14    httr_1.4.2      
-[13] pillar_1.4.6     rlang_0.4.7      curl_4.3         readxl_1.3.1    
-[17] rstudioapi_0.11  whisker_0.4      blob_1.2.1       rmarkdown_2.3   
-[21] labeling_0.3     urltools_1.7.3   triebeard_0.3.0  gridtext_0.1.1  
-[25] munsell_0.5.0    broom_0.7.0      compiler_3.6.1   httpuv_1.5.4    
-[29] modelr_0.1.8     xfun_0.16        pkgconfig_2.0.3  htmltools_0.5.0 
-[33] tidyselect_1.1.0 httpcode_0.3.0   workflowr_1.6.2  fansi_0.4.1     
-[37] crayon_1.3.4     dbplyr_1.4.4     withr_2.2.0      later_1.1.0.1   
-[41] crul_1.0.0       grid_3.6.1       jsonlite_1.7.0   gtable_0.3.0    
-[45] lifecycle_0.2.0  git2r_0.27.1     magrittr_1.5     cli_2.0.2       
-[49] stringi_1.4.6    farver_2.0.3     fs_1.5.0         promises_1.1.1  
-[53] xml2_1.3.2       ellipsis_0.3.1   xts_0.12-0       generics_0.0.2  
-[57] vctrs_0.3.2      tools_3.6.1      markdown_1.1     hms_0.5.3       
-[61] yaml_2.2.1       colorspace_1.4-1 rvest_0.3.6      knitr_1.29      
-[65] haven_2.3.1     </code></pre>
+ [1] fs_1.5.0         xts_0.12.1       bit64_4.0.5      httr_1.4.2      
+ [5] rprojroot_2.0.2  tools_4.1.1      backports_1.3.0  bslib_0.3.1     
+ [9] utf8_1.2.2       R6_2.5.1         colorspace_2.0-2 withr_2.4.2     
+[13] tidyselect_1.1.1 bit_4.0.4        curl_4.3.2       compiler_4.1.1  
+[17] git2r_0.28.0     cli_3.1.0        rvest_1.0.2      xml2_1.3.2      
+[21] labeling_0.4.2   triebeard_0.3.0  sass_0.4.0       digest_0.6.28   
+[25] rmarkdown_2.11   pkgconfig_2.0.3  htmltools_0.5.2  highr_0.9       
+[29] dbplyr_2.1.1     fastmap_1.1.0    rlang_0.4.12     readxl_1.3.1    
+[33] rstudioapi_0.13  httpcode_0.3.0   jquerylib_0.1.4  generics_0.1.1  
+[37] farver_2.1.0     zoo_1.8-9        jsonlite_1.7.2   vroom_1.5.5     
+[41] magrittr_2.0.1   Rcpp_1.0.7       munsell_0.5.0    fansi_0.5.0     
+[45] lifecycle_1.0.1  stringi_1.7.5    whisker_0.4      yaml_2.2.1      
+[49] grid_4.1.1       parallel_4.1.1   promises_1.2.0.1 crayon_1.4.1    
+[53] lattice_0.20-44  haven_2.4.3      gridtext_0.1.4   hms_1.1.1       
+[57] knitr_1.36       pillar_1.6.4     markdown_1.1     crul_1.1.0      
+[61] reprex_2.0.1     evaluate_0.14    modelr_0.1.8     vctrs_0.3.8     
+[65] tzdb_0.1.2       httpuv_1.6.3     urltools_1.7.3   cellranger_1.1.0
+[69] gtable_0.3.0     assertthat_0.2.1 xfun_0.27        broom_0.7.9     
+[73] later_1.3.0      ellipsis_0.3.2  </code></pre>
 </div>
 </div>
 
@@ -4773,7 +4807,7 @@ footer is added to webpages before the MathJax javascript. -->
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -4791,7 +4825,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
