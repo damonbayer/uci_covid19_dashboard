@@ -38,10 +38,12 @@ get_county_plots <- function(counties_of_interest){
   resource_ids <- list(cases_deaths = resources$id[resources$name == "Statewide COVID-19 Cases Deaths Tests"],
                        hosp = resources$id[resources$name == "Statewide Covid-19 Hospital County Data"])
 
+  cases_deaths_url <- resources %>% filter(name == "Statewide COVID-19 Cases Deaths Tests") %>% pull(url)
+  hosp_url <- resources %>% filter(name == "Statewide Covid-19 Hospital County Data") %>% pull(url)
 
   # pull resources into data frames (adds extra cols _id and _full_text)
   cases <-
-    tbl(src = ckan$con, from = resource_ids$cases_deaths) %>%
+    read_csv(cases_deaths_url) %>%
     as_tibble() %>%
     mutate(date = lubridate::ymd(date),
            deaths = as.integer(deaths),
@@ -58,7 +60,7 @@ get_county_plots <- function(counties_of_interest){
 
 
   hosp <-
-    tbl(src = ckan$con, from = resource_ids$hosp) %>%
+    read_csv(hosp_url) %>%
     as_tibble() %>%
     mutate(todays_date = lubridate::ymd(todays_date),
            hospitalized_covid_patients = as.integer(hospitalized_covid_patients),
