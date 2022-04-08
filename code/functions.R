@@ -61,7 +61,6 @@ get_county_plots <- function(counties_of_interest){
 
   hosp <-
     read_csv(hosp_url) %>%
-    as_tibble() %>%
     mutate(todays_date = lubridate::ymd(todays_date),
            hospitalized_covid_patients = as.integer(hospitalized_covid_patients),
            icu_covid_confirmed_patients = as.integer(icu_covid_confirmed_patients),
