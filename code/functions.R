@@ -60,7 +60,16 @@ get_county_plots <- function(counties_of_interest){
 
 
   hosp <-
-    read_csv(hosp_url) %>%
+    read_csv(hosp_url,col_types = cols(
+    	county=col_character(),
+    	todays_date=col_date(format =""),
+    	hospitalized_covid_confirmed_patients = col_double(),
+    	hospitalized_suspected_covid_patients = col_double(),
+    	hospitalized_covid_patients = col_double(),
+    	all_hospital_beds = col_double(),
+    	icu_covid_confirmed_patients = col_double(),
+    	icu_suspected_covid_patients = col_double(),
+    	icu_available_beds = col_double())) %>%
     mutate(todays_date = lubridate::ymd(todays_date),
            hospitalized_covid_patients = as.integer(hospitalized_covid_patients),
            icu_covid_confirmed_patients = as.integer(icu_covid_confirmed_patients),
