@@ -47,7 +47,6 @@ get_county_plots <- function(counties_of_interest){
     as_tibble() %>%
     mutate(date = lubridate::ymd(date),
            deaths = as.integer(deaths),
-           reported_cases = as.integer(reported_cases),
            cases = as.integer(cases),
            positive_tests = as.integer(positive_tests),
            total_tests = as.integer(total_tests)) %>%
